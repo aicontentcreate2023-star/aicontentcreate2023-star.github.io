@@ -1,0 +1,58 @@
+name: Auto Cleanup Temporary Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      files_to_remove:
+        description: 'Files to remove (comma-separated)'
+        required: true
+        type: string
+      delay_hours:
+        description: 'Hours to wait before cleanup'
+        required: false
+        default: '3'
+        type: string
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Wait for specified duration
+        run: |
+          HOURS="${{ inputs.delay_hours }}"
+          SECONDS=$((HOURS * 3600))
+          echo "⏳ Waiting ${HOURS} hours (${SECONDS} seconds) before cleanup..."
+          sleep $SECONDS
+          echo "✅ Wait complete, proceeding with cleanup"
+      
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Remove temporary files
+        run: |
+          IFS=',' read -ra FILES <<< "${{ inputs.files_to_remove }}"
+          for file in "${FILES[@]}"; do
+            file=$(echo "$file" | xargs)  # trim whitespace
+            if [ -f "$file" ]; then
+              echo "🗑️ Removing: $file"
+              git rm -f "$file"
+            else
+              echo "⚠️ File not found: $file"
+            fi
+          done
+          
+      - name: Commit and push
+        run: |
+          git config user.name "博特一號 Auto-Cleanup"
+          git config user.email "bot@aicontentcreate2023-star.github.io"
+          
+          if git diff --staged --quiet; then
+            echo "ℹ️ No files to remove, skipping commit"
+          else
+            git commit -m "🗑️ Auto-cleanup: Remove temporary pages after ${{ inputs.delay_hours }}h"
+            git push
+            echo "✅ Cleanup complete"
+          fi
