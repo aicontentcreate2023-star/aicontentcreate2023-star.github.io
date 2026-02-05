@@ -293,6 +293,25 @@ openclaw nodes camera clip --node pixel-phone --duration 10s
 
 <img src="img-camera-monitor.jpg" alt="相机监控场景" style="width:100%; max-width:800px; margin:20px auto; display:block; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.3);">
 
+#### 💡 什么是"前台"？
+
+**前台（Foreground）** = App 显示在屏幕上，用户正在使用  
+**后台（Background）** = App 最小化或切换到其他 app
+
+**为什么需要前台？**
+- 📱 iOS/Android 系统限制 — 为了隐私和安全
+- 🔒 防止恶意软件 — 避免 app 在用户不知情时偷拍、录屏
+
+**实际场景：**
+- ✅ **允许**：Node app 开着在屏幕上 → AI 可以拍照/录屏
+- ❌ **不允许**：Node app 切到后台（比如你在看 Twitter）→ AI 调用相机会失败
+
+**解决方案：**
+- 长期监控 → 把手机固定放着，保持 Node app 在屏幕上
+- 专用设备 → 用旧手机/平板做监控用途
+
+<img src="img-foreground-background.jpg" alt="前台 vs 后台对比" style="width:100%; max-width:800px; margin:20px auto; display:block; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.3);">
+
 ---
 
 ### 3. 🎬 屏幕录制（Screen Recording）
@@ -544,6 +563,8 @@ canvas.snapshot → 发送截图到 Discord/Slack
 3. system.run → 自动调整灯光/窗帘
 \`\`\`
 
+<img src="img-smart-home.jpg" alt="智能家居控制" style="width:100%; max-width:800px; margin:20px auto; display:block; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.3);">
+
 ---
 
 ### 4. 📱 移动办公助手
@@ -594,6 +615,8 @@ node2 → ffmpeg part2.mp4
 node3 → ffmpeg part3.mp4
 # 最后合并
 \`\`\`
+
+<img src="img-distributed-tasks.jpg" alt="分布式任务执行" style="width:100%; max-width:800px; margin:20px auto; display:block; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.3);">
 
 ---
 
