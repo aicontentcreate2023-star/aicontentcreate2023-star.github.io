@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NanoClaw vs Clawdbot/OpenClaw 對比報告</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-orange: #f0883e;
+            --accent-purple: #bc8cff;
+            --border-color: #30363d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .version-badge {
+            display: inline-block;
+            background: var(--accent-green);
+            color: var(--bg-primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .comparison-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+        
+        .comparison-card.clawdbot {
+            border-left: 3px solid var(--accent-orange);
+        }
+        
+        .comparison-card.nanoclaw {
+            border-left: 3px solid var(--accent-green);
+        }
+        
+        .comparison-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .comparison-card.clawdbot h4 {
+            color: var(--accent-orange);
+        }
+        
+        .comparison-card.nanoclaw h4 {
+            color: var(--accent-green);
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+        
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+        
+        .highlight-box {
+            background: var(--bg-tertiary);
+            border-left: 3px solid var(--accent-purple);
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        code {
+            background: var(--bg-tertiary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.9em;
+            color: var(--accent-blue);
+        }
+        
+        pre {
+            background: var(--bg-tertiary);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        td {
+            color: var(--text-secondary);
+        }
+        
+        .img-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .img-caption {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-tertiary);
+            color: var(--accent-blue);
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+        
+        .link-btn:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent-blue);
+        }
+        
+        .tag {
+            display: inline-block;
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+        
+        .tag.green {
+            background: rgba(63, 185, 80, 0.2);
+            color: var(--accent-green);
+        }
+        
+        .tag.orange {
+            background: rgba(240, 136, 62, 0.2);
+            color: var(--accent-orange);
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .toc {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+        }
+        
+        .toc a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.2s;
+        }
+        
+        .toc a:hover {
+            color: var(--accent-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 NanoClaw vs Clawdbot</h1>
+            <p class="meta">
+                對比報告 <span class="version-badge">v1.0</span>
+            </p>
+            <p class="meta">最後更新：2026-02-06 05:46 GMT+8</p>
+        </header>
+        
+        <nav class="toc">
+            <h3>📑 目錄</h3>
+            <a href="#overview">概述</a>
+            <a href="#philosophy">設計理念</a>
+            <a href="#security">安全模型</a>
+            <a href="#architecture">架構對比</a>
+            <a href="#channels">頻道支援</a>
+            <a href="#setup">設定方式</a>
+            <a href="#conclusion">結論</a>
+        </nav>
+        
+        <section id="overview">
+            <h2>📋 概述</h2>
+            
+            <div class="links">
+                <a href="https://github.com/gavrielc/nanoclaw" class="link-btn" target="_blank">
+                    🐙 NanoClaw GitHub
+                </a>
+                <a href="https://github.com/clawdbot/clawdbot" class="link-btn" target="_blank">
+                    🦞 Clawdbot GitHub
+                </a>
+                <a href="https://www.youtube.com/watch?v=AQ5uiLyr8bQ" class="link-btn" target="_blank">
+                    📺 NanoClaw 介紹影片
+                </a>
+            </div>
+            
+            <p><strong>NanoClaw</strong> 是一個極簡版的 Claude 個人助手，強調「可理解性」和「真正的容器隔離」。作者認為 OpenClaw/Clawdbot 功能太多、太複雜，無法在不理解的情況下安心使用。</p>
+            
+            <div class="highlight-box">
+                <strong>核心差異一句話：</strong><br>
+                Clawdbot = 全功能平台（多頻道、多 agent、iOS/Android nodes）<br>
+                NanoClaw = 極簡安全（單一用途、容器隔離、可完全理解的 codebase）
+            </div>
+            
+            <table>
+                <tr>
+                    <th>面向</th>
+                    <th>Clawdbot/OpenClaw</th>
+                    <th>NanoClaw</th>
+                </tr>
+                <tr>
+                    <td>代碼規模</td>
+                    <td>52+ modules, 45+ dependencies</td>
+                    <td>幾個檔案，"8 分鐘讀完"</td>
+                </tr>
+                <tr>
+                    <td>安全模型</td>
+                    <td>App-level (allowlist, pairing)</td>
+                    <td>OS-level container 隔離</td>
+                </tr>
+                <tr>
+                    <td>配置方式</td>
+                    <td>JSON config files</td>
+                    <td>無 config — 直接改 code</td>
+                </tr>
+                <tr>
+                    <td>頻道支援</td>
+                    <td>WhatsApp, Telegram, Discord, iMessage...</td>
+                    <td>預設 WhatsApp，其他靠 skills</td>
+                </tr>
+                <tr>
+                    <td>平台</td>
+                    <td>macOS, Linux, Windows, iOS/Android nodes</td>
+                    <td>macOS, Linux</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="philosophy">
+            <h2>💭 設計理念</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card clawdbot">
+                    <h4>🦞 Clawdbot/OpenClaw</h4>
+                    <ul>
+                        <li>完整的多頻道 gateway</li>
+                        <li>Plugin 和 Skill 擴展系統</li>
+                        <li>Config files + Wizard 設定</li>
+                        <li>Dashboard 和監控介面</li>
+                        <li>Multi-agent routing</li>
+                        <li>iOS/Android companion apps</li>
+                    </ul>
+                </div>
+                <div class="comparison-card nanoclaw">
+                    <h4>🔬 NanoClaw</h4>
+                    <ul>
+                        <li>「小到可以理解」</li>
+                        <li>無 config — 直接改 code</li>
+                        <li>Claude Code 處理設定/debug</li>
+                        <li>沒有 dashboard — 問 Claude</li>
+                        <li>Skills 改 code，不是加 config</li>
+                        <li>針對單一用戶設計</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>NanoClaw 的 Philosophy</h3>
+                <ul>
+                    <li><strong>Small enough to understand</strong> — 一個 process，幾個 source files</li>
+                    <li><strong>Secure by isolation</strong> — Agent 跑在 Linux container 裡</li>
+                    <li><strong>Built for one user</strong> — 不是 framework，是 working software</li>
+                    <li><strong>Customization = code changes</strong> — 沒有 config sprawl</li>
+                    <li><strong>AI-native</strong> — Claude Code 處理 setup、debug、monitoring</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="security">
+            <h2>🔒 安全模型</h2>
+            
+            <div class="img-container">
+                <img src="img-security-comparison.jpg" alt="Security Model Comparison" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <p style="display:none; padding: 2rem; color: var(--text-secondary);">[圖片載入中 - Container Isolation 示意圖]</p>
+                <p class="img-caption">Container 隔離 vs App-level 權限控制</p>
+            </div>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card clawdbot">
+                    <h4>🦞 Clawdbot 安全模型</h4>
+                    <ul>
+                        <li>單一 Node process</li>
+                        <li>共享記憶體空間</li>
+                        <li><code>allowFrom</code> allowlist</li>
+                        <li>Pairing codes</li>
+                        <li>Application-level permission checks</li>
+                    </ul>
+                </div>
+                <div class="comparison-card nanoclaw">
+                    <h4>🔬 NanoClaw 安全模型</h4>
+                    <ul>
+                        <li>Agent 跑在 Linux container</li>
+                        <li>Apple Container (macOS) / Docker (Linux)</li>
+                        <li>只能存取明確 mount 的目錄</li>
+                        <li>Bash 指令在 container 內執行</li>
+                        <li>OS-level isolation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>關鍵差異：</strong><br>
+                Clawdbot 的安全靠「誰可以發訊息給我」（allowlist）<br>
+                NanoClaw 的安全靠「agent 能存取什麼」（filesystem isolation）
+            </div>
+        </section>
+        
+        <section id="architecture">
+            <h2>🏗️ 架構對比</h2>
+            
+            <div class="img-container">
+                <img src="img-architecture-comparison.jpg" alt="Architecture Comparison" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <p style="display:none; padding: 2rem; color: var(--text-secondary);">[圖片載入中 - 架構對比圖]</p>
+                <p class="img-caption">Clawdbot Gateway 架構 vs NanoClaw 單 process 架構</p>
+            </div>
+            
+            <h3>Clawdbot 架構</h3>
+            <pre><code>WhatsApp / Telegram / Discord / iMessage (+ plugins)
+        │
+        ▼
+  ┌───────────────────────────┐
+  │          Gateway          │  ws://127.0.0.1:18789
+  │     (single source)       │
+  └───────────┬───────────────┘
+              │
+              ├─ Pi agent (RPC)
+              ├─ CLI (clawdbot …)
+              ├─ Chat UI (SwiftUI)
+              ├─ iOS node via Gateway WS
+              └─ Android node via Gateway WS</code></pre>
+            
+            <h3>NanoClaw 架構</h3>
+            <pre><code>WhatsApp (baileys)
+        │
+        ▼
+      SQLite
+        │
+        ▼
+   Polling loop
+        │
+        ▼
+   Container (Claude Agent SDK)
+        │
+        ▼
+     Response</code></pre>
+            
+            <div class="card">
+                <h3>NanoClaw 關鍵檔案</h3>
+                <ul>
+                    <li><code>src/index.ts</code> — Main app: WhatsApp connection, routing, IPC</li>
+                    <li><code>src/container-runner.ts</code> — Spawns agent containers</li>
+                    <li><code>src/task-scheduler.ts</code> — Runs scheduled tasks</li>
+                    <li><code>src/db.ts</code> — SQLite operations</li>
+                    <li><code>groups/*/CLAUDE.md</code> — Per-group memory</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="channels">
+            <h2>📱 頻道支援</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card clawdbot">
+                    <h4>🦞 Clawdbot 內建</h4>
+                    <p><span class="tag orange">WhatsApp</span> <span class="tag orange">Telegram</span> <span class="tag orange">Discord</span> <span class="tag orange">iMessage</span></p>
+                    <p style="margin-top: 0.5rem;"><strong>Plugins:</strong></p>
+                    <p><span class="tag">Mattermost</span> <span class="tag">更多...</span></p>
+                </div>
+                <div class="comparison-card nanoclaw">
+                    <h4>🔬 NanoClaw</h4>
+                    <p><span class="tag green">WhatsApp</span> <span class="tag">（預設）</span></p>
+                    <p style="margin-top: 0.5rem;"><strong>透過 Skills 加入:</strong></p>
+                    <p><span class="tag">/add-telegram</span> <span class="tag">/add-slack</span> <span class="tag">/add-discord</span></p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>NanoClaw 的擴展方式：</strong><br>
+                不是加 config 或 plugin，而是跑 skill 來「改寫你的 fork」<br>
+                例如：<code>/add-telegram</code> 會修改你的代碼，產出只有 Telegram 的乾淨版本
+            </div>
+        </section>
+        
+        <section id="setup">
+            <h2>⚙️ 設定方式</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card clawdbot">
+                    <h4>🦞 Clawdbot 安裝</h4>
+                    <pre><code>npm install -g clawdbot
+clawdbot onboard --install-daemon
+clawdbot channels login</code></pre>
+                    <p>Wizard 引導設定，JSON config files</p>
+                </div>
+                <div class="comparison-card nanoclaw">
+                    <h4>🔬 NanoClaw 安裝</h4>
+                    <pre><code>git clone https://github.com/gavrielc/nanoclaw.git
+cd nanoclaw
+claude</code></pre>
+                    <p>然後跑 <code>/setup</code>，Claude Code 處理一切</p>
+                </div>
+            </div>
+            
+            <h3>NanoClaw 自訂方式</h3>
+            <p>沒有 config files，直接告訴 Claude Code：</p>
+            <ul>
+                <li>"Change the trigger word to @Bob"</li>
+                <li>"Remember to make responses shorter"</li>
+                <li>"Add a custom greeting when I say good morning"</li>
+            </ul>
+            <p>或跑 <code>/customize</code> 進行引導式修改</p>
+        </section>
+        
+        <section id="conclusion">
+            <h2>🎯 結論：怎麼選？</h2>
+            
+            <div class="card">
+                <h3>選 Clawdbot/OpenClaw 如果你需要：</h3>
+                <ul>
+                    <li>✅ 多頻道支援（Telegram, Discord, iMessage...）</li>
+                    <li>✅ Multi-agent routing</li>
+                    <li>✅ iOS/Android companion apps (nodes)</li>
+                    <li>✅ 完整的生態系統和 plugin 支援</li>
+                    <li>✅ 不想動 code，偏好 config 設定</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>選 NanoClaw 如果你需要：</h3>
+                <ul>
+                    <li>✅ 真正的容器隔離安全</li>
+                    <li>✅ 可完全理解的 codebase</li>
+                    <li>✅ 只用 WhatsApp（或願意用 skill 改 code）</li>
+                    <li>✅ 喜歡 AI-native 的設定方式（Claude Code 處理一切）</li>
+                    <li>✅ 想要極簡、不要功能膨脹</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>本質差異：</strong><br>
+                Clawdbot 是「你想要的功能我都幫你做好」<br>
+                NanoClaw 是「我給你一個能理解的基礎，你用 Claude 改成你要的」
+            </div>
+        </section>
+        
+        <footer>
+            <p><strong>版本 v1.0</strong> | 最後更新：2026-02-06 05:46 GMT+8</p>
+            <p>作者：Sage (博特四號) 🧠</p>
+        </footer>
+    </div>
+</body>
+</html>
