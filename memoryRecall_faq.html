@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Recall 常见问题解答</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #f39c12;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 4px solid #f39c12;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+        .version {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        .question {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 25px 0;
+            font-weight: bold;
+            color: #856404;
+        }
+        .answer {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .diagram {
+            background: #ecf0f1;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.5;
+        }
+        .warning {
+            background: #ffe5e5;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+            margin: 20px 0;
+        }
+        .success {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4caf50;
+            margin: 20px 0;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #f39c12;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .flowchart {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 10px 0;
+        }
+        .toc a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>❓ Memory Recall 常见问题解答（FAQ）</h1>
+    <div class="version">
+        📄 版本：v1.0<br>
+        🕒 最后更新：2026-02-09 20:19 GMT+8<br>
+        📝 来源：实际用户提问整理
+    </div>
+
+    <div class="toc">
+        <h3>📑 目录</h3>
+        <ul>
+            <li><a href="#q1">Q1: 什么时候用 search、什么时候用 get？</a></li>
+            <li><a href="#q2">Q2: Memory Recall 的触发是基于用户提问内容？</a></li>
+            <li><a href="#q3">Q3: 我现在有启动 session 的搜索吗？</a></li>
+            <li><a href="#q4">Q4: Session Memory 是什么意思？</a></li>
+            <li><a href="#q5">Q5: Gemini Embedding API 在哪个阶段使用？超标会怎样？</a></li>
+            <li><a href="#q6">Q6: 能否控制搜索的时间范围或条数？</a></li>
+            <li><a href="#q7">Q7: Compact 和 Delta 机制会导致对话被截断吗？</a></li>
+            <li><a href="#q8">Q8: 压缩和 Delta 机制如何交互影响？</a></li>
+        </ul>
+    </div>
+
+    <h2 id="q1">Q1: 什么时候用 search、什么时候用 get？</h2>
+    <div class="question">
+        为什么要分成 memory_search 和 memory_get 两个工具？什么场景用哪个？
+    </div>
+
+    <div class="answer">
+        <h3>💡 答案：两步式工作流程</h3>
+        
+        <div class="flowchart">第一步：memory_search("关键词")
+    ↓
+返回匹配片段（带路径和行号）
+    ↓
+发现相关内容
+    ↓
+第二步：memory_get(path, from, lines)
+    ↓
+读取完整上下文</div>
+
+        <h3>为什么要分两步？</h3>
+        <table>
+            <tr>
+                <th>工具</th>
+                <th>作用</th>
+                <th>优势</th>
+            </tr>
+            <tr>
+                <td><strong>memory_search</strong></td>
+                <td>语义搜索，快速定位</td>
+                <td>• 模糊匹配<br>• 返回多个结果<br>• Token 消耗少</td>
+            </tr>
+            <tr>
+                <td><strong>memory_get</strong></td>
+                <td>精确读取，获取完整上下文</td>
+                <td>• 只读需要的部分<br>• 避免浪费 Token<br>• 获取完整信息</td>
+            </tr>
+        </table>
+
+        <h3>实际案例</h3>
+        <pre><strong>用户提问：</strong>"记事本社团的最新贴文整理好了吗？"
+
+<strong>步骤 1 - memory_search:</strong>
+memory_search("记事本社团最新贴文")
+→ 返回：
+  - path: memory/2026-02-06.md
+  - lines: 125-140
+  - snippet: "...记事本社团 31 篇贴文..."
+
+<strong>步骤 2 - memory_get:</strong>
+memory_get(
+  path: "memory/2026-02-06.md",
+  from: 125,
+  lines: 20
+)
+→ 读取完整内容
+
+<strong>AI 回答：</strong>
+"是的！2月6日已经收集了 31 篇贴文，
+文件路径在 记事本-社团/index.md"</pre>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ecf0f1;">
+
+    <h2 id="q2">Q2: Memory Recall 的触发是基于用户提问内容？</h2>
+    <div class="question">
+        Memory Recall 是自动触发的吗？还是需要手动调用？
+    </div>
+
+    <div class="answer">
+        <h3>✅ 是的！基于用户提问内容自动触发</h3>
+        
+        <div class="success">
+            <strong>System Prompt 明确规定：</strong><br>
+            Before answering anything about <strong>prior work, decisions, dates, people, preferences, or todos</strong>: 
+            run <code>memory_search</code> on MEMORY.md + memory/*.md
+        </div>
+
+        <h3>触发场景</h3>
+        <table>
+            <tr>
+                <th>用户提问</th>
+                <th>是否触发 Memory Recall</th>
+                <th>原因</th>
+            </tr>
+            <tr>
+                <td>"上週我們討論了什麼？"</td>
+                <td>✅ 是</td>
+                <td>涉及历史（prior work）</td>
+            </tr>
+            <tr>
+                <td>"記事本社團貼文整理好了嗎？"</td>
+                <td>✅ 是</td>
+                <td>涉及任务状态（decisions）</td>
+            </tr>
+            <tr>
+                <td>"我之前說過我喜歡什麼？"</td>
+                <td>✅ 是</td>
+                <td>涉及偏好（preferences）</td>
+            </tr>
+            <tr>
+                <td>"待辦清單還有哪些？"</td>
+                <td>✅ 是</td>
+                <td>涉及待办（todos）</td>
+            </tr>
+            <tr>
+                <td>"今天天氣如何？"</td>
+                <td>❌ 否</td>
+                <td>与历史无关</td>
+            </tr>
+            <tr>
+                <td>"幫我解釋什麼是量子力學？"</td>
+                <td>❌ 否</td>
+                <td>知识问答，不需要历史</td>
+            </tr>
+        </table>
+
+        <h3>判断机制</h3>
+        <p>AI 根据 System Prompt 的指导，<strong>自主判断</strong>问题是否需要历史上下文。无需用户手动触发。</p>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ecf0f1;">
+
+    <h2 id="q3">Q3: 我现在有启动 session 的搜索吗？</h2>
+    <div class="question">
+        如何确认 Session Search 是否已启用？
+    </div>
+
+    <div class="answer">
+        <h3>✅ 是的！已启用 Session Search</h3>
+        
+        <div class="success">
+            <strong>配置确认：</strong>
+            <pre>{
+  "memorySearch": {
+    "enabled": true,
+    "sources": ["memory", "sessions"],  ← 包含 sessions
+    "experimental": {
+      "sessionMemory": true  ← 已启用
+    }
+  }
+}</pre>
+        </div>
+
+        <h3>当前搜索范围</h3>
+        <table>
+            <tr>
+                <th>来源</th>
+                <th>路径</th>
+                <th>内容</th>
+                <th>状态</th>
+            </tr>
+            <tr>
+                <td><strong>memory</strong></td>
+                <td>MEMORY.md<br>memory/*.md</td>
+                <td>人工整理的记忆<br>日志文件</td>
+                <td>✅ 已启用</td>
+            </tr>
+            <tr>
+                <td><strong>sessions</strong></td>
+                <td>sessions/*.jsonl</td>
+                <td>完整对话历史</td>
+                <td>✅ 已启用</td>
+            </tr>
+        </table>
+
+        <h3>如何验证？</h3>
+        <pre># 检查配置文件
+cat ~/.clawdbot/clawdbot.json | grep -A 10 "memorySearch"
+
+# 检查 Session 数据库
+ls -lh ~/.clawdbot/memory/main.sqlite
+# 如果文件存在且较大（几 MB），说明已索引 sessions</pre>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ecf0f1;">
+
+    <h2 id="q4">Q4: Session Memory 是什么意思？</h2>
+    <div class="question">
+        Session Memory 和普通的 memory/ 文件夹有什么区别？
+    </div>
+
+    <div class="answer">
+        <h3>📚 Session Memory = Session Search</h3>
+        
+        <p><strong>定义：</strong></p>
+        <ul>
+            <li><strong>session</strong> = 对话记录文件（<code>sessions/main.jsonl</code>）</li>
+            <li><strong>memory</strong> = 能够搜索这些对话记录</li>
+            <li><strong>Session Memory</strong> = 搜索完整对话历史的能力</li>
+        </ul>
+
+        <h3>两种记忆的对比</h3>
+        <table>
+            <tr>
+                <th>特性</th>
+                <th>memory/ 文件夹</th>
+                <th>sessions/ 文件夹</th>
+            </tr>
+            <tr>
+                <td><strong>数据来源</strong></td>
+                <td>人工整理</td>
+                <td>自动记录</td>
+            </tr>
+            <tr>
+                <td><strong>内容特点</strong></td>
+                <td>精选、摘要、结构化</td>
+                <td>原始、完整、未过滤</td>
+            </tr>
+            <tr>
+                <td><strong>文件格式</strong></td>
+                <td>Markdown (.md)</td>
+                <td>JSONL (.jsonl)</td>
+            </tr>
+            <tr>
+                <td><strong>文件大小</strong></td>
+                <td>小（通常 < 100 KB）</td>
+                <td>大（可能 > 1 MB）</td>
+            </tr>
+            <tr>
+                <td><strong>索引速度</strong></td>
+                <td>快（秒级）</td>
+                <td>慢（分钟级）</td>
+            </tr>
+            <tr>
+                <td><strong>搜索精度</strong></td>
+                <td>高（已脱敏、筛选）</td>
+                <td>中（包含噪音）</td>
+            </tr>
+            <tr>
+                <td><strong>隐私风险</strong></td>
+                <td>低</td>
+                <td>高（完整对话）</td>
+            </tr>
+            <tr>
+                <td><strong>默认启用</strong></td>
+                <td>✅ 是</td>
+                <td>❌ 否（需手动启用）</td>
+            </tr>
+        </table>
+
+        <h3>为什么需要 Session Memory？</h3>
+        <ul>
+            <li>📜 查找几周前的技术讨论细节</li>
+            <li>🔍 追溯决策过程</li>
+            <li>🧠 AI 记住所有对话</li>
+            <li>💼 适合单人使用的个人助手</li>
+        </ul>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ecf0f1;">
+
+    <h2 id="q5">Q5: Gemini Embedding API 在哪个阶段使用？超标会怎样？</h2>
+    <div class="question">
+        Session Search 会用到 Gemini Embedding API，这是在什么时候调用的？如果超过免费额度会发生什么？
+    </div>
+
+    <div class="answer">
+        <h3>📊 API 调用时机</h3>
+        
+        <h4>1. 索引阶段（生成 Embedding）</h4>
+        <div class="info">
+            <strong>触发条件：</strong> Session 文件增长 >= 8KB 时
+        </div>
+        
+        <pre>Session 文件增长 8 KB
+    ↓
+Delta 追踪器检测到
+    ↓
+触发索引流程
+    ↓
+读取新增内容
+    ↓
+分块（512 tokens/块）
+    ↓
+每个 chunk → 1 次 Gemini API 调用
+    ↓
+生成 768 维向量
+    ↓
+存入 SQLite</pre>
+
+        <p><strong>示例：</strong></p>
+        <ul>
+            <li>100 KB session → 约 10 chunks → <strong>10 次 API 调用</strong></li>
+            <li>1 MB session → 约 100 chunks → <strong>100 次 API 调用</strong></li>
+        </ul>
+
+        <h4>2. 搜索阶段（查询 Embedding）</h4>
+        <pre>用户提问：memory_search("关键词")
+    ↓
+将查询文本发送到 Gemini API
+    ↓
+生成查询向量（768 维）
+    ↓
+在 SQLite 中搜索相似向量
+    ↓
+返回 top-5 结果</pre>
+
+        <p><strong>消耗：</strong> 每次 <code>memory_search()</code> = <strong>1 次 API 调用</strong></p>
+
+        <h3>📈 免费额度</h3>
+        <table>
+            <tr>
+                <th>限制类型</th>
+                <th>免费额度</th>
+                <th>你当前估计消耗</th>
+            </tr>
+            <tr>
+                <td>每分钟请求数</td>
+                <td>1,500 次</td>
+                <td>< 10 次</td>
+            </tr>
+            <tr>
+                <td>每天请求数</td>
+                <td>100,000 次</td>
+                <td>< 1,000 次</td>
+            </tr>
+        </table>
+
+        <div class="success">
+            <strong>✅ 你当前远低于免费额度</strong><br>
+            估计每天消耗：
+            <ul>
+                <li>索引：约 100-500 次（Session 更新）</li>
+                <li>搜索：约 20-50 次（memory_search 调用）</li>
+                <li>总计：< 1,000 次/天（远低于 100,000 上限）</li>
+            </ul>
+        </div>
+
+        <h3>⚠️ 超标会发生什么？</h3>
+        <div class="warning">
+            <strong>错误表现：</strong>
+            <ul>
+                <li>❌ API 返回错误：<code>429 Too Many Requests</code></li>
+                <li>❌ Clawdbot 报错：<code>Embedding API rate limit exceeded</code></li>
+                <li>❌ Session Search 暂时失效</li>
+            </ul>
+
+            <strong>影响范围：</strong>
+            <ul>
+                <li>✅ 其他功能不受影响（read/write/exec 等）</li>
+                <li>✅ memory/ 文件夹搜索仍可用（如果已索引）</li>
+                <li>❌ 新的 session 内容无法索引</li>
+                <li>❌ 搜索可能返回旧结果</li>
+            </ul>
+
+            <strong>恢复：</strong>
+            <ul>
+                <li>等待配额重置（每分钟重置一次）</li>
+                <li>或升级到付费计划</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ecf0f1;">
+
+    <h2 id="q6">Q6: 能否控制搜索的时间范围或条数？</h2>
+    <div class="question">
+        启动 Session Search 后，能不能只搜索最近的时间段（如最近一周），或者最近一百条对话？
+    </div>
+
+    <div class="answer">
+        <h3>❌ 当前不支持时间范围或条数限制</h3>
+        
+        <div class="warning">
+            <strong>现有机制：</strong>
+            <ul>
+                <li>搜索<strong>所有已索引的 session</strong></li>
+                <li>按相关度排序</li>
+                <li>返回 top-5 结果（最相关的 5 条）</li>
+            </ul>
+        </div>
+
+        <h3>💡 未来可能的配置（目前不支持）</h3>
+        <pre>{
+  "sessionMemory": {
+    "enabled": true,
+    "timeRange": "7d",        // 只搜索最近 7 天
+    "maxMessages": 100,       // 只搜索最近 100 条对话
+    "maxSessionAge": "30d"    // 超过 30 天的 session 不索引
+  }
+}</pre>
+
+        <h3>🛠️ 临时解决方案</h3>
+        <h4>方法 1：手动删除旧 session 文件</h4>
+        <pre># 删除 30 天前的 session 文件
+find ~/.clawdbot/sessions -name "*.jsonl" -mtime +30 -delete
+
+# 重建索引
+clawdbot gateway restart</pre>
+
+        <h4>方法 2：搜索时加时间限定词</h4>
+        <pre>// 不推荐（AI 可能忽略时间限定）
+memory_search("最近一週的記事本社團貼文")
+
+// AI 会搜索所有相关内容，然后自己筛选时间</pre>
+
+        <h4>方法 3：等待官方支持</h4>
+        <p>这是一个合理的功能需求，未来 Clawdbot 可能会添加配置选项。</p>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ecf0f1;">
+
+    <h2 id="q7">Q7: Compact 和 Delta 机制会导致对话被截断吗？</h2>
+    <div class="question">
+        如果使用 Delta 增量索引（8 KB 阈值），一旦遇到 Compaction（压缩），是不是最近一轮对话容易被截断，然后增量不足又不会被搜到？
+    </div>
+
+    <div class="answer">
+        <h3>⚠️ 是的，这是一个潜在问题！</h3>
+        
+        <div class="warning">
+            <strong>问题场景：</strong>
+        </div>
+
+        <div class="flowchart">时间线：
+
+T1: Session 文件 = 10 KB（已索引）
+    ↓
+T2: 新增 5 KB 对话
+    → Delta = 5 KB（未达 8 KB 阈值，不触发索引）
+    ↓
+T3: Context 接近上限（180K tokens）
+    → 触发 Compaction
+    ↓
+T4: 压缩发生
+    → 写入 memory/session-context.md
+    → 清空 context
+    ↓
+T5: Session 文件继续记录对话
+    → 文件大小 = 15 KB
+    → Delta 重新计算：15 KB - 10 KB = 5 KB
+    ↓
+❌ 问题：那 5 KB 对话可能永远不会被索引！
+    （因为 Delta 一直在 5-7 KB 徘徊）</div>
+
+        <h3>为什么会这样？</h3>
+        <table>
+            <tr>
+                <th>原因</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td><strong>Delta 阈值太高</strong></td>
+                <td>8 KB ≈ 100-200 条对话，小批量对话难以触发</td>
+            </tr>
+            <tr>
+                <td><strong>Compaction 不触发索引</strong></td>
+                <td>压缩和 Session 索引是两个独立系统</td>
+            </tr>
+            <tr>
+                <td><strong>增量计算方式</strong></td>
+                <td>基于文件大小，不是基于对话条数</td>
+            </tr>
+        </table>
+
+        <h3>📊 风险评估</h3>
+        <table>
+            <tr>
+                <th>场景</th>
+                <th>风险程度</th>
+                <th>原因</th>
+            </tr>
+            <tr>
+                <td>频繁触发 Compaction</td>
+                <td>🔴 高风险</td>
+                <td>小批量对话持续无法索引</td>
+            </tr>
+            <tr>
+                <td>对话量大（容易达到 8 KB）</td>
+                <td>🟡 中风险</td>
+                <td>通常能达到阈值，但偶尔会遗漏</td>
+            </tr>
+            <tr>
+                <td>很少 Compaction</td>
+                <td>🟢 低风险</td>
+                <td>有足够时间积累到 8 KB</td>
+            </tr>
+        </table>
+
+        <h3>你当前的配置</h3>
+        <pre>{
+  "compaction": {
+    "mode": "safeguard",
+    "reserveTokensFloor": 20000,  // 保留 20K tokens
+    "memoryFlush": {
+      "softThresholdTokens": 20000  // 20K tokens 触发压缩
+    }
+  }
+}</pre>
+
+        <div class="success">
+            <strong>✅ 你当前风险较低：</strong>
+            <ul>
+                <li>Context window = 200K tokens</li>
+                <li>触发压缩阈值 = 180K tokens</li>
+                <li>不容易频繁触发 Compaction</li>
+                <li>有充足时间积累对话达到 8 KB</li>
+            </ul>
+        </div>
+
+        <h3>💡 改进方向</h3>
+        <ol>
+            <li><strong>降低 Delta 阈值</strong> - 从 8 KB → 4 KB（更频繁索引）</li>
+            <li><strong>添加时间触发</strong> - 即使增量不足，超过 1 小时也强制索引</li>
+            <li><strong>Compaction 前强制索引</strong> - 压缩前自动触发一次 session 索引</li>
+            <li><strong>改用条数判断</strong> - >= 50 条消息触发（而不是 8 KB）</li>
+        </ol>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ecf0f1;">
+
+    <h2 id="q8">Q8: 压缩和 Delta 机制如何交互影响？</h2>
+    <div class="question">
+        遇到压缩的话，和 Delta 这个机制怎么交互影响？
+    </div>
+
+    <div class="answer">
+        <h3>🔄 当前机制分析</h3>
+        
+        <div class="warning">
+            <strong>核心问题：</strong> Compaction 和 Session 索引<strong>独立运作</strong>，没有协调机制。
+        </div>
+
+        <div class="flowchart">完整交互流程：
+
+┌─────────────────────────────────────┐
+│  正常对话流程                          │
+└─────────────────────────────────────┘
+
+对话开始
+    ↓
+Session 文件增长到 8 KB
+    ↓
+Delta 追踪器触发
+    ↓
+索引完成（存入数据库）
+    ↓
+继续对话...
+    ↓
+新增 5 KB 对话（未达阈值）
+    ↓
+Context 接近上限（180K tokens）
+    ↓
+┌─────────────────────────────────────┐
+│  压缩流程（与 Session 索引无关）       │
+└─────────────────────────────────────┘
+    ↓
+触发 memoryFlush
+    ↓
+AI 写入 memory/session-context.md
+    ↓
+AI 追加到 memory/YYYY-MM-DD.md
+    ↓
+清空 context
+    ↓
+┌─────────────────────────────────────┐
+│  Session 文件继续记录（不受影响）      │
+└─────────────────────────────────────┘
+    ↓
+Session 文件 = 13 KB（10 + 5 - 2）
+    ↓
+Delta 计算：13 - 10 = 3 KB
+    ↓
+❌ 未达阈值，不触发索引
+    ↓
+那 5 KB 对话内容：
+  ✅ 已写入 memory/session-context.md（可搜索）
+  ❌ 未索引到 session 数据库（搜不到原始对话）</div>
+
+        <h3>📊 影响分析</h3>
+        <table>
+            <tr>
+                <th>方面</th>
+                <th>影响</th>
+                <th>严重程度</th>
+            </tr>
+            <tr>
+                <td><strong>记忆完整性</strong></td>
+                <td>摘要保留在 memory/，原始对话未索引</td>
+                <td>🟡 中等</td>
+            </tr>
+            <tr>
+                <td><strong>搜索精度</strong></td>
+                <td>搜到摘要，但找不到原始细节</td>
+                <td>🟡 中等</td>
+            </tr>
+            <tr>
+                <td><strong>Token 浪费</strong></td>
+                <td>Delta 持续不足，永远不触发索引</td>
+                <td>🟢 低（节省了索引成本）</td>
+            </tr>
+            <tr>
+                <td><strong>系统复杂度</strong></td>
+                <td>两个独立系统，难以协调</td>
+                <td>🔴 高（设计问题）</td>
+            </tr>
+        </table>
+
+        <h3>💡 为什么设计成独立的？</h3>
+        <div class="info">
+            <strong>可能的原因：</strong>
+            <ul>
+                <li><strong>解耦设计</strong> - Compaction 和 Session 索引是两个独立模块</li>
+                <li><strong>性能考量</strong> - Compaction 时不想触发耗时的索引</li>
+                <li><strong>灵活性</strong> - 用户可能不需要 Session Search</li>
+            </ul>
+        </div>
+
+        <h3>🛠️ 改进方向</h3>
+        <h4>方案 1：Compaction 前强制索引</h4>
+        <pre>// 在 memoryFlush 之前触发
+beforeCompaction() {
+  // 强制索引当前 session（不管 Delta 多少）
+  await this.sessionMemory.syncSessionFiles([currentSessionKey]);
+}</pre>
+
+        <h4>方案 2：降低 Delta 阈值</h4>
+        <pre>// 从 8 KB → 4 KB
+const SESSION_INDEX_THRESHOLD = 4 * 1024;  // 4 KB</pre>
+
+        <h4>方案 3：添加时间触发</h4>
+        <pre>// 超过 1 小时强制索引
+if (timeSinceLastIndex > 3600000) {  // 1 hour in ms
+  await this.syncSessionFiles([sessionKey]);
+}</pre>
+
+        <h4>方案 4：改用条数判断</h4>
+        <pre>// >= 50 条消息触发
+if (newMessageCount >= 50) {
+  await this.syncSessionFiles([sessionKey]);
+}</pre>
+
+        <h3>✅ 你当前的缓解措施</h3>
+        <div class="success">
+            <strong>好消息：</strong>
+            <ul>
+                <li>✅ <code>memoryFlush</code> 会写入 <code>memory/session-context.md</code></li>
+                <li>✅ 摘要内容会被索引到 <code>memory/</code> 搜索</li>
+                <li>✅ 重要信息不会完全丢失</li>
+                <li>✅ Compaction 触发频率低（180K tokens 阈值）</li>
+            </ul>
+
+            <strong>建议：</strong>
+            <ul>
+                <li>保持当前配置（风险可控）</li>
+                <li>等待 Clawdbot 官方优化 Delta 和 Compaction 协调</li>
+                <li>定期检查 session 索引状态</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ecf0f1;">
+
+    <h2>💡 总结与建议</h2>
+    <div class="info">
+        <h3>关键要点</h3>
+        <ol>
+            <li>✅ <strong>search vs get</strong> - 先 search 找片段，再 get 读完整内容</li>
+            <li>✅ <strong>自动触发</strong> - AI 自动判断问题是否需要历史上下文</li>
+            <li>✅ <strong>Session Search 已启用</strong> - 你的配置正确</li>
+            <li>✅ <strong>API 用量充足</strong> - 远低于免费额度</li>
+            <li>⚠️ <strong>时间范围控制</strong> - 目前不支持，未来可能加入</li>
+            <li>⚠️ <strong>Compact vs Delta</strong> - 有潜在遗漏风险，但你的配置风险较低</li>
+        </ol>
+
+        <h3>你的配置状态</h3>
+        <table>
+            <tr>
+                <th>项目</th>
+                <th>状态</th>
+                <th>评估</th>
+            </tr>
+            <tr>
+                <td>Memory Recall</td>
+                <td>✅ 已启用</td>
+                <td>🟢 正常</td>
+            </tr>
+            <tr>
+                <td>Session Search</td>
+                <td>✅ 已启用</td>
+                <td>🟢 正常</td>
+            </tr>
+            <tr>
+                <td>Gemini API</td>
+                <td>✅ 免费额度充足</td>
+                <td>🟢 正常</td>
+            </tr>
+            <tr>
+                <td>Delta 阈值</td>
+                <td>⚠️ 8 KB（可能偏高）</td>
+                <td>🟡 可优化</td>
+            </tr>
+            <tr>
+                <td>Compaction 协调</td>
+                <td>⚠️ 独立运作</td>
+                <td>🟡 可优化</td>
+            </tr>
+        </table>
+
+        <h3>建议行动</h3>
+        <ul>
+            <li>✅ <strong>保持当前配置</strong> - 功能正常，风险可控</li>
+            <li>📚 <strong>继续观察</strong> - 监控 session 索引效果</li>
+            <li>⏳ <strong>等待官方优化</strong> - Clawdbot 可能会改进 Delta 和 Compaction 协调</li>
+            <li>🔍 <strong>定期检查</strong> - 验证重要对话是否被索引</li>
+        </ul>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 2px solid #ecf0f1;">
+    <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+        📚 Memory Recall 系列文档<br>
+        相关阅读：<br>
+        <a href="memoryRecall_overview.html">系统概览</a> | 
+        <a href="memoryRecall_isMinimal.html">isMinimal 机制</a> | 
+        <a href="memoryRecall_sessions.html">Sessions 搜索</a> | 
+        <a href="memoryRecall_technical.html">技术实作</a>
+    </p>
+</body>
+</html>
