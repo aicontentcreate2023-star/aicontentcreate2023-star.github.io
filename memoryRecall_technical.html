@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Search 技術實作深挖</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+        .version {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        .diagram {
+            background: #ecf0f1;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        .diagram strong {
+            color: #e74c3c;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.5;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #ffe5e5;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+            margin: 20px 0;
+        }
+        .success {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4caf50;
+            margin: 20px 0;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #e74c3c;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .flowchart {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 Session Search 技術實作深挖</h1>
+    <div class="version">
+        📄 版本：v1.0<br>
+        🕒 最後更新：2026-02-09 17:40 GMT+8
+    </div>
+
+    <div class="warning">
+        <strong>⚠️ 本文檔技術深度較高</strong><br>
+        適合：開發者、系統管理員、深度用戶<br>
+        如果只想了解基本使用，請閱讀前三篇文檔。
+    </div>
+
+    <h2>一、完整數據流程圖</h2>
+    <div class="diagram">
+        <strong>🎨 [生圖 Prompt]:</strong><br>
+        A detailed technical flowchart showing the complete Session Search data pipeline. Start with "Session File (.jsonl)" → "File Watcher" → "Delta Tracker" → "Debounce (300ms)" → "Threshold Check (8KB)" → "Parser" → "Chunker (512 tokens)" → "Gemini Embedding" → "SQLite (3 tables)" → "Search Engine". Use different colors for each stage. Include icons for files, database, and API calls. Modern, technical diagram style.
+    </div>
+
+    <div class="flowchart">
+┌─────────────────────────────────────────────────────────────┐
+│  Session Search 完整數據流程                                  │
+└─────────────────────────────────────────────────────────────┘
+
+1. 對話發生
+   ↓
+2. 寫入 sessions/main.jsonl（自動）
+   ↓
+3. onSessionTranscriptUpdate 事件觸發
+   ↓
+4. scheduleSessionDirty() [300ms 防抖]
+   ↓
+5. processSessionDeltaBatch()
+   ├─ 計算 Delta（當前大小 - 上次索引大小）
+   ├─ 檢查閾值：>= 8KB 或 >= 10 條消息？
+   └─ 是 → 繼續  /  否 → 跳過
+       ↓
+6. syncSessionFiles()
+   ├─ 讀取 .jsonl 文件
+   ├─ 解析 JSONL → 提取對話文本
+   ├─ 分塊（512 tokens/塊，64 tokens 重疊）
+   ├─ 調用 Gemini Embedding API
+   ├─ 生成 768 維向量
+   ├─ 存入 SQLite
+   │   ├─ files 表（文件元數據）
+   │   ├─ chunks 表（文本片段）
+   │   └─ vec0 表（向量索引）
+   └─ 完成
+
+7. 用戶執行 memory_search()
+   ↓
+8. 查詢 embedding（Gemini API）
+   ↓
+9. 向量搜索（SQLite vec0 表）
+   ↓
+10. 關鍵詞搜索（FTS5）
+   ↓
+11. RRF 合併兩個結果
+   ↓
+12. 返回 top-5 結果</div>
+
+    <h2>二、核心組件解析</h2>
+    <h3>2.1 文件監聽器（File Watcher）</h3>
+    <p>源碼：<code>src/memory/session-memory.ts</code></p>
+    <pre>// 監聽 session 文件變更
+this.sessionStore.on('sessionTranscriptUpdate', (data) => {
+  this.scheduleSessionDirty(data.sessionKey);
+});</pre>
+
+    <div class="success">
+        <strong>✅ 事件驅動設計：</strong><br>
+        每次對話更新時自動觸發，無需手動同步。
+    </div>
+
+    <h3>2.2 Delta 追踪器（Delta Tracker）</h3>
+    <p>源碼：<code>processSessionDeltaBatch()</code></p>
+    <pre>const delta = currentSize - lastSize;
+
+// 閾值判斷
+if (delta >= SESSION_INDEX_THRESHOLD) {
+  // SESSION_INDEX_THRESHOLD = 8192 (8 KB)
+  await this.syncSessionFiles([sessionKey]);
+}</pre>
+
+    <div class="highlight">
+        <strong>💡 為什麼用 Delta 而不是全量同步？</strong><br>
+        • 全量同步：每次變更都重新索引整個文件 → 越來越慢<br>
+        • Delta 同步：只在增長 >= 8KB 時才索引 → 平衡實時性和性能
+    </div>
+
+    <h3>2.3 防抖處理（Debounce）</h3>
+    <pre>scheduleSessionDirty(sessionKey: string) {
+  // 300ms 內多次變更只觸發一次
+  debounce(() => {
+    this.processSessionDeltaBatch();
+  }, 300);
+}</pre>
+
+    <table>
+        <tr>
+            <th>場景</th>
+            <th>無防抖</th>
+            <th>有防抖（300ms）</th>
+        </tr>
+        <tr>
+            <td>快速對話（10 條消息）</td>
+            <td>觸發 10 次索引</td>
+            <td>觸發 1 次索引</td>
+        </tr>
+        <tr>
+            <td>API 調用量</td>
+            <td>高</td>
+            <td>低</td>
+        </tr>
+        <tr>
+            <td>系統負載</td>
+            <td>高</td>
+            <td>低</td>
+        </tr>
+    </table>
+
+    <h2>三、Session 文件解析</h2>
+    <h3>3.1 JSONL 格式</h3>
+    <pre>// sessions/main.jsonl
+{"role":"user","content":"你好"}
+{"role":"assistant","content":"你好！有什麼可以幫你的？"}
+{"role":"user","content":"記事本社團最新貼文整理好了嗎？"}</pre>
+
+    <h3>3.2 解析邏輯</h3>
+    <pre>function parseSessionTranscript(jsonlPath: string): string {
+  const lines = readFileSync(jsonlPath, 'utf-8').split('\n');
+  const messages = lines
+    .filter(line => line.trim())
+    .map(line => JSON.parse(line));
+
+  // 提取對話文本
+  return messages
+    .map(msg => `${msg.role}: ${msg.content}`)
+    .join('\n\n');
+}</pre>
+
+    <h2>四、Chunking 策略</h2>
+    <div class="diagram">
+        <strong>🎨 [生圖 Prompt]:</strong><br>
+        A visual representation of text chunking with overlap. Show a long text document being split into 3 chunks of 512 tokens each, with 64-token overlaps highlighted in yellow between chunks. Use a horizontal layout with arrows showing the flow. Clean, educational infographic style.
+    </div>
+
+    <h3>4.1 為什麼需要 Chunking？</h3>
+    <ul>
+        <li>📏 <strong>Embedding 模型限制</strong> - Gemini 最大輸入 2048 tokens</li>
+        <li>🎯 <strong>提高檢索精度</strong> - 小片段更容易匹配精確內容</li>
+        <li>💾 <strong>減少存儲浪費</strong> - 不需要的部分不會被索引</li>
+    </ul>
+
+    <h3>4.2 Chunking 參數</h3>
+    <pre>const CHUNK_SIZE = 512;      // tokens per chunk
+const CHUNK_OVERLAP = 64;    // overlap between chunks</pre>
+
+    <table>
+        <tr>
+            <th>參數</th>
+            <th>值</th>
+            <th>理由</th>
+        </tr>
+        <tr>
+            <td>Chunk 大小</td>
+            <td>512 tokens</td>
+            <td>平衡上下文長度和檢索精度</td>
+        </tr>
+        <tr>
+            <td>重疊大小</td>
+            <td>64 tokens</td>
+            <td>避免語義在邊界被截斷</td>
+        </tr>
+    </table>
+
+    <h3>4.3 Chunking 示例</h3>
+    <pre><strong>原始對話（1,200 tokens）：</strong>
+
+[0-511]      Chunk #1: "你好！記事本社團..."
+             ↓ overlap 64 tokens
+[448-959]    Chunk #2: "...貼文共 31 篇..."
+             ↓ overlap 64 tokens
+[896-1200]   Chunk #3: "...完成整理。"</pre>
+
+    <h2>五、Embedding 生成</h2>
+    <h3>5.1 Gemini Embedding API</h3>
+    <pre>POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents
+
+{
+  "requests": [
+    {
+      "model": "models/gemini-embedding-001",
+      "content": {
+        "parts": [{"text": "Chunk #1 內容..."}]
+      }
+    }
+  ]
+}</pre>
+
+    <h3>5.2 返回向量</h3>
+    <pre>{
+  "embeddings": [
+    {
+      "values": [0.123, -0.456, 0.789, ...] // 768 維 float32
+    }
+  ]
+}</pre>
+
+    <h3>5.3 批次 vs 實時</h3>
+    <table>
+        <tr>
+            <th>模式</th>
+            <th>速度</th>
+            <th>成本</th>
+            <th>適用場景</th>
+        </tr>
+        <tr>
+            <td>實時（當前）</td>
+            <td>快（秒級）</td>
+            <td>高</td>
+            <td>即時搜索</td>
+        </tr>
+        <tr>
+            <td>Batch API</td>
+            <td>慢（分鐘級）</td>
+            <td>低（50% off）</td>
+            <td>批量索引</td>
+        </tr>
+    </table>
+
+    <div class="warning">
+        <strong>⚠️ 當前未啟用 Batch API：</strong><br>
+        實時調用成本較高，但速度快。未來可考慮啟用 Batch 模式降低成本。
+    </div>
+
+    <h2>六、SQLite 數據庫結構</h2>
+    <h3>6.1 三表設計</h3>
+    <div class="diagram">
+        <strong>🎨 [生圖 Prompt]:</strong><br>
+        A database schema diagram showing 3 tables: "files" (with columns: id, path, lastSize, lastSync), "chunks" (with columns: id, fileId, chunkIndex, text, embedding), and "vec0" (virtual table for vector search). Show relationships between tables with arrows. Use a clean ER diagram style with light blue table headers.
+    </div>
+
+    <pre>// 1. files 表（文件元數據）
+CREATE TABLE files (
+  id INTEGER PRIMARY KEY,
+  path TEXT UNIQUE,
+  lastSize INTEGER,
+  lastSync INTEGER
+);
+
+// 2. chunks 表（文本片段）
+CREATE TABLE chunks (
+  id INTEGER PRIMARY KEY,
+  fileId INTEGER,
+  chunkIndex INTEGER,
+  text TEXT,
+  FOREIGN KEY (fileId) REFERENCES files(id)
+);
+
+// 3. vec0 虛擬表（向量索引，使用 sqlite-vec）
+CREATE VIRTUAL TABLE vec0 USING vec0(
+  embedding FLOAT[768]
+);
+
+// 4. fts5_chunks 表（全文搜索）
+CREATE VIRTUAL TABLE fts5_chunks USING fts5(
+  text,
+  content=chunks
+);</pre>
+
+    <h3>6.2 數據插入流程</h3>
+    <pre>// Step 1: 插入文件元數據
+INSERT INTO files (path, lastSize, lastSync)
+VALUES ('sessions/main.jsonl', 102400, 1707456000);
+
+// Step 2: 插入 chunk 文本
+INSERT INTO chunks (fileId, chunkIndex, text)
+VALUES (1, 0, 'Chunk #1 內容...');
+
+// Step 3: 插入 embedding 向量
+INSERT INTO vec0 (rowid, embedding)
+VALUES (1, VECTOR_BLOB([0.123, -0.456, ...]));
+
+// Step 4: 更新 FTS5 索引（自動觸發）</pre>
+
+    <h2>七、混合搜索算法</h2>
+    <h3>7.1 為什麼需要混合搜索？</h3>
+    <table>
+        <tr>
+            <th>搜索類型</th>
+            <th>優點</th>
+            <th>缺點</th>
+        </tr>
+        <tr>
+            <td><strong>向量搜索</strong></td>
+            <td>語義理解強<br>同義詞可召回</td>
+            <td>精確匹配弱<br>可能漏掉關鍵詞</td>
+        </tr>
+        <tr>
+            <td><strong>關鍵詞搜索</strong></td>
+            <td>精確匹配強<br>性能快</td>
+            <td>語義理解弱<br>同義詞無法召回</td>
+        </tr>
+        <tr>
+            <td><strong>混合搜索</strong></td>
+            <td>兼顧語義和精確<br>召回率高</td>
+            <td>計算量略高</td>
+        </tr>
+    </table>
+
+    <h3>7.2 搜索權重</h3>
+    <pre>const VECTOR_WEIGHT = 0.7;    // 70% 向量搜索
+const KEYWORD_WEIGHT = 0.3;   // 30% 關鍵詞搜索</pre>
+
+    <h3>7.3 RRF 合併算法</h3>
+    <p><strong>RRF (Reciprocal Rank Fusion)</strong> - 融合多個排序結果</p>
+    <pre>function rrfScore(rank: number): number {
+  const K = 60;  // 常數
+  return 1 / (K + rank);
+}
+
+// 示例：
+// 向量搜索結果：[Doc A (rank 1), Doc B (rank 2)]
+// 關鍵詞結果：  [Doc B (rank 1), Doc C (rank 2)]
+
+// Doc A: 0.7 * rrfScore(1) + 0 = 0.0115
+// Doc B: 0.7 * rrfScore(2) + 0.3 * rrfScore(1) = 0.0163
+// Doc C: 0 + 0.3 * rrfScore(2) = 0.0048
+
+// 最終排序：Doc B > Doc A > Doc C</pre>
+
+    <h2>八、搜索執行流程</h2>
+    <div class="flowchart">
+memory_search("記事本社團最新貼文")
+    ↓
+1. Gemini embedding 查詢文本
+   → [0.234, -0.567, 0.891, ...]
+    ↓
+2. 向量搜索（vec0 表）
+   SELECT rowid, distance 
+   FROM vec0 
+   WHERE embedding MATCH ?
+   ORDER BY distance 
+   LIMIT 10;
+   
+   結果：[Chunk #5, Chunk #12, Chunk #23]
+    ↓
+3. 關鍵詞搜索（FTS5）
+   SELECT rowid, rank 
+   FROM fts5_chunks 
+   WHERE text MATCH '記事本 AND 社團'
+   ORDER BY rank 
+   LIMIT 10;
+   
+   結果：[Chunk #5, Chunk #19]
+    ↓
+4. RRF 合併
+   Chunk #5:  0.7 * rrfScore(1) + 0.3 * rrfScore(1) = 0.0164
+   Chunk #12: 0.7 * rrfScore(2) + 0 = 0.0113
+   Chunk #19: 0 + 0.3 * rrfScore(2) = 0.0048
+    ↓
+5. 排序 + 過濾（minScore = 0.5）
+   結果：[Chunk #5, Chunk #12]
+    ↓
+6. 返回給 AI
+   {
+     path: "sessions/main.jsonl",
+     lines: 125-140,
+     snippet: "...記事本社團 31 篇貼文..."
+   }</div>
+
+    <h2>九、同步策略</h2>
+    <h3>9.1 三種觸發方式</h3>
+    <table>
+        <tr>
+            <th>觸發方式</th>
+            <th>時機</th>
+            <th>適用場景</th>
+        </tr>
+        <tr>
+            <td><strong>onSessionStart</strong></td>
+            <td>Gateway 啟動時</td>
+            <td>初次索引所有 session</td>
+        </tr>
+        <tr>
+            <td><strong>onSearch</strong></td>
+            <td>執行 memory_search 前</td>
+            <td>確保搜索前數據最新</td>
+        </tr>
+        <tr>
+            <td><strong>watch</strong></td>
+            <td>文件變更時（實時）</td>
+            <td>自動增量索引</td>
+        </tr>
+    </table>
+
+    <h3>9.2 當前配置</h3>
+    <pre>{
+  "experimental": {
+    "sessionMemory": {
+      "enabled": true,
+      "syncStrategy": "watch"  // 實時監聽
+    }
+  }
+}</pre>
+
+    <h2>十、性能與成本分析</h2>
+    <h3>10.1 Embedding 成本</h3>
+    <pre><strong>Gemini Embedding API 免費額度：</strong>
+• 1,500 次請求/分鐘
+• 100,000 次請求/天
+
+<strong>實際消耗（估算）：</strong>
+• 1 個 session（1 MB）→ ~100 chunks → 100 次 API 調用
+• 每次搜索 → 1 次 API 調用
+
+<strong>老大當前狀態：</strong>
+• 10 個 session 文件 → ~1,000 次 API 調用（初次索引）
+• 每天搜索 ~50 次 → 50 次 API 調用
+• 總計：遠低於免費額度</pre>
+
+    <h3>10.2 存儲空間</h3>
+    <pre>1 個 chunk：
+• 文本：~2 KB
+• Embedding（768 維 float32）：~3 KB
+• FTS5 索引：~1 KB
+• 總計：~6 KB/chunk
+
+老大當前（估算）：
+• 10 個 session → ~1,000 chunks
+• 數據庫大小：~6 MB</pre>
+
+    <h3>10.3 索引速度</h3>
+    <table>
+        <tr>
+            <th>數據量</th>
+            <th>索引時間</th>
+            <th>備註</th>
+        </tr>
+        <tr>
+            <td>100 條對話</td>
+            <td>5-10 秒</td>
+            <td>實時 embedding</td>
+        </tr>
+        <tr>
+            <td>1,000 條對話</td>
+            <td>30-60 秒</td>
+            <td>Delta 追踪觸發</td>
+        </tr>
+        <tr>
+            <td>10,000 條對話</td>
+            <td>5-10 分鐘</td>
+            <td>初次索引（onSessionStart）</td>
+        </tr>
+    </table>
+
+    <h2>十一、潛在優化點</h2>
+    <div class="warning">
+        <strong>⚠️ 待討論的改進方向：</strong>
+    </div>
+
+    <h3>11.1 Sub-agent 無法使用 Session Search</h3>
+    <p><strong>問題：</strong> 當前 <code>isMinimal = true</code> 時，Memory Recall 區塊被跳過</p>
+    <p><strong>影響：</strong> Sub-agent 無法利用歷史對話上下文</p>
+    <p><strong>潛在方案：</strong></p>
+    <ul>
+        <li>新增 "semi-minimal" 模式（保留 Memory Recall）</li>
+        <li>允許 Sub-agent 按需載入 Memory Recall</li>
+    </ul>
+
+    <h3>11.2 Delta 閾值可能太大</h3>
+    <p><strong>問題：</strong> 8 KB ≈ 100-200 條對話，延遲較長</p>
+    <p><strong>影響：</strong> 新對話需要積累較多才會被索引</p>
+    <p><strong>潛在方案：</strong></p>
+    <ul>
+        <li>降低閾值到 4 KB 或 2 KB</li>
+        <li>改為條數判斷（>= 50 條消息）</li>
+    </ul>
+
+    <h3>11.3 沒有 Session 年齡管理</h3>
+    <p><strong>問題：</strong> 舊 session 會永久存在數據庫</p>
+    <p><strong>影響：</strong> 數據庫持續增長，搜索可能變慢</p>
+    <p><strong>潛在方案：</strong></p>
+    <ul>
+        <li>添加 TTL（Time-To-Live）機制</li>
+        <li>自動歸檔超過 N 天的 session</li>
+        <li>手動清理舊 session 的命令</li>
+    </ul>
+
+    <h3>11.4 Batch API 未啟用</h3>
+    <p><strong>問題：</strong> 當前實時調用，成本較高</p>
+    <p><strong>影響：</strong> 大量索引時 API 調用量大</p>
+    <p><strong>潛在方案：</strong></p>
+    <ul>
+        <li>啟用 Gemini Batch Embedding API（50% off）</li>
+        <li>非緊急索引改用批次模式</li>
+    </ul>
+
+    <h2>十二、總結</h2>
+    <div class="success">
+        <strong>✅ Session Search 核心要點：</strong>
+        <ul>
+            <li>✅ 事件驅動：Session 更新自動觸發</li>
+            <li>✅ Delta 追蹤：增量索引（>= 8KB）</li>
+            <li>✅ Chunking：512 tokens/塊 + 64 tokens 重疊</li>
+            <li>✅ Gemini Embedding：768 維向量</li>
+            <li>✅ SQLite 存儲：chunks + vec0 + FTS5</li>
+            <li>✅ 混合搜索：70% 向量 + 30% 關鍵詞</li>
+            <li>✅ RRF 合併：兼顧語義和精確匹配</li>
+        </ul>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 2px solid #ecf0f1;">
+    <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+        📚 Memory Recall 系列文檔 4/4（完結）<br>
+        上一篇：<a href="memoryRecall_sessions.html">Sessions 搜索機制</a><br>
+        返回：<a href="memoryRecall_overview.html">系統概覽</a>
+    </p>
+</body>
+</html>

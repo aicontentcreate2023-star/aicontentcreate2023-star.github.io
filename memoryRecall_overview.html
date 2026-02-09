@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Recall 系統概覽</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+        .version {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        .diagram {
+            background: #ecf0f1;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        .diagram strong {
+            color: #e74c3c;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.5;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        .tools {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Memory Recall 系統概覽</h1>
+    <div class="version">
+        📄 版本：v1.0<br>
+        🕒 最後更新：2026-02-09 17:40 GMT+8
+    </div>
+
+    <h2>一、什麼是 Memory Recall？</h2>
+    <p>
+        Memory Recall 是 Clawdbot 的<strong>長期記憶系統</strong>，讓 AI 助手能夠：
+    </p>
+    <ul>
+        <li>📝 記住之前討論過的決策、偏好、待辦事項</li>
+        <li>🔍 從歷史對話中找到相關信息</li>
+        <li>🧠 跨 session 保持上下文連續性</li>
+    </ul>
+
+    <div class="highlight">
+        <strong>核心理念：</strong> AI 每次重啟都會「失憶」，Memory Recall 通過<strong>主動搜索文件</strong>來恢復記憶。
+    </div>
+
+    <div class="diagram">
+        <strong>🎨 [生圖 Prompt]:</strong><br>
+        A minimalist diagram showing an AI robot with a brain icon, connected to file folders labeled "MEMORY.md" and "memory/*.md". An arrow labeled "memory_search" flows from the robot to the folders, and another arrow labeled "recalled context" flows back. Clean, technical style with blue and green accent colors.
+    </div>
+
+    <h2>二、核心工具</h2>
+    <div class="tools">
+        <h3>🔍 memory_search</h3>
+        <p>語義搜索記憶文件，返回最相關的片段。</p>
+        <pre>memory_search("記事本社團最新貼文")
+↓
+返回：
+- path: memory/2026-02-06.md
+- lines: 125-140
+- snippet: "...社團新貼文...共 31 篇..."</pre>
+
+        <h3>📄 memory_get</h3>
+        <p>精確讀取指定文件的特定行數。</p>
+        <pre>memory_get(
+  path: "memory/2026-02-06.md",
+  from: 125,
+  lines: 20
+)</pre>
+    </div>
+
+    <h2>三、工作流程</h2>
+    <ol>
+        <li><strong>用戶提問</strong> - 例如："記事本社團的最新貼文整理好了嗎？"</li>
+        <li><strong>觸發 Memory Recall</strong> - System prompt 強制要求先搜索記憶</li>
+        <li><strong>執行 memory_search</strong> - 找到相關片段</li>
+        <li><strong>執行 memory_get</strong> - 讀取完整上下文</li>
+        <li><strong>回答問題</strong> - 基於記憶內容回覆</li>
+    </ol>
+
+    <div class="diagram">
+        <strong>🎨 [生圖 Prompt]:</strong><br>
+        A flowchart showing 5 connected boxes from left to right: "User Question" → "System Prompt Triggers" → "memory_search" → "memory_get" → "AI Answer". Use arrows between boxes. Modern, clean design with gradient blue colors.
+    </div>
+
+    <h2>四、搜索範圍</h2>
+    <table>
+        <tr>
+            <th>來源</th>
+            <th>路徑</th>
+            <th>內容</th>
+            <th>默認啟用</th>
+        </tr>
+        <tr>
+            <td><code>memory</code></td>
+            <td>MEMORY.md<br>memory/*.md</td>
+            <td>人工整理的記憶<br>日誌文件</td>
+            <td>✅ 是</td>
+        </tr>
+        <tr>
+            <td><code>sessions</code></td>
+            <td>sessions/*.jsonl</td>
+            <td>完整對話歷史</td>
+            <td>⚠️ 可選</td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        <strong>注意：</strong> <code>sessions</code> 搜索需要手動啟用（性能、隱私、實驗性考量）。詳見下一章。
+    </div>
+
+    <h2>五、配置方式</h2>
+    <h3>5.1 默認配置（只搜索 memory 文件夾）</h3>
+    <pre>{
+  "memoryRecall": {
+    "enabled": true,
+    "sources": ["memory"]
+  }
+}</pre>
+
+    <h3>5.2 啟用 Sessions 搜索</h3>
+    <pre>{
+  "memoryRecall": {
+    "enabled": true,
+    "sources": ["memory", "sessions"]
+  },
+  "experimental": {
+    "sessionMemory": true
+  }
+}</pre>
+
+    <h2>六、實際效果</h2>
+    <h3>✅ 成功案例</h3>
+    <pre><strong>用戶：</strong>"記事本社團的最新貼文整理好了嗎？"
+
+<strong>AI（無 Memory Recall）：</strong>
+"我不確定，請告訴我詳細信息。"
+
+<strong>AI（有 Memory Recall）：</strong>
+"讓我查一下..."
+[執行 memory_search("記事本社團最新貼文")]
+"是的！2月6日已經收集了 31 篇貼文，
+文件路徑在 記事本-社團/index.md"</pre>
+
+    <h3>❌ 常見誤區</h3>
+    <ul>
+        <li>❌ <strong>不是自動記憶</strong> - AI 不會自動記住所有對話，需要主動寫入文件</li>
+        <li>❌ <strong>不是全文檢索</strong> - 是語義搜索，關鍵詞不一定要完全匹配</li>
+        <li>❌ <strong>不搜索代碼文件</strong> - 只搜索 <code>memory/</code> 和 <code>sessions/</code></li>
+    </ul>
+
+    <h2>七、何時觸發 Memory Recall？</h2>
+    <p>System prompt 中明確規定：</p>
+    <div class="highlight">
+        Before answering anything about <strong>prior work, decisions, dates, people, preferences, or todos</strong>: 
+        run <code>memory_search</code> on MEMORY.md + memory/*.md
+    </div>
+
+    <h3>觸發場景：</h3>
+    <ul>
+        <li>📅 "上週我們討論了什麼？"</li>
+        <li>✅ "那個 CB 回測報告完成了嗎？"</li>
+        <li>👤 "我之前說過我喜歡什麼？"</li>
+        <li>📝 "待辦清單還有哪些？"</li>
+    </ul>
+
+    <h2>八、下一步</h2>
+    <p>這份概覽解釋了 Memory Recall 的基本概念和工作原理。接下來的文檔將深入：</p>
+    <ul>
+        <li>📘 <strong>isMinimal 機制</strong> - 為什麼 Sub-agent 不能用 Memory Recall？</li>
+        <li>📗 <strong>Sessions 搜索</strong> - 如何啟用完整對話歷史搜索？</li>
+        <li>📙 <strong>技術實作</strong> - Session Search 的完整架構深挖</li>
+    </ul>
+
+    <hr style="margin: 40px 0; border: none; border-top: 2px solid #ecf0f1;">
+    <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+        📚 Memory Recall 系列文檔 1/4<br>
+        下一篇：<a href="memoryRecall_isMinimal.html">isMinimal 機制詳解</a>
+    </p>
+</body>
+</html>
