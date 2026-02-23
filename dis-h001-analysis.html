@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIS-H001 Android CTS 解題分析</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header .meta {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin: 30px 0 15px 0;
+            font-size: 1.4em;
+        }
+        
+        .error-box {
+            background: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .error-box code {
+            background: #fed7d7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .success-box {
+            background: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .code-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            position: relative;
+        }
+        
+        .code-block h4 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .code-block.correct {
+            border: 2px solid #38a169;
+        }
+        
+        .code-block.buggy {
+            border: 2px solid #e53e3e;
+        }
+        
+        .code-block pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            background: rgba(56, 161, 105, 0.3);
+            padding: 2px 0;
+        }
+        
+        .missing {
+            background: rgba(229, 62, 62, 0.3);
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f7fafc;
+        }
+        
+        .flow-diagram {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+        
+        .patch-box {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .patch-box .add {
+            color: #38a169;
+        }
+        
+        .patch-box .remove {
+            color: #e53e3e;
+        }
+        
+        .summary-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .summary-box h3 {
+            color: white;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .timeline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .timeline-item {
+            background: #edf2f7;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        .timeline-arrow {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+        
+        @media (max-width: 768px) {
+            .code-compare {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 DIS-H001 Android CTS 解題分析</h1>
+            <div class="meta">
+                <strong>測試案例：</strong> VirtualDisplayTest#testUntrustedSysDecorVirtualDisplay<br>
+                <strong>難度：</strong> Hard ⭐⭐⭐ | <strong>解題日期：</strong> 2026-02-23
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- 問題概述 -->
+            <h2>📋 問題概述</h2>
+            <div class="error-box">
+                <h3>❌ 錯誤現象</h3>
+                <p><strong>錯誤類型：</strong> <code>SecurityException</code></p>
+                <p><strong>錯誤訊息：</strong> Requires INTERNAL_SYSTEM_WINDOW permission</p>
+                <p><strong>發生位置：</strong> DisplayManager.createVirtualDisplay()</p>
+                <pre style="margin-top: 10px; padding: 10px; background: #fed7d7; border-radius: 4px;">
+java.lang.SecurityException: Requires INTERNAL_SYSTEM_WINDOW permission
+  at android.os.Parcel.createExceptionOrNull(Parcel.java:3057)
+  at android.hardware.display.DisplayManager.createVirtualDisplay(...)</pre>
+            </div>
+
+            <!-- 測試預期行為 -->
+            <h2>🎯 測試預期行為</h2>
+            <h3>CTS 測試代碼</h3>
+            <div class="code-block">
+                <pre><code>public void testUntrustedSysDecorVirtualDisplay() {
+    // 故意不設置 TRUSTED flag，但設置 SHOULD_SHOW_SYSTEM_DECORATIONS
+    int flags = VIRTUAL_DISPLAY_FLAG_PUBLIC
+              | VIRTUAL_DISPLAY_FLAG_OWN_CONTENT_ONLY
+              | VIRTUAL_DISPLAY_FLAG_SHOULD_SHOW_SYSTEM_DECORATIONS;  // ⚠️ 沒有 TRUSTED
+    
+    VirtualDisplay vd = mDisplayManager.createVirtualDisplay(..., flags, ...);
+    
+    // 測試預期：創建應該成功，但 flag 會被自動清除
+    assertNotNull("VirtualDisplay should not be null", vd);
+}</code></pre>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>預期行為</th>
+                        <th>實際行為</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>createVirtualDisplay</td>
+                        <td>✅ 成功</td>
+                        <td>❌ 拋出 SecurityException</td>
+                    </tr>
+                    <tr>
+                        <td>SHOULD_SHOW_SYSTEM_DECORATIONS flag</td>
+                        <td>✅ 被系統自動清除</td>
+                        <td>❌ 未被清除，觸發權限檢查</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 代碼對比 -->
+            <h2>🔎 代碼對比分析</h2>
+            <p><strong>問題文件：</strong> <code>frameworks/base/services/core/java/com/android/server/display/DisplayManagerService.java</code></p>
+
+            <div class="code-compare">
+                <div class="code-block correct">
+                    <h4>✅ 官方 AOSP（正確）</h4>
+                    <pre><code><span class="highlight">// 關鍵：先檢查 TRUSTED flag
+if ((flags & VIRTUAL_DISPLAY_FLAG_TRUSTED) == 0) {
+    flags &= ~VIRTUAL_DISPLAY_FLAG_SHOULD_SHOW_SYSTEM_DECORATIONS;
+}</span>
+
+// 然後才權限檢查
+if ((flags & VIRTUAL_DISPLAY_FLAG_SHOULD_SHOW_SYSTEM_DECORATIONS) != 0) {
+    if (!canProjectVideo(projection)) {
+        throw new SecurityException("Requires INTERNAL_SYSTEM_WINDOW permission");
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-block buggy">
+                    <h4>❌ project_source（有 Bug）</h4>
+                    <pre><code><span class="missing">// ⚠️ 缺少 flag 自動清除邏輯
+if ((flags & VIRTUAL_DISPLAY_FLAG_TRUSTED) == 0) {
+    flags &= ~VIRTUAL_DISPLAY_FLAG_SHOULD_SHOW_SYSTEM_DECORATIONS;
+}</span>
+
+// 直接進入權限檢查 → 拋異常
+if ((flags & VIRTUAL_DISPLAY_FLAG_SHOULD_SHOW_SYSTEM_DECORATIONS) != 0) {
+    if (!canProjectVideo(projection)) {
+        throw new SecurityException("Requires INTERNAL_SYSTEM_WINDOW permission");
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <!-- 執行流程對比 -->
+            <h2>📊 執行流程對比</h2>
+            <div class="flow-diagram">
+                <h3>官方 AOSP（正確流程）</h3>
+                <div class="mermaid">
+graph LR
+    A[收到 flags] --> B{有 TRUSTED flag?}
+    B -->|否| C[清除 SHOULD_SHOW_SYSTEM_DECORATIONS]
+    B -->|是| D[保留 flag]
+    C --> E{檢查權限}
+    D --> E
+    E -->|flag 已清除| F[✅ 創建成功]
+    E -->|有 flag + 有權限| F
+    E -->|有 flag + 無權限| G[❌ 拋異常]
+    
+    style F fill:#9ae6b4
+    style G fill:#fc8181
+                </div>
+            </div>
+
+            <div class="flow-diagram" style="margin-top: 20px;">
+                <h3>project_source（Bug 流程）</h3>
+                <div class="mermaid">
+graph LR
+    A[收到 flags] --> B[跳過檢查]
+    B --> C{檢查權限}
+    C -->|有 flag + 無權限| D[❌ 拋異常]
+    
+    style D fill:#fc8181
+                </div>
+            </div>
+
+            <!-- 修復方案 -->
+            <h2>🛠️ 修復方案</h2>
+            <h3>Patch 內容</h3>
+            <div class="patch-box">
+<span class="add">+        if ((flags & VIRTUAL_DISPLAY_FLAG_TRUSTED) == 0) {
++            flags &= ~VIRTUAL_DISPLAY_FLAG_SHOULD_SHOW_SYSTEM_DECORATIONS;
++        }
++</span>
+         // Sometimes users can have sensitive information...
+         if ((flags & VIRTUAL_DISPLAY_FLAG_SHOULD_SHOW_SYSTEM_DECORATIONS) != 0) {
+             if (!canProjectVideo(projection)) {
+                 throw new SecurityException("Requires INTERNAL_SYSTEM_WINDOW permission");
+             }
+         }
+            </div>
+
+            <h3>修復位置</h3>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li><strong>文件：</strong> DisplayManagerService.java</li>
+                <li><strong>行號：</strong> 約第 1595 行（在權限檢查的註解之前）</li>
+                <li><strong>修改：</strong> 新增 4 行代碼</li>
+            </ul>
+
+            <!-- 驗證結果 -->
+            <h2>✅ 驗證結果</h2>
+            <div class="success-box">
+                <h3>編譯成功</h3>
+                <p>✅ build completed successfully (16:15 mm:ss)</p>
+            </div>
+
+            <div class="success-box">
+                <h3>CTS 測試通過</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>測試模組</th>
+                            <th>結果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CtsDisplayTestCases</td>
+                            <td style="color: #38a169; font-weight: bold;">✅ PASS</td>
+                        </tr>
+                        <tr>
+                            <td>CtsDisplayTestCases[instant]</td>
+                            <td style="color: #38a169; font-weight: bold;">✅ PASS</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Summary:</strong> pass="2" failed="0"</p>
+            </div>
+
+            <!-- 解題邏輯鏈 -->
+            <h2>🔗 解題邏輯鏈</h2>
+            <div class="timeline">
+                <div class="timeline-item">SecurityException 錯誤</div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">定位權限檢查代碼</div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">分析測試預期</div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">對比官方 AOSP</div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">發現缺少 flag 清除邏輯</div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">補上 4 行代碼</div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">✅ 驗證通過</div>
+            </div>
+
+            <!-- 總結 -->
+            <div class="summary-box">
+                <h3>📝 總結</h3>
+                <p><strong>根因：</strong> DisplayManagerService.java 缺少 TRUSTED flag 檢查和自動清除邏輯</p>
+                <p><strong>修復：</strong> 新增 4 行代碼，在權限檢查前先檢查 TRUSTED flag，若無則清除 SHOULD_SHOW_SYSTEM_DECORATIONS flag</p>
+                <p><strong>設計意圖：</strong> 安全考量下，對於不受信任的 App，系統會自動拒絕顯示系統裝飾窗口的請求，但不會直接拋異常導致創建失敗</p>
+                
+                <h3 style="margin-top: 30px;">⏱️ 耗時統計</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li>📊 分析定位：5 分鐘</li>
+                    <li>🔨 編譯：16 分鐘</li>
+                    <li>📱 刷機測試：9 分鐘</li>
+                    <li><strong>🎯 總計：約 30 分鐘</strong></li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">💡 關鍵技巧</h3>
+                <ol style="margin-left: 20px; line-height: 2;">
+                    <li>從錯誤訊息反推：SecurityException 直接指向權限檢查代碼</li>
+                    <li>理解測試意圖：測試名稱暗示測試「不信任的 App 請求系統裝飾」場景</li>
+                    <li>對比官方代碼：直接比較官方 AOSP 找出差異</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>
