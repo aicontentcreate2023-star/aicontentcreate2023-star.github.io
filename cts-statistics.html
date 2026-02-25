@@ -3,24 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTS 領域統計報告 v1.1</title>
+    <title>CTS 領域統計報告 v1.2</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
             color: #333;
         }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1400px; margin: 0 auto; }
         .header {
             background: white;
             padding: 30px;
@@ -28,10 +21,7 @@
             margin-bottom: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
-        .header h1 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
+        .header h1 { color: #667eea; margin-bottom: 10px; }
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -45,14 +35,8 @@
             border-radius: 10px;
             text-align: center;
         }
-        .stat-card h3 {
-            font-size: 2em;
-            margin-bottom: 5px;
-        }
-        .stat-card p {
-            opacity: 0.9;
-            font-size: 0.9em;
-        }
+        .stat-card h3 { font-size: 2em; margin-bottom: 5px; }
+        .stat-card p { opacity: 0.9; font-size: 0.9em; }
         .chart-container {
             background: white;
             padding: 30px;
@@ -79,10 +63,7 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             overflow-x: auto;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+        table { width: 100%; border-collapse: collapse; }
         th, td {
             padding: 12px;
             text-align: left;
@@ -93,9 +74,7 @@
             color: white;
             font-weight: 600;
         }
-        tr:hover {
-            background: #f8f9fa;
-        }
+        tr:hover { background: #f8f9fa; }
         .priority-high {
             background: #ff6b6b;
             color: white;
@@ -123,13 +102,20 @@
             margin-top: 30px;
             padding: 20px;
         }
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>📊 CTS 領域統計報告</h1>
-            <p>版本：v1.1 | 更新時間：2026-02-25 | CTS 版本：Android 14 CTS r7</p>
+            <p>版本：v1.2 | 更新時間：2026-02-25 | CTS 版本：Android 14 CTS r7</p>
             
             <div class="stats-grid">
                 <div class="stat-card">
@@ -163,6 +149,35 @@
             <div class="chart-wrapper">
                 <canvas id="testItemChart"></canvas>
             </div>
+        </div>
+
+        <!-- NEW: Framework 细分 -->
+        <div class="chart-container">
+            <h2>🔍 Framework 領域細分統計</h2>
+            <div class="highlight-box">
+                <strong>說明：</strong>Framework 是 CTS 最大領域（183 模組），已細分為 22 個功能子領域
+            </div>
+            <div class="chart-wrapper" style="height: 500px;">
+                <canvas id="frameworkChart"></canvas>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h2>📋 Framework 子領域詳細數據</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>子領域</th>
+                        <th>模組數</th>
+                        <th>平均測項/模組</th>
+                        <th>估計測項數</th>
+                        <th>主要模組示例</th>
+                    </tr>
+                </thead>
+                <tbody id="frameworkTableBody">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
         </div>
 
         <div class="chart-container">
@@ -258,19 +273,19 @@
                     </tr>
                 </thead>
                 <tbody id="fullDataBody">
-                    <!-- Will be populated by JavaScript -->
+                    <!-- Populated by JS -->
                 </tbody>
             </table>
         </div>
 
         <div class="footer">
-            <p>📄 版本：v1.1 | 🕒 最後更新：2026-02-25 22:54 GMT+8</p>
+            <p>📄 版本：v1.2 | 🕒 最後更新：2026-02-25 23:05 GMT+8</p>
             <p>數據來源：Android 14 CTS r7 | 估算誤差範圍：±20-30%</p>
         </div>
     </div>
 
     <script>
-        // Full data
+        // Full domain data
         const domainData = [
             {rank: 1, name: "framework", modules: 183, avgTests: 138, estimatedTests: 25254},
             {rank: 2, name: "art", modules: 155, avgTests: null, estimatedTests: null},
@@ -311,7 +326,33 @@
             {rank: 37, name: "contentcapture", modules: 1, avgTests: 50, estimatedTests: 50}
         ];
 
-        // Populate full data table
+        // Framework subdomains
+        const frameworkData = [
+            {name: "Os/Process/Service", modules: 22, avgTests: 140, estimatedTests: 3080, examples: "CtsOsTestCases, CtsProcessTest"},
+            {name: "Companion/Device", modules: 22, avgTests: 109, estimatedTests: 2398, examples: "CtsCompanionDeviceManager*"},
+            {name: "App/Activity", modules: 17, avgTests: 117, estimatedTests: 1989, examples: "CtsAppTestCases, CtsActivityManager*"},
+            {name: "Provider/Storage", modules: 15, avgTests: 98, estimatedTests: 1470, examples: "CtsProviderTestCases, CtsScopedStorage*"},
+            {name: "Permission/Role", modules: 12, avgTests: 122, estimatedTests: 1464, examples: "CtsPermissionTestCases, CtsRoleTestCases"},
+            {name: "WindowManager/Display", modules: 11, avgTests: 138, estimatedTests: 1518, examples: "CtsWindowManagerDeviceTestCases"},
+            {name: "Settings/Config", modules: 10, avgTests: 133, estimatedTests: 1330, examples: "CtsSettingsTestCases, CtsDeviceConfig*"},
+            {name: "Voice/Speech", modules: 6, avgTests: 134, estimatedTests: 804, examples: "CtsVoiceInteractionTestCases"},
+            {name: "Health/Fitness", modules: 6, avgTests: 116, estimatedTests: 696, examples: "CtsHealthConnectTestCases"},
+            {name: "Notification", modules: 6, avgTests: 105, estimatedTests: 630, examples: "CtsNotificationTestCases"},
+            {name: "JobScheduler/Alarm", modules: 5, avgTests: 104, estimatedTests: 520, examples: "CtsJobSchedulerTestCases"},
+            {name: "Translation/Text", modules: 5, avgTests: 109, estimatedTests: 545, examples: "CtsTranslationTestCases"},
+            {name: "DevicePolicy/Admin", modules: 4, avgTests: 126, estimatedTests: 504, examples: "CtsDevicePolicyTestCases"},
+            {name: "Time/Calendar", modules: 4, avgTests: 110, estimatedTests: 440, examples: "CtsTimeTestCases"},
+            {name: "Accessibility", modules: 3, avgTests: 149, estimatedTests: 447, examples: "CtsAccessibilityTestCases"},
+            {name: "Battery/Thermal", modules: 3, avgTests: 107, estimatedTests: 321, examples: "CtsBatteryHealthTestCases"},
+            {name: "Shortcut/Widget", modules: 3, avgTests: 109, estimatedTests: 327, examples: "CtsShortcutManagerTestCases"},
+            {name: "Game", modules: 3, avgTests: 39, estimatedTests: 117, examples: "CtsGameManagerTestCases"},
+            {name: "Biometrics", modules: 2, avgTests: 110, estimatedTests: 220, examples: "CtsBiometricsTestCases"},
+            {name: "Usage/Stats", modules: 2, avgTests: 108, estimatedTests: 216, examples: "CtsUsageStatsTestCases"},
+            {name: "Input", modules: 1, avgTests: 134, estimatedTests: 134, examples: "CtsInputTestCases"},
+            {name: "其他", modules: 15, avgTests: 100, estimatedTests: 1500, examples: "CtsBugreportTestCases 等"}
+        ];
+
+        // Populate full domain table
         const tbody = document.getElementById('fullDataBody');
         domainData.forEach(item => {
             const row = tbody.insertRow();
@@ -324,7 +365,20 @@
             `;
         });
 
-        // Chart 1: Module Distribution (Top 15)
+        // Populate framework table
+        const frameworkTbody = document.getElementById('frameworkTableBody');
+        frameworkData.forEach(item => {
+            const row = frameworkTbody.insertRow();
+            row.innerHTML = `
+                <td><strong>${item.name}</strong></td>
+                <td>${item.modules}</td>
+                <td>${item.avgTests}</td>
+                <td>~${item.estimatedTests.toLocaleString()}</td>
+                <td style="font-size: 0.9em;">${item.examples}</td>
+            `;
+        });
+
+        // Chart 1: Module Distribution
         const top15Modules = domainData.slice(0, 15);
         new Chart(document.getElementById('moduleChart'), {
             type: 'bar',
@@ -342,8 +396,7 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false },
-                    title: { display: false }
+                    legend: { display: false }
                 },
                 scales: {
                     y: { beginAtZero: true, title: { display: true, text: '模組數' } }
@@ -351,7 +404,7 @@
             }
         });
 
-        // Chart 2: Test Items (Top 15, excluding art)
+        // Chart 2: Test Items
         const top15Tests = domainData.filter(d => d.estimatedTests !== null).slice(0, 15);
         new Chart(document.getElementById('testItemChart'), {
             type: 'bar',
@@ -377,7 +430,34 @@
             }
         });
 
-        // Chart 3: Coverage Pie
+        // Chart 3: Framework Subdomains (top 12)
+        const top12Framework = frameworkData.slice(0, 12);
+        new Chart(document.getElementById('frameworkChart'), {
+            type: 'bar',
+            data: {
+                labels: top12Framework.map(d => d.name),
+                datasets: [{
+                    label: '估計測項數',
+                    data: top12Framework.map(d => d.estimatedTests),
+                    backgroundColor: 'rgba(255, 107, 107, 0.8)',
+                    borderColor: 'rgba(255, 107, 107, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { beginAtZero: true, title: { display: true, text: '測項數' } }
+                }
+            }
+        });
+
+        // Chart 4: Coverage Pie
         new Chart(document.getElementById('coverageChart'), {
             type: 'pie',
             data: {
