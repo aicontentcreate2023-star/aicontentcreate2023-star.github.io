@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q003 調用樹分析 - testFinishBottom</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'SF Pro', -apple-system, system-ui, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f7;
+        }
+        h1 {
+            color: #1d1d1f;
+            border-bottom: 3px solid #0071e3;
+            padding-bottom: 10px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .bug-marker {
+            color: #ff3b30;
+            font-weight: bold;
+        }
+        .pass-marker {
+            color: #34c759;
+            font-weight: bold;
+        }
+        .condition {
+            background: #f0f0f5;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'SF Mono', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #1d1d1f;
+            color: #f5f5f7;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'SF Mono', monospace;
+        }
+        .timeline {
+            border-left: 3px solid #0071e3;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        .timeline-item {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '●';
+            position: absolute;
+            left: -28px;
+            color: #0071e3;
+            font-size: 20px;
+        }
+        .old-bug {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .new-bug {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Q003 調用樹分析：testFinishBottom</h1>
+    
+    <div class="meta">
+        <strong>版本：</strong> v1.0<br>
+        <strong>更新時間：</strong> 2026-02-25 19:54 GMT+8<br>
+        <strong>分析者：</strong> 博特一號、博特四號<br>
+        <strong>目的：</strong> 找出為何舊 Bug 無效，設計新的有效 Bug
+    </div>
+
+    <div class="section">
+        <h2>測試場景</h2>
+        <p><code>testFinishBottom</code> 測試底層 Activity 被頂層遮蓋後 finish 的生命週期：</p>
+        <ol>
+            <li>啟動 FirstActivity（底層）</li>
+            <li>啟動 SecondActivity（頂層，遮蓋底層）</li>
+            <li>等待 FirstActivity 進入 ON_STOP 狀態</li>
+            <li><strong>呼叫 firstActivity.finish()</strong> ← 測試的重點</li>
+            <li>等待 FirstActivity 進入 ON_DESTROY</li>
+            <li>驗證：生命週期序列只有 [ON_DESTROY]（沒有 ON_STOP，因為已經停止）</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>完整調用樹（含所有分支）</h2>
+        <div class="mermaid">
+graph TD
+    A[testFinishBottom: firstActivity.finish] --> B[Activity.finish]
+    B --> C[ActivityClient.finish]
+    C --> D[ATMS.finishActivity]
+    D --> E[ActivityRecord.completeFinishing]
+    
+    E --> F{isCurrentVisible?}
+    F -->|true| G[可見 Activity 分支]
+    F -->|false ✓| H[不可見 Activity 分支]
+    
+    G --> G1{isNextNotYetVisible<br/>或 delayRemoval?}
+    G1 -->|true| G2[addToStopping]
+    G2 --> G3[setState STOPPING]
+    G3 --> OLD[🚫 舊 Bug 位置<br/>註解掉 setState]
+    G1 -->|false| G4[destroyImmediately]
+    
+    H --> H1[addToFinishingAndWaitForIdle]
+    H1 --> H2[destroyIfPossible]
+    
+    H2 --> I{isLastRootTaskOverEmptyHome?<br/>next == null &&<br/>rootTask.isFocused &&<br/>hasHomeTask}
+    I -->|true| I1[不立即 destroy]
+    I1 --> I2[addToFinishingAndWaitForIdle]
+    I -->|false ✓| J[destroyImmediately]
+    
+    J --> K{nowVisible == false &&<br/>finishing == true?}
+    K -->|true ✓| L[🐛 新 Bug 生效]
+    K -->|false| M[正常發送 destroy 事務]
+    
+    L --> L1[skipDestroy = true]
+    L1 --> L2[跳過 scheduleTransactionItem]
+    L2 --> L3[Activity 不會收到 onDestroy]
+    L3 --> FAIL[❌ 測試 Fail<br/>Timeout 或 Assertion Error]
+    
+    M --> M1[scheduleTransactionItem<br/>DestroyActivityItem]
+    M1 --> M2[Activity 收到 onDestroy]
+    M2 --> PASS[✅ 測試 Pass]
+    
+    style F fill:#fff3cd
+    style H fill:#d4edda
+    style I fill:#fff3cd
+    style J fill:#d4edda
+    style K fill:#fff3cd
+    style L fill:#ff6b6b,color:#fff
+    style OLD fill:#ffc107,color:#000
+    style FAIL fill:#ff3b30,color:#fff
+    style PASS fill:#34c759,color:#fff
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>關鍵分支條件分析</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>條件 1: isCurrentVisible</h3>
+                <p><span class="condition">isCurrentVisible = false</span></p>
+                <p><strong>原因：</strong> FirstActivity 被 SecondActivity 遮蓋，不可見</p>
+                <p><strong>結果：</strong> 走 <code>else</code> 分支 → <code>addToFinishingAndWaitForIdle()</code></p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>條件 2: isLastRootTaskOverEmptyHome</h3>
+                <p><span class="condition">next = SecondActivity (非 null)</span></p>
+                <p><span class="condition">isLastRootTaskOverEmptyHome = false</span></p>
+                <p><strong>原因：</strong> 還有 SecondActivity 在上層，不是最後一個 Activity</p>
+                <p><strong>結果：</strong> 直接呼叫 <code>destroyImmediately()</code></p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>條件 3: nowVisible && finishing</h3>
+                <p><span class="condition">nowVisible = false</span>（被遮蓋）</p>
+                <p><span class="condition">finishing = true</span>（正在 finish）</p>
+                <p><strong>Bug 條件：</strong> <code>!nowVisible && finishing</code> → <span class="bug-marker">true</span></p>
+                <p><strong>結果：</strong> <code>skipDestroy = true</code>，跳過發送 destroy 事務</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>為什麼舊 Bug 無效？</h2>
+        <div class="old-bug">
+            <h3>🚫 舊 Bug 位置</h3>
+            <pre><code>// 在 completeFinishing() 中
+if (isCurrentVisible) {
+    if (isNextNotYetVisible || delayRemoval) {
+        addToStopping(false, false);
+        // setState(STOPPING, "completeFinishing");  ← 舊 Bug：註解掉這行
+    }
+}</code></pre>
+            <p><strong>問題：</strong></p>
+            <ul>
+                <li><span class="bug-marker">條件不符合：</span> <code>isCurrentVisible = false</code>（Activity 被遮蓋）</li>
+                <li>測試永遠不會走到 <code>if (isCurrentVisible)</code> 這個分支</li>
+                <li>Bug 代碼完全沒有執行 → 測試 Pass</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>新 Bug 設計</h2>
+        <div class="new-bug">
+            <h3>✅ 新 Bug 位置</h3>
+            <pre><code>// 在 destroyImmediately() 中（行 4063）
+boolean destroyImmediately(String reason) {
+    ...
+    final boolean nowVisible = mVisibleRequested && mVisible;
+    
+    // 🐛 新 Bug：錯誤地跳過不可見 Activity 的 destroy
+    if (!nowVisible && finishing) {
+        return false;  // 跳過後續的 scheduleTransactionItem
+    }
+    
+    if (hasProcess()) {
+        mAtmService.mH.post(() -> {
+            try {
+                mAtmService.getLifecycleManager()
+                    .scheduleTransactionItem(app.getThread(),
+                        DestroyActivityItem.obtain(...));  // ← 這行不會執行
+            } catch (Exception e) { ... }
+        });
+    }
+    ...
+}</code></pre>
+            <p><strong>為什麼有效：</strong></p>
+            <ul>
+                <li><span class="pass-marker">條件符合：</span> <code>nowVisible = false && finishing = true</code></li>
+                <li>測試場景下會執行到這個分支</li>
+                <li>跳過 <code>scheduleTransactionItem</code> → Activity 不會收到 <code>onDestroy()</code></li>
+                <li>測試的 <code>waitAndAssertActivityStates(ON_DESTROY)</code> 會 timeout/fail</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Lesson Learned</h2>
+        <h3>選注入點的新標準</h3>
+        <ol>
+            <li><strong>畫出完整分支圖</strong> — 不只是函數調用，還要包含所有 if/else 分支</li>
+            <li><strong>模擬測試場景</strong> — 確定測試在這個場景下會走哪個分支</li>
+            <li><strong>驗證條件值</strong> — 確認 if 條件在測試場景下的值（true/false）</li>
+            <li><strong>確認 Bug 會執行</strong> — Bug 必須在測試執行路徑上，不能在不會走到的分支</li>
+            <li><strong>驗證 Bug 影響測試</strong> — Bug 影響的行為 = 測試 assertion 檢查的行為</li>
+        </ol>
+        
+        <h3>Q003 驗證的錯誤模式</h3>
+        <ul>
+            <li>❌ 只看函數名稱（<code>completeFinishing()</code> 會被調用）</li>
+            <li>❌ 沒有分析分支條件（<code>isCurrentVisible</code> 的值）</li>
+            <li>❌ 重複驗證期待不同結果</li>
+            <li>✅ 應該先畫分支圖，確認調用路徑，再設計 Bug</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>預期驗證結果</h2>
+        <p><strong>測試執行流程：</strong></p>
+        <ol>
+            <li>編譯套用新 Bug 的 AOSP</li>
+            <li>Flash 到測試設備</li>
+            <li>執行 <code>CtsWindowManagerDeviceTestCases</code> 中的 <code>ActivityLifecycleTests#testFinishBottom</code></li>
+            <li><strong>預期結果：</strong> <span class="bug-marker">測試 FAIL</span></li>
+            <li><strong>失敗原因：</strong> Timeout 或 Assertion Error（等不到 ON_DESTROY）</li>
+        </ol>
+        
+        <p><strong>如果測試還是 Pass：</strong></p>
+        <ul>
+            <li>表示調用路徑分析還是有誤</li>
+            <li>需要加 log 追蹤實際執行路徑</li>
+            <li>或用 method tracing 動態驗證</li>
+        </ul>
+    </div>
+
+    <div class="meta">
+        <p><strong>文件生成時間：</strong> 2026-02-25 19:54 GMT+8</p>
+        <p><strong>臨時頁面：</strong> 3 小時後自動下架</p>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>
