@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTS 領域統計報告 v1.1</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-card h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .stat-card p {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .chart-container h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+            margin-top: 20px;
+        }
+        .table-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .priority-high {
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .priority-mid {
+            background: #ffd93d;
+            color: #333;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .priority-low {
+            background: #95e1d3;
+            color: #333;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 CTS 領域統計報告</h1>
+            <p>版本：v1.1 | 更新時間：2026-02-25 | CTS 版本：Android 14 CTS r7</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>37</h3>
+                    <p>CTS 領域總數</p>
+                </div>
+                <div class="stat-card">
+                    <h3>~650</h3>
+                    <p>CTS 模組總數</p>
+                </div>
+                <div class="stat-card">
+                    <h3>~65,000</h3>
+                    <p>CTS 測項總數</p>
+                </div>
+                <div class="stat-card">
+                    <h3>15/37</h3>
+                    <p>題庫覆蓋率 (40%)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h2>📈 各領域模組數量分佈</h2>
+            <div class="chart-wrapper">
+                <canvas id="moduleChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h2>🎯 各領域測項數量排名（前15）</h2>
+            <div class="chart-wrapper">
+                <canvas id="testItemChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h2>📚 題庫覆蓋率</h2>
+            <div class="chart-wrapper" style="height: 500px;">
+                <canvas id="coverageChart"></canvas>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h2>🎯 擴展優先級建議</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>領域</th>
+                        <th>模組數</th>
+                        <th>估計測項數</th>
+                        <th>優先級</th>
+                        <th>原因說明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>packagemanager</strong></td>
+                        <td>37</td>
+                        <td>~3,774</td>
+                        <td><span class="priority-high">高</span></td>
+                        <td>應用安裝/權限管理是 Android 核心功能，面試常考點；AOSP 源碼結構清晰，適合出題</td>
+                    </tr>
+                    <tr>
+                        <td><strong>wifi</strong></td>
+                        <td>3</td>
+                        <td>~660</td>
+                        <td><span class="priority-high">高</span></td>
+                        <td>連網功能必備，實際開發常遇到；測項數適中，投入產出比高</td>
+                    </tr>
+                    <tr>
+                        <td><strong>bluetooth</strong></td>
+                        <td>2</td>
+                        <td>~354</td>
+                        <td><span class="priority-high">高</span></td>
+                        <td>IoT/穿戴設備關鍵技術，市場需求大；測項數少但重要性高</td>
+                    </tr>
+                    <tr>
+                        <td><strong>telecom</strong></td>
+                        <td>14</td>
+                        <td>~1,428</td>
+                        <td><span class="priority-mid">中</span></td>
+                        <td>電話/短信功能重要但較專業化；需要特殊硬體支援測試</td>
+                    </tr>
+                    <tr>
+                        <td><strong>libcore</strong></td>
+                        <td>11</td>
+                        <td>~3,289</td>
+                        <td><span class="priority-mid">中</span></td>
+                        <td>Java 核心庫測試，偏底層；對理解 Android 運行時有幫助</td>
+                    </tr>
+                    <tr>
+                        <td><strong>sysui</strong></td>
+                        <td>8</td>
+                        <td>~824</td>
+                        <td><span class="priority-mid">中</span></td>
+                        <td>系統 UI（狀態列/通知欄）重要；但與 framework 有重疊</td>
+                    </tr>
+                    <tr>
+                        <td><strong>art</strong></td>
+                        <td>155</td>
+                        <td>N/A</td>
+                        <td><span class="priority-low">低</span></td>
+                        <td>主要是 host-side 測試，測試 ART 虛擬機；不適合以 bug 注入方式出題</td>
+                    </tr>
+                    <tr>
+                        <td><strong>adservices</strong></td>
+                        <td>23</td>
+                        <td>~3,266</td>
+                        <td><span class="priority-low">低</span></td>
+                        <td>Android 13+ 新增的廣告服務 API；版本依賴性強，適用範圍有限</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h2>📋 完整領域數據表</h2>
+            <table id="fullDataTable">
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>領域</th>
+                        <th>模組數</th>
+                        <th>平均測項/模組</th>
+                        <th>估計測項數</th>
+                    </tr>
+                </thead>
+                <tbody id="fullDataBody">
+                    <!-- Will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>📄 版本：v1.1 | 🕒 最後更新：2026-02-25 22:54 GMT+8</p>
+            <p>數據來源：Android 14 CTS r7 | 估算誤差範圍：±20-30%</p>
+        </div>
+    </div>
+
+    <script>
+        // Full data
+        const domainData = [
+            {rank: 1, name: "framework", modules: 183, avgTests: 138, estimatedTests: 25254},
+            {rank: 2, name: "art", modules: 155, avgTests: null, estimatedTests: null},
+            {rank: 3, name: "systems", modules: 38, avgTests: 98, estimatedTests: 3724},
+            {rank: 4, name: "packagemanager", modules: 37, avgTests: 102, estimatedTests: 3774},
+            {rank: 5, name: "security", modules: 36, avgTests: 122, estimatedTests: 4392},
+            {rank: 6, name: "media", modules: 33, avgTests: 229, estimatedTests: 7557},
+            {rank: 7, name: "adservices", modules: 23, avgTests: 142, estimatedTests: 3266},
+            {rank: 8, name: "uitoolkit", modules: 21, avgTests: 147, estimatedTests: 3087},
+            {rank: 9, name: "networking", modules: 18, avgTests: 122, estimatedTests: 2196},
+            {rank: 10, name: "telecom", modules: 14, avgTests: 102, estimatedTests: 1428},
+            {rank: 11, name: "libcore", modules: 11, avgTests: 299, estimatedTests: 3289},
+            {rank: 12, name: "graphics", modules: 9, avgTests: 81, estimatedTests: 729},
+            {rank: 13, name: "sysui", modules: 8, avgTests: 103, estimatedTests: 824},
+            {rank: 14, name: "location", modules: 7, avgTests: 124, estimatedTests: 868},
+            {rank: 15, name: "devtools", modules: 6, avgTests: 88, estimatedTests: 528},
+            {rank: 16, name: "neuralnetworks", modules: 5, avgTests: 99, estimatedTests: 495},
+            {rank: 17, name: "bionic", modules: 5, avgTests: 80, estimatedTests: 400},
+            {rank: 18, name: "auto", modules: 5, avgTests: 152, estimatedTests: 760},
+            {rank: 19, name: "tv", modules: 4, avgTests: 187, estimatedTests: 748},
+            {rank: 20, name: "renderscript", modules: 4, avgTests: 252, estimatedTests: 1008},
+            {rank: 21, name: "wifi", modules: 3, avgTests: 220, estimatedTests: 660},
+            {rank: 22, name: "webview", modules: 3, avgTests: 226, estimatedTests: 678},
+            {rank: 23, name: "uwb", modules: 3, avgTests: 81, estimatedTests: 243},
+            {rank: 24, name: "misc", modules: 3, avgTests: 109, estimatedTests: 327},
+            {rank: 25, name: "metrics", modules: 3, avgTests: 139, estimatedTests: 417},
+            {rank: 26, name: "inputmethod", modules: 3, avgTests: 155, estimatedTests: 465},
+            {rank: 27, name: "camera", modules: 2, avgTests: 287, estimatedTests: 574},
+            {rank: 28, name: "bluetooth", modules: 2, avgTests: 177, estimatedTests: 354},
+            {rank: 29, name: "statsd", modules: 2, avgTests: 114, estimatedTests: 228},
+            {rank: 30, name: "print", modules: 2, avgTests: 96, estimatedTests: 192},
+            {rank: 31, name: "deviceinfo", modules: 2, avgTests: 81, estimatedTests: 162},
+            {rank: 32, name: "backup", modules: 2, avgTests: 86, estimatedTests: 172},
+            {rank: 33, name: "auth", modules: 2, avgTests: 103, estimatedTests: 206},
+            {rank: 34, name: "autofill", modules: 1, avgTests: 410, estimatedTests: 410},
+            {rank: 35, name: "vr", modules: 1, avgTests: 107, estimatedTests: 107},
+            {rank: 36, name: "hdmi", modules: 1, avgTests: 118, estimatedTests: 118},
+            {rank: 37, name: "contentcapture", modules: 1, avgTests: 50, estimatedTests: 50}
+        ];
+
+        // Populate full data table
+        const tbody = document.getElementById('fullDataBody');
+        domainData.forEach(item => {
+            const row = tbody.insertRow();
+            row.innerHTML = `
+                <td>${item.rank}</td>
+                <td><strong>${item.name}</strong></td>
+                <td>${item.modules}</td>
+                <td>${item.avgTests !== null ? item.avgTests : 'N/A'}</td>
+                <td>${item.estimatedTests !== null ? '~' + item.estimatedTests.toLocaleString() : 'N/A'}</td>
+            `;
+        });
+
+        // Chart 1: Module Distribution (Top 15)
+        const top15Modules = domainData.slice(0, 15);
+        new Chart(document.getElementById('moduleChart'), {
+            type: 'bar',
+            data: {
+                labels: top15Modules.map(d => d.name),
+                datasets: [{
+                    label: '模組數',
+                    data: top15Modules.map(d => d.modules),
+                    backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                    borderColor: 'rgba(102, 126, 234, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    title: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: '模組數' } }
+                }
+            }
+        });
+
+        // Chart 2: Test Items (Top 15, excluding art)
+        const top15Tests = domainData.filter(d => d.estimatedTests !== null).slice(0, 15);
+        new Chart(document.getElementById('testItemChart'), {
+            type: 'bar',
+            data: {
+                labels: top15Tests.map(d => d.name),
+                datasets: [{
+                    label: '估計測項數',
+                    data: top15Tests.map(d => d.estimatedTests),
+                    backgroundColor: 'rgba(118, 75, 162, 0.8)',
+                    borderColor: 'rgba(118, 75, 162, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: '測項數' } }
+                }
+            }
+        });
+
+        // Chart 3: Coverage Pie
+        new Chart(document.getElementById('coverageChart'), {
+            type: 'pie',
+            data: {
+                labels: ['已覆蓋 (15)', '未覆蓋 (22)'],
+                datasets: [{
+                    data: [15, 22],
+                    backgroundColor: [
+                        'rgba(102, 126, 234, 0.8)',
+                        'rgba(200, 200, 200, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(102, 126, 234, 1)',
+                        'rgba(200, 200, 200, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { font: { size: 14 } }
+                    },
+                    title: {
+                        display: true,
+                        text: '題庫覆蓋率：40% (15/37)',
+                        font: { size: 18 }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
