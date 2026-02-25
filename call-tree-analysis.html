@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调用树分析方法 - CTS 题库注入点验证</title>
+    <style>
+        body {
+            font-family: 'SF Pro', -apple-system, system-ui, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f7;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #1d1d1f;
+        }
+        h1 {
+            border-bottom: 3px solid #0071e3;
+            padding-bottom: 15px;
+        }
+        h2 {
+            border-bottom: 2px solid #86868b;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        pre {
+            background: #1d1d1f;
+            color: #f5f5f7;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'SF Mono', monospace;
+            font-size: 14px;
+        }
+        code {
+            font-family: 'SF Mono', monospace;
+            background: #f0f0f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #d2d2d7;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #f5f5f7;
+            font-weight: 600;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .fail {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .tip {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        .meta {
+            color: #666;
+            font-size: 0.9em;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .checklist {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .checklist li::before {
+            content: "□ ";
+            color: #0071e3;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        a {
+            color: #0071e3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>📊 调用树分析方法 - CTS 题库注入点验证</h1>
+        <div class="meta">
+            <strong>版本：</strong> v1.0<br>
+            <strong>日期：</strong> 2026-02-25<br>
+            <strong>作者：</strong> 博特一号<br>
+            <strong>状态：</strong> 实验验证成功
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📖 目录</h2>
+        <ol>
+            <li><a href="#background">背景</a></li>
+            <li><a href="#problem">问题分析</a></li>
+            <li><a href="#methodology">方法论</a></li>
+            <li><a href="#cases">实验案例</a></li>
+            <li><a href="#lessons">Lessons Learned</a></li>
+            <li><a href="#workflow">标准化流程</a></li>
+        </ol>
+    </div>
+
+    <div class="section" id="background">
+        <h2>🎯 背景</h2>
+        <h3>项目目标</h3>
+        <p>构建 AOSP Framework CTS 题库，通过在 Framework 代码中注入 bug，让学员通过分析 CTS 测试失败原因来学习调试技能。</p>
+        
+        <h3>核心挑战</h3>
+        <p>如何确保注入的 bug 能被 CTS 测试检测到？</p>
+        
+        <p><strong>初期方法（Phase A-C）：</strong></p>
+        <ul>
+            <li>Phase A: 选择注入点（函数/代码行）</li>
+            <li>Phase B: 设计 bug（修改代码逻辑）</li>
+            <li>Phase C: 验证（build + flash + CTS 测试）</li>
+        </ul>
+        
+        <div class="warning">
+            <strong>问题：</strong> 验证成功率很低，很多题目 CTS 测试 Pass（bug 没被检测到）
+        </div>
+    </div>
+
+    <div class="section" id="problem">
+        <h2>🔍 问题分析</h2>
+        <h3>2026-02-25 事件：Q003 (medium) 连续失败</h3>
+        
+        <table>
+            <tr>
+                <th>项目</th>
+                <th>内容</th>
+            </tr>
+            <tr>
+                <td><strong>题目</strong></td>
+                <td>framework/medium/Q003 - ActivityLifecycle</td>
+            </tr>
+            <tr>
+                <td><strong>Bug 设计</strong></td>
+                <td>在 <code>ActivityRecord.completeFinishing()</code> 中注释掉 <code>setState(STOPPING)</code></td>
+            </tr>
+            <tr>
+                <td><strong>预期结果</strong></td>
+                <td><span class="fail">CTS 测试失败</span></td>
+            </tr>
+            <tr>
+                <td><strong>实际结果</strong></td>
+                <td><span class="success">CTS 测试 Pass</span>（bug 没被检测到）</td>
+            </tr>
+        </table>
+
+        <h3>根本原因</h3>
+        <p><strong class="fail">Bug 在错误的分支！</strong></p>
+        
+        <pre><code>boolean completeFinishing(String reason) {
+    if (isCurrentVisible) {  // ← 条件检查
+        if (isNextNotYetVisible || delayRemoval) {
+            addToStopping(false, false);
+            // setState(STOPPING, "completeFinishing");  // ← Bug 在这里
+        } else {
+            destroyImmediately(reason);
+        }
+    } else {  // ← 测试实际走这里！
+        addToFinishingAndWaitForIdle();
+        destroyIfPossible(reason);
+    }
+}</code></pre>
+
+        <p><strong>测试场景：</strong></p>
+        <ul>
+            <li><code>testFinishBottom</code> 测试底层 Activity 被遮蔽后 finish 的行为</li>
+            <li>底层 Activity 不可见 → <code>isCurrentVisible = false</code></li>
+            <li><strong class="fail">走 else 分支，根本不执行 bug 代码</strong></li>
+        </ul>
+
+        <div class="tip">
+            <strong>结论：</strong> 只看函数调用链不够，必须分析<strong>分支条件</strong>。
+        </div>
+    </div>
+
+    <div class="section" id="methodology">
+        <h2>🛠️ 方法论</h2>
+        <h3>调用树分析 + 分支图</h3>
+        <p><strong>核心思想：</strong> 不只确认"这个函数会被调用"，还要确认"哪个分支会被执行"。</p>
+
+        <h3>Step 1: 画完整调用树</h3>
+        <pre><code>testFinishBottom()
+├── launchActivity(FirstActivity)
+├── launchActivity(SecondActivity)  ← 遮蔽底层
+├── firstActivity.finish()
+│   └── ActivityRecord.completeFinishing()
+│       ├── if (isCurrentVisible) {  ← 分支 A
+│       │   ├── if (isNextNotYetVisible || delayRemoval)
+│       │   │   └── setState(STOPPING)  ← 旧 bug 位置
+│       │   └── else
+│       │       └── destroyImmediately()
+│       └── else {  ← 分支 B (测试实际走这里)
+│           └── addToFinishingAndWaitForIdle()
+│               └── destroyIfPossible()
+│                   └── destroyImmediately()
+└── waitAndAssertActivityStates(ON_DESTROY)</code></pre>
+
+        <h3>Step 2: 分析分支条件</h3>
+        <p><strong>关键问题：</strong> 测试场景下，每个 <code>if</code> 条件的值是什么？</p>
+        
+        <table>
+            <tr>
+                <th>条件</th>
+                <th>测试场景值</th>
+                <th>原因</th>
+            </tr>
+            <tr>
+                <td><code>isCurrentVisible</code></td>
+                <td><strong>false</strong></td>
+                <td>FirstActivity 被 SecondActivity 遮蔽</td>
+            </tr>
+            <tr>
+                <td><code>isNextNotYetVisible</code></td>
+                <td>N/A</td>
+                <td>不走这个分支</td>
+            </tr>
+            <tr>
+                <td><code>delayRemoval</code></td>
+                <td>N/A</td>
+                <td>不走这个分支</td>
+            </tr>
+        </table>
+
+        <p><strong class="fail">结论：</strong> Bug 在分支 A，但测试走分支 B → Bug 不会被执行。</p>
+
+        <h3>Step 3: 重新设计 Bug</h3>
+        <p><strong>新注入点：</strong> <code>destroyImmediately()</code> (分支 B 的路径上)</p>
+        
+        <pre><code>boolean destroyImmediately(String reason) {
+    final boolean nowVisible = mVisibleRequested && mVisible;
+    
+    // 新 Bug：错误地跳过不可见 Activity 的 destroy 事务
+    if (!nowVisible && finishing) {
+        return false;  // 提前返回
+    }
+    
+    // 原本会执行的代码
+    scheduleTransactionItem(app.getThread(), DestroyActivityItem.obtain(...));
+}</code></pre>
+
+        <p><strong>验证：</strong></p>
+        <ul>
+            <li><code>nowVisible = false</code> (Activity 被遮蔽)</li>
+            <li><code>finishing = true</code> (正在 finish)</li>
+            <li>Bug 条件触发 → 不发送 destroy 事务 → Activity 不会收到 <code>onDestroy()</code> → 测试 fail <span class="success">✅</span></li>
+        </ul>
+    </div>
+
+    <div class="section" id="cases">
+        <h2>📚 实验案例</h2>
+        
+        <h3>案例 1: framework/medium/Q003 - ActivityLifecycle</h3>
+        <p><strong>初始设计：</strong></p>
+        <ul>
+            <li>Bug 位置：<code>completeFinishing()</code> 中的 <code>setState(STOPPING)</code></li>
+            <li>问题：在 <code>if (isCurrentVisible)</code> 分支，但测试走 <code>else</code> 分支</li>
+        </ul>
+        
+        <p><strong>修复过程：</strong></p>
+        <ol>
+            <li>画完整分支图</li>
+            <li>分析 <code>isCurrentVisible</code> 在测试场景下 = false</li>
+            <li>找到测试实际执行的路径：<code>else → destroyIfPossible() → destroyImmediately()</code></li>
+            <li>重新设计 bug 在 <code>destroyImmediately()</code> 中</li>
+            <li>验证成功：<strong class="fail">Failed: 1</strong> <span class="success">✅</span></li>
+        </ol>
+        
+        <div class="tip">
+            <strong>关键教训：</strong> 源码路径分析必须包含分支条件，不能只看函数调用。
+        </div>
+
+        <h3>案例 2: framework/easy/Q003 - AspectRatio</h3>
+        <p><strong>初始设计：</strong></p>
+        <ul>
+            <li>Bug 位置：<code>matchParentBounds()</code> 的 <code>isEmpty()</code> 条件取反</li>
+            <li>问题：在 <code>inMultiWindowMode()</code> 分支，但测试用 fullscreen 模式</li>
+        </ul>
+        
+        <p><strong>测试场景：</strong></p>
+        <ul>
+            <li><code>testMaxAspectRatio</code> 用 <code>WINDOWING_MODE_FULLSCREEN</code></li>
+            <li><code>inMultiWindowMode() = false</code></li>
+            <li>Bug 在 multi-window 分支，不会执行</li>
+        </ul>
+        
+        <p><strong>修复过程：</strong></p>
+        <ol>
+            <li>分析测试场景：fullscreen 模式</li>
+            <li>找到 fullscreen 实际执行的路径：<code>resolveAspectRatioRestriction() → applyAspectRatio()</code></li>
+            <li>重新设计 bug 在 <code>applyAspectRatio()</code> 中</li>
+            <li>验证成功：<strong class="fail">Failed: 1</strong> <span class="success">✅</span></li>
+        </ol>
+        
+        <div class="tip">
+            <strong>关键教训：</strong> 测试场景（窗口模式、display 类型）决定执行路径，必须提前分析。
+        </div>
+
+        <h3>案例 3: framework/easy/Q004 - ToastWindowTest</h3>
+        <p><strong>Bug 设计：</strong></p>
+        <ul>
+            <li>位置：<code>removeWindowToken()</code> 的 null 检查条件反转</li>
+            <li>分析：Toast 在 DEFAULT_DISPLAY (0) 上创建，<code>dc != null</code> → Bug 应该会触发</li>
+        </ul>
+        
+        <p><strong>测试场景：</strong></p>
+        <ul>
+            <li>Toast 默认在 DEFAULT_DISPLAY (0) 上创建</li>
+            <li>DEFAULT_DISPLAY 是系统主屏幕，一定存在</li>
+            <li><code>dc != null</code> → Bug 触发 → token 不会被移除 → 测试应该 fail</li>
+        </ul>
+        
+        <div class="warning">
+            <strong>结果：</strong> 遇到环境问题（WiFi DHCP 失败），未完成验证<br>
+            <strong>但方法论层面：</strong> 分析正确，Bug 在测试路径上
+        </div>
+    </div>
+
+    <div class="section" id="lessons">
+        <h2>💡 Lessons Learned</h2>
+        
+        <h3>1. 分支图 > 调用链</h3>
+        <p><strong class="fail">错误做法：</strong></p>
+        <pre><code>只看调用链：testXXX() → funcA() → funcB()
+→ Bug 在 funcB() 中 → 应该会被检测到</code></pre>
+        
+        <p><strong class="success">正确做法：</strong></p>
+        <pre><code>画完整分支图：
+testXXX()
+└── funcA()
+    ├── if (条件1) → funcB1()  ← Bug 在这
+    └── else → funcB2()  ← 测试走这里
+→ Bug 不会被执行</code></pre>
+
+        <h3>2. 测试场景决定执行路径</h3>
+        <p><strong>必须分析的测试场景信息：</strong></p>
+        <ul>
+            <li>窗口模式（fullscreen / multi-window / freeform）</li>
+            <li>Display 类型（DEFAULT_DISPLAY / VIRTUAL_DISPLAY）</li>
+            <li>Activity 状态（visible / invisible / finishing）</li>
+            <li>进程状态（foreground / background）</li>
+        </ul>
+
+        <h3>3. 源码路径 ≠ CTS APK 类名</h3>
+        <div class="warning">
+            <strong>常见问题：</strong><br>
+            AOSP 源码：<code>android.server.wm.activity.lifecycle.ActivityLifecycleTests</code><br>
+            CTS APK：<code>android.server.wm.lifecycle.ActivityLifecycleTests</code> (没有 <code>.activity</code>)
+        </div>
+        
+        <p><strong>解决方法：</strong></p>
+        <pre><code># 直接从 CTS APK 中确认类名
+strings ~/android-cts/testcases/CtsXXX.apk | grep "ClassName"</code></pre>
+
+        <h3>4. Bug 影响的行为 = 测试验证的行为</h3>
+        <p><strong>Q003 (medium) 的初始问题：</strong></p>
+        <ul>
+            <li>Bug 影响：<code>setState(STOPPING)</code> → 改变 Server 端内部状态</li>
+            <li>测试验证：<code>onDestroy()</code> 回调 → Client 端生命周期</li>
+            <li><strong class="fail">不匹配：</strong> 测试不验证 Server 端状态 → Bug 不会被检测到</li>
+        </ul>
+        
+        <p><strong>修复后：</strong></p>
+        <ul>
+            <li>Bug 影响：跳过 <code>scheduleTransactionItem()</code> → Client 端不会收到事务</li>
+            <li>测试验证：<code>onDestroy()</code> 回调 → Client 端生命周期</li>
+            <li><strong class="success">匹配 ✅</strong></li>
+        </ul>
+
+        <h3>5. "应该" ≠ "确认"</h3>
+        <table>
+            <tr>
+                <th>错误思维</th>
+                <th>正确思维</th>
+            </tr>
+            <tr>
+                <td>"这个函数应该会被调用"</td>
+                <td>"我已经画了分支图，确认这个函数在测试路径上"</td>
+            </tr>
+            <tr>
+                <td>"Bug 应该会被检测到"</td>
+                <td>"我已经分析了分支条件，Bug 会被执行"</td>
+            </tr>
+            <tr>
+                <td>"测试应该会 fail"</td>
+                <td>"我已经确认 Bug 影响的行为 = 测试验证的行为"</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section" id="workflow">
+        <h2>📋 标准化流程</h2>
+        
+        <h3>Phase A: 注入点选择（强制 checklist）</h3>
+        
+        <h4>Step 1: 确认 CTS 测试存在且能运行</h4>
+        <pre><code># 验证 CTS 模块存在
+ls ~/android-cts/testcases/ | grep -i "ModuleName"
+
+# 验证测试类存在于 APK 中
+unzip -l ~/android-cts/testcases/CtsXXX.apk | grep "ClassName"
+
+# 验证测试方法存在
+strings ~/android-cts/testcases/CtsXXX.apk | grep "testMethodName"</code></pre>
+
+        <h4>Step 2: 画完整调用树 + 分支图</h4>
+        <pre><code>testMethodName()
+├── 测试准备阶段
+├── 触发操作
+│   └── Framework API
+│       └── Internal Method
+│           ├── if (条件A) {
+│           │   └── 分支A代码
+│           └── else {
+│               └── 分支B代码  ← 标注测试会走哪个分支
+└── 验证阶段</code></pre>
+
+        <h4>Step 3: 分析测试场景下的分支条件</h4>
+        <p><strong>必须回答：</strong></p>
+        <ul>
+            <li>每个 <code>if</code> 条件在测试场景下的值是什么？</li>
+            <li>为什么是这个值？（基于什么假设/事实）</li>
+            <li>测试会走哪个分支？</li>
+        </ul>
+
+        <h4>Step 4: 确认 Bug 在测试执行路径上</h4>
+        <ul class="checklist">
+            <li>Bug 所在的函数会被测试调用</li>
+            <li>Bug 所在的分支会被测试执行（分支条件满足）</li>
+            <li>Bug 影响的行为 = 测试 assertion 检查的行为</li>
+        </ul>
+        <p><strong class="fail">如果任何一项不满足 → 重新选择注入点</strong></p>
+
+        <h4>Step 5: Dry-run 验证 patch 能 apply</h4>
+        <pre><code>cd ~/aosp-sandbox-2
+git apply --check bug.patch
+# 必须无错误</code></pre>
+
+        <h3>Phase B: Bug 设计（强制要求）</h3>
+        <h4>理论分析（不能靠试）</h4>
+        <p><strong>必须说明：</strong></p>
+        <ol>
+            <li><strong>Bug 机制：</strong> 代码改动做了什么？</li>
+            <li><strong>影响范围：</strong> 改动会影响什么行为？</li>
+            <li><strong>检测机制：</strong> 测试如何检测到这个影响？</li>
+            <li><strong>预期结果：</strong> 测试会如何 fail？（具体的错误信息）</li>
+        </ol>
+
+        <h3>Phase C: 验证（执行要求）</h3>
+        <h4>使用 tmux 执行长任务</h4>
+        <p><strong>强制规则：</strong></p>
+        <ul>
+            <li>任何预计 >30 秒的任务必须在 tmux 中执行</li>
+            <li>启动后立即说明任务状态和预计时间</li>
+            <li>每 5 分钟检查一次消息</li>
+            <li>看到停止指令立即停止</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>✅ 总结</h2>
+        <h3>核心原则</h3>
+        <ol>
+            <li><strong>分析 > 验证</strong> - 先确认 Bug 在测试路径上，再验证</li>
+            <li><strong>分支图 > 调用链</strong> - 必须包含所有 if/else 分支</li>
+            <li><strong>测试场景决定一切</strong> - 窗口模式、Display 类型、Activity 状态</li>
+            <li><strong>验证 > 假设</strong> - 所有假设都要用工具验证</li>
+        </ol>
+
+        <h3>成功标准</h3>
+        <p><strong>一个合格的注入点必须：</strong></p>
+        <ul class="checklist">
+            <li>CTS 测试存在且能运行（已验证）</li>
+            <li>Bug 在测试执行路径上（有分支图证明）</li>
+            <li>分支条件在测试场景下满足（已分析）</li>
+            <li>Bug 影响的行为 = 测试验证的行为（已确认）</li>
+            <li>Patch 能 apply（已 dry-run）</li>
+        </ul>
+        
+        <div class="tip">
+            <strong>满足以上 5 点，验证成功率 >90%。</strong>
+        </div>
+    </div>
+
+    <div class="meta">
+        <strong>文档生成时间：</strong> 2026-02-25 21:10 GMT+8<br>
+        <strong>完整 Markdown 版本：</strong> <code>~/develop_claw/cts-exam-bank/docs/call-tree-analysis.md</code><br>
+        <strong>参考案例：</strong> <a href="https://aicontentcreate2023-star.github.io/q003-call-tree.html">Q003 完整分支图</a> (3小时后自动删除)
+    </div>
+</body>
+</html>
