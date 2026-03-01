@@ -1,7 +1,7 @@
 # Bug Bounty 赏金任务整理报告
 
-📄 **版本：** v1.3  
-🕒 **最后更新：** 2026-03-01 19:33 GMT+8  
+📄 **版本：** v1.4  
+🕒 **最后更新：** 2026-03-01 19:35 GMT+8  
 👤 **撰写：** 阿福 (一号)  
 🔄 **审阅协助：** 四号
 
@@ -106,11 +106,32 @@ Bug Bounty（漏洞赏金）是一种"按效果付费"的安全测试模式，�
   - 高质量项目筛选
 - **适合：** 专业智能合约审计员
 
-### 8. **其他平台**
+### 8. **GitHub 相关 Bug Bounty**
+- **GitHub Bug Bounty**
+  - 网址: https://bounty.github.com/
+  - 通过 HackerOne 运营
+  - 赏金: $617 - $30,000+
+  - 范围: GitHub.com, GitHub Enterprise, Actions 等
+  
+- **Internet Bug Bounty (IBB)**
+  - 网址: https://hackerone.com/ibb
+  - 保护核心开源基础设施
+  - 涵盖: OpenSSL, Apache, Nginx, curl 等
+  - 赏金: $2,500 - $30,000+
+
+- **开源项目自己的计划**
+  - 很多大型开源项目有 `SECURITY.md` 说明赏金政策
+  - 例如: curl, Electron, Node.js, GitLab
+  - 通常通过 HackerOne/Bugcrowd 运营
+
+### 9. **其他平台**
 - **Synack** - 精英研究员模式
 - **Cobalt.io** - 敏捷渗透测试
 - **Open Bug Bounty** - 免费公开披露平台
-- **Disclose.io** - 漏洞披露政策目录
+- **Disclose.io** - 漏洞披露政策目录（重要资源！）
+  - GitHub: https://github.com/disclose/diodb
+  - 统整各公司/项目的漏洞披露政策
+  - 可查询是否有赏金计划
 
 ---
 
@@ -696,6 +717,7 @@ Bug Bounty（漏洞赏金）是一种"按效果付费"的安全测试模式，�
 1. **HackerOne** - 最大平台，资源最多
 2. **Bugcrowd** - 专业支持好
 3. **Intigriti** - 欧洲友好，社区活跃
+4. **Internet Bug Bounty** - 开源项目，社区友好
 
 ### 推荐资产类型（新手）
 1. **Domain / Web App** - 学习资源最多
@@ -763,6 +785,33 @@ go install -v github.com/projectdiscovery/katana/cmd/katana@latest
   - 支持 HackerOne, Bugcrowd, Intigriti, YesWeHack, Federacy
   - 可用于自动化目标侦查
   - URL: https://github.com/arkadiyt/bounty-targets-data
+
+- **disclose/diodb** (漏洞披露政策数据库)
+  - 统整各公司/项目的漏洞披露政策
+  - 包含赏金信息、联系方式、披露政策
+  - 可查询特定公司是否有 bug bounty
+  - URL: https://github.com/disclose/diodb
+
+### 如何找 GitHub 上有 Bug Bounty 的项目
+**方法 1：搜索 SECURITY.md**
+```
+"security.md" site:github.com "bug bounty"
+"security.md" site:github.com "vulnerability disclosure"
+```
+
+**方法 2：查看 .github/SECURITY.md**
+- 访问项目主页，点击 "Security" 标签
+- 查看是否有披露政策和赏金说明
+
+**方法 3：使用 disclose/diodb**
+- 查询数据库中的开源项目
+- 筛选有 `bounty: true` 的项目
+
+**常见有赏金的开源项目类型：**
+- 浏览器引擎（Chromium, Firefox）
+- 编程语言运行时（Node.js, Python）
+- 核心库（OpenSSL, curl, libssh）
+- 大型框架（Electron, React Native）
 
 ### 亚洲区域平台
 - **漏洞盒子** (VulBox)
