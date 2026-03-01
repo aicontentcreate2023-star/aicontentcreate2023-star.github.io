@@ -1,7 +1,7 @@
 # Bug Bounty 赏金任务整理报告
 
-📄 **版本：** v1.1  
-🕒 **最后更新：** 2026-03-01 19:32 GMT+8  
+📄 **版本：** v1.2  
+🕒 **最后更新：** 2026-03-01 19:33 GMT+8  
 👤 **撰写：** 阿福 (一号)  
 🔄 **审阅协助：** 四号
 
@@ -84,7 +84,29 @@ Bug Bounty（漏洞赏金）是一种"按效果付费"的安全测试模式，�
   - Audit Competition 模式
   - Web3 Security Playbook
 
-### 6. **其他平台**
+### 6. **Code4rena** ⭐⭐⭐⭐ (Web3 审计竞赛)
+- **网址：** https://code4rena.com/
+- **特点：** 竞赛式智能合约审计平台
+- **模式：** 多个审计员同时审计同一项目，按发现漏洞质量分配奖金池
+- **优势：**
+  - 高额奖金池（通常 $50k-$500k+）
+  - 透明的评分机制
+  - 社区驱动
+  - 审计报告公开
+- **适合：** Solidity 审计专家，竞争性强
+
+### 7. **Sherlock** ⭐⭐⭐⭐ (Web3 审计 + 保险)
+- **网址：** https://www.sherlock.xyz/
+- **特点：** 审计竞赛 + 智能合约保险
+- **模式：** 审计竞赛 + 持续保障
+- **优势：**
+  - 审计员质押代币（skin in the game）
+  - 发现漏洞获得奖励
+  - 审计后提供保险覆盖
+  - 高质量项目筛选
+- **适合：** 专业智能合约审计员
+
+### 8. **其他平台**
 - **Synack** - 精英研究员模式
 - **Cobalt.io** - 敏捷渗透测试
 - **Open Bug Bounty** - 免费公开披露平台
@@ -137,9 +159,11 @@ Bug Bounty（漏洞赏金）是一种"按效果付费"的安全测试模式，�
 
 ### 6. **Audit Competition** 🏆 (Web3)
 - **描述：** 智能合约代码审计竞赛
-- **平台：** Immunefi, Code4rena
-- **特点：** 多个研究员竞争找出最多/最严重漏洞
-- **适合：** 智能合约审计专家
+- **平台：** Code4rena, Sherlock, Immunefi
+- **特点：** 多个研究员竞争找出最多/最严重漏洞，按质量分配奖金池
+- **奖金池：** 通常 $50k - $500k+
+- **适合：** 智能合约审计专家（Solidity, Vyper）
+- **优势：** 高额奖金、透明评分、社区学习
 
 ---
 
@@ -681,6 +705,8 @@ Bug Bounty（漏洞赏金）是一种"按效果付费"的安全测试模式，�
 - Intigriti: https://www.intigriti.com/
 - YesWeHack: https://www.yeswehack.com/
 - Immunefi (Web3): https://immunefi.com/
+- Code4rena (Web3 Audits): https://code4rena.com/
+- Sherlock (Web3 Audits + Insurance): https://www.sherlock.xyz/
 
 ### 学习资源
 - PortSwigger Academy: https://portswigger.net/web-security
