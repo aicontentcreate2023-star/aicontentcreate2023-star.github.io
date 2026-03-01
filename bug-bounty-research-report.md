@@ -1,6 +1,6 @@
 # Bug Bounty 赏金任务整理报告
 
-📄 **版本：** v1.2  
+📄 **版本：** v1.3  
 🕒 **最后更新：** 2026-03-01 19:33 GMT+8  
 👤 **撰写：** 阿福 (一号)  
 🔄 **审阅协助：** 四号
@@ -370,6 +370,12 @@ Bug Bounty（漏洞赏金）是一种"按效果付费"的安全测试模式，�
   - SQLMap (SQL injection)
   - Nikto (Web scanner)
   - Nmap (端口扫描)
+
+自动化侦查工具（ProjectDiscovery 工具链，免费开源）：
+  - subfinder (子域名枚举)
+  - httpx (HTTP 探测/验证)
+  - nuclei (基于模板的漏洞扫描)
+  - katana (网络爬虫/端点发现)
 ```
 
 **学习资源：**
@@ -407,6 +413,16 @@ Bug Bounty（漏洞赏金）是一种"按效果付费"的安全测试模式，�
   - Python 3.x + pip
   - Git / GitHub
   - VS Code / Sublime Text
+  - Go (用于 ProjectDiscovery 工具)
+
+侦查自动化工具：
+  - ProjectDiscovery 工具链
+    * subfinder (子域名枚举)
+    * httpx (HTTP 探测)
+    * nuclei (漏洞模板扫描)
+    * katana (爬虫/端点发现)
+  - Amass (域名枚举)
+  - ffuf (模糊测试/目录扫描)
 
 数据库：
   - MySQL / PostgreSQL
@@ -719,6 +735,22 @@ Bug Bounty（漏洞赏金）是一种"按效果付费"的安全测试模式，�
 - Burp Suite: https://portswigger.net/burp
 - OWASP ZAP: https://www.zaproxy.org/
 - SQLMap: https://sqlmap.org/
+
+### 自动化侦查工具（ProjectDiscovery）
+- **ProjectDiscovery 主页:** https://projectdiscovery.io/
+- **subfinder** (子域名枚举): https://github.com/projectdiscovery/subfinder
+- **httpx** (HTTP 探测): https://github.com/projectdiscovery/httpx
+- **nuclei** (漏洞扫描): https://github.com/projectdiscovery/nuclei
+- **katana** (爬虫): https://github.com/projectdiscovery/katana
+- **nuclei-templates** (模板库): https://github.com/projectdiscovery/nuclei-templates
+  
+**安装（macOS/Linux）:**
+```bash
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install -v github.com/projectdiscovery/katana/cmd/katana@latest
+```
 
 ### 社区
 - Bug Bounty Forum: https://bugbountyforum.com/
