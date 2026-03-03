@@ -242,6 +242,7 @@
             font-weight: 500;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -436,6 +437,13 @@
             </div>
         </div>
         
+        <div class="chart-section">
+            <h2>📈 Trend Analysis</h2>
+            <div class="chart-container">
+                <canvas id="trendChart" style="max-height: 400px;"></canvas>
+            </div>
+        </div>
+        
         <div class="footer">
             <div class="legend">
                 <div class="legend-item">
@@ -468,6 +476,89 @@
                 }, 100);
             });
         });
+
+        
+        // Trend Chart
+        const ctx = document.getElementById('trendChart');
+        if (ctx) {
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Mar 1', 'Mar 2', 'Mar 3'],
+                    datasets: [{
+                        label: 'Total PRs',
+                        data: [4, 15, 25],
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        borderWidth: 3
+                    }, {
+                        label: 'Merged',
+                        data: [2, 4, 4],
+                        borderColor: '#28a745',
+                        backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        borderWidth: 2
+                    }, {
+                        label: 'Rejected',
+                        data: [1, 1, 3],
+                        borderColor: '#dc3545',
+                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        borderWidth: 2
+                    }, {
+                        label: 'Open',
+                        data: [0, 9, 14],
+                        borderColor: '#ffc107',
+                        backgroundColor: 'rgba(255, 193, 7, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Daily PR Status Trends',
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            },
+                            color: '#667eea'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 5
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
     </script>
 </body>
 </html>
