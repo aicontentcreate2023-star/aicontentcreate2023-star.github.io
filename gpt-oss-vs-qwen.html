@@ -14,116 +14,168 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 20px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            padding: 40px;
+            padding: 30px 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         h1 {
             text-align: center;
             color: #2d3748;
-            margin-bottom: 10px;
-            font-size: 2.5em;
+            margin-bottom: 8px;
+            font-size: 1.8em;
+            line-height: 1.2;
         }
         .subtitle {
             text-align: center;
             color: #718096;
-            margin-bottom: 40px;
-            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-size: 0.95em;
         }
         .highlight-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         .highlight-box h2 {
-            margin-bottom: 15px;
-            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-size: 1.4em;
         }
         .highlight-box p {
-            font-size: 1.3em;
+            font-size: 1.05em;
             line-height: 1.6;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-        }
-        th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-        td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        tr:hover {
-            background-color: #f7fafc;
-        }
-        .model-name {
-            font-weight: 600;
-            color: #2d3748;
-        }
-        .score {
-            font-weight: 600;
-        }
-        .diff-positive {
-            color: #48bb78;
-            font-weight: 600;
-        }
-        .diff-negative {
-            color: #f56565;
-            font-weight: 600;
         }
         .section-title {
             color: #2d3748;
-            margin: 30px 0 20px 0;
-            font-size: 1.8em;
+            margin: 30px 0 15px 0;
+            font-size: 1.5em;
             border-left: 5px solid #667eea;
-            padding-left: 15px;
+            padding-left: 12px;
+        }
+        .benchmark-card {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .benchmark-name {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+        }
+        .score-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .score-row:last-child {
+            border-bottom: none;
+        }
+        .model-label {
+            color: #4a5568;
+            font-size: 0.9em;
+        }
+        .score-value {
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        .score-gpt {
+            color: #e53e3e;
+        }
+        .score-qwen27 {
+            color: #38a169;
+        }
+        .score-qwen122 {
+            color: #3182ce;
+        }
+        .diff-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .diff-negative {
+            background: #fed7d7;
+            color: #c53030;
+        }
+        .diff-positive {
+            background: #c6f6d5;
+            color: #2f855a;
+        }
+        .param-grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .param-card {
+            background: #edf2f7;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .param-card h3 {
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .param-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 0.95em;
+        }
+        .param-label {
+            color: #4a5568;
+        }
+        .param-value {
+            font-weight: 600;
+            color: #2d3748;
         }
         .conclusion {
             background: #edf2f7;
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             border-left: 5px solid #667eea;
+            margin-bottom: 20px;
         }
         .conclusion h3 {
             color: #2d3748;
             margin-bottom: 15px;
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
         .conclusion ul {
             list-style: none;
             padding-left: 0;
         }
         .conclusion li {
-            padding: 10px 0;
-            font-size: 1.1em;
+            padding: 8px 0;
+            font-size: 1em;
             color: #4a5568;
+            line-height: 1.5;
         }
         .conclusion li:before {
             content: "✓ ";
             color: #667eea;
             font-weight: bold;
-            margin-right: 10px;
+            margin-right: 8px;
         }
         .footer {
             text-align: center;
             color: #a0aec0;
-            margin-top: 40px;
-            font-size: 0.9em;
+            margin-top: 30px;
+            font-size: 0.85em;
         }
     </style>
 </head>
@@ -139,127 +191,190 @@
         </div>
 
         <h2 class="section-title">📊 Benchmark 性能对比</h2>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>测试项目</th>
-                    <th>GPT-OSS-120B</th>
-                    <th>Qwen3.5-27B</th>
-                    <th>Qwen3.5-122B-A10B</th>
-                    <th>差距 (vs 27B)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="model-name">MMLU-Pro</td>
-                    <td class="score">80.8</td>
-                    <td class="score">86.1</td>
-                    <td class="score">86.7</td>
-                    <td class="diff-negative">-5.3</td>
-                </tr>
-                <tr>
-                    <td class="model-name">MMLU-Redux</td>
-                    <td class="score">91.0</td>
-                    <td class="score">93.2</td>
-                    <td class="score">94.0</td>
-                    <td class="diff-negative">-2.2</td>
-                </tr>
-                <tr>
-                    <td class="model-name">GPQA Diamond</td>
-                    <td class="score">80.1</td>
-                    <td class="score">85.5</td>
-                    <td class="score">86.6</td>
-                    <td class="diff-negative">-5.4</td>
-                </tr>
-                <tr>
-                    <td class="model-name">C-Eval (中文)</td>
-                    <td class="score">76.2</td>
-                    <td class="score">90.5</td>
-                    <td class="score">91.9</td>
-                    <td class="diff-negative">-14.3</td>
-                </tr>
-                <tr>
-                    <td class="model-name">HLE w/ CoT</td>
-                    <td class="score">14.9</td>
-                    <td class="score">24.3</td>
-                    <td class="score">25.3</td>
-                    <td class="diff-negative">-9.4</td>
-                </tr>
-                <tr>
-                    <td class="model-name">SWE-bench Verified</td>
-                    <td class="score">62.0</td>
-                    <td class="score">72.4</td>
-                    <td class="score">72.0</td>
-                    <td class="diff-negative">-10.4</td>
-                </tr>
-                <tr>
-                    <td class="model-name">IFEval</td>
-                    <td class="score">88.9</td>
-                    <td class="score">95.0</td>
-                    <td class="score">93.4</td>
-                    <td class="diff-negative">-6.1</td>
-                </tr>
-                <tr>
-                    <td class="model-name">LiveCodeBench v6</td>
-                    <td class="score">82.7</td>
-                    <td class="score">80.7</td>
-                    <td class="score">78.9</td>
-                    <td class="diff-positive">+2.0</td>
-                </tr>
-                <tr>
-                    <td class="model-name">IFBench</td>
-                    <td class="score">69.0</td>
-                    <td class="score">76.5</td>
-                    <td class="score">76.1</td>
-                    <td class="diff-negative">-7.5</td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="benchmark-card">
+            <div class="benchmark-name">MMLU-Pro (知识)</div>
+            <div class="score-row">
+                <span class="model-label">GPT-OSS-120B</span>
+                <span class="score-value score-gpt">80.8</span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-27B</span>
+                <span class="score-value score-qwen27">86.1 <span class="diff-badge diff-negative">-5.3</span></span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-122B</span>
+                <span class="score-value score-qwen122">86.7</span>
+            </div>
+        </div>
+
+        <div class="benchmark-card">
+            <div class="benchmark-name">MMLU-Redux (知识)</div>
+            <div class="score-row">
+                <span class="model-label">GPT-OSS-120B</span>
+                <span class="score-value score-gpt">91.0</span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-27B</span>
+                <span class="score-value score-qwen27">93.2 <span class="diff-badge diff-negative">-2.2</span></span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-122B</span>
+                <span class="score-value score-qwen122">94.0</span>
+            </div>
+        </div>
+
+        <div class="benchmark-card">
+            <div class="benchmark-name">GPQA Diamond (推理)</div>
+            <div class="score-row">
+                <span class="model-label">GPT-OSS-120B</span>
+                <span class="score-value score-gpt">80.1</span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-27B</span>
+                <span class="score-value score-qwen27">85.5 <span class="diff-badge diff-negative">-5.4</span></span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-122B</span>
+                <span class="score-value score-qwen122">86.6</span>
+            </div>
+        </div>
+
+        <div class="benchmark-card">
+            <div class="benchmark-name">C-Eval (中文知识)</div>
+            <div class="score-row">
+                <span class="model-label">GPT-OSS-120B</span>
+                <span class="score-value score-gpt">76.2</span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-27B</span>
+                <span class="score-value score-qwen27">90.5 <span class="diff-badge diff-negative">-14.3</span></span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-122B</span>
+                <span class="score-value score-qwen122">91.9</span>
+            </div>
+        </div>
+
+        <div class="benchmark-card">
+            <div class="benchmark-name">HLE w/ CoT (高难度推理)</div>
+            <div class="score-row">
+                <span class="model-label">GPT-OSS-120B</span>
+                <span class="score-value score-gpt">14.9</span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-27B</span>
+                <span class="score-value score-qwen27">24.3 <span class="diff-badge diff-negative">-9.4</span></span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-122B</span>
+                <span class="score-value score-qwen122">25.3</span>
+            </div>
+        </div>
+
+        <div class="benchmark-card">
+            <div class="benchmark-name">SWE-bench Verified (代码)</div>
+            <div class="score-row">
+                <span class="model-label">GPT-OSS-120B</span>
+                <span class="score-value score-gpt">62.0</span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-27B</span>
+                <span class="score-value score-qwen27">72.4 <span class="diff-badge diff-negative">-10.4</span></span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-122B</span>
+                <span class="score-value score-qwen122">72.0</span>
+            </div>
+        </div>
+
+        <div class="benchmark-card">
+            <div class="benchmark-name">LiveCodeBench v6 (编程)</div>
+            <div class="score-row">
+                <span class="model-label">GPT-OSS-120B</span>
+                <span class="score-value score-gpt">82.7</span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-27B</span>
+                <span class="score-value score-qwen27">80.7 <span class="diff-badge diff-positive">+2.0</span></span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-122B</span>
+                <span class="score-value score-qwen122">78.9</span>
+            </div>
+        </div>
+
+        <div class="benchmark-card">
+            <div class="benchmark-name">IFEval (指令遵循)</div>
+            <div class="score-row">
+                <span class="model-label">GPT-OSS-120B</span>
+                <span class="score-value score-gpt">88.9</span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-27B</span>
+                <span class="score-value score-qwen27">95.0 <span class="diff-badge diff-negative">-6.1</span></span>
+            </div>
+            <div class="score-row">
+                <span class="model-label">Qwen3.5-122B</span>
+                <span class="score-value score-qwen122">93.4</span>
+            </div>
+        </div>
 
         <h2 class="section-title">🔍 参数对比</h2>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>模型</th>
-                    <th>总参数</th>
-                    <th>激活参数</th>
-                    <th>架构类型</th>
-                    <th>硬件需求</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="model-name">GPT-OSS-120B</td>
-                    <td>120B</td>
-                    <td>5.1B</td>
-                    <td>MoE (稀疏)</td>
-                    <td>单 80GB GPU</td>
-                </tr>
-                <tr>
-                    <td class="model-name">Qwen3.5-27B</td>
-                    <td>27B</td>
-                    <td>27B (全激活)</td>
-                    <td>密集模型</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td class="model-name">Qwen3.5-122B-A10B</td>
-                    <td>122B</td>
-                    <td>10B</td>
-                    <td>MoE (稀疏)</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td class="model-name">Qwen3.5-397B-A17B</td>
-                    <td>397B</td>
-                    <td>17B</td>
-                    <td>MoE (稀疏)</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="param-grid">
+            <div class="param-card">
+                <h3>GPT-OSS-120B</h3>
+                <div class="param-item">
+                    <span class="param-label">总参数</span>
+                    <span class="param-value">120B</span>
+                </div>
+                <div class="param-item">
+                    <span class="param-label">激活参数</span>
+                    <span class="param-value">5.1B</span>
+                </div>
+                <div class="param-item">
+                    <span class="param-label">架构</span>
+                    <span class="param-value">MoE (稀疏)</span>
+                </div>
+                <div class="param-item">
+                    <span class="param-label">硬件需求</span>
+                    <span class="param-value">单 80GB GPU</span>
+                </div>
+            </div>
+
+            <div class="param-card">
+                <h3>Qwen3.5-27B</h3>
+                <div class="param-item">
+                    <span class="param-label">总参数</span>
+                    <span class="param-value">27B</span>
+                </div>
+                <div class="param-item">
+                    <span class="param-label">激活参数</span>
+                    <span class="param-value">27B (全激活)</span>
+                </div>
+                <div class="param-item">
+                    <span class="param-label">架构</span>
+                    <span class="param-value">密集模型</span>
+                </div>
+            </div>
+
+            <div class="param-card">
+                <h3>Qwen3.5-122B-A10B</h3>
+                <div class="param-item">
+                    <span class="param-label">总参数</span>
+                    <span class="param-value">122B</span>
+                </div>
+                <div class="param-item">
+                    <span class="param-label">激活参数</span>
+                    <span class="param-value">10B</span>
+                </div>
+                <div class="param-item">
+                    <span class="param-label">架构</span>
+                    <span class="param-value">MoE (稀疏)</span>
+                </div>
+            </div>
+        </div>
 
         <div class="conclusion">
             <h3>💡 关键发现</h3>
@@ -273,7 +388,8 @@
         </div>
 
         <div class="footer">
-            <p>数据来源：Hugging Face 官方 Model Cards | 更新时间：2026-03-04</p>
+            <p>数据来源：Hugging Face 官方 Model Cards</p>
+            <p>更新时间：2026-03-04</p>
         </div>
     </div>
 </body>
