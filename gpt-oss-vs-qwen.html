@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-OSS-120B vs Qwen3.5 性能对比</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .highlight-box h2 {
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        .highlight-box p {
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:hover {
+            background-color: #f7fafc;
+        }
+        .model-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        .score {
+            font-weight: 600;
+        }
+        .diff-positive {
+            color: #48bb78;
+            font-weight: 600;
+        }
+        .diff-negative {
+            color: #f56565;
+            font-weight: 600;
+        }
+        .section-title {
+            color: #2d3748;
+            margin: 30px 0 20px 0;
+            font-size: 1.8em;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+        .conclusion {
+            background: #edf2f7;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        .conclusion h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .conclusion ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .conclusion li {
+            padding: 10px 0;
+            font-size: 1.1em;
+            color: #4a5568;
+        }
+        .conclusion li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .footer {
+            text-align: center;
+            color: #a0aec0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 GPT-OSS-120B vs Qwen3.5 性能对比</h1>
+        <p class="subtitle">基于官方 Benchmark 数据分析</p>
+
+        <div class="highlight-box">
+            <h2>🎯 核心结论</h2>
+            <p><strong>GPT-OSS-120B (120B 参数，5.1B 激活) ≈ Qwen3.5-14B ~ Qwen3.5-27B 之间</strong></p>
+            <p>虽然总参数达 120B，但因 MoE 稀疏激活机制，实际能力接近 Qwen3.5 的 14B~20B 密集模型</p>
+        </div>
+
+        <h2 class="section-title">📊 Benchmark 性能对比</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>测试项目</th>
+                    <th>GPT-OSS-120B</th>
+                    <th>Qwen3.5-27B</th>
+                    <th>Qwen3.5-122B-A10B</th>
+                    <th>差距 (vs 27B)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="model-name">MMLU-Pro</td>
+                    <td class="score">80.8</td>
+                    <td class="score">86.1</td>
+                    <td class="score">86.7</td>
+                    <td class="diff-negative">-5.3</td>
+                </tr>
+                <tr>
+                    <td class="model-name">MMLU-Redux</td>
+                    <td class="score">91.0</td>
+                    <td class="score">93.2</td>
+                    <td class="score">94.0</td>
+                    <td class="diff-negative">-2.2</td>
+                </tr>
+                <tr>
+                    <td class="model-name">GPQA Diamond</td>
+                    <td class="score">80.1</td>
+                    <td class="score">85.5</td>
+                    <td class="score">86.6</td>
+                    <td class="diff-negative">-5.4</td>
+                </tr>
+                <tr>
+                    <td class="model-name">C-Eval (中文)</td>
+                    <td class="score">76.2</td>
+                    <td class="score">90.5</td>
+                    <td class="score">91.9</td>
+                    <td class="diff-negative">-14.3</td>
+                </tr>
+                <tr>
+                    <td class="model-name">HLE w/ CoT</td>
+                    <td class="score">14.9</td>
+                    <td class="score">24.3</td>
+                    <td class="score">25.3</td>
+                    <td class="diff-negative">-9.4</td>
+                </tr>
+                <tr>
+                    <td class="model-name">SWE-bench Verified</td>
+                    <td class="score">62.0</td>
+                    <td class="score">72.4</td>
+                    <td class="score">72.0</td>
+                    <td class="diff-negative">-10.4</td>
+                </tr>
+                <tr>
+                    <td class="model-name">IFEval</td>
+                    <td class="score">88.9</td>
+                    <td class="score">95.0</td>
+                    <td class="score">93.4</td>
+                    <td class="diff-negative">-6.1</td>
+                </tr>
+                <tr>
+                    <td class="model-name">LiveCodeBench v6</td>
+                    <td class="score">82.7</td>
+                    <td class="score">80.7</td>
+                    <td class="score">78.9</td>
+                    <td class="diff-positive">+2.0</td>
+                </tr>
+                <tr>
+                    <td class="model-name">IFBench</td>
+                    <td class="score">69.0</td>
+                    <td class="score">76.5</td>
+                    <td class="score">76.1</td>
+                    <td class="diff-negative">-7.5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">🔍 参数对比</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>模型</th>
+                    <th>总参数</th>
+                    <th>激活参数</th>
+                    <th>架构类型</th>
+                    <th>硬件需求</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="model-name">GPT-OSS-120B</td>
+                    <td>120B</td>
+                    <td>5.1B</td>
+                    <td>MoE (稀疏)</td>
+                    <td>单 80GB GPU</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3.5-27B</td>
+                    <td>27B</td>
+                    <td>27B (全激活)</td>
+                    <td>密集模型</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3.5-122B-A10B</td>
+                    <td>122B</td>
+                    <td>10B</td>
+                    <td>MoE (稀疏)</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3.5-397B-A17B</td>
+                    <td>397B</td>
+                    <td>17B</td>
+                    <td>MoE (稀疏)</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="conclusion">
+            <h3>💡 关键发现</h3>
+            <ul>
+                <li>GPT-OSS-120B 在多数任务上落后 Qwen3.5-27B 约 5-10%</li>
+                <li>中文任务（C-Eval）差距更大，达 -14.3%</li>
+                <li>编码任务（LiveCodeBench）是少数领先的项目 (+2.0%)</li>
+                <li>参数量 ≠ 能力：120B MoE (5.1B 激活) ≈ 27B 密集模型</li>
+                <li>Qwen3.5-27B 虽然参数更少，但全激活架构带来更强的整体能力</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>数据来源：Hugging Face 官方 Model Cards | 更新时间：2026-03-04</p>
+        </div>
+    </div>
+</body>
+</html>
