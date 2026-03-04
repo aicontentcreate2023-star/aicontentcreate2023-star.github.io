@@ -247,11 +247,11 @@
 <body>
     <div class="container">
         <h1>📊 Open Source Contribution Stats</h1>
-        <p class="subtitle">Last updated: <span id="last-updated">2026-03-04 06:02 GMT+8</span></p>
+        <p class="subtitle">Last updated: <span id="last-updated">2026-03-05 06:31 GMT+8</span></p>
         
         <div class="stats-grid">
             <div class="stat-card highlight">
-                <div class="stat-number" id="total-prs">25</div>
+                <div class="stat-number" id="total-prs">26</div>
                 <div class="stat-label">Total PRs</div>
             </div>
             
@@ -261,12 +261,12 @@
             </div>
             
             <div class="stat-card">
-                <div class="stat-number" id="open-prs" style="color: #667eea;">15</div>
+                <div class="stat-number" id="open-prs" style="color: #667eea;">16</div>
                 <div class="stat-label">Open</div>
             </div>
             
             <div class="stat-card">
-                <div class="stat-number" id="success-rate" style="color: #28a745;">72%</div>
+                <div class="stat-number" id="success-rate" style="color: #28a745;">73%</div>
                 <div class="stat-label">Success Rate</div>
             </div>
         </div>
@@ -278,13 +278,13 @@
                     <div class="bar-row">
                         <div class="bar-label">Python</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 48%;">12</div>
+                            <div class="bar-fill" style="width: 46%;">12</div>
                         </div>
                     </div>
                     <div class="bar-row">
                         <div class="bar-label">Go</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 32%;">8</div>
+                            <div class="bar-fill" style="width: 31%;">8</div>
                         </div>
                     </div>
                     <div class="bar-row">
@@ -311,6 +311,12 @@
                             <div class="bar-fill" style="width: 4%;">1</div>
                         </div>
                     </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Shell</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 4%;">1</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,25 +328,25 @@
                     <div class="bar-row">
                         <div class="bar-label">Feature</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 36%;">9</div>
+                            <div class="bar-fill" style="width: 35%;">9</div>
                         </div>
                     </div>
                     <div class="bar-row">
                         <div class="bar-label">Bug Fix</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 32%;">8</div>
+                            <div class="bar-fill" style="width: 31%;">8</div>
                         </div>
                     </div>
                     <div class="bar-row">
                         <div class="bar-label">Refactor</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 16%;">4</div>
+                            <div class="bar-fill" style="width: 15%;">4</div>
                         </div>
                     </div>
                     <div class="bar-row">
                         <div class="bar-label">Docs</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 4%;">1</div>
+                            <div class="bar-fill" style="width: 8%;">2</div>
                         </div>
                     </div>
                 </div>
@@ -354,19 +360,19 @@
                     <div class="bar-row">
                         <div class="bar-label">Easy (1)</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 40%;">10</div>
+                            <div class="bar-fill" style="width: 38%;">10</div>
                         </div>
                     </div>
                     <div class="bar-row">
                         <div class="bar-label">Medium (2)</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 36%;">9</div>
+                            <div class="bar-fill" style="width: 38%;">10</div>
                         </div>
                     </div>
                     <div class="bar-row">
                         <div class="bar-label">Hard (3)</div>
                         <div class="bar-container">
-                            <div class="bar-fill" style="width: 24%;">6</div>
+                            <div class="bar-fill" style="width: 23%;">6</div>
                         </div>
                     </div>
                 </div>
@@ -413,6 +419,15 @@
                         </div>
                         <div class="timeline-total">Total: 25 (15 open)</div>
                     </div>
+                    <div class="timeline-day">
+                        <div class="timeline-date">Mar 5</div>
+                        <div class="timeline-bars">
+                            <div class="timeline-bar new" style="width: 4%;" title="1 new PR">
+                                <span class="timeline-label">1 new</span>
+                            </div>
+                        </div>
+                        <div class="timeline-total">Total: 26 (16 open)</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -426,7 +441,7 @@
                         <div style="color: #666; margin-top: 0.5rem;">Avg Merge Time</div>
                     </div>
                     <div style="text-align: center; padding: 1rem;">
-                        <div style="font-size: 2rem; font-weight: bold; color: #667eea;">8.38h</div>
+                        <div style="font-size: 2rem; font-weight: bold; color: #667eea;">8.88h</div>
                         <div style="color: #666; margin-top: 0.5rem;">Total Time Spent</div>
                     </div>
                     <div style="text-align: center; padding: 1rem;">
@@ -484,10 +499,10 @@
             new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ['Mar 1', 'Mar 2', 'Mar 3'],
+                    labels: ['Mar 1', 'Mar 2', 'Mar 3', 'Mar 5'],
                     datasets: [{
                         label: 'Total PRs',
-                        data: [4, 15, 25],
+                        data: [4, 15, 25, 26],
                         borderColor: '#667eea',
                         backgroundColor: 'rgba(102, 126, 234, 0.1)',
                         tension: 0.4,
@@ -495,7 +510,7 @@
                         borderWidth: 3
                     }, {
                         label: 'Merged',
-                        data: [2, 4, 4],
+                        data: [2, 4, 4, 4],
                         borderColor: '#28a745',
                         backgroundColor: 'rgba(40, 167, 69, 0.1)',
                         tension: 0.4,
@@ -503,7 +518,7 @@
                         borderWidth: 2
                     }, {
                         label: 'Rejected',
-                        data: [1, 1, 3],
+                        data: [1, 1, 3, 3],
                         borderColor: '#dc3545',
                         backgroundColor: 'rgba(220, 53, 69, 0.1)',
                         tension: 0.4,
@@ -511,7 +526,7 @@
                         borderWidth: 2
                     }, {
                         label: 'Open',
-                        data: [0, 9, 14],
+                        data: [0, 9, 14, 16],
                         borderColor: '#ffc107',
                         backgroundColor: 'rgba(255, 193, 7, 0.1)',
                         tension: 0.4,
