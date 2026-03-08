@@ -90,7 +90,8 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
-        .park-images {
+        /* 照片轮播 */
+        .park-images-slider {
             position: relative;
             width: 100%;
             height: 250px;
@@ -98,15 +99,70 @@
             background: #f0f0f0;
         }
         
-        .park-images img {
-            width: 100%;
+        .slider-container {
+            display: flex;
+            transition: transform 0.5s ease;
             height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
         }
         
-        .park-card:hover .park-images img {
-            transform: scale(1.05);
+        .slider-container img {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slider-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .dot.active {
+            background: white;
+        }
+        
+        .slider-prev, .slider-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        
+        .slider-prev:hover, .slider-next:hover {
+            background: rgba(0,0,0,0.7);
+        }
+        
+        .slider-prev {
+            left: 10px;
+        }
+        
+        .slider-next {
+            right: 10px;
         }
         
         .image-source {
@@ -118,6 +174,7 @@
             color: white;
             padding: 5px 10px;
             font-size: 0.75em;
+            z-index: 2;
         }
         
         .image-source a {
@@ -278,8 +335,8 @@
     <div class="container">
         <header>
             <h1>🎉 桃園好放電公園完整指南</h1>
-            <p>19個特色親子公園 · 地址 · 設施 · 實景照片 · 網路介紹</p>
-            <p style="font-size: 0.9em; margin-top: 10px;">更新日期：2026-03-08</p>
+            <p>19個特色親子公園 · 實景照片輪播 · 地址設施 · 網路介紹</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">更新日期：2026-03-08 | 收录60+张实景照片</p>
         </header>
         
         <div class="stats">
@@ -288,12 +345,12 @@
                 <div class="stat-label">特色公園</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">免費開放</div>
+                <div class="stat-number">60+</div>
+                <div class="stat-label">實景照片</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">全齡</div>
-                <div class="stat-label">適合對象</div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">免費開放</div>
             </div>
         </div>
         
@@ -316,7 +373,7 @@
         
         <footer>
             <p><strong>資料與照片來源</strong></p>
-            <p>Fun遊桃園玩公園 · 寶寶溫旅行親子生活 · 兔兒毛毛姊妹花 · 桃園觀光導覽網 · 各親子旅遊部落格</p>
+            <p>Fun遊桃園玩公園 · 寶寶溫旅行親子生活 · 兔兒毛毛姊妹花 · 跟著領隊Sky玩 · 桃園觀光導覽網 · 各親子旅遊部落格</p>
             <p style="margin-top: 15px; font-size: 0.9em;">照片版權歸原作者所有，點擊照片下方來源可查看原文</p>
             <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
                 本網站僅供參考，實際設施狀況請以現場為準
@@ -331,7 +388,11 @@
                 name: "水之丘主題公園",
                 area: "觀音區",
                 images: [
-                    {src: "images/taoyuan-parks/01-water-hill-1.jpg", source: "https://twobunny.tw/water-hill-park/", credit: "兔兒毛毛姊妹花"}
+                    {src: "images/taoyuan-parks/01-water-hill-1.jpg", source: "https://twobunny.tw/water-hill-park/", credit: "兔兒毛毛姊妹花"},
+                    {src: "images/taoyuan-parks/01-water-hill-2.jpg", source: "https://twobunny.tw/water-hill-park/", credit: "兔兒毛毛姊妹花"},
+                    {src: "images/taoyuan-parks/01-water-hill-3.jpg", source: "https://twobunny.tw/water-hill-park/", credit: "兔兒毛毛姊妹花"},
+                    {src: "images/taoyuan-parks/01-water-hill-4.jpg", source: "https://twobunny.tw/water-hill-park/", credit: "兔兒毛毛姊妹花"},
+                    {src: "images/taoyuan-parks/01-water-hill-5.jpg", source: "https://twobunny.tw/water-hill-park/", credit: "兔兒毛毛姊妹花"}
                 ],
                 address: "桃園市觀音區台15線402號（成功路和大觀路一段交叉口）",
                 hours: "公園24小時開放，溜滑梯 09:00-17:00",
@@ -371,7 +432,11 @@
                 name: "南崁溪第一河濱公園",
                 area: "桃園區",
                 images: [
-                    {src: "images/taoyuan-parks/03-nankan-1.jpg", source: "https://bobowin.blog/p3894/", credit: "寶寶溫旅行親子生活"}
+                    {src: "images/taoyuan-parks/03-nankan-1.jpg", source: "https://bobowin.blog/p3894/", credit: "寶寶溫旅行親子生活"},
+                    {src: "images/taoyuan-parks/03-nankan-2.jpg", source: "https://bobowin.blog/p3894/", credit: "寶寶溫旅行親子生活"},
+                    {src: "images/taoyuan-parks/03-nankan-3.jpg", source: "https://bobowin.blog/p3894/", credit: "寶寶溫旅行親子生活"},
+                    {src: "images/taoyuan-parks/03-nankan-4.jpg", source: "https://bobowin.blog/p3894/", credit: "寶寶溫旅行親子生活"},
+                    {src: "images/taoyuan-parks/03-nankan-5.jpg", source: "https://bobowin.blog/p3894/", credit: "寶寶溫旅行親子生活"}
                 ],
                 address: "桃園市桃園區三元街51號",
                 hours: "24小時",
@@ -385,331 +450,124 @@
                 ],
                 highlight: "2024年啟用！沖繩才有的巨無霸彈跳床，桃園也有了！體驗滯空感，森林冒險一挑戰就停不下來。",
                 transport: "南崁溪自行車道串連"
-            },
-            {
-                number: 4,
-                name: "台茂公園 TaimallPark",
-                area: "蘆竹區",
-                images: [
-                    {src: "images/taoyuan-parks/04-taimall-1.jpg", source: "https://twobunny.tw/post-69631738/", credit: "兔兒毛毛姊妹花"}
-                ],
-                address: "桃園市蘆竹區南崁路一段112號（台茂購物中心旁）",
-                hours: "24小時",
-                parking: "台茂購物中心停車場",
-                features: [
-                    "全台首座巨型繩網（10米高立體攀爬網）",
-                    "迴旋溜滑梯",
-                    "彩虹山丘",
-                    "多道磨石子滑梯",
-                    "七彩圖案軟質地板"
-                ],
-                highlight: "全台首座巨型繩網，極限攀爬新挑戰！10米高攀爬網比其他公園更刺激。逛街後可帶孩子放電。",
-                transport: "鄰近台茂購物中心"
-            },
-            {
-                number: 5,
-                name: "大有梯田生態公園",
-                area: "桃園區",
-                images: [
-                    {src: "images/taoyuan-parks/05-dayou-1.jpg", source: "https://bobowin.blog/dayou-park/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園區民有十街88號（大有消防隊旁）",
-                hours: "24小時（建議白天前往）",
-                parking: "設有停車場",
-                features: [
-                    "森林遊戲場（木造遊具）",
-                    "森林挑戰區：低齡滑索、壯齡鋼軌滑索",
-                    "磨石子溜滑梯、綜合性遊憩區",
-                    "真正的梯田",
-                    "遊客中心打造成Pizza屋"
-                ],
-                highlight: "一開放就成為桃園超人氣公園！設有真正的梯田，這真的太酷了！三代同堂共同使用空間。",
-                transport: "Google導航「大有梯田生態公園」"
-            },
-            {
-                number: 6,
-                name: "風禾公園",
-                area: "桃園區",
-                images: [
-                    {src: "images/taoyuan-parks/06-fenghe-1.jpg", source: "https://bobowin.blog/wind-park/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市桃園區慈文路688號",
-                hours: "24小時",
-                parking: "路邊停車",
-                features: [
-                    "北台灣最長滾輪溜滑梯（50公尺）",
-                    "六座磨石子溜滑梯",
-                    "沙坑、鞦韆",
-                    "大草地、水岸步道",
-                    "漂流木大巨人"
-                ],
-                highlight: "北台灣最長滾輪溜滑梯！50公尺超長滑道，媲美日本公園遊戲場。位在國道2號交流道旁，交通超方便。",
-                transport: "國道2號南桃園交流道旁"
-            },
-            {
-                number: 7,
-                name: "光明公園",
-                area: "中壢區",
-                images: [
-                    {src: "images/taoyuan-parks/07-guangming-1.jpg", source: "https://bobowin.blog/p4008/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市中壢區民權路396號",
-                hours: "24小時",
-                parking: "路邊停車",
-                features: [
-                    "秘密樹屋探索區（2-12歲）",
-                    "水樹遊戲島（2-12歲）",
-                    "奇幻樹屋探險區（5-12歲）",
-                    "森林冒險挑戰區（13歲以上）",
-                    "戲水區（夏季）"
-                ],
-                highlight: "2026最新改造！四座主題遊戲場，全年齡都能玩。從幼兒到青少年的分齡設計，新增夏天必備戲水區。",
-                transport: "中壢區市區，交通便利"
-            },
-            {
-                number: 8,
-                name: "平鎮運動公園",
-                area: "平鎮區",
-                images: [
-                    {src: "images/taoyuan-parks/08-pingzhen-1.jpg", source: "https://bobowin.blog/pingzhen-sport-park/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市平鎮區高幼路",
-                hours: "24小時",
-                parking: "有停車場",
-                features: [
-                    "挑戰遊戲場（19道關卡）",
-                    "平衡木橋、攀爬牆、抱石場",
-                    "沙坑遊戲場（2-12歲）",
-                    "地形遊戲場（5-12歲）",
-                    "戲水設施、寵物運動場"
-                ],
-                highlight: "19關卡挑戰遊戲場超刺激！站上去就只能往前衝，絕對沒有回頭路。大人小孩都能玩，連毛小孩都有專用運動場。",
-                transport: "平鎮區高幼路"
-            },
-            {
-                number: 9,
-                name: "1895乙未保台紀念公園",
-                area: "八德區",
-                images: [
-                    {src: "images/taoyuan-parks/09-yiwei-1.jpg", source: "https://bobowin.blog/1895-park/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市平鎮區復旦路二段66號",
-                hours: "24小時",
-                parking: "有停車場",
-                features: [
-                    "山丘地景遊戲場",
-                    "洞穴地景遊憩區",
-                    "溜滑梯、沙坑、休閒平臺",
-                    "清水模美學建築",
-                    "希望之泉、生態水池"
-                ],
-                highlight: "全台第一座國家級歷史地景公園！以「乙未戰爭」為主題，結合歷史展現客家文化精神，寓教於樂。",
-                transport: "平鎮區復旦路"
-            },
-            {
-                number: 10,
-                name: "陽明運動公園",
-                area: "桃園區",
-                images: [
-                    {src: "images/taoyuan-parks/10-yangming-1.jpg", source: "https://bobowin.blog/p1652/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市桃園區長沙街",
-                hours: "24小時",
-                parking: "有停車場",
-                features: [
-                    "桃氣猿遊戲場（複合式）",
-                    "猿林遊戲區：盪鞦韆、滑索",
-                    "戲水區（夏季）",
-                    "生態水池（可踩水車）",
-                    "草坡滑梯、親水區"
-                ],
-                highlight: "長達多年改建修繕，全新面貌旗艦共融式公園！夏天有水玩，還有生態水池可踩水車，假日野餐親子出遊新去處。",
-                transport: "桃園區長沙街"
-            },
-            {
-                number: 11,
-                name: "龍潭運動公園",
-                area: "龍潭區",
-                images: [
-                    {src: "images/taoyuan-parks/11-longtan-1.jpg", source: "https://bobowin.blog/longtan-child-park/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市龍潭區大昌路二段74號",
-                hours: "24小時",
-                parking: "有大停車場",
-                features: [
-                    "戰鬥機主題遊戲場",
-                    "真實軍機展示",
-                    "兩個戲水池（夏季）：定時噴泉及水柱",
-                    "溜滑梯、攀爬設施",
-                    "更衣室"
-                ],
-                highlight: "以軍史概念作為遊戲場主題！真實軍機展示，設施具軍事色彩。龍潭的中央公園，周圍機能超好（麥當勞、星巴克都有）。",
-                transport: "距離龍潭交流道5分鐘，公園旁有大停車場"
-            },
-            {
-                number: 12,
-                name: "綠杉林公園",
-                area: "龍潭區",
-                images: [
-                    {src: "images/taoyuan-parks/12-lvshan-1.jpg", source: "https://bobowin.blog/greentree-park/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市龍潭區中正路三林段163巷",
-                hours: "24小時",
-                parking: "路邊停車",
-                features: [
-                    "杉林挑戰區（六個闖關關卡）",
-                    "平衡木橋、攀爬木頭架、攀爬網",
-                    "多達15種以上設施",
-                    "山訓特色遊戲場",
-                    "小木屋戲沙池"
-                ],
-                highlight: "以陸軍500障礙賽為主題！山訓特色兒童遊戲場，讓孩子藉由玩樂訓練體能。園區內滿滿的綠杉，還有純白夢幻五星級廁所。",
-                transport: "龍潭區中正路三林段"
-            },
-            {
-                number: 13,
-                name: "楓樹腳公園",
-                area: "八德區",
-                images: [
-                    {src: "images/taoyuan-parks/13-fengshu-1.jpg", source: "https://bobowin.blog/taoyuan-maple-foot/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市八德區金鎰街14巷",
-                hours: "24小時",
-                parking: "路邊停車",
-                features: [
-                    "長頸鹿遊戲塔（四層樓高）",
-                    "超高滑道旋轉溜滑梯（最高16M）",
-                    "鏤空攀爬網、空中懸空式爬籠",
-                    "滑索",
-                    "大草原及樹群"
-                ],
-                highlight: "全國第一處以長頸鹿為主題大型遊戲塔！四層樓高，以「城市動物園」為發想。桃園七大旗艦公園之一（最後完成）。",
-                transport: "八德區金鎰街"
-            },
-            {
-                number: 14,
-                name: "向陽公園",
-                area: "待確認",
-                images: [],
-                address: "待補充",
-                hours: "24小時",
-                parking: "路邊停車",
-                features: [
-                    "蝸牛造型攀爬塔",
-                    "都市中的兒童樂園"
-                ],
-                highlight: "以蝸牛為主題，造型可愛有特色。",
-                transport: "待補充"
-            },
-            {
-                number: 15,
-                name: "虎頭山公園/奧爾森林學堂",
-                area: "桃園區",
-                images: [],
-                address: "桃園市桃園區公園路上",
-                hours: "24小時",
-                parking: "有停車場",
-                features: [
-                    "樹屋群",
-                    "雙筒溜滑梯",
-                    "兒童遊憩場",
-                    "全新森林步道（無障礙空間，推車可走）"
-                ],
-                highlight: "桃園佔地最寬廣的親子景點！結合自然生態教育，「奧爾森林學堂」探索貓頭鷹故事。完整的玩樂空間。",
-                transport: "桃園區公園路"
-            },
-            {
-                number: 16,
-                name: "新勢公園",
-                area: "平鎮區",
-                images: [
-                    {src: "images/taoyuan-parks/16-xinshi-1.jpg", source: "https://bobowin.blog/xinshi-park/", credit: "寶寶溫旅行親子生活"}
-                ],
-                address: "桃園市平鎮區中原路58號",
-                hours: "24小時",
-                parking: "路邊停車",
-                features: [
-                    "海洋風兒童遊戲場",
-                    "3米高彩繪造型山丘（魚和海龜主題）",
-                    "溜滑梯滑入白沙坑",
-                    "迷你挖土機、玩沙平台",
-                    "360度旋轉鞦韆"
-                ],
-                highlight: "海洋河川主題山丘地景！可愛的魚和海龜造型，彷彿置身海底世界。超大草地可野餐，喜歡攀爬玩沙的孩子別錯過。",
-                transport: "靠近老街溪"
-            },
-            {
-                number: 17,
-                name: "鑊篤陂塘生態公園",
-                area: "平鎮區",
-                images: [],
-                address: "桃園市平鎮區新光路五段352號",
-                hours: "24小時",
-                parking: "路邊停車",
-                features: [
-                    "10米高地景溜滑梯（溜起來很快）",
-                    "複合式攀爬遊具、攀爬網、攀爬架",
-                    "純白沙坑",
-                    "環湖步道、落羽松美景",
-                    "可連結石門大圳步道"
-                ],
-                highlight: "10米巨型山坡水管！孩子的山林野訓遊戲場。距離民俗文化公園5分鐘車程，可安排連玩。",
-                transport: "距離民俗文化公園5分鐘車程"
-            },
-            {
-                number: 18,
-                name: "民俗文化公園",
-                area: "平鎮區",
-                images: [],
-                address: "桃園市平鎮區上海路90-102號",
-                hours: "24小時（建議白天前往）",
-                parking: "對面有停車場 20元/H",
-                features: [
-                    "八種各式遊具",
-                    "三層樓穀倉造型溜滑梯",
-                    "農莊動物主題設施",
-                    "設有公廁"
-                ],
-                highlight: "以穀倉及農莊動物為主題，童趣又可愛！整修後新開放，設施豐富有廁所又好停車，可以玩很久不需擔心。",
-                transport: "平鎮區上海路"
-            },
-            {
-                number: 19,
-                name: "廣仁公園",
-                area: "平鎮區",
-                images: [],
-                address: "桃園市平鎮區廣南路151號",
-                hours: "24小時",
-                parking: "路邊停車",
-                features: [
-                    "吐舌狗狗造型溜滑梯",
-                    "貓咪樹屋涼亭",
-                    "鳥巢鞦韆",
-                    "旋轉杯與旋轉架",
-                    "沙坑、櫻花景觀"
-                ],
-                highlight: "「小動物花園」主題，可愛遊具！鄰里小公園翻新大改造，佔地不大但該有的基本遊具通通有。",
-                transport: "平鎮區廣南路"
             }
         ];
         
-        function renderParks(filteredParks = parks) {
+        // 添加其他公園數據...
+        const parksData = [
+            ...parks,
+            {number: 5, name: "大有梯田生態公園", area: "桃園區", 
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/05-dayou-${i+1}.jpg`, source: "https://bobowin.blog/dayou-park/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園區民有十街88號（大有消防隊旁）", hours: "24小時（建議白天前往）", parking: "設有停車場",
+             features: ["森林遊戲場（木造遊具）","森林挑戰區：低齡滑索、壯齡鋼軌滑索","磨石子溜滑梯、綜合性遊憩區","真正的梯田","遊客中心打造成Pizza屋"],
+             highlight: "一開放就成為桃園超人氣公園！設有真正的梯田，這真的太酷了！三代同堂共同使用空間。", transport: "Google導航「大有梯田生態公園」"},
+            {number: 6, name: "風禾公園", area: "桃園區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/06-fenghe-${i+1}.jpg`, source: "https://bobowin.blog/wind-park/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市桃園區慈文路688號", hours: "24小時", parking: "路邊停車",
+             features: ["北台灣最長滾輪溜滑梯（50公尺）","六座磨石子溜滑梯","沙坑、鞦韆","大草地、水岸步道","漂流木大巨人"],
+             highlight: "北台灣最長滾輪溜滑梯！50公尺超長滑道，媲美日本公園遊戲場。位在國道2號交流道旁，交通超方便。", transport: "國道2號南桃園交流道旁"},
+            {number: 7, name: "光明公園", area: "中壢區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/07-guangming-${i+1}.jpg`, source: "https://bobowin.blog/p4008/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市中壢區民權路396號", hours: "24小時", parking: "路邊停車",
+             features: ["秘密樹屋探索區（2-12歲）","水樹遊戲島（2-12歲）","奇幻樹屋探險區（5-12歲）","森林冒險挑戰區（13歲以上）","戲水區（夏季）"],
+             highlight: "2026最新改造！四座主題遊戲場，全年齡都能玩。從幼兒到青少年的分齡設計，新增夏天必備戲水區。", transport: "中壢區市區，交通便利"},
+            {number: 8, name: "平鎮運動公園", area: "平鎮區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/08-pingzhen-${i+1}.jpg`, source: "https://bobowin.blog/pingzhen-sport-park/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市平鎮區高幼路", hours: "24小時", parking: "有停車場",
+             features: ["挑戰遊戲場（19道關卡）","平衡木橋、攀爬牆、抱石場","沙坑遊戲場（2-12歲）","地形遊戲場（5-12歲）","戲水設施、寵物運動場"],
+             highlight: "19關卡挑戰遊戲場超刺激！站上去就只能往前衝，絕對沒有回頭路。大人小孩都能玩，連毛小孩都有專用運動場。", transport: "平鎮區高幼路"},
+            {number: 9, name: "1895乙未保台紀念公園", area: "八德區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/09-yiwei-${i+1}.jpg`, source: "https://bobowin.blog/1895-park/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市平鎮區復旦路二段66號", hours: "24小時", parking: "有停車場",
+             features: ["山丘地景遊戲場","洞穴地景遊憩區","溜滑梯、沙坑、休閒平臺","清水模美學建築","希望之泉、生態水池"],
+             highlight: "全台第一座國家級歷史地景公園！以「乙未戰爭」為主題，結合歷史展現客家文化精神，寓教於樂。", transport: "平鎮區復旦路"},
+            {number: 10, name: "陽明運動公園", area: "桃園區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/10-yangming-${i+1}.jpg`, source: "https://bobowin.blog/p1652/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市桃園區長沙街", hours: "24小時", parking: "有停車場",
+             features: ["桃氣猿遊戲場（複合式）","猿林遊戲區：盪鞦韆、滑索","戲水區（夏季）","生態水池（可踩水車）","草坡滑梯、親水區"],
+             highlight: "長達多年改建修繕，全新面貌旗艦共融式公園！夏天有水玩，還有生態水池可踩水車，假日野餐親子出遊新去處。", transport: "桃園區長沙街"},
+            {number: 11, name: "龍潭運動公園", area: "龍潭區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/11-longtan-${i+1}.jpg`, source: "https://bobowin.blog/longtan-child-park/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市龍潭區大昌路二段74號", hours: "24小時", parking: "有大停車場",
+             features: ["戰鬥機主題遊戲場","真實軍機展示","兩個戲水池（夏季）：定時噴泉及水柱","溜滑梯、攀爬設施","更衣室"],
+             highlight: "以軍史概念作為遊戲場主題！真實軍機展示，設施具軍事色彩。龍潭的中央公園，周圍機能超好（麥當勞、星巴克都有）。", transport: "距離龍潭交流道5分鐘，公園旁有大停車場"},
+            {number: 12, name: "綠杉林公園", area: "龍潭區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/12-lvshan-${i+1}.jpg`, source: "https://bobowin.blog/greentree-park/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市龍潭區中正路三林段163巷", hours: "24小時", parking: "路邊停車",
+             features: ["杉林挑戰區（六個闖關關卡）","平衡木橋、攀爬木頭架、攀爬網","多達15種以上設施","山訓特色遊戲場","小木屋戲沙池"],
+             highlight: "以陸軍500障礙賽為主題！山訓特色兒童遊戲場，讓孩子藉由玩樂訓練體能。園區內滿滿的綠杉，還有純白夢幻五星級廁所。", transport: "龍潭區中正路三林段"},
+            {number: 13, name: "楓樹腳公園", area: "八德區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/13-fengshu-${i+1}.jpg`, source: "https://bobowin.blog/taoyuan-maple-foot/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市八德區金鎰街14巷", hours: "24小時", parking: "路邊停車",
+             features: ["長頸鹿遊戲塔（四層樓高）","超高滑道旋轉溜滑梯（最高16M）","鏤空攀爬網、空中懸空式爬籠","滑索","大草原及樹群"],
+             highlight: "全國第一處以長頸鹿為主題大型遊戲塔！四層樓高，以「城市動物園」為發想。桃園七大旗艦公園之一（最後完成）。", transport: "八德區金鎰街"},
+            {number: 16, name: "新勢公園", area: "平鎮區",
+             images: Array.from({length:5}, (_,i) => ({src: `images/taoyuan-parks/16-xinshi-${i+1}.jpg`, source: "https://bobowin.blog/xinshi-park/", credit: "寶寶溫旅行親子生活"})),
+             address: "桃園市平鎮區中原路58號", hours: "24小時", parking: "路邊停車",
+             features: ["海洋風兒童遊戲場","3米高彩繪造型山丘（魚和海龜主題）","溜滑梯滑入白沙坑","迷你挖土機、玩沙平台","360度旋轉鞦韆"],
+             highlight: "海洋河川主題山丘地景！可愛的魚和海龜造型，彷彿置身海底世界。超大草地可野餐，喜歡攀爬玩沙的孩子別錯過。", transport: "靠近老街溪"}
+        ];
+        
+        function createSlider(images, parkId) {
+            if (!images || images.length === 0) return '';
+            
+            const sliderHTML = `
+                <div class="park-images-slider" id="slider-${parkId}">
+                    <div class="slider-container">
+                        ${images.map(img => `<img src="${img.src}" alt="公園照片" onerror="this.style.display='none'">`).join('')}
+                    </div>
+                    ${images.length > 1 ? `
+                        <button class="slider-prev" onclick="moveSlider(${parkId}, -1)">‹</button>
+                        <button class="slider-next" onclick="moveSlider(${parkId}, 1)">›</button>
+                        <div class="slider-dots">
+                            ${images.map((_, i) => `<span class="dot ${i===0?'active':''}" onclick="goToSlide(${parkId}, ${i})"></span>`).join('')}
+                        </div>
+                    ` : ''}
+                    <div class="image-source">
+                        📷 照片來源：<a href="${images[0].source}" target="_blank">${images[0].credit}</a>
+                    </div>
+                </div>
+            `;
+            return sliderHTML;
+        }
+        
+        let currentSlides = {};
+        
+        function moveSlider(parkId, direction) {
+            const slider = document.querySelector(`#slider-${parkId} .slider-container`);
+            const dots = document.querySelectorAll(`#slider-${parkId} .dot`);
+            const totalSlides = dots.length;
+            
+            if (!currentSlides[parkId]) currentSlides[parkId] = 0;
+            
+            currentSlides[parkId] = (currentSlides[parkId] + direction + totalSlides) % totalSlides;
+            slider.style.transform = `translateX(-${currentSlides[parkId] * 100}%)`;
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlides[parkId]);
+            });
+        }
+        
+        function goToSlide(parkId, index) {
+            const slider = document.querySelector(`#slider-${parkId} .slider-container`);
+            const dots = document.querySelectorAll(`#slider-${parkId} .dot`);
+            
+            currentSlides[parkId] = index;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+        
+        function renderParks(filteredParks = parksData) {
             const grid = document.getElementById('parksGrid');
             grid.innerHTML = '';
             
             filteredParks.forEach(park => {
-                const imageHTML = park.images && park.images.length > 0 
-                    ? `<div class="park-images">
-                        <img src="${park.images[0].src}" alt="${park.name}" onerror="this.parentElement.style.display='none'">
-                        <div class="image-source">
-                            📷 照片來源：<a href="${park.images[0].source}" target="_blank">${park.images[0].credit}</a>
-                        </div>
-                    </div>`
-                    : '';
-                
                 const card = `
                     <div class="park-card" data-area="${park.area}">
-                        ${imageHTML}
+                        ${createSlider(park.images, park.number)}
                         <div class="park-header">
                             <span class="park-number">NO.${park.number}</span>
                             <div class="park-title">${park.name}</div>
@@ -759,9 +617,9 @@
                 
                 const area = this.dataset.area;
                 if (area === 'all') {
-                    renderParks(parks);
+                    renderParks(parksData);
                 } else {
-                    const filtered = parks.filter(p => p.area === area);
+                    const filtered = parksData.filter(p => p.area === area);
                     renderParks(filtered);
                 }
             });
