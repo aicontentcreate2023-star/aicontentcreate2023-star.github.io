@@ -90,6 +90,45 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
+        .park-images {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+        
+        .park-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .park-card:hover .park-images img {
+            transform: scale(1.05);
+        }
+        
+        .image-source {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.75em;
+        }
+        
+        .image-source a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        
+        .image-source a:hover {
+            text-decoration: underline;
+        }
+        
         .park-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -239,7 +278,7 @@
     <div class="container">
         <header>
             <h1>🎉 桃園好放電公園完整指南</h1>
-            <p>19個特色親子公園 · 地址 · 設施 · 網路介紹</p>
+            <p>19個特色親子公園 · 地址 · 設施 · 實景照片 · 網路介紹</p>
             <p style="font-size: 0.9em; margin-top: 10px;">更新日期：2026-03-08</p>
         </header>
         
@@ -276,9 +315,10 @@
         </div>
         
         <footer>
-            <p><strong>資料來源</strong></p>
-            <p>Fun遊桃園玩公園 · 寶寶溫旅行親子生活 · 桃園觀光導覽網 · 各親子旅遊部落格</p>
-            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+            <p><strong>資料與照片來源</strong></p>
+            <p>Fun遊桃園玩公園 · 寶寶溫旅行親子生活 · 兔兒毛毛姊妹花 · 桃園觀光導覽網 · 各親子旅遊部落格</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">照片版權歸原作者所有，點擊照片下方來源可查看原文</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
                 本網站僅供參考，實際設施狀況請以現場為準
             </p>
         </footer>
@@ -290,6 +330,9 @@
                 number: 1,
                 name: "水之丘主題公園",
                 area: "觀音區",
+                images: [
+                    {src: "images/taoyuan-parks/01-water-hill-1.jpg", source: "https://twobunny.tw/water-hill-park/", credit: "兔兒毛毛姊妹花"}
+                ],
                 address: "桃園市觀音區台15線402號（成功路和大觀路一段交叉口）",
                 hours: "公園24小時開放，溜滑梯 09:00-17:00",
                 parking: "免費停車場（距遊戲區較遠），或路邊停車格",
@@ -307,6 +350,9 @@
                 number: 2,
                 name: "華興池生態埤塘公園",
                 area: "大園區",
+                images: [
+                    {src: "images/taoyuan-parks/02-huaxing-1.jpg", source: "https://foolish.tw/huaxing-pond-ecological-park/", credit: "魚腦袋行走中"}
+                ],
                 address: "桃園市大園區華興路205號",
                 hours: "24小時",
                 parking: "老街溪停車場、華興停車場、全聯停車場、路邊停車格",
@@ -324,6 +370,9 @@
                 number: 3,
                 name: "南崁溪第一河濱公園",
                 area: "桃園區",
+                images: [
+                    {src: "images/taoyuan-parks/03-nankan-1.jpg", source: "https://bobowin.blog/p3894/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市桃園區三元街51號",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -341,6 +390,9 @@
                 number: 4,
                 name: "台茂公園 TaimallPark",
                 area: "蘆竹區",
+                images: [
+                    {src: "images/taoyuan-parks/04-taimall-1.jpg", source: "https://twobunny.tw/post-69631738/", credit: "兔兒毛毛姊妹花"}
+                ],
                 address: "桃園市蘆竹區南崁路一段112號（台茂購物中心旁）",
                 hours: "24小時",
                 parking: "台茂購物中心停車場",
@@ -358,6 +410,9 @@
                 number: 5,
                 name: "大有梯田生態公園",
                 area: "桃園區",
+                images: [
+                    {src: "images/taoyuan-parks/05-dayou-1.jpg", source: "https://bobowin.blog/dayou-park/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園區民有十街88號（大有消防隊旁）",
                 hours: "24小時（建議白天前往）",
                 parking: "設有停車場",
@@ -375,6 +430,9 @@
                 number: 6,
                 name: "風禾公園",
                 area: "桃園區",
+                images: [
+                    {src: "images/taoyuan-parks/06-fenghe-1.jpg", source: "https://bobowin.blog/wind-park/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市桃園區慈文路688號",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -392,6 +450,9 @@
                 number: 7,
                 name: "光明公園",
                 area: "中壢區",
+                images: [
+                    {src: "images/taoyuan-parks/07-guangming-1.jpg", source: "https://bobowin.blog/p4008/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市中壢區民權路396號",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -409,6 +470,9 @@
                 number: 8,
                 name: "平鎮運動公園",
                 area: "平鎮區",
+                images: [
+                    {src: "images/taoyuan-parks/08-pingzhen-1.jpg", source: "https://bobowin.blog/pingzhen-sport-park/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市平鎮區高幼路",
                 hours: "24小時",
                 parking: "有停車場",
@@ -426,6 +490,9 @@
                 number: 9,
                 name: "1895乙未保台紀念公園",
                 area: "八德區",
+                images: [
+                    {src: "images/taoyuan-parks/09-yiwei-1.jpg", source: "https://bobowin.blog/1895-park/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市平鎮區復旦路二段66號",
                 hours: "24小時",
                 parking: "有停車場",
@@ -443,6 +510,9 @@
                 number: 10,
                 name: "陽明運動公園",
                 area: "桃園區",
+                images: [
+                    {src: "images/taoyuan-parks/10-yangming-1.jpg", source: "https://bobowin.blog/p1652/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市桃園區長沙街",
                 hours: "24小時",
                 parking: "有停車場",
@@ -460,6 +530,9 @@
                 number: 11,
                 name: "龍潭運動公園",
                 area: "龍潭區",
+                images: [
+                    {src: "images/taoyuan-parks/11-longtan-1.jpg", source: "https://bobowin.blog/longtan-child-park/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市龍潭區大昌路二段74號",
                 hours: "24小時",
                 parking: "有大停車場",
@@ -477,6 +550,9 @@
                 number: 12,
                 name: "綠杉林公園",
                 area: "龍潭區",
+                images: [
+                    {src: "images/taoyuan-parks/12-lvshan-1.jpg", source: "https://bobowin.blog/greentree-park/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市龍潭區中正路三林段163巷",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -494,6 +570,9 @@
                 number: 13,
                 name: "楓樹腳公園",
                 area: "八德區",
+                images: [
+                    {src: "images/taoyuan-parks/13-fengshu-1.jpg", source: "https://bobowin.blog/taoyuan-maple-foot/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市八德區金鎰街14巷",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -511,6 +590,7 @@
                 number: 14,
                 name: "向陽公園",
                 area: "待確認",
+                images: [],
                 address: "待補充",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -525,6 +605,7 @@
                 number: 15,
                 name: "虎頭山公園/奧爾森林學堂",
                 area: "桃園區",
+                images: [],
                 address: "桃園市桃園區公園路上",
                 hours: "24小時",
                 parking: "有停車場",
@@ -541,6 +622,9 @@
                 number: 16,
                 name: "新勢公園",
                 area: "平鎮區",
+                images: [
+                    {src: "images/taoyuan-parks/16-xinshi-1.jpg", source: "https://bobowin.blog/xinshi-park/", credit: "寶寶溫旅行親子生活"}
+                ],
                 address: "桃園市平鎮區中原路58號",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -558,6 +642,7 @@
                 number: 17,
                 name: "鑊篤陂塘生態公園",
                 area: "平鎮區",
+                images: [],
                 address: "桃園市平鎮區新光路五段352號",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -575,6 +660,7 @@
                 number: 18,
                 name: "民俗文化公園",
                 area: "平鎮區",
+                images: [],
                 address: "桃園市平鎮區上海路90-102號",
                 hours: "24小時（建議白天前往）",
                 parking: "對面有停車場 20元/H",
@@ -591,6 +677,7 @@
                 number: 19,
                 name: "廣仁公園",
                 area: "平鎮區",
+                images: [],
                 address: "桃園市平鎮區廣南路151號",
                 hours: "24小時",
                 parking: "路邊停車",
@@ -611,8 +698,18 @@
             grid.innerHTML = '';
             
             filteredParks.forEach(park => {
+                const imageHTML = park.images && park.images.length > 0 
+                    ? `<div class="park-images">
+                        <img src="${park.images[0].src}" alt="${park.name}" onerror="this.parentElement.style.display='none'">
+                        <div class="image-source">
+                            📷 照片來源：<a href="${park.images[0].source}" target="_blank">${park.images[0].credit}</a>
+                        </div>
+                    </div>`
+                    : '';
+                
                 const card = `
                     <div class="park-card" data-area="${park.area}">
+                        ${imageHTML}
                         <div class="park-header">
                             <span class="park-number">NO.${park.number}</span>
                             <div class="park-title">${park.name}</div>

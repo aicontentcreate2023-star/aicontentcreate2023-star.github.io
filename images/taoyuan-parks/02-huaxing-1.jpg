@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://foolish.tw/xmlrpc.php">
+
+<meta name="ad-unblock-verification" content="cCeaaVnf4XSGNLfG" />
+<meta name="ad-unblock-cache" content="{&quot;verification&quot;:&quot;cCeaaVnf4XSGNLfG&quot;,&quot;cache_active&quot;:&quot;true&quot;,&quot;error_state&quot;:&quot;false&quot;,&quot;sources_count&quot;:1,&quot;expires_in&quot;:61,&quot;timestamp&quot;:1772944646,&quot;cached_sources&quot;:[&quot;https:\/\/adunblock2.static-cloudflare.workers.dev\/index.js&quot;],&quot;cache_timestamp&quot;:1772944407}" />
+<meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>找不到頁面 - 魚腦袋行走中</title>
+	<meta property="og:locale" content="zh_TW" />
+	<meta property="og:title" content="找不到頁面 - 魚腦袋行走中" />
+	<meta property="og:site_name" content="魚腦袋行走中" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://foolish.tw/#website","url":"https://foolish.tw/","name":"魚腦袋行走中","description":"旅遊x美食x親子x生活","publisher":{"@id":"https://foolish.tw/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://foolish.tw/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"zh-TW"},{"@type":"Organization","@id":"https://foolish.tw/#organization","name":"魚腦袋行走中","url":"https://foolish.tw/","logo":{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://foolish.tw/#/schema/logo/image/","url":"https://foolish.tw/wp-content/uploads/2021/07/20210722104928_33.jpg","contentUrl":"https://foolish.tw/wp-content/uploads/2021/07/20210722104928_33.jpg","width":123,"height":124,"caption":"魚腦袋行走中"},"image":{"@id":"https://foolish.tw/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//adunblock2.static-cloudflare.workers.dev' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+
+<link rel='stylesheet' id='sbi_styles-css' href='https://foolish.tw/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.10.0' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://foolish.tw/wp-includes/css/dist/block-library/style.min.css?ver=6.9.1' type='text/css' media='all' />
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='achang-ft-btn-css' href='https://foolish.tw/wp-content/plugins/achang-ft-btn/css/style.css?ver=1762414338' type='text/css' media='all' />
+<link rel='stylesheet' id='achang-pencil-box-css' href='https://foolish.tw/wp-content/plugins/achang-pencil-box/public/css/achang-pencil-box-public.css?ver=1.9.3.1762414344.1.0.9' type='text/css' media='all' />
+<link rel='stylesheet' id='atd-public-style-css' href='https://foolish.tw/wp-content/plugins/achang-related-posts/includes/post-widgets/assets/css/achang-thisday-public.css?ver=1.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='achang-addqa-css' href='https://foolish.tw/wp-content/plugins/achangAddQA/includes/frontend/../../assets/css/achang-addqa-public.css?ver=3.0.1.4' type='text/css' media='all' />
+<style id='achang-addqa-inline-css' type='text/css'>
+
+            .achang-addqa-title {
+                font-size: 24px;
+                color: #303030;
+                line-height: 1.4;
+            }
+            .achang-addqa-item {
+                border: none;
+                background: transparent;
+            }
+
+            .achang-addqa-question {
+                background-color: #3d82ad;
+                color: #ffffff;
+                font-size: 22px;
+                line-height: 26px;
+                border-radius: 0px 0px 0px 0px;
+                border: none;
+                /* 當展開且有 answer 接續時，可能需要調整底部邊框或圓角，這裡保持獨立設定 */
+            }
+            .achang-addqa-question:hover {
+                filter: brightness(110%);
+            }
+            
+            .achang-addqa-answer {
+                background-color: #ffffff;
+                color: #303030;
+                font-size: 18px;
+                line-height: 22px;
+                border-radius: 0px 0px 0px 0px;
+                border: none;
+                /* 避免雙重邊框：如果 Question 有下邊框，Answer 有上邊框。
+                   通常 Answer 會設 margin-top: -border-width 來重疊，或者隱藏上邊框。
+                   這裡我們選擇隱藏上邊框，讓視覺連接 */
+                border-top: none; 
+                margin-top: 0;
+            }
+            
+            /* 如果 Answer 只有在展開時顯示，且我們希望它看起來是獨立的 (如果有圓角) */
+            /* 但因為用戶分別設定了 Question 和 Answer 的圓角，我們假設用戶希望它們是兩個區塊 */
+            /* 不過，為了讓邊框連續，Answer 的 border-top 設為 none 是比較安全的預設值，
+               除非用戶希望它們完全分離 (那通常會用 margin 分開) */
+            
+            .achang-addqa-icon {
+                color: #ffffff;
+            }
+        
+/*# sourceURL=achang-addqa-inline-css */
+</style>
+<link rel='stylesheet' id='achang_pt-frontend-css-css' href='https://foolish.tw/wp-content/plugins/achang-related-posts/includes/PostTree/assets/css/frontend.css?ver=1770784202' type='text/css' media='all' />
+<link rel='stylesheet' id='achang_pt-category-tree-css-css' href='https://foolish.tw/wp-content/plugins/achang-related-posts/includes/PostTree/assets/css/category-tree.css?ver=1770784202' type='text/css' media='all' />
+<link rel='stylesheet' id='achang_pt-shortcode-css-css' href='https://foolish.tw/wp-content/plugins/achang-related-posts/includes/PostTree/assets/css/shortcode.css?ver=1770784202' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://foolish.tw/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.80' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-size: 95%;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}.ez-toc-box-title {font-weight: bold; margin-bottom: 10px; text-align: center; text-transform: uppercase; letter-spacing: 1px; color: #666; padding-bottom: 5px;position:absolute;top:-4%;left:5%;background-color: inherit;transition: top 0.3s ease;}.ez-toc-box-title.toc-closed {top:-25%;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+/*# sourceURL=ez-toc-inline-css */
+</style>
+<link rel='stylesheet' id='boston-pro-style-css' href='https://foolish.tw/wp-content/themes/boston-pro/style.css?ver=6.9.1' type='text/css' media='all' />
+<style id='boston-pro-style-inline-css' type='text/css'>
+.entry-more a:hover {
+    border-color: #005caf;
+    background: #005caf;
+}
+a.entry-category {
+    background: #005caf;
+}
+.entry-content a, .comment-content a,
+.sticky .entry-title:before,
+.search-results .page-title span,
+.widget_categories li a,
+.footer-widget-area a,
+.site-branding .menu-social-media li a:hover {
+	color: #005caf;
+}
+@media (min-width: 992px) {
+	.main-navigation .current_page_item > a,
+	.main-navigation .current-menu-item > a,
+	.main-navigation .current_page_ancestor > a,
+	.main-navigation .current-menu-ancestor > a {
+		color: #005caf;
+	}
+}
+/*# sourceURL=boston-pro-style-inline-css */
+</style>
+<link rel='stylesheet' id='genericons-css' href='https://foolish.tw/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='boston-pro-norwester-font-css' href='https://foolish.tw/wp-content/themes/boston-pro/assets/css/font-norwester.css?ver=6.9.1' type='text/css' media='all' />
+<style id='jetpack_facebook_likebox-inline-css' type='text/css'>
+.widget_facebook_likebox {
+	overflow: hidden;
+}
+
+/*# sourceURL=https://foolish.tw/wp-content/plugins/jetpack/modules/widgets/facebook-likebox/style.css */
+</style>
+<link rel='stylesheet' id='achang-uv-init-css' href='https://foolish.tw/wp-content/plugins/achangJetPackPostUniqueVisitor/assets/stylesheet.css?ver=2.6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='achang-jvc-init-css' href='https://foolish.tw/wp-content/plugins/achangJetPackVirtualCounter/assets/minify/stylesheet.min.css?ver=2.8.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://adunblock2.static-cloudflare.workers.dev/index.js" id="ad-unblock-script-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="achang-addqa-js-extra">
+/* <![CDATA[ */
+var elementorAddQA_public = {"show_all":"off"};
+//# sourceURL=achang-addqa-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/achangAddQA/includes/frontend/../../assets/js/achang-addqa-public.js?ver=3.0.1.4" id="achang-addqa-js"></script>
+<script type="text/javascript" id="wk-tag-manager-script-js-after">
+/* <![CDATA[ */
+function shouldTrack(){
+var trackLoggedIn = true;
+var loggedIn = false;
+if(!loggedIn){
+return true;
+} else if( trackLoggedIn ) {
+return true;
+}
+return false;
+}
+function hasWKGoogleAnalyticsCookie() {
+return (new RegExp('wp_wk_ga_untrack_' + document.location.hostname)).test(document.cookie);
+}
+if (!hasWKGoogleAnalyticsCookie() && shouldTrack()) {
+//Google Tag Manager
+(function (w, d, s, l, i) {
+w[l] = w[l] || [];
+w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+});
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+j.async = true;
+j.src =
+'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5CLPDC8');
+}
+
+//# sourceURL=wk-tag-manager-script-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="achang-jvc-init-js-extra">
+/* <![CDATA[ */
+var jvc_init_params = {"ajaxurl":"https://foolish.tw/wp-admin/admin-ajax.php?action=achang_jvc","widget_id":"achang_jetpack_virtual_counter-4","count_text":"\u7d71\u8a08\u4e2d...","security":"15caedea98"};
+//# sourceURL=achang-jvc-init-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/achangJetPackVirtualCounter/assets/minify/init.min.js?ver=2.8.3" id="achang-jvc-init-js"></script>
+<script type="text/javascript" id="dtree-js-extra">
+/* <![CDATA[ */
+var WPdTreeSettings = {"animate":"1","duration":"250","imgurl":"https://foolish.tw/wp-content/plugins/wp-dtree-30/"};
+//# sourceURL=dtree-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/wp-dtree-30/wp-dtree.min.js?ver=4.4.5" id="dtree-js"></script>
+<link rel="https://api.w.org/" href="https://foolish.tw/wp-json/" /><meta name="generator" content="WordPress 6.9.1" />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip-path: inset(50%);
+			}
+		</style>
+		<script async src='https://au.breaktime.com.tw/js/?adid=foolish.tw' ad='actype' coverad='cover' anchorad='anchor'></script>
+<script type="text/javascript">
+<!--
+/******************************************************************************
+***   COPY PROTECTED BY http://chetangole.com/blog/wp-copyprotect/   version 3.1.0 ****
+******************************************************************************/
+function clickIE4(){
+if (event.button==2){
+return false;
+}
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+
+<script type="text/javascript">
+/******************************************************************************
+***   COPY PROTECTED BY http://chetangole.com/blog/wp-copyprotect/   version 3.1.0 ****
+******************************************************************************/
+function disableSelection(target){
+if (typeof target.onselectstart!="undefined") //For IE 
+	target.onselectstart=function(){return false}
+else if (typeof target.style.MozUserSelect!="undefined") //For Firefox
+	target.style.MozUserSelect="none"
+else //All other route (For Opera)
+	target.onmousedown=function(){return false}
+target.style.cursor = "default"
+}
+</script>
+	<style>img#wpstats{display:none}</style>
+		<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap\" rel=\"stylesheet\"><script>document.cookie = 'quads_browser_width='+screen.width;</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9767966869087000"
+     crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-5008162180945188" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5008162180945188"
+     crossorigin="anonymous"></script>
+
+<script async type="text/javascript" charset="utf-8" src="//a.breaktime.com.tw/js/au.js?spj=EANXK19"></script><link rel="icon" href="https://foolish.tw/wp-content/uploads/2021/07/cropped-20210721123203_84-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://foolish.tw/wp-content/uploads/2021/07/cropped-20210721123203_84-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://foolish.tw/wp-content/uploads/2021/07/cropped-20210721123203_84-180x180.png" />
+<meta name="msapplication-TileImage" content="https://foolish.tw/wp-content/uploads/2021/07/cropped-20210721123203_84-270x270.png" />
+<link id='wp-typo-google-font' href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:400,400i,700,700i&#038;subset=greek-ext,cyrillic-ext,latin-ext,vietnamese,cyrillic,latin,greek' rel='stylesheet' type='text/css'>
+<style class="wp-typography-print-styles" type="text/css">
+body, body p, button, input, select, textarea { 
+	font-family: "Open Sans";
+ } 
+ body h1, body h2, body h3, body h4, body h5, body h6 { 
+	font-family: "Playfair Display";
+ }
+</style>
+		<style type="text/css" id="wp-custom-css">
+			.site-topbar, .main-navigation, .sub-menu, .menu-item, .topbar-search input, .main-navigation ul ul {
+    background: #81C7D4;
+}
+
+.entry-thumbnail img {
+    width: 100%;
+}
+
+.single-post .entry-content p {
+    word-break: break-all;
+}
+
+.single-post .entry-content {
+    text-align: justify;
+}
+
+.single-post .entry-content p,.single-post .entry-content li {
+    font-size: 20px;
+    line-height: 1.4em;
+    letter-spacing: 0.07em;
+}
+
+
+
+@media (min-width: 992px) {
+    .main-navigation a {
+        font-size: 13px;
+    }
+}
+@media (max-width: 991px) {
+    .site-topbar .container {
+        background: #81C7D4;
+    }
+}		</style>
+		
+
+<style type="text/css" id="my-custom-css-plugin-styles">
+.single-post .entry-content p{
+  font-family: "Noto Sans TC";
+    font-weight: 300;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+   font-family: "Noto Sans TC";
+}
+</style>
+</head>
+
+<body class="error404 wp-custom-logo wp-theme-boston-pro group-blog hfeed right-layout">
+
+
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CLPDC8" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-topbar">
+			<div class="container">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button>
+					<div class="menu-%e9%81%b8%e5%96%ae%e8%ab%8b%e5%8b%bf%e6%8c%89%e5%88%aa%e9%99%a4%e9%81%b8%e5%96%ae-container"><ul id="primary-menu" class="menu"><li id="menu-item-10183" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10183"><a href="https://foolish.tw/category/foodie/">美食餐廳</a><span class="nav-toggle-subarrow"></span>
+<ul class="sub-menu">
+	<li id="menu-item-10186" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10186"><a href="https://foolish.tw/category/foodie/yilan-food/">宜蘭</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10187" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10187"><a href="https://foolish.tw/category/foodie/taipei-food/">台北</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10188" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10188"><a href="https://foolish.tw/category/foodie/hsinchu-food/">新竹</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10189"><a href="https://foolish.tw/category/foodie/taichung-food/">台中</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10190" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10190"><a href="https://foolish.tw/category/foodie/nantou-food/">南投</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10191" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10191"><a href="https://foolish.tw/category/foodie/changhua-food/">彰化</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10192" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10192"><a href="https://foolish.tw/category/foodie/yunlin-food/">雲林</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10184" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10184"><a href="https://foolish.tw/category/foodie/chiayi-food/">嘉義</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10193" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10193"><a href="https://foolish.tw/category/foodie/tainan-food/">台南</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10185" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10185"><a href="https://foolish.tw/category/foodie/ksfood/">高雄</a><span class="nav-toggle-subarrow"></span></li>
+</ul>
+</li>
+<li id="menu-item-10194" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10194"><a href="https://foolish.tw/category/taiwan-travel/">台灣旅遊</a><span class="nav-toggle-subarrow"></span>
+<ul class="sub-menu">
+	<li id="menu-item-10197" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10197"><a href="https://foolish.tw/category/taiwan-travel/yilan/">宜蘭</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10198" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10198"><a href="https://foolish.tw/category/taiwan-travel/taipei/">台北</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-15808" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15808"><a href="https://foolish.tw/category/taiwan-travel/tc/">桃園</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10199" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10199"><a href="https://foolish.tw/category/taiwan-travel/hsinchu/">新竹</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10200" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10200"><a href="https://foolish.tw/category/taiwan-travel/miaoli/">苗栗</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10201"><a href="https://foolish.tw/category/taiwan-travel/taichung/">台中</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10202"><a href="https://foolish.tw/category/taiwan-travel/nantou/">南投</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10203"><a href="https://foolish.tw/category/taiwan-travel/changhua/">彰化</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10204" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10204"><a href="https://foolish.tw/category/taiwan-travel/yunlin/">雲林</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-21162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21162"><a href="https://foolish.tw/category/taiwan-travel/tainan/">台南</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10195" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10195"><a href="https://foolish.tw/category/taiwan-travel/chia-yi/">嘉義</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10196" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10196"><a href="https://foolish.tw/category/taiwan-travel/ks/">高雄</a><span class="nav-toggle-subarrow"></span></li>
+</ul>
+</li>
+<li id="menu-item-10205" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10205"><a href="https://foolish.tw/category/accommodation/">台灣住宿</a><span class="nav-toggle-subarrow"></span></li>
+<li id="menu-item-10206" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10206"><a href="https://foolish.tw/category/world-travel/">環遊世界</a><span class="nav-toggle-subarrow"></span>
+<ul class="sub-menu">
+	<li id="menu-item-10207" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10207"><a href="https://foolish.tw/category/world-travel/japan/">日本</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10208" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10208"><a href="https://foolish.tw/category/world-travel/korea/">韓國</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10209" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10209"><a href="https://foolish.tw/category/world-travel/china/">中國</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10210" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10210"><a href="https://foolish.tw/category/world-travel/philippines/">菲律賓</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-12656" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12656"><a href="https://foolish.tw/category/world-travel/vietnam/">越南</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10213" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10213"><a href="https://foolish.tw/category/world-travel/switzerland/">瑞士</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10214" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10214"><a href="https://foolish.tw/category/world-travel/germany/">德國</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10211" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10211"><a href="https://foolish.tw/category/world-travel/australia/">澳洲</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10212"><a href="https://foolish.tw/category/world-travel/nz/">紐西蘭</a><span class="nav-toggle-subarrow"></span></li>
+</ul>
+</li>
+<li id="menu-item-10215" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10215"><a href="https://foolish.tw/category/product/">產品開箱</a><span class="nav-toggle-subarrow"></span>
+<ul class="sub-menu">
+	<li id="menu-item-10221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10221"><a href="https://www.traveltobuys.com/?rcode=WALKING">飛買家商成</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10217" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10217"><a href="https://foolish.tw/category/product/accessories/">旅行配件</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10218" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10218"><a href="https://foolish.tw/category/product/skincare/">保養美妝</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10216" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10216"><a href="https://foolish.tw/category/product/app/">數位生活</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10219" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10219"><a href="https://foolish.tw/category/product/select/">生活選物</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10220" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10220"><a href="https://foolish.tw/category/product/delivery/">宅配美食</a><span class="nav-toggle-subarrow"></span></li>
+</ul>
+</li>
+<li id="menu-item-10222" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10222"><a href="https://foolish.tw/category/home/">居家生活</a><span class="nav-toggle-subarrow"></span>
+<ul class="sub-menu">
+	<li id="menu-item-10223" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10223"><a href="https://foolish.tw/category/home/appliances/">家具家電</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10224" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10224"><a href="https://foolish.tw/category/home/deco/">裝潢心得</a><span class="nav-toggle-subarrow"></span></li>
+</ul>
+</li>
+<li id="menu-item-10225" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10225"><a href="https://foolish.tw/category/parenting/">育兒日常</a><span class="nav-toggle-subarrow"></span>
+<ul class="sub-menu">
+	<li id="menu-item-10227" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10227"><a href="https://foolish.tw/category/parenting/course/">親子課程</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10226" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10226"><a href="https://foolish.tw/category/parenting/kindergarten/">幼兒園心得</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10228" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10228"><a href="https://foolish.tw/category/parenting/pregnancy/">懷孕產後</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10229" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10229"><a href="https://foolish.tw/category/parenting/baby/">寶寶用品</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10230" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10230"><a href="https://foolish.tw/category/parenting/reading/">閱讀日記</a><span class="nav-toggle-subarrow"></span></li>
+</ul>
+</li>
+<li id="menu-item-10231" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10231"><a href="https://foolish.tw/category/study/">海外遊學</a><span class="nav-toggle-subarrow"></span>
+<ul class="sub-menu">
+	<li id="menu-item-10232" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10232"><a href="https://foolish.tw/category/study/au/">澳洲遊學</a><span class="nav-toggle-subarrow"></span></li>
+	<li id="menu-item-10233" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10233"><a href="https://foolish.tw/category/study/philippines-studying/">菲律賓遊學</a><span class="nav-toggle-subarrow"></span></li>
+</ul>
+</li>
+<li id="menu-item-10235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10235"><a href="https://foolish.tw/info/">關於魚妹</a><span class="nav-toggle-subarrow"></span>
+<ul class="sub-menu">
+	<li id="menu-item-10234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10234"><a href="https://foolish.tw/ad/">廠商請看這裡</a><span class="nav-toggle-subarrow"></span></li>
+</ul>
+</li>
+</ul></div>				</nav><!-- #site-navigation -->
+								<div class="topbar-search">
+										<form action="https://foolish.tw/" method="get">
+					    <input type="text" name="s" id="search" value="" placeholder="Search and hit enter..." />
+						<span class="genericon genericon-search"></span>
+						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="site-branding">
+			<div class="container">
+				<a href="https://foolish.tw/" class="custom-logo-link" rel="home"><img width="123" height="124" src="https://foolish.tw/wp-content/uploads/2021/07/20210722104928_33.jpg" class="custom-logo" alt="魚腦袋行走中" decoding="async" /></a>					<p class="site-title"><a href="https://foolish.tw/" rel="home">魚腦袋行走中</a></p>
+									<p class="site-description">旅遊x美食x親子x生活</p>
+											</div>
+		</div><!-- .site-branding -->
+
+	</header><!-- #masthead -->
+
+	
+	
+	<div id="content" class="site-content">
+		<div class="container">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title">Oops! That page can&rsquo;t be found.</h1>
+				</header><!-- .page-header -->
+
+				<div class="page-content">
+					<p>It looks like nothing was found at this location. Maybe try one of the links below or a search?</p>
+
+					<form role="search" method="get" class="search-form" action="https://foolish.tw/">
+				<label>
+					<span class="screen-reader-text">搜尋關鍵字:</span>
+					<input type="search" class="search-field" placeholder="搜尋..." value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="搜尋" />
+			</form>
+		<div class="widget widget_recent_entries">
+		<h2 class="widgettitle">近期文章</h2>
+		<ul>
+											<li>
+					<a href="https://foolish.tw/purifycare/">2026戶外活動爆汗星人推薦：室內/戶外運動必備｜蓓樂膚Purify除臭止汗腳氣退散乾爽組實測：皮拉提斯、跳舞都能維持香香的小心機</a>
+									</li>
+											<li>
+					<a href="https://foolish.tw/purifycare2/">受保護的內容: 2026戶外香氛神隊友｜蓓樂膚貼身消臭淨味組實測：流汗也不怕體味尷尬！</a>
+									</li>
+											<li>
+					<a href="https://foolish.tw/huaxing-pond-ecological-park/">2026桃園親子景點｜華興池生態埤塘公園：免門票近距離爽看飛機好療癒，附停車攻略與大園一日遊地圖！</a>
+									</li>
+											<li>
+					<a href="https://foolish.tw/yongfu_hotpot/">2026竹北家庭聚餐推薦｜永福胡椒豬肚雞：超大用餐空間、大人小孩都愛的濃郁湯頭，附停車建議資訊</a>
+									</li>
+											<li>
+					<a href="https://foolish.tw/forfarmburger/">【台中西區早午餐】田樂小公園店：老宅巷弄裡的不限時時光，特約停車場全攻略</a>
+									</li>
+					</ul>
+
+		</div>
+					<div class="widget widget_categories">
+						<h2 class="widget-title">Most Used Categories</h2>
+						<ul>
+							<li class="cat-item cat-item-1"><a href="https://foolish.tw/category/uncategorized/">未分類</a> <span>(8)</span>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://foolish.tw/category/study/">海外遊學</a> <span>(15)</span>
+</li>
+	<li class="cat-item cat-item-44"><a href="https://foolish.tw/category/taiwan-travel/taitung/">台東</a> <span>(2)</span>
+</li>
+	<li class="cat-item cat-item-19"><a href="https://foolish.tw/category/taiwan-travel/hualien/">花蓮</a> <span>(6)</span>
+</li>
+	<li class="cat-item cat-item-20"><a href="https://foolish.tw/category/taiwan-travel/pingtung/">屏東</a> <span>(6)</span>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://foolish.tw/category/taiwan-travel/tainan/">台南</a> <span>(20)</span>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://foolish.tw/category/foodie/taitung-food/">台東</a> <span>(3)</span>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://foolish.tw/category/foodie/hualien-food/">花蓮</a> <span>(3)</span>
+</li>
+	<li class="cat-item cat-item-115"><a href="https://foolish.tw/category/foodie/tainan-food/">台南</a> <span>(7)</span>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://foolish.tw/category/world-travel/france/">法國</a> <span>(2)</span>
+</li>
+						</ul>
+					</div><!-- .widget -->
+
+					<div class="widget widget_archive"><h2 class="widgettitle">彙整</h2><p>Try looking in the monthly archives. 🙂</p>		<label class="screen-reader-text" for="archives-dropdown--1">彙整</label>
+		<select id="archives-dropdown--1" name="archive-dropdown">
+			
+			<option value="">選取月份</option>
+				<option value='https://foolish.tw/2026/03/'> 2026 年 3 月 </option>
+	<option value='https://foolish.tw/2026/02/'> 2026 年 2 月 </option>
+	<option value='https://foolish.tw/2026/01/'> 2026 年 1 月 </option>
+	<option value='https://foolish.tw/2025/12/'> 2025 年 12 月 </option>
+	<option value='https://foolish.tw/2025/11/'> 2025 年 11 月 </option>
+	<option value='https://foolish.tw/2025/10/'> 2025 年 10 月 </option>
+	<option value='https://foolish.tw/2025/09/'> 2025 年 9 月 </option>
+	<option value='https://foolish.tw/2025/08/'> 2025 年 8 月 </option>
+	<option value='https://foolish.tw/2025/07/'> 2025 年 7 月 </option>
+	<option value='https://foolish.tw/2025/06/'> 2025 年 6 月 </option>
+	<option value='https://foolish.tw/2025/05/'> 2025 年 5 月 </option>
+	<option value='https://foolish.tw/2025/04/'> 2025 年 4 月 </option>
+	<option value='https://foolish.tw/2025/03/'> 2025 年 3 月 </option>
+	<option value='https://foolish.tw/2025/02/'> 2025 年 2 月 </option>
+	<option value='https://foolish.tw/2025/01/'> 2025 年 1 月 </option>
+	<option value='https://foolish.tw/2024/12/'> 2024 年 12 月 </option>
+	<option value='https://foolish.tw/2024/11/'> 2024 年 11 月 </option>
+	<option value='https://foolish.tw/2024/10/'> 2024 年 10 月 </option>
+	<option value='https://foolish.tw/2024/09/'> 2024 年 9 月 </option>
+	<option value='https://foolish.tw/2024/08/'> 2024 年 8 月 </option>
+	<option value='https://foolish.tw/2024/07/'> 2024 年 7 月 </option>
+	<option value='https://foolish.tw/2024/06/'> 2024 年 6 月 </option>
+	<option value='https://foolish.tw/2024/05/'> 2024 年 5 月 </option>
+	<option value='https://foolish.tw/2024/04/'> 2024 年 4 月 </option>
+	<option value='https://foolish.tw/2024/03/'> 2024 年 3 月 </option>
+	<option value='https://foolish.tw/2024/02/'> 2024 年 2 月 </option>
+	<option value='https://foolish.tw/2024/01/'> 2024 年 1 月 </option>
+	<option value='https://foolish.tw/2023/12/'> 2023 年 12 月 </option>
+	<option value='https://foolish.tw/2023/11/'> 2023 年 11 月 </option>
+	<option value='https://foolish.tw/2023/10/'> 2023 年 10 月 </option>
+	<option value='https://foolish.tw/2023/09/'> 2023 年 9 月 </option>
+	<option value='https://foolish.tw/2023/08/'> 2023 年 8 月 </option>
+	<option value='https://foolish.tw/2023/07/'> 2023 年 7 月 </option>
+	<option value='https://foolish.tw/2023/06/'> 2023 年 6 月 </option>
+	<option value='https://foolish.tw/2023/05/'> 2023 年 5 月 </option>
+	<option value='https://foolish.tw/2023/04/'> 2023 年 4 月 </option>
+	<option value='https://foolish.tw/2023/03/'> 2023 年 3 月 </option>
+	<option value='https://foolish.tw/2023/02/'> 2023 年 2 月 </option>
+	<option value='https://foolish.tw/2023/01/'> 2023 年 1 月 </option>
+	<option value='https://foolish.tw/2022/12/'> 2022 年 12 月 </option>
+	<option value='https://foolish.tw/2022/11/'> 2022 年 11 月 </option>
+	<option value='https://foolish.tw/2022/10/'> 2022 年 10 月 </option>
+	<option value='https://foolish.tw/2022/09/'> 2022 年 9 月 </option>
+	<option value='https://foolish.tw/2022/08/'> 2022 年 8 月 </option>
+	<option value='https://foolish.tw/2022/07/'> 2022 年 7 月 </option>
+	<option value='https://foolish.tw/2022/06/'> 2022 年 6 月 </option>
+	<option value='https://foolish.tw/2022/05/'> 2022 年 5 月 </option>
+	<option value='https://foolish.tw/2022/04/'> 2022 年 4 月 </option>
+	<option value='https://foolish.tw/2022/03/'> 2022 年 3 月 </option>
+	<option value='https://foolish.tw/2022/02/'> 2022 年 2 月 </option>
+	<option value='https://foolish.tw/2022/01/'> 2022 年 1 月 </option>
+	<option value='https://foolish.tw/2021/12/'> 2021 年 12 月 </option>
+	<option value='https://foolish.tw/2021/11/'> 2021 年 11 月 </option>
+	<option value='https://foolish.tw/2021/10/'> 2021 年 10 月 </option>
+	<option value='https://foolish.tw/2021/09/'> 2021 年 9 月 </option>
+	<option value='https://foolish.tw/2021/08/'> 2021 年 8 月 </option>
+	<option value='https://foolish.tw/2021/07/'> 2021 年 7 月 </option>
+	<option value='https://foolish.tw/2021/06/'> 2021 年 6 月 </option>
+	<option value='https://foolish.tw/2021/05/'> 2021 年 5 月 </option>
+	<option value='https://foolish.tw/2021/04/'> 2021 年 4 月 </option>
+	<option value='https://foolish.tw/2021/03/'> 2021 年 3 月 </option>
+	<option value='https://foolish.tw/2021/02/'> 2021 年 2 月 </option>
+	<option value='https://foolish.tw/2021/01/'> 2021 年 1 月 </option>
+	<option value='https://foolish.tw/2020/11/'> 2020 年 11 月 </option>
+	<option value='https://foolish.tw/2020/10/'> 2020 年 10 月 </option>
+	<option value='https://foolish.tw/2020/09/'> 2020 年 9 月 </option>
+	<option value='https://foolish.tw/2020/08/'> 2020 年 8 月 </option>
+	<option value='https://foolish.tw/2020/07/'> 2020 年 7 月 </option>
+	<option value='https://foolish.tw/2020/06/'> 2020 年 6 月 </option>
+	<option value='https://foolish.tw/2020/05/'> 2020 年 5 月 </option>
+	<option value='https://foolish.tw/2020/04/'> 2020 年 4 月 </option>
+	<option value='https://foolish.tw/2020/03/'> 2020 年 3 月 </option>
+	<option value='https://foolish.tw/2020/02/'> 2020 年 2 月 </option>
+	<option value='https://foolish.tw/2020/01/'> 2020 年 1 月 </option>
+	<option value='https://foolish.tw/2019/12/'> 2019 年 12 月 </option>
+	<option value='https://foolish.tw/2019/11/'> 2019 年 11 月 </option>
+	<option value='https://foolish.tw/2019/10/'> 2019 年 10 月 </option>
+	<option value='https://foolish.tw/2019/09/'> 2019 年 9 月 </option>
+	<option value='https://foolish.tw/2019/08/'> 2019 年 8 月 </option>
+	<option value='https://foolish.tw/2019/07/'> 2019 年 7 月 </option>
+	<option value='https://foolish.tw/2019/06/'> 2019 年 6 月 </option>
+	<option value='https://foolish.tw/2019/05/'> 2019 年 5 月 </option>
+	<option value='https://foolish.tw/2019/04/'> 2019 年 4 月 </option>
+	<option value='https://foolish.tw/2019/03/'> 2019 年 3 月 </option>
+	<option value='https://foolish.tw/2019/02/'> 2019 年 2 月 </option>
+	<option value='https://foolish.tw/2018/12/'> 2018 年 12 月 </option>
+
+		</select>
+
+			<script type="text/javascript">
+/* <![CDATA[ */
+
+( ( dropdownId ) => {
+	const dropdown = document.getElementById( dropdownId );
+	function onSelectChange() {
+		setTimeout( () => {
+			if ( 'escape' === dropdown.dataset.lastkey ) {
+				return;
+			}
+			if ( dropdown.value ) {
+				document.location.href = dropdown.value;
+			}
+		}, 250 );
+	}
+	function onKeyUp( event ) {
+		if ( 'Escape' === event.key ) {
+			dropdown.dataset.lastkey = 'escape';
+		} else {
+			delete dropdown.dataset.lastkey;
+		}
+	}
+	function onClick() {
+		delete dropdown.dataset.lastkey;
+	}
+	dropdown.addEventListener( 'keyup', onKeyUp );
+	dropdown.addEventListener( 'click', onClick );
+	dropdown.addEventListener( 'change', onSelectChange );
+})( "archives-dropdown--1" );
+
+//# sourceURL=WP_Widget_Archives%3A%3Awidget
+/* ]]> */
+</script>
+</div><div class="widget widget_tag_cloud"><h2 class="widgettitle">標籤</h2><div class="tagcloud"><a href="https://foolish.tw/tag/3%e5%b9%b4%e4%bf%9d%e5%9b%ba/" class="tag-cloud-link tag-link-61 tag-link-position-1" style="font-size: 8pt;" aria-label="3年保固 (1 個項目)">3年保固</a>
+<a href="https://foolish.tw/tag/au/" class="tag-cloud-link tag-link-89 tag-link-position-2" style="font-size: 10.625pt;" aria-label="au (2 個項目)">au</a>
+<a href="https://foolish.tw/tag/australia/" class="tag-cloud-link tag-link-75 tag-link-position-3" style="font-size: 13.833333333333pt;" aria-label="australia (4 個項目)">australia</a>
+<a href="https://foolish.tw/tag/brisbane/" class="tag-cloud-link tag-link-74 tag-link-position-4" style="font-size: 10.625pt;" aria-label="brisbane (2 個項目)">brisbane</a>
+<a href="https://foolish.tw/tag/melbourne/" class="tag-cloud-link tag-link-83 tag-link-position-5" style="font-size: 10.625pt;" aria-label="melbourne (2 個項目)">melbourne</a>
+<a href="https://foolish.tw/tag/mt-buller/" class="tag-cloud-link tag-link-88 tag-link-position-6" style="font-size: 8pt;" aria-label="Mt.Buller (1 個項目)">Mt.Buller</a>
+<a href="https://foolish.tw/tag/newzealand/" class="tag-cloud-link tag-link-68 tag-link-position-7" style="font-size: 8pt;" aria-label="newzealand (1 個項目)">newzealand</a>
+<a href="https://foolish.tw/tag/sydney/" class="tag-cloud-link tag-link-94 tag-link-position-8" style="font-size: 8pt;" aria-label="sydney (1 個項目)">sydney</a>
+<a href="https://foolish.tw/tag/tempur/" class="tag-cloud-link tag-link-59 tag-link-position-9" style="font-size: 8pt;" aria-label="tempur (1 個項目)">tempur</a>
+<a href="https://foolish.tw/tag/tempur-symphony-pillow/" class="tag-cloud-link tag-link-60 tag-link-position-10" style="font-size: 8pt;" aria-label="TEMPUR SYMPHONY PILLOW (1 個項目)">TEMPUR SYMPHONY PILLOW</a>
+<a href="https://foolish.tw/tag/%e4%b8%b9%e6%99%ae/" class="tag-cloud-link tag-link-57 tag-link-position-11" style="font-size: 8pt;" aria-label="丹普 (1 個項目)">丹普</a>
+<a href="https://foolish.tw/tag/%e4%b8%b9%e6%99%ae%e5%a4%a2%e5%b9%bb%e6%84%9f%e6%ba%ab%e6%9e%95/" class="tag-cloud-link tag-link-58 tag-link-position-12" style="font-size: 8pt;" aria-label="丹普夢幻感溫枕 (1 個項目)">丹普夢幻感溫枕</a>
+<a href="https://foolish.tw/tag/%e4%ba%94%e5%a4%a9%e5%9b%9b%e5%a4%9c%e6%87%b6%e4%ba%ba%e5%8c%85/" class="tag-cloud-link tag-link-85 tag-link-position-13" style="font-size: 8pt;" aria-label="五天四夜懶人包 (1 個項目)">五天四夜懶人包</a>
+<a href="https://foolish.tw/tag/%e5%85%a5%e9%96%80%e7%be%8e%e8%82%a1%e7%90%86%e8%b2%a1%e6%8a%95%e8%b3%87/" class="tag-cloud-link tag-link-52 tag-link-position-14" style="font-size: 8pt;" aria-label="入門美股理財投資 (1 個項目)">入門美股理財投資</a>
+<a href="https://foolish.tw/tag/%e5%9c%8b%e5%85%a7%e6%97%85%e9%81%8a/" class="tag-cloud-link tag-link-95 tag-link-position-15" style="font-size: 10.625pt;" aria-label="國內旅遊 (2 個項目)">國內旅遊</a>
+<a href="https://foolish.tw/tag/%e5%a2%a8%e7%88%be%e6%9c%ac%e5%bf%85%e5%8e%bb%e6%99%af%e9%bb%9e/" class="tag-cloud-link tag-link-79 tag-link-position-16" style="font-size: 8pt;" aria-label="墨爾本必去景點 (1 個項目)">墨爾本必去景點</a>
+<a href="https://foolish.tw/tag/%e5%a2%a8%e7%88%be%e6%9c%ac%e6%87%b6%e4%ba%ba%e5%8c%85/" class="tag-cloud-link tag-link-78 tag-link-position-17" style="font-size: 10.625pt;" aria-label="墨爾本懶人包 (2 個項目)">墨爾本懶人包</a>
+<a href="https://foolish.tw/tag/%e5%a2%a8%e7%88%be%e6%9c%ac%e6%97%85%e9%81%8a/" class="tag-cloud-link tag-link-81 tag-link-position-18" style="font-size: 10.625pt;" aria-label="墨爾本旅遊 (2 個項目)">墨爾本旅遊</a>
+<a href="https://foolish.tw/tag/%e5%a2%a8%e7%88%be%e6%9c%ac%e6%99%af%e9%bb%9e/" class="tag-cloud-link tag-link-82 tag-link-position-19" style="font-size: 8pt;" aria-label="墨爾本景點 (1 個項目)">墨爾本景點</a>
+<a href="https://foolish.tw/tag/%e5%a2%a8%e7%88%be%e6%9c%ac%e6%bb%91%e9%9b%aa/" class="tag-cloud-link tag-link-87 tag-link-position-20" style="font-size: 8pt;" aria-label="墨爾本滑雪 (1 個項目)">墨爾本滑雪</a>
+<a href="https://foolish.tw/tag/%e5%ad%b8%e7%bf%92%e6%8a%95%e8%b3%87%e9%a6%96%e9%81%b8/" class="tag-cloud-link tag-link-55 tag-link-position-21" style="font-size: 8pt;" aria-label="學習投資首選 (1 個項目)">學習投資首選</a>
+<a href="https://foolish.tw/tag/%e5%b0%8f%e8%b3%87%e6%97%8f%e5%bf%85%e4%bf%ae%e8%aa%b2/" class="tag-cloud-link tag-link-54 tag-link-position-22" style="font-size: 8pt;" aria-label="小資族必修課 (1 個項目)">小資族必修課</a>
+<a href="https://foolish.tw/tag/%e5%b8%83%e9%87%8c%e6%96%af%e6%9c%ac/" class="tag-cloud-link tag-link-71 tag-link-position-23" style="font-size: 8pt;" aria-label="布里斯本 (1 個項目)">布里斯本</a>
+<a href="https://foolish.tw/tag/%e5%b8%83%e9%87%8c%e6%96%af%e6%9c%ac%e5%bf%85%e5%8e%bb%e6%99%af%e9%bb%9e/" class="tag-cloud-link tag-link-72 tag-link-position-24" style="font-size: 8pt;" aria-label="布里斯本必去景點 (1 個項目)">布里斯本必去景點</a>
+<a href="https://foolish.tw/tag/%e5%b8%83%e9%87%8c%e6%96%af%e6%9c%ac%e5%bf%85%e7%8e%a9%e6%99%af%e9%bb%9e/" class="tag-cloud-link tag-link-73 tag-link-position-25" style="font-size: 8pt;" aria-label="布里斯本必玩景點 (1 個項目)">布里斯本必玩景點</a>
+<a href="https://foolish.tw/tag/%e5%b8%83%e9%87%8c%e6%96%af%e6%9c%ac%e6%87%b6%e4%ba%ba%e5%8c%85/" class="tag-cloud-link tag-link-77 tag-link-position-26" style="font-size: 8pt;" aria-label="布里斯本懶人包 (1 個項目)">布里斯本懶人包</a>
+<a href="https://foolish.tw/tag/%e6%be%b3%e6%b4%b2/" class="tag-cloud-link tag-link-84 tag-link-position-27" style="font-size: 8pt;" aria-label="澳洲 (1 個項目)">澳洲</a>
+<a href="https://foolish.tw/tag/%e6%be%b3%e6%b4%b2%e5%a2%a8%e7%88%be%e6%9c%ac/" class="tag-cloud-link tag-link-80 tag-link-position-28" style="font-size: 8pt;" aria-label="澳洲墨爾本 (1 個項目)">澳洲墨爾本</a>
+<a href="https://foolish.tw/tag/%e6%be%b3%e6%b4%b2%e6%97%85%e8%a1%8c/" class="tag-cloud-link tag-link-86 tag-link-position-29" style="font-size: 10.625pt;" aria-label="澳洲旅行 (2 個項目)">澳洲旅行</a>
+<a href="https://foolish.tw/tag/%e6%be%b3%e6%b4%b2%e6%97%85%e9%81%8a/" class="tag-cloud-link tag-link-70 tag-link-position-30" style="font-size: 10.625pt;" aria-label="澳洲旅遊 (2 個項目)">澳洲旅遊</a>
+<a href="https://foolish.tw/tag/%e7%90%86%e8%b2%a1%e6%8a%95%e8%b3%87/" class="tag-cloud-link tag-link-53 tag-link-position-31" style="font-size: 8pt;" aria-label="理財投資 (1 個項目)">理財投資</a>
+<a href="https://foolish.tw/tag/%e7%b4%90%e8%a5%bf%e8%98%ad%e5%8c%97%e5%b3%b6/" class="tag-cloud-link tag-link-66 tag-link-position-32" style="font-size: 8pt;" aria-label="紐西蘭北島 (1 個項目)">紐西蘭北島</a>
+<a href="https://foolish.tw/tag/%e7%b4%90%e8%a5%bf%e8%98%ad%e5%8d%81%e5%a4%a9%e9%81%8a/" class="tag-cloud-link tag-link-65 tag-link-position-33" style="font-size: 8pt;" aria-label="紐西蘭十天遊 (1 個項目)">紐西蘭十天遊</a>
+<a href="https://foolish.tw/tag/%e7%b4%90%e8%a5%bf%e8%98%ad%e5%8d%97%e5%b3%b6/" class="tag-cloud-link tag-link-67 tag-link-position-34" style="font-size: 8pt;" aria-label="紐西蘭南島 (1 個項目)">紐西蘭南島</a>
+<a href="https://foolish.tw/tag/%e7%b4%90%e8%a5%bf%e8%98%ad%e7%92%b0%e5%b3%b6/" class="tag-cloud-link tag-link-64 tag-link-position-35" style="font-size: 8pt;" aria-label="紐西蘭環島 (1 個項目)">紐西蘭環島</a>
+<a href="https://foolish.tw/tag/%e7%be%8e%e5%9c%8bnasa%e8%aa%8d%e8%ad%89/" class="tag-cloud-link tag-link-62 tag-link-position-36" style="font-size: 8pt;" aria-label="美國nasa認證 (1 個項目)">美國nasa認證</a>
+<a href="https://foolish.tw/tag/%e7%be%8e%e8%82%a1app/" class="tag-cloud-link tag-link-51 tag-link-position-37" style="font-size: 8pt;" aria-label="美股app (1 個項目)">美股app</a>
+<a href="https://foolish.tw/tag/%e8%82%a1%e8%82%a1%e5%ad%b8%e9%99%a2/" class="tag-cloud-link tag-link-50 tag-link-position-38" style="font-size: 8pt;" aria-label="股股學院 (1 個項目)">股股學院</a>
+<a href="https://foolish.tw/tag/%e8%8b%97%e6%a0%97%e6%99%af%e9%bb%9e/" class="tag-cloud-link tag-link-96 tag-link-position-39" style="font-size: 18.791666666667pt;" aria-label="苗栗景點 (10 個項目)">苗栗景點</a>
+<a href="https://foolish.tw/tag/%e8%8b%97%e6%a0%97%e6%b0%91%e5%ae%bf/" class="tag-cloud-link tag-link-97 tag-link-position-40" style="font-size: 8pt;" aria-label="苗栗民宿 (1 個項目)">苗栗民宿</a>
+<a href="https://foolish.tw/tag/%e9%9b%aa%e6%a2%a8%e5%9b%9b%e5%a4%a9%e4%b8%89%e5%a4%9c%e8%a1%8c%e7%a8%8b/" class="tag-cloud-link tag-link-93 tag-link-position-41" style="font-size: 8pt;" aria-label="雪梨四天三夜行程 (1 個項目)">雪梨四天三夜行程</a>
+<a href="https://foolish.tw/tag/%e9%9b%aa%e6%a2%a8%e5%bf%85%e5%8e%bb%e6%99%af%e9%bb%9e/" class="tag-cloud-link tag-link-90 tag-link-position-42" style="font-size: 8pt;" aria-label="雪梨必去景點 (1 個項目)">雪梨必去景點</a>
+<a href="https://foolish.tw/tag/%e9%9b%aa%e6%a2%a8%e8%87%aa%e7%94%b1%e8%a1%8c/" class="tag-cloud-link tag-link-91 tag-link-position-43" style="font-size: 8pt;" aria-label="雪梨自由行 (1 個項目)">雪梨自由行</a>
+<a href="https://foolish.tw/tag/%e9%9b%aa%e6%a2%a8%e8%b7%a8%e5%b9%b4/" class="tag-cloud-link tag-link-92 tag-link-position-44" style="font-size: 8pt;" aria-label="雪梨跨年 (1 個項目)">雪梨跨年</a>
+<a href="https://foolish.tw/tag/%e9%ad%9a%e8%85%a6%e8%a2%8b%e8%a1%8c%e8%b5%b0%e4%b8%ad/" class="tag-cloud-link tag-link-49 tag-link-position-45" style="font-size: 22pt;" aria-label="魚腦袋行走中 (17 個項目)">魚腦袋行走中</a></div>
+</div>
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+		</div><!-- .container -->
+	</div><!-- #content -->
+
+	
+<div id="tertiary" class="widget-area footer-widget-area" role="complementary">
+    <div class="container">
+    	
+    	    	<div id="widget-area-3" class="widget-area">
+    		<section id="custom_html-6" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwalkingfoolish0401%2F&amp;tabs&amp;width=340&amp;height=130&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=343136556076395" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div></section>    	</div><!-- #widget-area-3 -->
+    	
+    	
+            </div>
+</div><!-- #tertiary -->
+
+	
+	<footer id="colophon" class="site-footer" role="contentinfo">
+
+		
+		<div class="container">
+            			<div class="site-info">
+				<p>Copyright &copy; 2026 魚腦袋行走中. All Rights Reserved.</p>			</div><!-- .site-info -->
+			<div class="theme-info">
+						<span class="theme-info-text">
+        Boston Theme by <a href="https://www.famethemes.com/">FameThemes</a>		</span>
+        			</div>
+		</div>
+	</footer><!-- #colophon -->
+
+	
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/boston-pro/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div id="achang-ft-btn">
+    <ul>
+    <li id="achang_ft_btn-5" style="background-color:#8fc6d4; background-image: none; padding:0px; border-radius:50%;"  class="achang-ft-btn-floating-widget">                <a href="https://www.instagram.com/walkingfoolish0401/" target="_blank">
+                    <img src="https://foolish.tw/wp-content/uploads/2023/05/20230505170845_35.png" />
+                </a>
+        </li><li id="achang_ft_btn-4" style="background-color:#8fc6d4; background-image: none; padding:0px; border-radius:50%;"  class="achang-ft-btn-floating-widget">                <a href="/cdn-cgi/l/email-protection#057264696e6c6b62636a6a696c766d35313534456268646c692b666a68" target="_blank">
+                    <img src="https://foolish.tw/wp-content/uploads/2023/04/20230419114547_98.png" />
+                </a>
+        </li>        </ul>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+disableSelection(document.body)
+</script>
+<!-- JS Client --> <script>(function(w,d,s,u,k,h){if(!w[h]){w[h]=k;var g=d.getElementsByTagName(s) [0],a=d.createElement(s);a.async=!0,a.src=u+\"js-client.js?key=\"+k,g.parentNode.insertBefore(a,g)} })(window,document,\'script\',\'https://api.mdeianet.com/api/\', \'dc8446f8-ad7f-4d92-ac8d-754c7776b484\',\'__JS_CLIENT_SCRIPT__\') </script> <!-- End JS Client -->
+
+<script type=\"text/javascript\">
+document.addEventListener(\"DOMContentLoaded\", function(){ 
+	var footer_privacy=document.createElement(\'div\');
+footer_privacy.setAttribute(\"style\", \"text-align: center; padding: 5px\");
+footer_privacy.innerHTML = \'<a href=\"/info/\" style=\"color:#a1a1a1;\" target=\"_blank\">關於我們</a> | <a href=\"/privacy.html\" style=\"color:#a1a1a1;\" target=\"_blank\">隱私權政策</a>\';document.body.appendChild(footer_privacy);
+});
+</script><!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://foolish.tw/wp-admin/admin-ajax.php";
+</script>
+<script type="text/javascript" id="achang-ft-btn-front-js-extra">
+/* <![CDATA[ */
+var achangFtBtnData = {"ajaxUrl":"https://foolish.tw/wp-admin/admin-ajax.php","defer":"1"};
+//# sourceURL=achang-ft-btn-front-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/achang-ft-btn/js/front.js?ver=1762414338" id="achang-ft-btn-front-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/achang-pencil-box/public/js/achang-pencil-box-public.js?ver=1.9.3.1762414344.1.0.9" id="achang-pencil-box-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/achang-related-posts/includes/PostTree/assets/js/frontend.js?ver=1770784202" id="achang_pt-frontend-js-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/achang-related-posts/includes/PostTree/assets/js/category-tree.js?ver=1770784202" id="achang_pt-category-tree-js-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/achang-related-posts/includes/PostTree/assets/js/shortcode.js?ver=1770784202" id="achang_pt-shortcode-js-js"></script>
+<script type="text/javascript" id="ez-toc-scroll-scriptjs-js-extra">
+/* <![CDATA[ */
+var eztoc_smooth_local = {"scroll_offset":"30","add_request_uri":"","add_self_reference_link":""};
+//# sourceURL=ez-toc-scroll-scriptjs-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/easy-table-of-contents/assets/js/smooth_scroll.min.js?ver=2.0.80" id="ez-toc-scroll-scriptjs-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1" id="ez-toc-js-cookie-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js?ver=1.9.2" id="ez-toc-jquery-sticky-kit-js"></script>
+<script type="text/javascript" id="ez-toc-js-js-extra">
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"","scroll_offset":"30","fallbackIcon":"\u003Cspan class=\"\"\u003E\u003Cspan class=\"eztoc-hide\" style=\"display:none;\"\u003EToggle\u003C/span\u003E\u003Cspan class=\"ez-toc-icon-toggle-span\"\u003E\u003Csvg style=\"fill: #999;color:#999\" xmlns=\"http://www.w3.org/2000/svg\" class=\"list-377408\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" fill=\"none\"\u003E\u003Cpath d=\"M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z\" fill=\"currentColor\"\u003E\u003C/path\u003E\u003C/svg\u003E\u003Csvg style=\"fill: #999;color:#999\" class=\"arrow-unsorted-368013\" xmlns=\"http://www.w3.org/2000/svg\" width=\"10px\" height=\"10px\" viewBox=\"0 0 24 24\" version=\"1.2\" baseProfile=\"tiny\"\u003E\u003Cpath d=\"M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z\"/\u003E\u003C/svg\u003E\u003C/span\u003E\u003C/span\u003E","chamomile_theme_is_on":""};
+//# sourceURL=ez-toc-js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js?ver=2.0.80-1768287879" id="ez-toc-js-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/themes/boston-pro/assets/js/owl.carousel.min.js?ver=1.3.3" id="owl-carousel-js"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script type="text/javascript" id="boston-pro-themejs-js-extra">
+/* <![CDATA[ */
+var Boston_Pro = {"header_fixed":"1","slider":{"autoplay":1,"delay":5000,"speed":200},"loading_icon":"\u003Cdiv class=\"spinner\"\u003E\u003Cdiv class=\"uil-squares-css\" style=\"transform:scale(0.4);\"\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E"};
+//# sourceURL=boston-pro-themejs-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/themes/boston-pro/assets/js/theme.js?ver=20151215" id="boston-pro-themejs-js"></script>
+<script type="text/javascript" id="jetpack-facebook-embed-js-extra">
+/* <![CDATA[ */
+var jpfbembed = {"appid":"249643311490","locale":"zh_TW"};
+//# sourceURL=jetpack-facebook-embed-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/jetpack/_inc/build/facebook-embed.min.js?ver=15.5" id="jetpack-facebook-embed-js"></script>
+<script type="text/javascript" id="q2w3_fixed_widget-js-extra">
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"sidebar":"sidebar-1","use_sticky_position":false,"margin_top":10,"margin_bottom":0,"stop_elements_selectors":"instagram-footer","screen_max_width":875,"screen_max_height":0,"widgets":["#custom_html-10"]}];
+//# sourceURL=q2w3_fixed_widget-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/q2w3-fixed-widget/js/frontend.min.js?ver=6.2.3" id="q2w3_fixed_widget-js"></script>
+<script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"195676704","post":"0","tz":"8","srv":"foolish.tw","arch_err":"/wp-content/uploads/20241216102825_75.jpg","j":"1:15.5"} ]);
+_stq.push([ "clickTrackerInit", "195676704", "0" ]);
+//# sourceURL=jetpack-stats-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202610.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://foolish.tw/wp-content/plugins/quick-adsense-reloaded/assets/js/ads.js?ver=2.0.98.1" id="quads-ads-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://foolish.tw/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://foolish.tw/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+
+
+</body>
+</html>
+
+
+<!-- Page cached by LiteSpeed Cache 7.7 on 2026-03-08 12:37:26 -->

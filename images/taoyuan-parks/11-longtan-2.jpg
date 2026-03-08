@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+
+<!--[if IE 7 | IE 8]>
+
+<html class="ie" lang="zh-TW">
+
+<![endif]-->
+
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+
+<html lang="zh-TW" class="no-js">
+
+<!--<![endif]-->
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="author" content="寶寶溫旅行親子生活" />
+
+	<meta name="rating" content="general" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<link rel="alternate" title="RSS 2.0 訂閱最新文章" href="https://bobowin.blog/feed/" />
+
+	<link rel="pingback" href="https://bobowin.blog/xmlrpc.php">
+
+	<!--[if lt IE 9]>
+
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+	<![endif]-->
+
+	<meta name='robots' content='noindex, follow' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v26.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>找不到頁面 - 寶寶溫旅行親子生活</title>
+	<meta property="og:locale" content="zh_TW" />
+	<meta property="og:title" content="找不到頁面 - 寶寶溫旅行親子生活" />
+	<meta property="og:site_name" content="寶寶溫旅行親子生活" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://bobowin.blog/#website","url":"https://bobowin.blog/","name":"寶寶溫旅行親子生活","description":"國內外旅遊,親子行程,露營生活, 美食懶人包","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://bobowin.blog/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"zh-TW"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bobowin.blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.3"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://bobowin.blog/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='create-block-achang-dr-seo-dlc-style-inline-css' type='text/css'>
+.flex-grow{flex-grow:1}.achang-dr-seo-dlc-lazybag{padding:.4em}.achang-dr-seo-dlc-lazybag ul:not(.list-no-pic){list-style:none;padding-left:0}.achang-dr-seo-dlc-lazybag ul:not(.list-no-pic) li{list-style:none}.achang-dr-seo-dlc-lazybag figure{margin:0!important;overflow:hidden}.achang-dr-seo-dlc-lazybag .lazybag-img span{background-position:50%;background-size:cover;display:block;padding-top:75%}.achang-dr-seo-dlc-lazybag a,.achang-dr-seo-dlc-lazybag a:visited{color:inherit;text-decoration:none}.achang-dr-seo-dlc-lazybag a:hover{filter:brightness(1.02)}.achang-dr-seo-dlc-lazybag .lazy-title{font-size:1.2em;font-weight:700;margin:.2em 0 .6em}.achang-dr-seo-dlc-lazybag p{text-align:justify}.achang-dr-seo-dlc-lazybag .lazybag-content{margin-top:1em}.achang-dr-seo-dlc-lazybag .list-content li,.achang-dr-seo-dlc-lazybag .list-no-content li{align-items:center;display:flex}.achang-dr-seo-dlc-lazybag .list-content li:not(:last-of-type),.achang-dr-seo-dlc-lazybag .list-no-content li:not(:last-of-type){margin:0 0 16px}.achang-dr-seo-dlc-lazybag .list-content li .lazybag-img,.achang-dr-seo-dlc-lazybag .list-no-content li .lazybag-img{border:1px solid #e8e8e8;border-radius:4px;flex-shrink:0;margin:0 32px 0 0!important;max-width:210px!important;width:100%}.achang-dr-seo-dlc-lazybag .list-content li .lazy-title,.achang-dr-seo-dlc-lazybag .list-no-content li .lazy-title{flex-grow:1}.achang-dr-seo-dlc-lazybag .list-content li .lazybag-content:after,.achang-dr-seo-dlc-lazybag .list-no-content li .lazybag-content:after{border-bottom:1px solid #dbdbdb;content:"";display:block;margin:10px 0;width:18%}.achang-dr-seo-dlc-lazybag .list-block{list-style:none}.achang-dr-seo-dlc-lazybag .list-block li{border-radius:24px;box-shadow:0 0 6px 0 hsla(0,0%,45%,.25);padding:20px 26px}.achang-dr-seo-dlc-lazybag .list-block li:not(:last-of-type){margin:0 0 30px}.achang-dr-seo-dlc-lazybag .list-block .lazy-title{font-size:1.2em;margin-bottom:.6em}.achang-dr-seo-dlc-lazybag .list-block .lazybag-readmore{text-align:center}.achang-dr-seo-dlc-lazybag .list-slide{list-style:none}.achang-dr-seo-dlc-lazybag .list-slide li{border:1px solid #dbdbdb;border-radius:10px;position:relative}.achang-dr-seo-dlc-lazybag .list-slide li:not(:last-of-type){margin:0 0 30px}.achang-dr-seo-dlc-lazybag .list-slide li .lazy-title{background:rgba(0,0,0,.6);bottom:0;color:#fff;left:0;margin-bottom:0;padding:14px 16px;position:absolute;right:0;text-align:center}.achang-dr-seo-dlc-lazybag .list-grid,.achang-dr-seo-dlc-lazybag .list-grid-full{display:grid;gap:2.4em 1.8em;grid-template-columns:repeat(3,minmax(0,1fr));list-style:none}.achang-dr-seo-dlc-lazybag .list-grid .lazybag-readmore,.achang-dr-seo-dlc-lazybag .list-grid-full .lazybag-readmore{text-align:center}.achang-dr-seo-dlc-lazybag .list-grid-full{gap:1.4em 1em}.achang-dr-seo-dlc-lazybag .list-grid-full li{border-radius:10px;box-shadow:0 0 6.5px 0 hsla(0,0%,70%,.4);display:flex;flex-direction:column;padding:24px 14px}.achang-dr-seo-dlc-lazybag .list-magazine{list-style:none}.achang-dr-seo-dlc-lazybag .list-magazine li{margin-bottom:2.2em!important;position:relative}.achang-dr-seo-dlc-lazybag .list-magazine .lazybag-img{width:100%}.achang-dr-seo-dlc-lazybag .list-magazine .lazybag-img a{display:inline-block;width:57%}.achang-dr-seo-dlc-lazybag .list-magazine li .block{background-color:#fff;border-radius:10px;box-shadow:0 4px 4px 0 hsla(0,0%,70%,.25);padding:2em;position:absolute;top:50%;transform:translateY(-50%);width:54%}.achang-dr-seo-dlc-lazybag .list-magazine li:nth-of-type(2n) .lazybag-img{text-align:right}.achang-dr-seo-dlc-lazybag .list-magazine li:nth-of-type(odd) .block{right:0}.achang-dr-seo-dlc-lazybag .list-magazine li:nth-of-type(2n) .block{left:0}@media screen and (min-width:768px){.achang-dr-seo-dlc-lazybag .list-magazine .lazy-title-sm{display:none}}@media screen and (max-width:767px){.achang-dr-seo-dlc-lazybag figure{max-height:75vw}.achang-dr-seo-dlc-lazybag figure img{aspect-ratio:auto;height:auto}.achang-dr-seo-dlc-lazybag .list-grid,.achang-dr-seo-dlc-lazybag .list-grid-full{grid-template-columns:repeat(1,minmax(0,1fr))}.achang-dr-seo-dlc-lazybag .list-grid .lazy-title,.achang-dr-seo-dlc-lazybag .list-grid-full .lazy-title{text-align:center}.achang-dr-seo-dlc-lazybag .list-content li,.achang-dr-seo-dlc-lazybag .list-no-content li{display:block}.achang-dr-seo-dlc-lazybag .list-content li .lazybag-img,.achang-dr-seo-dlc-lazybag .list-no-content li .lazybag-img{margin:0!important;max-width:none!important}.achang-dr-seo-dlc-lazybag .list-magazine .lazy-title{display:none}.achang-dr-seo-dlc-lazybag .list-magazine .lazybag-img a{width:100%}.achang-dr-seo-dlc-lazybag .list-magazine li{background-color:#fff;border-radius:10px;box-shadow:0 4px 4px 0 hsla(0,0%,70%,.25);padding:2em 1em}.achang-dr-seo-dlc-lazybag .list-magazine li .block{background:none;box-shadow:none;padding:0;position:relative;transform:none;width:auto}.achang-dr-seo-dlc-lazybag .list-magazine .lazybag-content p{color:#9e9e9e}.achang-dr-seo-dlc-lazybag .list-magazine .lazybag-readmore{text-align:center}}
+
+</style>
+<style id='achang-pencil-box-style-box-style-inline-css' type='text/css'>
+.apb-highlighter-highlight{background:linear-gradient(to top,var(--apb-highlighter-color,#fff59d) 60%,transparent 60%);padding:2px 4px}.apb-highlighter-highlight,.apb-highlighter-line{border-radius:2px;-webkit-box-decoration-break:clone;box-decoration-break:clone;display:inline}.apb-highlighter-line{background:linear-gradient(transparent 40%,hsla(0,0%,100%,0) 40%,var(--apb-highlighter-color,#ccff90) 50%,transparent 70%);padding:3px 6px}.apb-underline{background:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone;display:inline;padding-bottom:2px;text-decoration:none}.apb-underline-normal{border-bottom:2px solid var(--apb-underline-color,red);padding-bottom:3px}.apb-underline-wavy{text-decoration-color:var(--apb-underline-color,red);text-decoration-line:underline;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none;text-decoration-style:wavy;text-decoration-thickness:2px;text-underline-offset:3px}.apb-underline-dashed{border-bottom:2px dashed var(--apb-underline-color,red);padding-bottom:3px}.apb-underline-crayon{background:linear-gradient(transparent 40%,hsla(0,0%,100%,0) 40%,var(--apb-underline-color,red) 90%,transparent 95%);border-radius:3px;padding:3px 6px;position:relative}.apb-font-size{display:inline}.apb-style-box{margin:1em 0;position:relative}.apb-style-box .apb-box-title{align-items:center;color:var(--apb-title-color,inherit);display:flex;font-size:var(--apb-title-font-size,1.2em);font-weight:700}.apb-style-box .apb-box-title .apb-title-icon{font-size:1em;margin-right:10px}.apb-style-box .apb-box-title .apb-title-text{flex-grow:1}.apb-style-box .apb-box-content>:first-child{margin-top:0}.apb-style-box .apb-box-content>:last-child{margin-bottom:0}.apb-layout-info{border-color:var(--apb-box-color,#ddd);border-radius:4px;border-style:var(--apb-border-line-style,solid);border-width:var(--apb-border-width,2px)}.apb-layout-info .apb-box-title{background-color:var(--apb-box-color,#ddd);color:var(--apb-title-color,#333);padding:10px 15px}.apb-layout-info .apb-box-content{background-color:#fff;padding:15px}.apb-layout-alert{border:1px solid transparent;border-radius:.375rem;padding:1rem}.apb-layout-alert .apb-box-content,.apb-layout-alert .apb-box-title{background:transparent;padding:0}.apb-layout-alert .apb-box-title{margin-bottom:.5rem}.apb-layout-alert.apb-alert-type-custom{background-color:var(--apb-box-color,#cfe2ff);border-color:var(--apb-border-color,#9ec5fe);border-style:var(--apb-border-line-style,solid);border-width:var(--apb-border-width,1px);color:var(--apb-title-color,#333)}.apb-layout-alert.apb-alert-type-custom .apb-box-title{color:var(--apb-title-color,#333)}.apb-layout-alert.apb-alert-type-info{background-color:#cfe2ff;border-color:#9ec5fe;color:#0a58ca}.apb-layout-alert.apb-alert-type-info .apb-box-title{color:var(--apb-title-color,#0a58ca)}.apb-layout-alert.apb-alert-type-success{background-color:#d1e7dd;border-color:#a3cfbb;color:#146c43}.apb-layout-alert.apb-alert-type-success .apb-box-title{color:var(--apb-title-color,#146c43)}.apb-layout-alert.apb-alert-type-warning{background-color:#fff3cd;border-color:#ffecb5;color:#664d03}.apb-layout-alert.apb-alert-type-warning .apb-box-title{color:var(--apb-title-color,#664d03)}.apb-layout-alert.apb-alert-type-danger{background-color:#f8d7da;border-color:#f1aeb5;color:#842029}.apb-layout-alert.apb-alert-type-danger .apb-box-title{color:var(--apb-title-color,#842029)}.apb-layout-morandi-alert{background-color:var(--apb-box-color,#f7f4eb);border:1px solid var(--apb-box-color,#f7f4eb);border-left:var(--apb-border-width,4px) solid var(--apb-border-color,#d9d2c6);border-radius:.375rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.05);padding:1rem}.apb-layout-morandi-alert .apb-box-title{background:transparent;color:var(--apb-title-color,#2d3748);font-size:var(--apb-title-font-size,1em);font-weight:700;margin-bottom:.25rem;padding:0}.apb-layout-morandi-alert .apb-box-content{background:transparent;color:#4a5568;padding:0}.apb-layout-centered-title{background-color:#fff;border-color:var(--apb-box-color,#ddd);border-radius:4px;border-style:var(--apb-border-line-style,solid);border-width:var(--apb-border-width,2px);margin-top:1.5em;padding:25px 15px 15px;position:relative}.apb-layout-centered-title .apb-box-title{background:var(--apb-title-bg-color,#fff);color:var(--apb-title-color,var(--apb-box-color,#333));left:20px;padding:0 10px;position:absolute;top:-.8em}.apb-layout-centered-title .apb-box-content{background:transparent;padding:0}.wp-block-achang-pencil-box-code-box{border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);font-family:Consolas,Monaco,Courier New,monospace;margin:1.5em 0;overflow:hidden;position:relative}.wp-block-achang-pencil-box-code-box .apb-code-box-header{align-items:center;border-bottom:1px solid;display:flex;font-size:13px;font-weight:500;justify-content:space-between;padding:12px 16px;position:relative}.wp-block-achang-pencil-box-code-box .apb-code-box-header .apb-code-language{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif}.wp-block-achang-pencil-box-code-box .apb-code-content-wrapper{background:transparent;display:flex;max-height:500px;overflow:hidden;position:relative}.wp-block-achang-pencil-box-code-box .apb-line-numbers{border-right:1px solid;flex-shrink:0;font-size:14px;line-height:1.5;min-width:50px;overflow-y:auto;padding:16px 8px;text-align:right;-webkit-user-select:none;-moz-user-select:none;user-select:none;-ms-overflow-style:none;position:relative;scrollbar-width:none;z-index:1}.wp-block-achang-pencil-box-code-box .apb-line-numbers::-webkit-scrollbar{display:none}.wp-block-achang-pencil-box-code-box .apb-line-numbers .apb-line-number{display:block;line-height:1.5;white-space:nowrap}.wp-block-achang-pencil-box-code-box .apb-code-box-content{background:transparent;flex:1;font-size:14px;line-height:1.5;margin:0;min-width:0;overflow:auto;padding:16px;position:relative;white-space:pre!important;z-index:0}.wp-block-achang-pencil-box-code-box .apb-code-box-content code{background:transparent;border:none;display:block;font-family:inherit;font-size:inherit;line-height:inherit;margin:0;overflow-wrap:normal!important;padding:0;white-space:pre!important;word-break:normal!important}.wp-block-achang-pencil-box-code-box .apb-code-box-content code .token{display:inline}.wp-block-achang-pencil-box-code-box .apb-copy-button{background:transparent;border:1px solid;border-radius:4px;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;font-size:12px;padding:6px 12px;transition:all .2s ease}.wp-block-achang-pencil-box-code-box .apb-copy-button:hover{opacity:.8}.wp-block-achang-pencil-box-code-box .apb-copy-button:active{transform:scale(.95)}.wp-block-achang-pencil-box-code-box .apb-copy-button.apb-copy-success{animation:copySuccess .6s ease;background-color:#d4edda!important;border-color:#28a745!important;color:#155724!important}.wp-block-achang-pencil-box-code-box .apb-copy-button.apb-copy-error{animation:copyError .6s ease;background-color:#f8d7da!important;border-color:#dc3545!important;color:#721c24!important}.wp-block-achang-pencil-box-code-box .apb-copy-button-standalone{position:absolute;right:12px;top:12px;z-index:1}.apb-code-style-style-1{background:#f8f9fa;border:1px solid #e9ecef}.apb-code-style-style-1 .apb-code-box-header{background:#fff;border-bottom-color:#dee2e6;color:#495057}.apb-code-style-style-1 .apb-line-numbers{background:#f1f3f4;border-right-color:#dee2e6;color:#6c757d}.apb-code-style-style-1 .apb-code-box-content{background:#fff;color:#212529;text-shadow:none}.apb-code-style-style-1 .apb-code-box-content code[class*=language-]{text-shadow:none}.apb-code-style-style-1 .apb-copy-button{background:hsla(0,0%,100%,.8);border-color:#6c757d;color:#495057}.apb-code-style-style-1 .apb-copy-button:hover{background:#f8f9fa;border-color:#495057}.apb-code-style-style-1 .apb-copy-button.apb-copy-success{background:#d4edda;border-color:#28a745;color:#155724}.apb-code-style-style-1 .apb-copy-button.apb-copy-error{background:#f8d7da;border-color:#dc3545;color:#721c24}.apb-code-style-style-1 code .token.cdata,.apb-code-style-style-1 code .token.comment,.apb-code-style-style-1 code .token.doctype,.apb-code-style-style-1 code .token.prolog{color:#5a6b73}.apb-code-style-style-1 code .token.punctuation{color:#666}.apb-code-style-style-1 code .token.boolean,.apb-code-style-style-1 code .token.constant,.apb-code-style-style-1 code .token.deleted,.apb-code-style-style-1 code .token.number,.apb-code-style-style-1 code .token.property,.apb-code-style-style-1 code .token.symbol,.apb-code-style-style-1 code .token.tag{color:#d73a49}.apb-code-style-style-1 code .token.attr-name,.apb-code-style-style-1 code .token.builtin,.apb-code-style-style-1 code .token.char,.apb-code-style-style-1 code .token.inserted,.apb-code-style-style-1 code .token.selector,.apb-code-style-style-1 code .token.string{color:#22863a}.apb-code-style-style-1 code .token.entity,.apb-code-style-style-1 code .token.operator,.apb-code-style-style-1 code .token.url{color:#6f42c1}.apb-code-style-style-1 code .token.atrule,.apb-code-style-style-1 code .token.attr-value,.apb-code-style-style-1 code .token.keyword{color:#005cc5}.apb-code-style-style-1 code .token.class-name,.apb-code-style-style-1 code .token.function{color:#6f42c1}.apb-code-style-style-1 code .token.important,.apb-code-style-style-1 code .token.regex,.apb-code-style-style-1 code .token.variable{color:#e36209}.apb-code-style-style-2{background:#1e1e1e;border:1px solid #333}.apb-code-style-style-2 .apb-code-box-header{background:#2d2d30;border-bottom-color:#3e3e42;color:#ccc}.apb-code-style-style-2 .apb-line-numbers{background:#252526;border-right-color:#3e3e42;color:#858585}.apb-code-style-style-2 .apb-code-box-content{background:#1e1e1e;color:#f0f0f0}.apb-code-style-style-2 .apb-copy-button{background:rgba(45,45,48,.8);border-color:#6c6c6c;color:#ccc}.apb-code-style-style-2 .apb-copy-button:hover{background:#3e3e42;border-color:#ccc}.apb-code-style-style-2 .apb-copy-button.apb-copy-success{background:#0e5132;border-color:#28a745;color:#d4edda}.apb-code-style-style-2 .apb-copy-button.apb-copy-error{background:#58151c;border-color:#dc3545;color:#f8d7da}.apb-code-style-style-2 code .token.cdata,.apb-code-style-style-2 code .token.comment,.apb-code-style-style-2 code .token.doctype,.apb-code-style-style-2 code .token.prolog{color:#6a9955}.apb-code-style-style-2 code .token.punctuation{color:#d4d4d4}.apb-code-style-style-2 code .token.boolean,.apb-code-style-style-2 code .token.constant,.apb-code-style-style-2 code .token.deleted,.apb-code-style-style-2 code .token.number,.apb-code-style-style-2 code .token.property,.apb-code-style-style-2 code .token.symbol,.apb-code-style-style-2 code .token.tag{color:#b5cea8}.apb-code-style-style-2 code .token.attr-name,.apb-code-style-style-2 code .token.builtin,.apb-code-style-style-2 code .token.char,.apb-code-style-style-2 code .token.inserted,.apb-code-style-style-2 code .token.selector,.apb-code-style-style-2 code .token.string{color:#ce9178}.apb-code-style-style-2 code .token.entity,.apb-code-style-style-2 code .token.operator,.apb-code-style-style-2 code .token.url{color:#d4d4d4}.apb-code-style-style-2 code .token.atrule,.apb-code-style-style-2 code .token.attr-value,.apb-code-style-style-2 code .token.keyword{color:#569cd6}.apb-code-style-style-2 code .token.class-name,.apb-code-style-style-2 code .token.function{color:#dcdcaa}.apb-code-style-style-2 code .token.important,.apb-code-style-style-2 code .token.regex,.apb-code-style-style-2 code .token.variable{color:#ff8c00}@keyframes copySuccess{0%{transform:scale(1)}50%{background-color:#28a745;color:#fff;transform:scale(1.1)}to{transform:scale(1)}}@keyframes copyError{0%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}to{transform:translateX(0)}}@media(max-width:768px){.wp-block-achang-pencil-box-code-box .apb-code-box-header{font-size:12px;padding:10px 12px}.wp-block-achang-pencil-box-code-box .apb-line-numbers{font-size:11px;min-width:35px;padding:12px 6px}.wp-block-achang-pencil-box-code-box .apb-code-box-content{font-size:13px;padding:12px}.wp-block-achang-pencil-box-code-box .apb-copy-button{font-size:11px;padding:4px 8px}}@media print{.wp-block-achang-pencil-box-code-box{border:1px solid #000;box-shadow:none}.wp-block-achang-pencil-box-code-box .apb-copy-button{display:none}.wp-block-achang-pencil-box-code-box .apb-code-content-wrapper{max-height:none;overflow:visible}}
+
+</style>
+<link rel='stylesheet' id='quads-style-css-css' href='https://bobowin.blog/wp-content/plugins/quick-adsense-reloaded/includes/gutenberg/dist/blocks.style.build.css?ver=2.0.98.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://bobowin.blog/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://bobowin.blog/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.3' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css' type='text/css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='achang-ft-btn-css' href='https://bobowin.blog/wp-content/plugins/achang-ft-btn/css/style.css?ver=1762420058' type='text/css' media='all' />
+<link rel='stylesheet' id='achang-pencil-box-css' href='https://bobowin.blog/wp-content/plugins/achang-pencil-box/public/css/achang-pencil-box-public.css?ver=1.9.3.1762420065.1.2.14.2' type='text/css' media='all' />
+<link rel='stylesheet' id='achang-addqa-css' href='https://bobowin.blog/wp-content/plugins/achangAddQA/includes/frontend/../../assets/css/achang-addqa-public.css?ver=3.0.1.4' type='text/css' media='all' />
+<style id='achang-addqa-inline-css' type='text/css'>
+
+            .achang-addqa-title {
+                font-size: 24px;
+                color: #303030;
+                line-height: 1.4;
+            }
+            .achang-addqa-item {
+                border: none;
+                background: transparent;
+            }
+
+            .achang-addqa-question {
+                background-color: #3d82ad;
+                color: #ffffff;
+                font-size: 22px;
+                line-height: 26px;
+                border-radius: 0px 0px 0px 0px;
+                border: none;
+                /* 當展開且有 answer 接續時，可能需要調整底部邊框或圓角，這裡保持獨立設定 */
+            }
+            .achang-addqa-question:hover {
+                filter: brightness(110%);
+            }
+            
+            .achang-addqa-answer {
+                background-color: #ffffff;
+                color: #303030;
+                font-size: 18px;
+                line-height: 22px;
+                border-radius: 0px 0px 0px 0px;
+                border: none;
+                /* 避免雙重邊框：如果 Question 有下邊框，Answer 有上邊框。
+                   通常 Answer 會設 margin-top: -border-width 來重疊，或者隱藏上邊框。
+                   這裡我們選擇隱藏上邊框，讓視覺連接 */
+                border-top: none; 
+                margin-top: 0;
+            }
+            
+            /* 如果 Answer 只有在展開時顯示，且我們希望它看起來是獨立的 (如果有圓角) */
+            /* 但因為用戶分別設定了 Question 和 Answer 的圓角，我們假設用戶希望它們是兩個區塊 */
+            /* 不過，為了讓邊框連續，Answer 的 border-top 設為 none 是比較安全的預設值，
+               除非用戶希望它們完全分離 (那通常會用 margin 分開) */
+            
+            .achang-addqa-icon {
+                color: #ffffff;
+            }
+        
+</style>
+<link rel='stylesheet' id='wpa-css-css' href='https://bobowin.blog/wp-content/plugins/honeypot/includes/css/wpa.css?ver=2.3.04' type='text/css' media='all' />
+<link rel="preload" href="//fonts.googleapis.com/css?family=Lato:100|Lora&#038;display=swap&#038;ver=6.8.3" as="style" onload="this.onload=null;this.rel='stylesheet'" data-handle="googleFonts" media="all" /><noscript><link rel='stylesheet' id='googleFonts-css' href='//fonts.googleapis.com/css?family=Lato%3A100%7CLora&#038;display=swap&#038;ver=6.8.3' type='text/css' media='all' />
+</noscript><link rel='stylesheet' id='achang-icon-css' href='https://bobowin.blog/wp-content/themes/achang-quill/img/icon-font/style.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='achang-style-css' href='https://bobowin.blog/wp-content/themes/achang-quill/css/style.min.css?ver=1.2.14.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fa-icon-css' href='https://bobowin.blog/wp-content/themes/achang-quill/fafaicon/css/all.min.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='achang_theme-style-rwd-css' href='https://bobowin.blog/wp-content/themes/achang-quill/css/style.rwd.min.css?ver=1.2.14.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://bobowin.blog/wp-content/plugins/tablepress/css/build/default.css?ver=3.2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='achang-jvc-init-css' href='https://bobowin.blog/wp-content/plugins/achangJetPackVirtualCounter/assets/minify/stylesheet.min.css?ver=2.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dtree.css-css' href='https://bobowin.blog/wp-content/plugins/wp-dtree-30/wp-dtree.min.css?ver=4.4.5' type='text/css' media='all' />
+<script type="text/javascript" src="https://bobowin.blog/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://bobowin.blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="achang-addqa-js-extra">
+/* <![CDATA[ */
+var elementorAddQA_public = {"show_all":"off"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/achangAddQA/includes/frontend/../../assets/js/achang-addqa-public.js?ver=3.0.1.4" id="achang-addqa-js"></script>
+<script type="text/javascript" id="wk-tag-manager-script-js-after">
+/* <![CDATA[ */
+function shouldTrack(){
+var trackLoggedIn = true;
+var loggedIn = false;
+if(!loggedIn){
+return true;
+} else if( trackLoggedIn ) {
+return true;
+}
+return false;
+}
+function hasWKGoogleAnalyticsCookie() {
+return (new RegExp('wp_wk_ga_untrack_' + document.location.hostname)).test(document.cookie);
+}
+if (!hasWKGoogleAnalyticsCookie() && shouldTrack()) {
+//Google Tag Manager
+(function (w, d, s, l, i) {
+w[l] = w[l] || [];
+w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+});
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+j.async = true;
+j.src =
+'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-PHJ5NBJ');
+}
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/themes/achang-quill/js/rwd-menu.min.js?ver=1.2.14.2" id="achang_rwd-menu-js"></script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/themes/achang-quill/inc/js/achang.custom.js?ver=1.0" id="achang-custom-js"></script>
+<script type="text/javascript" id="achang-jvc-init-js-extra">
+/* <![CDATA[ */
+var jvc_init_params = {"ajaxurl":"https:\/\/bobowin.blog\/wp-admin\/admin-ajax.php?action=achang_jvc","widget_id":"achang_jetpack_virtual_counter-3","count_text":"\u7d71\u8a08\u4e2d...","security":"0a2fe9d331"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/achangJetPackVirtualCounter/assets/minify/init.min.js?ver=2.8.3" id="achang-jvc-init-js"></script>
+<script type="text/javascript" id="dtree-js-extra">
+/* <![CDATA[ */
+var WPdTreeSettings = {"animate":"1","duration":"250","imgurl":"https:\/\/bobowin.blog\/wp-content\/plugins\/wp-dtree-30\/"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/wp-dtree-30/wp-dtree.min.js?ver=4.4.5" id="dtree-js"></script>
+<link rel="https://api.w.org/" href="https://bobowin.blog/wp-json/" /><meta name="generator" content="WordPress 6.8.3" />
+	<style>img#wpstats{display:none}</style>
+		<script>document.cookie = 'quads_browser_width='+screen.width;</script>
+<link rel="Shortcut Icon" href="https://bobowin.blog/wp-content/uploads/20170401073952_16.jpg" /><script>jQuery($ => {
+        $("#achang-menu").on("click",e=>{
+            if($(e.target).hasClass("search-icon")){
+                $("#primary-search").show();
+                $("#search-cover").show();
+                $("#achang-menu .textfield").focus();
+            }else{
+                if( 0 === $(e.target).parents("#primary-search").length){
+                    $("#primary-search").hide();
+                    $("#search-cover").hide();
+                }
+            }
+        })
+    })</script>        <style type="text/css">
+        #header,
+        #header .no-logo,
+        #achang-menu,
+        #primary-search,
+        #footer,
+        #access ul ul,
+        .readmore-link a{
+            background-color: #000;
+        }
+
+        #access ul li:after{
+            color: #000;
+        }
+
+        #achang_menu_wrap>li>ul:before{
+            border-color: transparent transparent #000 transparent;
+        }
+        </style>
+    <link rel="preload" as="image" href="https://i2.wp.com/bobowin.blog/wp-content/uploads/20231028095347_61.jpg?quality=90&ssl=1" /><link rel="preconnect" href="//fonts.googleapis.com/css?family=Lato:100|Lora&display=swap" /><link rel="preconnect" href="//connect.facebook.net/zh_TW/sdk.js" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6994555750211392"
+     crossorigin="anonymous"></script>		<style type="text/css" id="wp-custom-css">
+			.achang_faq lable.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#achang-ft-btn li img {
+    width: 48px;
+    height: 48px;
+}		</style>
+		
+<link rel="preload" as="image" href="https://gogojp.tw/wp-content/uploads/20171102055119_64.gif"></head>
+
+
+<body class="error404 wp-theme-achang-quill">
+
+
+
+	<header id="header">
+
+		<h1 class="no-logo"><a id="logo" href="https://bobowin.blog" title="寶寶溫旅行親子生活" class="text" >寶寶溫旅行親子生活</a></h1>
+
+	</header>
+
+	<div class="sticky-menu">
+
+		<div id="rwd-header"><a id="rwd-logo" href="https://bobowin.blog" title="寶寶溫旅行親子生活" style="color: #FFF; font-size: 20px;">寶寶溫旅行親子生活</a></div>
+
+		<div id="achang-menu">
+
+			<nav id="access" role="navigation">
+
+				<header><h3 class="assistive-text">Main Menu</h3></header>
+
+				<svg viewBox="0 0 18 18" preserveAspectRatio="xMidYMid meet" focusable="false" class="search-icon icon"><path d="M 10,10 16.5,16.5 M 11,6 A 5,5 0 0 1 6,11 5,5 0 0 1 1,6 5,5 0 0 1 6,1 5,5 0 0 1 11,6 Z" class="search-icon icon" style="fill:none;stroke:#FFF;stroke-width:2px;stroke-linecap:round;stroke-miterlimit:10"></path></svg><div id="primary-search"><form role="search" method="get" id="searchform" action="https://bobowin.blog/" >
+
+    <div class="search-box">
+
+		<input type="text" class="textfield"  placeholder="搜尋文章..."  value="" name="s" id="s" />
+
+		<button type="submit" aria-label="搜尋">
+
+			<i class="fas fa-search"></i>
+
+		</button>
+
+    </div>
+
+    </form></div><div id="search-cover"></div><ul id="achang_menu_wrap" class="menu rwd-menu"><li id="menu-item-1543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1543"><a href="https://bobowin.blog/myself/">關於寶寶溫</a></li>
+<li id="menu-item-166994" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-166994"><a href="https://bobowin.blog/coupon-all/">日本百貨藥妝優惠券</a></li>
+<li id="menu-item-1548" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1548"><a href="https://bobowin.blog/category/taiwan/">台灣趴趴走</a>
+<ul class="sub-menu">
+	<li id="menu-item-1544" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1544"><a href="https://bobowin.blog/category/taiwan/travel01/">旅遊行程懶人包</a></li>
+	<li id="menu-item-1545" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1545"><a href="https://bobowin.blog/category/taiwan/yilan/">宜蘭</a></li>
+	<li id="menu-item-70057" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70057"><a href="https://bobowin.blog/category/taiwan/hualien/">花蓮</a></li>
+	<li id="menu-item-71434" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-71434"><a href="https://bobowin.blog/category/taiwan/taitung/">台東</a></li>
+	<li id="menu-item-1641" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1641"><a href="https://bobowin.blog/category/taiwan/taipei/">台北市</a></li>
+	<li id="menu-item-1640" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1640"><a href="https://bobowin.blog/category/taiwan/newtaipei/">新北市</a></li>
+	<li id="menu-item-1639" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1639"><a href="https://bobowin.blog/category/taiwan/keelung/">基隆</a></li>
+	<li id="menu-item-1546" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1546"><a href="https://bobowin.blog/category/taiwan/taoyuan/">桃園</a></li>
+	<li id="menu-item-1642" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1642"><a href="https://bobowin.blog/category/taiwan/hsinchu/">新竹</a></li>
+	<li id="menu-item-1547" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1547"><a href="https://bobowin.blog/category/taiwan/miaoli/">苗栗</a></li>
+	<li id="menu-item-1643" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1643"><a href="https://bobowin.blog/category/taiwan/taichung/">台中市</a></li>
+	<li id="menu-item-1644" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1644"><a href="https://bobowin.blog/category/taiwan/nantou/">南投</a></li>
+	<li id="menu-item-1646" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1646"><a href="https://bobowin.blog/category/taiwan/chiayi/">嘉義</a></li>
+	<li id="menu-item-1648" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1648"><a href="https://bobowin.blog/category/taiwan/tainan/">台南</a></li>
+	<li id="menu-item-75409" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-75409"><a href="https://bobowin.blog/category/taiwan/penghu/">澎湖</a></li>
+	<li id="menu-item-75411" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-75411"><a href="https://bobowin.blog/category/taiwan/matsu/">馬祖</a></li>
+</ul>
+</li>
+<li id="menu-item-1556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1556"><a target="_blank">露營野外踏青</a>
+<ul class="sub-menu">
+	<li id="menu-item-82198" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-82198"><a href="https://bobowin.blog/top-camping/">免搭帳親子營地</a></li>
+	<li id="menu-item-1663" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1663"><a href="https://bobowin.blog/category/family/camping/">露營營地</a></li>
+	<li id="menu-item-82199" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-82199"><a href="https://bobowin.blog/north-taiwan-trail/">北台灣15條絕美步道</a></li>
+	<li id="menu-item-3090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3090"><a href="https://bobowin.blog/category/travel/picnic/">野餐景點</a></li>
+	<li id="menu-item-3877" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3877"><a href="https://bobowin.blog/category/travel/slide/">特色溜滑梯</a></li>
+</ul>
+</li>
+<li id="menu-item-1549" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1549"><a href="https://bobowin.blog/category/foreign/">日本旅遊</a>
+<ul class="sub-menu">
+	<li id="menu-item-1550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1550"><a href="https://bobowin.blog/category/foreign/traveljapan/">日本旅遊懶人包</a></li>
+	<li id="menu-item-1555" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1555"><a href="https://bobowin.blog/category/foreign/okinawa/">日本沖繩</a></li>
+	<li id="menu-item-1655" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1655"><a href="https://bobowin.blog/category/foreign/kyushu/">日本九州</a></li>
+	<li id="menu-item-1656" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1656"><a href="https://bobowin.blog/category/foreign/tokyo/">日本東京</a></li>
+	<li id="menu-item-1657" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1657"><a href="https://bobowin.blog/category/foreign/kyoto/">日本京都奈良宇治</a></li>
+	<li id="menu-item-1658" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1658"><a href="https://bobowin.blog/category/foreign/hiroshima/">日本廣島中國</a></li>
+	<li id="menu-item-1659" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1659"><a href="https://bobowin.blog/category/foreign/hokkaido/">日本北海道</a></li>
+</ul>
+</li>
+<li id="menu-item-2950" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2950"><a href="https://bobowin.blog/category/travel/okinawa6/">沖繩旅遊</a>
+<ul class="sub-menu">
+	<li id="menu-item-82195" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-82195"><a href="https://bobowin.blog/okinawa-child/">沖繩景點懶人包</a></li>
+	<li id="menu-item-26890" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26890"><a href="https://bobowin.blog/2015-10-31-285/">沖繩海景飯店</a></li>
+	<li id="menu-item-82196" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-82196"><a href="https://bobowin.blog/okinawa-slide/">沖繩10大溜滑梯公園</a></li>
+	<li id="menu-item-26891" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26891"><a href="https://bobowin.blog/2015-11-11-279/">沖繩那霸輕軌飯店</a></li>
+	<li id="menu-item-82197" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-82197"><a href="https://bobowin.blog/p1568/">沖繩租車攻略</a></li>
+</ul>
+</li>
+</ul>
+			</nav>
+
+		</div>
+
+	</div>
+
+		
+	<div id="content">
+<div id="main" role="main">
+
+<section id="page-error" class="page-single">
+
+    <header>
+
+        <h1>ERROR 404 - 找不到頁面</h1>
+
+    </header>
+
+    <p>抱歉，找不到您要的內容。您可以透過搜尋或是以下索引方式找尋您所需的資料。</p>
+
+    <p>
+
+        <h2>依分類查詢</h2>
+
+        <div id="archive-list">
+
+            <ul>
+
+                	<li class="cat-item cat-item-5073"><a href="https://bobowin.blog/category/%e8%b6%8a%e5%8d%97%e5%8c%97%e8%b6%8a-%e6%b2%99%e5%a3%a9/">越南北越 沙壩</a> (6)
+</li>
+	<li class="cat-item cat-item-53"><a href="https://bobowin.blog/category/taiwan/">台灣好玩好吃趴趴走</a> (3,160)
+</li>
+	<li class="cat-item cat-item-55"><a href="https://bobowin.blog/category/foreign/">國外趴趴走</a> (618)
+</li>
+	<li class="cat-item cat-item-56"><a href="https://bobowin.blog/category/family/">親子相關</a> (149)
+</li>
+	<li class="cat-item cat-item-57"><a href="https://bobowin.blog/category/picture/">攝影相關</a> (26)
+</li>
+	<li class="cat-item cat-item-58"><a href="https://bobowin.blog/category/life/">生活相關</a> (309)
+</li>
+	<li class="cat-item cat-item-100"><a href="https://bobowin.blog/category/travel/">專題旅遊</a> (1,552)
+</li>
+	<li class="cat-item cat-item-46"><a href="https://bobowin.blog/category/notice/">公告佈告欄</a> (10)
+</li>
+
+            </ul>
+
+        </div>
+
+    </p>
+
+    <p>
+
+        <h2>依月份查詢</h2>
+
+        <div id="archive-list">
+
+            <ul>
+
+                	<li><a href='https://bobowin.blog/2026/03/'>2026 年 3 月</a>&nbsp;(38)</li>
+	<li><a href='https://bobowin.blog/2026/02/'>2026 年 2 月</a>&nbsp;(74)</li>
+	<li><a href='https://bobowin.blog/2026/01/'>2026 年 1 月</a>&nbsp;(99)</li>
+	<li><a href='https://bobowin.blog/2025/12/'>2025 年 12 月</a>&nbsp;(64)</li>
+	<li><a href='https://bobowin.blog/2025/11/'>2025 年 11 月</a>&nbsp;(51)</li>
+	<li><a href='https://bobowin.blog/2025/10/'>2025 年 10 月</a>&nbsp;(45)</li>
+	<li><a href='https://bobowin.blog/2025/09/'>2025 年 9 月</a>&nbsp;(26)</li>
+	<li><a href='https://bobowin.blog/2025/08/'>2025 年 8 月</a>&nbsp;(37)</li>
+	<li><a href='https://bobowin.blog/2025/07/'>2025 年 7 月</a>&nbsp;(40)</li>
+	<li><a href='https://bobowin.blog/2025/06/'>2025 年 6 月</a>&nbsp;(55)</li>
+	<li><a href='https://bobowin.blog/2025/05/'>2025 年 5 月</a>&nbsp;(60)</li>
+	<li><a href='https://bobowin.blog/2025/04/'>2025 年 4 月</a>&nbsp;(66)</li>
+	<li><a href='https://bobowin.blog/2025/03/'>2025 年 3 月</a>&nbsp;(50)</li>
+	<li><a href='https://bobowin.blog/2025/02/'>2025 年 2 月</a>&nbsp;(39)</li>
+	<li><a href='https://bobowin.blog/2025/01/'>2025 年 1 月</a>&nbsp;(73)</li>
+	<li><a href='https://bobowin.blog/2024/12/'>2024 年 12 月</a>&nbsp;(38)</li>
+	<li><a href='https://bobowin.blog/2024/11/'>2024 年 11 月</a>&nbsp;(57)</li>
+	<li><a href='https://bobowin.blog/2024/10/'>2024 年 10 月</a>&nbsp;(78)</li>
+	<li><a href='https://bobowin.blog/2024/09/'>2024 年 9 月</a>&nbsp;(43)</li>
+	<li><a href='https://bobowin.blog/2024/08/'>2024 年 8 月</a>&nbsp;(39)</li>
+	<li><a href='https://bobowin.blog/2024/07/'>2024 年 7 月</a>&nbsp;(35)</li>
+	<li><a href='https://bobowin.blog/2024/06/'>2024 年 6 月</a>&nbsp;(40)</li>
+	<li><a href='https://bobowin.blog/2024/05/'>2024 年 5 月</a>&nbsp;(59)</li>
+	<li><a href='https://bobowin.blog/2024/04/'>2024 年 4 月</a>&nbsp;(66)</li>
+	<li><a href='https://bobowin.blog/2024/03/'>2024 年 3 月</a>&nbsp;(27)</li>
+	<li><a href='https://bobowin.blog/2024/02/'>2024 年 2 月</a>&nbsp;(40)</li>
+	<li><a href='https://bobowin.blog/2024/01/'>2024 年 1 月</a>&nbsp;(48)</li>
+	<li><a href='https://bobowin.blog/2023/12/'>2023 年 12 月</a>&nbsp;(26)</li>
+	<li><a href='https://bobowin.blog/2023/11/'>2023 年 11 月</a>&nbsp;(46)</li>
+	<li><a href='https://bobowin.blog/2023/10/'>2023 年 10 月</a>&nbsp;(25)</li>
+	<li><a href='https://bobowin.blog/2023/09/'>2023 年 9 月</a>&nbsp;(22)</li>
+	<li><a href='https://bobowin.blog/2023/08/'>2023 年 8 月</a>&nbsp;(20)</li>
+	<li><a href='https://bobowin.blog/2023/07/'>2023 年 7 月</a>&nbsp;(17)</li>
+	<li><a href='https://bobowin.blog/2023/06/'>2023 年 6 月</a>&nbsp;(24)</li>
+	<li><a href='https://bobowin.blog/2023/05/'>2023 年 5 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2023/04/'>2023 年 4 月</a>&nbsp;(5)</li>
+	<li><a href='https://bobowin.blog/2023/03/'>2023 年 3 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2023/02/'>2023 年 2 月</a>&nbsp;(3)</li>
+	<li><a href='https://bobowin.blog/2023/01/'>2023 年 1 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2022/12/'>2022 年 12 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2022/11/'>2022 年 11 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2022/10/'>2022 年 10 月</a>&nbsp;(21)</li>
+	<li><a href='https://bobowin.blog/2022/09/'>2022 年 9 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2022/08/'>2022 年 8 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2022/07/'>2022 年 7 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2022/06/'>2022 年 6 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2022/05/'>2022 年 5 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2022/04/'>2022 年 4 月</a>&nbsp;(21)</li>
+	<li><a href='https://bobowin.blog/2022/03/'>2022 年 3 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2022/02/'>2022 年 2 月</a>&nbsp;(17)</li>
+	<li><a href='https://bobowin.blog/2022/01/'>2022 年 1 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2021/12/'>2021 年 12 月</a>&nbsp;(22)</li>
+	<li><a href='https://bobowin.blog/2021/11/'>2021 年 11 月</a>&nbsp;(23)</li>
+	<li><a href='https://bobowin.blog/2021/10/'>2021 年 10 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2021/09/'>2021 年 9 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2021/08/'>2021 年 8 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2021/07/'>2021 年 7 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2021/06/'>2021 年 6 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2021/05/'>2021 年 5 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2021/04/'>2021 年 4 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2021/03/'>2021 年 3 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2021/02/'>2021 年 2 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2021/01/'>2021 年 1 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2020/12/'>2020 年 12 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2020/11/'>2020 年 11 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2020/10/'>2020 年 10 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2020/09/'>2020 年 9 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2020/08/'>2020 年 8 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2020/07/'>2020 年 7 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2020/06/'>2020 年 6 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2020/05/'>2020 年 5 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2020/04/'>2020 年 4 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2020/03/'>2020 年 3 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2020/02/'>2020 年 2 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2020/01/'>2020 年 1 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2019/12/'>2019 年 12 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2019/11/'>2019 年 11 月</a>&nbsp;(8)</li>
+	<li><a href='https://bobowin.blog/2019/10/'>2019 年 10 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2019/09/'>2019 年 9 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2019/08/'>2019 年 8 月</a>&nbsp;(6)</li>
+	<li><a href='https://bobowin.blog/2019/07/'>2019 年 7 月</a>&nbsp;(4)</li>
+	<li><a href='https://bobowin.blog/2019/06/'>2019 年 6 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2019/05/'>2019 年 5 月</a>&nbsp;(17)</li>
+	<li><a href='https://bobowin.blog/2019/04/'>2019 年 4 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2019/03/'>2019 年 3 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2019/02/'>2019 年 2 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2019/01/'>2019 年 1 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2018/12/'>2018 年 12 月</a>&nbsp;(24)</li>
+	<li><a href='https://bobowin.blog/2018/11/'>2018 年 11 月</a>&nbsp;(23)</li>
+	<li><a href='https://bobowin.blog/2018/10/'>2018 年 10 月</a>&nbsp;(22)</li>
+	<li><a href='https://bobowin.blog/2018/09/'>2018 年 9 月</a>&nbsp;(17)</li>
+	<li><a href='https://bobowin.blog/2018/08/'>2018 年 8 月</a>&nbsp;(25)</li>
+	<li><a href='https://bobowin.blog/2018/07/'>2018 年 7 月</a>&nbsp;(20)</li>
+	<li><a href='https://bobowin.blog/2018/06/'>2018 年 6 月</a>&nbsp;(21)</li>
+	<li><a href='https://bobowin.blog/2018/05/'>2018 年 5 月</a>&nbsp;(25)</li>
+	<li><a href='https://bobowin.blog/2018/04/'>2018 年 4 月</a>&nbsp;(20)</li>
+	<li><a href='https://bobowin.blog/2018/03/'>2018 年 3 月</a>&nbsp;(25)</li>
+	<li><a href='https://bobowin.blog/2018/02/'>2018 年 2 月</a>&nbsp;(18)</li>
+	<li><a href='https://bobowin.blog/2018/01/'>2018 年 1 月</a>&nbsp;(21)</li>
+	<li><a href='https://bobowin.blog/2017/12/'>2017 年 12 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2017/11/'>2017 年 11 月</a>&nbsp;(23)</li>
+	<li><a href='https://bobowin.blog/2017/10/'>2017 年 10 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2017/09/'>2017 年 9 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2017/08/'>2017 年 8 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2017/07/'>2017 年 7 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2017/06/'>2017 年 6 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2017/05/'>2017 年 5 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2017/04/'>2017 年 4 月</a>&nbsp;(25)</li>
+	<li><a href='https://bobowin.blog/2017/03/'>2017 年 3 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2017/02/'>2017 年 2 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2017/01/'>2017 年 1 月</a>&nbsp;(22)</li>
+	<li><a href='https://bobowin.blog/2016/12/'>2016 年 12 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2016/11/'>2016 年 11 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2016/10/'>2016 年 10 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2016/09/'>2016 年 9 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2016/08/'>2016 年 8 月</a>&nbsp;(18)</li>
+	<li><a href='https://bobowin.blog/2016/07/'>2016 年 7 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2016/06/'>2016 年 6 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2016/05/'>2016 年 5 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2016/04/'>2016 年 4 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2016/03/'>2016 年 3 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2016/02/'>2016 年 2 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2016/01/'>2016 年 1 月</a>&nbsp;(17)</li>
+	<li><a href='https://bobowin.blog/2015/12/'>2015 年 12 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2015/11/'>2015 年 11 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2015/10/'>2015 年 10 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2015/09/'>2015 年 9 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2015/08/'>2015 年 8 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2015/07/'>2015 年 7 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2015/06/'>2015 年 6 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2015/05/'>2015 年 5 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2015/04/'>2015 年 4 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2015/03/'>2015 年 3 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2015/02/'>2015 年 2 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2015/01/'>2015 年 1 月</a>&nbsp;(20)</li>
+	<li><a href='https://bobowin.blog/2014/12/'>2014 年 12 月</a>&nbsp;(18)</li>
+	<li><a href='https://bobowin.blog/2014/11/'>2014 年 11 月</a>&nbsp;(17)</li>
+	<li><a href='https://bobowin.blog/2014/10/'>2014 年 10 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2014/09/'>2014 年 9 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2014/08/'>2014 年 8 月</a>&nbsp;(22)</li>
+	<li><a href='https://bobowin.blog/2014/07/'>2014 年 7 月</a>&nbsp;(19)</li>
+	<li><a href='https://bobowin.blog/2014/06/'>2014 年 6 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2014/05/'>2014 年 5 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2014/04/'>2014 年 4 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2014/03/'>2014 年 3 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2014/02/'>2014 年 2 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2014/01/'>2014 年 1 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2013/12/'>2013 年 12 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2013/11/'>2013 年 11 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2013/10/'>2013 年 10 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2013/09/'>2013 年 9 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2013/08/'>2013 年 8 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2013/07/'>2013 年 7 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2013/06/'>2013 年 6 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2013/05/'>2013 年 5 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2013/04/'>2013 年 4 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2013/03/'>2013 年 3 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2013/02/'>2013 年 2 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2013/01/'>2013 年 1 月</a>&nbsp;(8)</li>
+	<li><a href='https://bobowin.blog/2012/12/'>2012 年 12 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2012/11/'>2012 年 11 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2012/10/'>2012 年 10 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2012/09/'>2012 年 9 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2012/08/'>2012 年 8 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2012/07/'>2012 年 7 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2012/06/'>2012 年 6 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2012/05/'>2012 年 5 月</a>&nbsp;(17)</li>
+	<li><a href='https://bobowin.blog/2012/04/'>2012 年 4 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2012/03/'>2012 年 3 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2012/02/'>2012 年 2 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2012/01/'>2012 年 1 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2011/12/'>2011 年 12 月</a>&nbsp;(8)</li>
+	<li><a href='https://bobowin.blog/2011/11/'>2011 年 11 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2011/10/'>2011 年 10 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2011/09/'>2011 年 9 月</a>&nbsp;(18)</li>
+	<li><a href='https://bobowin.blog/2011/08/'>2011 年 8 月</a>&nbsp;(16)</li>
+	<li><a href='https://bobowin.blog/2011/07/'>2011 年 7 月</a>&nbsp;(15)</li>
+	<li><a href='https://bobowin.blog/2011/06/'>2011 年 6 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2011/05/'>2011 年 5 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2011/04/'>2011 年 4 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2011/03/'>2011 年 3 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2011/02/'>2011 年 2 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2011/01/'>2011 年 1 月</a>&nbsp;(6)</li>
+	<li><a href='https://bobowin.blog/2010/12/'>2010 年 12 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2010/11/'>2010 年 11 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2010/10/'>2010 年 10 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2010/09/'>2010 年 9 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2010/08/'>2010 年 8 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2010/07/'>2010 年 7 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2010/06/'>2010 年 6 月</a>&nbsp;(11)</li>
+	<li><a href='https://bobowin.blog/2010/05/'>2010 年 5 月</a>&nbsp;(17)</li>
+	<li><a href='https://bobowin.blog/2010/04/'>2010 年 4 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2010/03/'>2010 年 3 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2010/02/'>2010 年 2 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2010/01/'>2010 年 1 月</a>&nbsp;(13)</li>
+	<li><a href='https://bobowin.blog/2009/12/'>2009 年 12 月</a>&nbsp;(14)</li>
+	<li><a href='https://bobowin.blog/2009/11/'>2009 年 11 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2009/10/'>2009 年 10 月</a>&nbsp;(12)</li>
+	<li><a href='https://bobowin.blog/2009/09/'>2009 年 9 月</a>&nbsp;(8)</li>
+	<li><a href='https://bobowin.blog/2009/08/'>2009 年 8 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2009/07/'>2009 年 7 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2009/06/'>2009 年 6 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2009/05/'>2009 年 5 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2009/04/'>2009 年 4 月</a>&nbsp;(8)</li>
+	<li><a href='https://bobowin.blog/2009/03/'>2009 年 3 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2009/02/'>2009 年 2 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2009/01/'>2009 年 1 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2008/12/'>2008 年 12 月</a>&nbsp;(6)</li>
+	<li><a href='https://bobowin.blog/2008/11/'>2008 年 11 月</a>&nbsp;(6)</li>
+	<li><a href='https://bobowin.blog/2008/10/'>2008 年 10 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2008/09/'>2008 年 9 月</a>&nbsp;(6)</li>
+	<li><a href='https://bobowin.blog/2008/08/'>2008 年 8 月</a>&nbsp;(10)</li>
+	<li><a href='https://bobowin.blog/2008/07/'>2008 年 7 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2008/06/'>2008 年 6 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2008/05/'>2008 年 5 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2008/04/'>2008 年 4 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2008/03/'>2008 年 3 月</a>&nbsp;(8)</li>
+	<li><a href='https://bobowin.blog/2008/02/'>2008 年 2 月</a>&nbsp;(5)</li>
+	<li><a href='https://bobowin.blog/2008/01/'>2008 年 1 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2007/12/'>2007 年 12 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2007/11/'>2007 年 11 月</a>&nbsp;(8)</li>
+	<li><a href='https://bobowin.blog/2007/10/'>2007 年 10 月</a>&nbsp;(6)</li>
+	<li><a href='https://bobowin.blog/2007/09/'>2007 年 9 月</a>&nbsp;(9)</li>
+	<li><a href='https://bobowin.blog/2007/08/'>2007 年 8 月</a>&nbsp;(8)</li>
+	<li><a href='https://bobowin.blog/2007/07/'>2007 年 7 月</a>&nbsp;(3)</li>
+	<li><a href='https://bobowin.blog/2003/11/'>2003 年 11 月</a>&nbsp;(1)</li>
+	<li><a href='https://bobowin.blog/2003/09/'>2003 年 9 月</a>&nbsp;(2)</li>
+	<li><a href='https://bobowin.blog/2003/06/'>2003 年 6 月</a>&nbsp;(1)</li>
+	<li><a href='https://bobowin.blog/2001/10/'>2001 年 10 月</a>&nbsp;(1)</li>
+	<li><a href='https://bobowin.blog/2000/12/'>2000 年 12 月</a>&nbsp;(2)</li>
+	<li><a href='https://bobowin.blog/2000/11/'>2000 年 11 月</a>&nbsp;(1)</li>
+	<li><a href='https://bobowin.blog/2000/10/'>2000 年 10 月</a>&nbsp;(7)</li>
+	<li><a href='https://bobowin.blog/2000/09/'>2000 年 9 月</a>&nbsp;(2)</li>
+	<li><a href='https://bobowin.blog/2000/07/'>2000 年 7 月</a>&nbsp;(6)</li>
+	<li><a href='https://bobowin.blog/2000/06/'>2000 年 6 月</a>&nbsp;(3)</li>
+	<li><a href='https://bobowin.blog/2000/05/'>2000 年 5 月</a>&nbsp;(2)</li>
+	<li><a href='https://bobowin.blog/2000/04/'>2000 年 4 月</a>&nbsp;(5)</li>
+	<li><a href='https://bobowin.blog/2000/03/'>2000 年 3 月</a>&nbsp;(4)</li>
+	<li><a href='https://bobowin.blog/2000/02/'>2000 年 2 月</a>&nbsp;(4)</li>
+	<li><a href='https://bobowin.blog/2000/01/'>2000 年 1 月</a>&nbsp;(3)</li>
+
+            </ul>
+
+        </div>
+
+    </p>
+
+</section>
+
+</div>
+
+<aside id="sidebar">
+
+
+<section id="block-17" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<h2 class="wp-block-heading">GoogleAD</h2>
+
+
+
+<p class=""><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6994555750211392" crossorigin="anonymous"></script>
+<!-- 右側最上面_矩形 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6994555750211392" data-ad-slot="7661177645"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+</div></div>
+</section><section id="block-15" class="widget widget_block widget_text">
+<p class=""></p>
+</section><section id="block-16" class="widget widget_block widget_text">
+<p class=""></p>
+</section><section id="block-12" class="widget widget_block">
+<h2 class="wp-block-heading">接收最新訊息，歡迎按讚加入FB</h2>
+</section><section id="block-3" class="widget widget_block widget_media_image">
+<figure class="wp-block-image"><a href="https://www.facebook.com/bobowin" target="_blank" rel="noopener"><img decoding="async" width="295" height="85" src="https://bobowin.blog/wp-content/uploads/20210109075305_23.jpg" alt="" class="wp-image-69298"/></a></figure>
+</section><section id="block-5" class="widget widget_block widget_media_image">
+<figure class="wp-block-image"><a href="https://reurl.cc/gDzqKN" target="_blank" rel="noopener"><img decoding="async" width="295" height="105" src="https://bobowin.blog/wp-content/uploads/20210401061123_30.jpg" alt="" class="wp-image-74538"/></a></figure>
+</section><section id="block-7" class="widget widget_block widget_media_image">
+<figure class="wp-block-image"><a href="https://www.instagram.com/bobowingreg/" target="_blank" rel="noopener"><img decoding="async" src="https://bobowin.blog/wp-content/uploads/20210511172846_73.jpg" alt="" class="wp-image-74538"/></a></figure>
+</section><section id="block-8" class="widget widget_block widget_text">
+<p class="has-text-align-center">
+
+
+●聯絡信箱：<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f99b969b968e90979e8b9c9eb99e94989095d79a9694">[email&#160;protected]</a>
+</p>
+</section><section id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" action="https://bobowin.blog/" >
+
+    <div class="search-box">
+
+		<input type="text" class="textfield"  placeholder="搜尋文章..."  value="" name="s" id="s" />
+
+		<button type="submit" aria-label="搜尋">
+
+			<i class="fas fa-search"></i>
+
+		</button>
+
+    </div>
+
+    </form></section>
+		<section id="recent-posts-2" class="widget widget_recent_entries">
+		<h3>近期文章</h3>
+		<ul>
+											<li>
+					<a href="https://bobowin.blog/kaohsiung-hotel/">2026【高雄住宿】TOP20最新高雄飯店推薦，住過還不錯近捷運好停車熱門飯店整理</a>
+									</li>
+											<li>
+					<a href="https://bobowin.blog/zhonggang-drain2026/">2026中港大排光雕展》北極熊企鵝跨區同框, 必拍夜光鬱金香花海, 超夢幻燈光海洋世界, 燈區位置/交通資訊一次看</a>
+									</li>
+											<li>
+					<a href="https://bobowin.blog/phu-quoc-free-travel/">2026【富國島自由行規劃】機票, 住宿, 景點, 機場接送, 樂園門票, 網路卡, 包車資訊</a>
+									</li>
+											<li>
+					<a href="https://bobowin.blog/taipei-outdoor/">2026台北戶外景點推薦! 步道/公園/野餐/親子景點一次收錄! 30+陸續新增中</a>
+									</li>
+											<li>
+					<a href="https://bobowin.blog/307-hotels/">《2026杉林溪住宿懶人包》TOP6必住杉林溪飯店, Google評價4星級飯店</a>
+									</li>
+					</ul>
+
+		</section><section id="wpdt-categories-widget-2" class="widget wpdt-categories"><h3>文章</h3><div class="dtree"><span class='oclinks oclinks_cat' id='oclinks_cat1'><a href='javascript:cat1.openAll();' title='展開全部'>展開全部</a><span class='oclinks_sep oclinks_sep_cat' id='oclinks_sep_cat1'> | </span><a href='javascript:cat1.closeAll();' title='收合全部'>收合全部</a></span>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type='text/javascript'>
+/* <![CDATA[ */
+try{
+if(document.getElementById && document.getElementById('oclinks_cat1')){document.getElementById('oclinks_cat1').style.display = 'block';}
+var cat1 = new wpdTree('cat1', 'https://bobowin.blog/','0');
+cat1.config.useLines=1;
+cat1.config.useIcons=0;
+cat1.config.closeSameLevel=1;
+cat1.config.folderLinks=0;
+cat1.config.useSelection=0;
+cat1.a(0,'root','','','','','');
+cat1.a(-5073,0,'越南北越 沙壩','','category/%e8%b6%8a%e5%8d%97%e5%8c%97%e8%b6%8a-%e6%b2%99%e5%a3%a9/','','');
+cat1.a(-6,-55,'日本旅遊懶人包','','category/foreign/traveljapan/','','');
+cat1.a(-16,-53,'旅遊行程懶人包','','category/taiwan/travel01/','','');
+cat1.a(-41,-57,'攝影創作','','category/picture/photograph/','','');
+cat1.a(-53,0,'台灣好玩好吃趴趴走','','category/taiwan/','','');
+cat1.a(-3177,-36,'澎湖住宿','','category/taiwan/penghu/%e6%be%8e%e6%b9%96%e4%bd%8f%e5%ae%bf/','','');
+cat1.a(-3328,-100,'沖繩美國村','','category/travel/%e6%b2%96%e7%b9%a9%e7%be%8e%e5%9c%8b%e6%9d%91/','','');
+cat1.a(-3682,-58,'團購','','category/life/%e5%9c%98%e8%b3%bc/','','');
+cat1.a(-4020,-56,'免搭帳露營','','category/family/%e5%85%8d%e6%90%ad%e5%b8%b3%e9%9c%b2%e7%87%9f/','','');
+cat1.a(-17,-53,'基隆','','category/taiwan/keelung/','','');
+cat1.a(-21,-58,'廠商邀約','','category/life/vendor/','','');
+cat1.a(-43,-55,'日本北海道','','category/foreign/hokkaido/','','');
+cat1.a(-45,-57,'攝影心得','','category/picture/experience/','','');
+cat1.a(-55,0,'國外趴趴走','','category/foreign/','','');
+cat1.a(-1524,-56,'野餐裝備','','category/family/picnic-family/','','');
+cat1.a(-3178,-36,'澎湖景點','','category/taiwan/penghu/%e6%be%8e%e6%b9%96%e6%99%af%e9%bb%9e/','','');
+cat1.a(-3421,-100,'幾米景點','','category/travel/%e5%b9%be%e7%b1%b3%e6%99%af%e9%bb%9e/','','');
+cat1.a(-2,-56,'露營裝備','','category/family/campingeq/','','');
+cat1.a(-7,-53,'宜蘭','','category/taiwan/yilan/','','');
+cat1.a(-23,-58,'生活資訊','','category/life/information/','','');
+cat1.a(-47,-57,'攝影器材','','category/picture/camera/','','');
+cat1.a(-56,0,'親子相關','','category/family/','','');
+cat1.a(-1433,-55,'日本秋田','','category/foreign/akita/','','');
+cat1.a(-3458,-100,'舊鐵道自行車','','category/travel/%e8%88%8a%e9%90%b5%e9%81%93%e8%87%aa%e8%a1%8c%e8%bb%8a/','','');
+cat1.a(-9,-56,'露營營地','','category/family/camping/','','');
+cat1.a(-19,-53,'新北市','','category/taiwan/newtaipei/','','');
+cat1.a(-28,-58,'3C生活','','category/life/3c/','','');
+cat1.a(-52,-57,'婚禮攝影','','category/picture/wedding/','','');
+cat1.a(-57,0,'攝影相關','','category/picture/','','');
+cat1.a(-1084,-55,'日本福島仙台山形','','category/foreign/fukushima/','','');
+cat1.a(-3461,-100,'全台溫泉飯店','','category/travel/%e5%85%a8%e5%8f%b0%e6%ba%ab%e6%b3%89%e9%a3%af%e5%ba%97/','','');
+cat1.a(-3,-56,'親子生活','','category/family/famliylife/','','');
+cat1.a(-4,-53,'台北市','','category/taiwan/taipei/','','');
+cat1.a(-40,-55,'日本京都奈良宇治','','category/foreign/kyoto/','','');
+cat1.a(-58,0,'生活相關','','category/life/','','');
+cat1.a(-3498,-100,'由布院','','category/travel/%e7%94%b1%e5%b8%83%e9%99%a2/','','');
+cat1.a(-12,-53,'桃園','','category/taiwan/taoyuan/','','');
+cat1.a(-44,-55,'日本東京','','category/foreign/tokyo/','','');
+cat1.a(-48,-56,'福寶成長特輯','','category/family/fubo/','','');
+cat1.a(-100,0,'專題旅遊','','category/travel/','','');
+cat1.a(-3516,-100,'全台博物館','','category/travel/%e5%85%a8%e5%8f%b0%e5%8d%9a%e7%89%a9%e9%a4%a8/','','');
+cat1.a(-14,-53,'新竹','','category/taiwan/hsinchu/','','');
+cat1.a(-46,0,'公告佈告欄','','category/notice/','','');
+cat1.a(-1052,-55,'日本昇龍道','','category/foreign/%e6%97%a5%e6%9c%ac%e6%98%87%e9%be%8d%e9%81%93/','','');
+cat1.a(-3591,-100,'東京親子自由行','','category/travel/%e6%9d%b1%e4%ba%ac%e8%a6%aa%e5%ad%90%e8%87%aa%e7%94%b1%e8%a1%8c/','','');
+cat1.a(-1,0,'未分類','','category/uncategorized/','','');
+cat1.a(-8,-53,'苗栗','','category/taiwan/miaoli/','','');
+cat1.a(-3596,-100,'東京住宿','','category/travel/%e6%9d%b1%e4%ba%ac%e4%bd%8f%e5%ae%bf/','','');
+cat1.a(-5064,-55,'日本大阪京都','','category/foreign/%e6%97%a5%e6%9c%ac%e5%a4%a7%e9%98%aa%e4%ba%ac%e9%83%bd/','','');
+cat1.a(-29,-53,'台中市','','category/taiwan/taichung/','','');
+cat1.a(-2933,-100,'小豆島','','category/travel/%e5%b0%8f%e8%b1%86%e5%b3%b6/','','');
+cat1.a(-3097,-55,'大阪景點','','category/foreign/%e5%a4%a7%e9%98%aa%e6%99%af%e9%bb%9e/','','');
+cat1.a(-13,-53,'南投','','category/taiwan/nantou/','','');
+cat1.a(-2700,-55,'大阪親子飯店','','category/foreign/%e5%a4%a7%e9%98%aa%e8%a6%aa%e5%ad%90%e9%a3%af%e5%ba%97/','','');
+cat1.a(-3003,-100,'台中兩日遊','','category/travel/%e5%8f%b0%e4%b8%ad%e5%85%a9%e6%97%a5%e9%81%8a/','','');
+cat1.a(-15,-53,'彰化','','category/taiwan/changhua/','','');
+cat1.a(-2672,-55,'大阪住宿','','category/foreign/%e5%a4%a7%e9%98%aa%e4%bd%8f%e5%ae%bf/','','');
+cat1.a(-3025,-100,'台中親子','','category/travel/%e5%8f%b0%e4%b8%ad%e8%a6%aa%e5%ad%90/','','');
+cat1.a(-22,-53,'嘉義','','category/taiwan/chiayi/','','');
+cat1.a(-33,-55,'日本大阪岡山倉敷','','category/foreign/kansai/','','');
+cat1.a(-3035,-100,'新竹住宿','','category/travel/%e6%96%b0%e7%ab%b9%e4%bd%8f%e5%ae%bf/','','');
+cat1.a(-20,-55,'日本廣島中國','','category/foreign/hiroshima/','','');
+cat1.a(-32,-53,'雲林','','category/taiwan/yunlin/','','');
+cat1.a(-3049,-100,'沖繩美國村飯店','','category/travel/%e6%b2%96%e7%b9%a9%e7%be%8e%e5%9c%8b%e6%9d%91%e9%a3%af%e5%ba%97/','','');
+cat1.a(-10,-53,'台南','','category/taiwan/tainan/','','');
+cat1.a(-2686,-100,'日本特色星巴克','','category/travel/japan-starbucks/','','');
+cat1.a(-2867,-55,'日本四國','','category/foreign/shikoku/','','');
+cat1.a(-26,-53,'高雄','','category/taiwan/kaohsiung/','','');
+cat1.a(-51,-55,'日本沖繩','','category/foreign/okinawa/','','');
+cat1.a(-2759,-100,'沖繩親子景點','','category/travel/%e6%b2%96%e7%b9%a9%e8%a6%aa%e5%ad%90%e6%99%af%e9%bb%9e/','','');
+cat1.a(-27,-53,'屏東','','category/taiwan/pingtung/','','');
+cat1.a(-31,-55,'日本九州','','category/foreign/kyushu/','','');
+cat1.a(-2842,-100,'高雄三日遊','','category/travel/%e9%ab%98%e9%9b%84%e4%b8%89%e6%97%a5%e9%81%8a/','','');
+cat1.a(-38,-53,'花蓮','','category/taiwan/hualien/','','');
+cat1.a(-50,-55,'香港澳門','','category/foreign/hongkong/','','');
+cat1.a(-1449,-100,'觀光工廠','','category/travel/%e8%a7%80%e5%85%89%e5%b7%a5%e5%bb%a0/','','');
+cat1.a(-39,-53,'台東','','category/taiwan/taitung/','','');
+cat1.a(-1183,-55,'新加坡','','category/foreign/singapore/','','');
+cat1.a(-1473,-100,'博多飯店','','category/travel/hakata-hotel/','','');
+cat1.a(-36,-53,'澎湖','','category/taiwan/penghu/','','');
+cat1.a(-1643,-100,'特色圖書館','','category/travel/libaray/','','');
+cat1.a(-3200,-55,'越南','','category/foreign/vietnam/','','');
+cat1.a(-18,-53,'金門','','category/taiwan/golden/','','');
+cat1.a(-1647,-100,'賞櫻景點','','category/travel/taiwan-sakura/','','');
+cat1.a(-5067,-55,'越南富國島','','category/foreign/phu-quoc/','','');
+cat1.a(-945,-55,'馬來西亞','','category/foreign/malaysia/','','');
+cat1.a(-1710,-100,'北海岸','','category/travel/north-coast/','','');
+cat1.a(-2550,-53,'馬祖','','category/taiwan/matsu/','','');
+cat1.a(-34,-55,'澳洲伯斯','','category/foreign/perth/','','');
+cat1.a(-37,-53,'團購美食','','category/taiwan/buyfood/','','');
+cat1.a(-1769,-100,'特色星巴克','','category/travel/%e7%89%b9%e8%89%b2%e6%98%9f%e5%b7%b4%e5%85%8b/','','');
+cat1.a(-49,-55,'澳洲雪梨','','category/foreign/sydney/','','');
+cat1.a(-1798,-100,'東北角','','category/travel/%e6%9d%b1%e5%8c%97%e8%a7%92/','','');
+cat1.a(-1252,-55,'中國珠海','','category/foreign/zhuhai/','','');
+cat1.a(-1816,-100,'全台桐花特輯','','category/travel/%e5%85%a8%e5%8f%b0%e6%a1%90%e8%8a%b1%e7%89%b9%e8%bc%af/','','');
+cat1.a(-42,-55,'中國上海','','category/foreign/shanghai/','','');
+cat1.a(-1869,-100,'沖繩特色公園','','category/travel/%e6%b2%96%e7%b9%a9%e7%89%b9%e8%89%b2%e5%85%ac%e5%9c%92/','','');
+cat1.a(-1899,-100,'特色公園','','category/travel/child-park/','','');
+cat1.a(-2084,-100,'宜蘭玩水','','category/travel/%e5%ae%9c%e8%98%ad%e7%8e%a9%e6%b0%b4/','','');
+cat1.a(-2214,-100,'台北飯店','','category/travel/taipei-hotel/','','');
+cat1.a(-2251,-100,'沖繩餐廳','','category/travel/okinawa-restaurant/','','');
+cat1.a(-2261,-100,'台北捷運飯店','','category/travel/taipei-mrt-hotel/','','');
+cat1.a(-2458,-100,'新北市特色公園','','category/travel/new-taipei-park/','','');
+cat1.a(-2542,-100,'新竹兩日遊','','category/travel/%e6%96%b0%e7%ab%b9%e5%85%a9%e6%97%a5%e9%81%8a/','','');
+cat1.a(-1345,-100,'沖繩海景飯店','','category/travel/okinawa-ocean-hotel/','','');
+cat1.a(-1346,-100,'沖繩飯店','','category/travel/okinawa-hotel/','','');
+cat1.a(-1389,-100,'冬遊沖繩五日','','category/travel/%e5%86%ac%e9%81%8a%e6%b2%96%e7%b9%a9%e4%ba%94%e6%97%a5/','','');
+cat1.a(-1390,-100,'沖繩國際通飯店','','category/travel/kokusai-dori-hotel/','','');
+cat1.a(-1411,-100,'桃園餐廳','','category/travel/taoyuan-restaurant/','','');
+cat1.a(-1434,-100,'秋田五日','','category/travel/akita5/','','');
+cat1.a(-175,-100,'香港四天三夜全紀錄','','category/travel/hk4day/','','');
+cat1.a(-958,-100,'香港五日海洋公園','','category/travel/oceanpark5/','','');
+cat1.a(-222,-100,'沖繩六天五夜','','category/travel/okinawa6/','','');
+cat1.a(-630,-100,'沖繩五天四夜','','category/travel/okinawa5day/','','');
+cat1.a(-1184,-100,'新馬自由行','','category/travel/singapore-malaysia/','','');
+cat1.a(-1185,-100,'新加坡親子自由行','','category/travel/singapore-child/','','');
+cat1.a(-1253,-100,'澳門珠海自由行','','category/travel/zhuhai-trip/','','');
+cat1.a(-103,-100,'野餐景點','','category/travel/picnic/','','');
+cat1.a(-111,-100,'特色溜滑梯','','category/travel/slide/','','');
+cat1.a(-115,-100,'親子飯店','','category/travel/childhotel/','','');
+cat1.a(-191,-100,'特色小學','','category/travel/elementary/','','');
+cat1.a(-215,-100,'台北一日遊','','category/travel/taipeione/','','');
+cat1.a(-312,-100,'宜蘭兩日遊','','category/travel/yilan2day/','','');
+cat1.a(-313,-100,'宜蘭三日遊','','category/travel/yilan3day/','','');
+cat1.a(-332,-100,'台灣老街','','category/travel/oldway/','','');
+cat1.a(-333,-100,'IG打卡熱點','','category/travel/igpoint/','','');
+cat1.a(-343,-100,'宜蘭民宿飯店','','category/travel/yilanhotel/','','');
+cat1.a(-367,-100,'台北餐廳','','category/travel/taipeifood/','','');
+cat1.a(-379,-100,'台北捷運餐廳','','category/travel/taipelmrtfood/','','');
+cat1.a(-445,-100,'夏天玩水景點','','category/travel/summerwater/','','');
+cat1.a(-610,-100,'親子景點','','category/travel/childpoint/','','');
+cat1.a(-851,-100,'彩繪村','','category/travel/paint-village/','','');
+cat1.a(-942,-100,'香港五日','','category/travel/hk-5/','','');
+cat1.a(-959,-100,'親子步道','','category/travel/child-hiking/','','');
+cat1.a(-960,-100,'健走步道','','category/travel/hiking/','','');
+cat1.a(-1032,-100,'雨天備案','','category/travel/rain-backup/','','');
+cat1.a(-1065,-100,'台中飯店','','category/travel/taichung-hotel/','','');
+cat1.a(-1149,-100,'全台落羽松特輯','','category/travel/pine/','','');
+cat1.a(-94,-100,'景觀餐廳','','category/travel/viewpoint/','','');
+cat1.a(-95,-100,'親子餐廳','','category/travel/familyrest/','','');
+document.write(cat1);
+}catch(e){} /* ]]> */
+</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+try{
+/*WP-dTree: cat1 request was "'wp-content\/uploads\/pixnet\/d6f2e5c5e5c5e5c5e5c5e5c5e5c5e5c5.jpg'" Couldn't find it.*/
+}catch(e){} /* ]]> */
+</script>
+</div></section><section id="text-11" class="widget widget_text"><h3>台灣住宿飯店懶人包</h3>			<div class="textwidget"><p><strong><a href="https://bobowin.blog/child-hotel/" target="_blank" rel="noopener noreferrer">全台親子飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/taiwan-swim-hotel/" target="_blank" rel="noopener">全台泳池玩水飯店</a></strong></p>
+<p><strong><a href="https://bobowin.blog/p3485/" target="_blank" rel="noopener">北部親子飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/taipei-design-hotel/" target="_blank" rel="noopener">台北住宿飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/beitou-hotspring/" target="_blank" rel="noopener">北投溫泉湯屋推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/wulai-hotspring/" target="_blank" rel="noopener">烏來泡湯住宿推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/tamsui-top7/" target="_blank" rel="noopener">淡水住宿飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/yilan-hotels/" target="_blank" rel="noopener noreferrer">宜蘭住宿飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/jiaoxi-hotel/" target="_blank" rel="noopener">礁溪溫泉飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/keelung-hotel/" target="_blank" rel="noopener">基隆住宿飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/taoyuan-hotel-top5/" target="_blank" rel="noopener">桃園住宿飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/hsinchu-hotel/" target="_blank" rel="noopener">新竹住宿飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/miaoli-15hotel/" target="_blank" rel="noopener">苗栗住宿飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/p3486/" target="_blank" rel="noopener">桃竹苗親子飯店推薦</a></strong></p>
+<p><a href="https://bobowin.blog/taichung-hotel/" target="_blank" rel="noopener"><strong>台中住宿飯店推薦</strong></a></p>
+<p><a href="https://bobowin.blog/nantou-hotel/" target="_blank" rel="noopener"><strong>南投住宿飯店推薦</strong></a></p>
+<p><a href="https://bobowin.blog/sunmoonlake-hotels/" target="_blank" rel="noopener"><strong>日月潭住宿飯店推薦</strong></a></p>
+<p><strong><a href="https://bobowin.blog/chiayi-hotel/" target="_blank" rel="noopener">嘉義住宿飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/chiayi-child-hotel/" target="_blank" rel="noopener">嘉義親子飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/tainan-hotel/" target="_blank" rel="noopener">台南住宿飯店推薦</a></strong></p>
+<p><a href="https://bobowin.blog/kaohsiung-hotel/" target="_blank" rel="noopener"><strong>高雄住宿飯店推薦</strong></a></p>
+<p><strong><a href="https://bobowin.blog/hualien-hotel/" target="_blank" rel="noopener">花蓮住宿飯店推薦</a></strong></p>
+</div>
+		</section><section id="text-12" class="widget widget_text"><h3>國外住宿飯店懶人包</h3>			<div class="textwidget"><p><strong><a href="https://bobowin.blog/okinawa-hotels/" target="_blank" rel="noopener">沖繩住宿18間飯店推薦</a></strong></p>
+<p><strong><a href="https://bobowin.blog/okinawa-12/" target="_blank" rel="noopener">沖繩12歲以下免費住飯店</a></strong></p>
+<p><strong><a title="閱讀：日本九州博多車站飯店 | 九間高CP值、親子友善、走路就到飯店，實際入住經驗分享(兒童免費入住年齡、飯店位置、價格收錄)" href="https://bobowin.blog/hakata-hotel/" rel="bookmark">九州博多車站9間飯店</a></strong></p>
+<p><strong><a href="https://bobowin.blog/tokyo-air-hotel/" target="_blank" rel="noopener">東京10間機場直達飯店</a></strong></p>
+<p><strong><a title="閱讀：東京自由行住哪裡 | 評比8間淺草飯店，選出省錢高CP值飯店，想拍無人淺草寺雷門一定要住這、還有面Skytree景觀房" href="https://bobowin.blog/2017-01-16-47/" target="_blank" rel="bookmark noopener">東京自由行住哪裡 | 8間淺草飯店</a></strong></p>
+<p><strong><a href="https://bobowin.blog/tokyo-12/" target="_blank" rel="noopener">東京12歲以下免費住飯店</a></strong></p>
+<p><a title="閱讀：[大阪心齋橋 難波飯店怎麼選] 精選10間車站附近、交通和購物方便 大阪心齋橋飯店 難波飯店 日本橋飯店(含2016年新飯店)" href="https://bobowin.blog/2016-10-06-104/" target="_blank" rel="bookmark noopener"><strong>大阪心齋橋 難波10間飯店</strong></a></p>
+<p><strong><a title="閱讀：[大阪車站飯店怎麼選] 9間JR大阪梅田車站周邊飯店、離購物百貨近、去關西機場也方便" href="https://bobowin.blog/2016-07-29-151/" target="_blank" rel="bookmark noopener">9間JR大阪梅田車站周邊飯店</a></strong></p>
+<p><strong><a href="https://bobowin.blog/kyoto-12/" target="_blank" rel="noopener">京都12歲以下免費住飯店</a></strong></p>
+<p><a href="https://bobowin.blog/fukuoka-hotel/" target="_blank" rel="noopener"><strong>10間福岡車站住宿推薦</strong></a></p>
+<p><strong><a title="閱讀：【出國選飯店】飯店房型怎麼選? 有孩子人數怎麼報，訂房前注意事項提醒(附上各房型照片)，解開你長久以來的訂房困惑" href="https://bobowin.blog/2017-03-08-9/" target="_blank" rel="bookmark noopener">【出國選飯店】飯店房型怎麼選? </a></strong></p>
+</div>
+		</section><section id="text-8" class="widget widget_text"><h3>國內實際入住飯店推薦</h3>			<div class="textwidget"><p><strong><a href="https://bobowin.blog/p1591/" target="_blank" rel="noopener">基隆長榮桂冠</a> (<a href="https://www.agoda.com/zh-tw/evergreen-laurel-hotel-keelung/hotel/keelung-tw.html?cid=1604220&amp;pcs=1&amp;hid=663" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/hotel-resonance-taipei/">台北時代寓所</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=18793396" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<a href="https://bobowin.blog/grand-hyatt-taipei/" target="_blank" rel="noopener"><strong>台北君悅酒店</strong></a><strong>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=736992" target="_blank" rel="noopener noreferrer">看房價)</a></strong><br />
+<strong><a href="https://bobowin.blog/sheratongrand-taipei/">台北喜來登</a></strong> <strong>(<a href="https://www.kkday.com/zh-tw/product/114932?cid=10146" target="_blank" rel="noopener noreferrer">看房價)</a></strong><br />
+<a href="https://bobowin.blog/shangri-la-taipei/" target="_blank" rel="noopener"><strong>香格里拉台北遠東國際大飯店</strong></a> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?cid=1604220&amp;pcs=1&amp;hid=7767" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/hua-shan-din-hotel/" target="_blank" rel="noopener">台北天成文旅華山町</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=3329297" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/p1588/" target="_blank" rel="noopener">台北美福大飯店</a>(<a href="https://www.agoda.com/partners/partnersearch.aspx?cid=1604220&amp;pcs=1&amp;hid=1192093" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/aloft-taipei-zhongshan/" target="_blank" rel="noopener">台北雅樂軒飯店</a></strong>(<strong><a href="https://www.agoda.com/zh-tw/aloft-taipei-zhongshan/hotel/taipei-tw.html?cid=1604220&amp;pcs=1&amp;hid=1181757" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/home-hotel/" target="_blank" rel="noopener">台北逸寬文旅大安館</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=920692" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/citizen-m-taipei/" target="_blank" rel="noopener">台北北門酒店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=2079109" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/sotetsu-grand-fresa/" target="_blank" rel="noopener">相鐵飯店台北西門</a> (<a href="https://www.booking.com/hotel/tw/xiang-tie-fan-dian-tai-bei-xi-men-zhong-zheng-qu.zh-tw.html?aid=1662501" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/apresort-beitou/" target="_blank" rel="noopener">台北北投亞太飯店</a></strong> <strong> (<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=3579897" target="_blank" rel="noopener noreferrer">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/the-gaia-hotel/" target="_blank" rel="noopener">台北北投大地酒店</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=569079" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/songshan-amba/" target="_blank" rel="noopener">台北松山意舍酒店</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1227837" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/artree-hotel/" target="_blank" rel="noopener">台北阿樹國際旅店</a> </strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=2602081" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/american-village/" target="_blank" rel="noopener">台北陽明山渡假村</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=6754643" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/2016-01-29-237/" target="_blank" rel="noopener">台北陽明山天籟</a>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=109058" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/checkinn-yangmingshan/" target="_blank" rel="noopener">雀客藏居台北陽明山溫泉飯店</a>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=197121" target="_blank" rel="noopener">看房價</a>)</strong></p>
+<p><strong><a href="https://bobowin.blog/2015-05-07-377/" target="_blank" rel="noopener">新北大板根溫泉飯店 (</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=281254" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/2015-05-07-377/" target="_blank" rel="noopener">)</a></strong><br />
+<strong><a href="https://bobowin.blog/goldentulip-fabhotel/" target="_blank" rel="noopener">新北淡水將捷金鬱金香酒店</a> </strong></p>
+<p><a href="https://bobowin.blog/ct-greenbay/" target="_blank" rel="noopener"><strong>新北群策翡翠灣溫泉飯店</strong></a>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=3547417" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><strong><a href="https://bobowin.blog/hyatt-place-xinzhuang/" target="_blank" rel="noopener">新北新莊凱悅嘉軒酒店</a></strong>(<strong><a href="https://reurl.cc/7MeXZb" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/fullon-tamsui/" target="_blank" rel="noopener">新北淡水漁人碼頭福容</a>(<a href="https://www.agoda.com/partners/partnersearch.aspx?cid=1604220&amp;pcs=1&amp;hid=283812" target="_blank" rel="noopener noreferrer">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/inhouse-hotel-yehliu/" target="_blank" rel="noopener">新北薆悅酒店野柳渡假館</a>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=686342" target="_blank" rel="noopener noreferrer">看房價</a>)</strong><br />
+<a href="https://bobowin.blog/queen-village-jinshan/" target="_blank" rel="noopener"><strong>新北金山皇后鎮森林(</strong></a><strong><a href="https://pse.is/3mzpc2" target="_blank" rel="noopener noreferrer">看房價</a>)</strong></p>
+<p><a href="https://bobowin.blog/kilin-jiaoxi/"><strong>宜蘭礁溪麒麟<a href="https://bobowin.blog/queen-village-jinshan/" target="_blank" rel="noopener">(</a><a href="https://pse.is/599n47" target="_blank" rel="noopener noreferrer">看房價</a>)</strong></a></p>
+<p><strong><a href="https://bobowin.blog/lanyang-seaview-hotel/" target="_blank" rel="noopener">宜蘭蘭陽烏石港海景酒店 (</a><a href="https://reurl.cc/O0QQAR" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/lanyang-seaview-hotel/" target="_blank" rel="noopener">)</a></strong><br />
+<strong><a href="https://bobowin.blog/2016-06-22-172/" target="_blank" rel="noopener">宜蘭礁溪長隆榮鳳凰酒店</a> (<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=246328" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/mu-hotel/" target="_blank" rel="noopener">宜蘭礁溪寒沐酒店</a></strong>  (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=2613931" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/yilan-hotelroyal/" target="_blank" rel="noopener">宜蘭礁溪老爺酒店</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=104996" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/chuang-tang/" target="_blank" rel="noopener">宜蘭川湯溫泉旗艦館</a></strong> (<strong><a href="https://www.booking.com/hotel/tw/chuan-tang-chun-tian-wen-quan-jiu-dian-qi-jian-guan.zh-tw.html?aid=1662502" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/jiaoxi-maisondechine/" target="_blank" rel="noopener">宜蘭礁溪福朋喜來登酒店</a><a href="https://bobowin.blog/jiaoxi-maisondechine/" target="_blank" rel="noopener">(</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=4987357" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/jiaoxi-maisondechine/" target="_blank" rel="noopener">)</a></strong></p>
+<p><strong><a href="https://bobowin.blog/arts-lakeshore/">煙波花時間宜蘭傳藝</a></strong>（<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=28393263" target="_blank" rel="noopener noreferrer">看房價</a></strong>）<br />
+<strong><a href="https://bobowin.blog/muen-yang-dong/">宜蘭沐恩遠東溫泉渡假飯店(</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=22041602" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/muen-yang-dong/">)</a></strong><br />
+<strong><a href="https://bobowin.blog/2016-07-25-154/" target="_blank" rel="noopener">宜蘭瓏山林飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=339299" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/dwsresort/" target="_blank" rel="noopener">宜蘭綠舞國際觀光飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=2733379" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/yilan-cuncyue/" target="_blank" rel="noopener">宜蘭羅東村却國際溫泉酒店</a> </strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=3579923" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<a href="https://bobowin.blog/river-forest/" target="_blank" rel="noopener"><strong>宜蘭水岸森林休閒農場</strong></a>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=295057" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<a href="https://bobowin.blog/river-forest/" target="_blank" rel="noopener"><strong>宜蘭三富休閒農場‧紫森林旅宿</strong></a>(<strong><a href="https://www.kkday.com/zh-tw/product/122966?cid=10146" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<a href="https://bobowin.blog/river-forest/" target="_blank" rel="noopener"><strong>宜蘭煙波蘇澳四季雙泉館</strong></a>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1179417" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><a href="https://bobowin.blog/taoyuan-southgarden/" target="_blank" rel="noopener"><strong>桃園南方莊園</strong></a>(<a href="https://www.agoda.com/zh-tw/south-garden-hotels-and-resorts/hotel/taoyuan-tw.html?cid=1604220&amp;pcs=1&amp;hid=186598" target="_blank" rel="noopener"><strong>看房價</strong></a>)<br />
+<strong><a href="https://bobowin.blog/howard-shihmen/" target="_blank" rel="noopener">石門水庫福華渡假飯店</a>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=67826" target="_blank" rel="noopener">看房價</a>)</strong></p>
+<p><strong><a href="https://bobowin.blog/xpark-cozzi/" target="_blank" rel="noopener">夜宿XPARK</a>(<a href="https://reurl.cc/p6m0gx" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/fleurlis/" target="_blank" rel="noopener">新竹芙洛麗大飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=433172" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/hotel-indigo-hsinchu/" target="_blank" rel="noopener">新竹伊普索凱悅尚選酒店</a>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=5784586" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/hotel-indigo-hsinchu/" target="_blank" rel="noopener">)</a></strong></p>
+<p><a href="https://bobowin.blog/aj-hotel/" target="_blank" rel="noopener"><strong>新竹安捷國際酒店(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=4168034" target="_blank" rel="noopener">看房價</a>)</strong></a><br />
+<strong><a href="https://bobowin.blog/hsinchu-lakeshore/" target="_blank" rel="noopener">新竹煙波親子飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=412087" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/leofoo-resort/" target="_blank" rel="noopener">新竹關西六福莊</a>  (<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=237243" target="_blank" rel="noopener noreferrer">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/hsinchu-xiong/" target="_blank" rel="noopener">新竹愛上喜翁豪華帳棚</a>  <a href="https://bobowin.blog/hsinchu-xiong/" target="_blank" rel="noopener">(</a><a href="https://pse.is/3sb526" target="_blank" rel="noopener noreferrer">看房價</a><a href="https://bobowin.blog/hsinchu-xiong/" target="_blank" rel="noopener">)</a></strong><br />
+<strong><a href="https://bobowin.blog/clresort/" target="_blank" rel="noopener">苗栗南庄雲水度假森林</a></strong> (<strong><a href="https://www.booking.com/hotel/tw/nan-zhuang-yun-shui-du-jia-sen-lin.zh-tw.html?aid=1662502" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/2016-11-22-82/" target="_blank" rel="noopener">苗栗尚順飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=937157" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/goldentulip-aesthetics-2/" target="_blank" rel="noopener">苗栗馥藝金鬱金香酒店(</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=288620" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/goldentulip-aesthetics-2/" target="_blank" rel="noopener">)</a></strong><br />
+<strong><a href="https://bobowin.blog/provence-villa/" target="_blank" rel="noopener">苗栗享沐時光莊園渡假酒店(</a><a href="http://affiliate.klook.com/redirect?aid=32&amp;aff_adid=577616&amp;k_site=https%3A%2F%2Fwww.klook.com%2Fzh-TW%2Fhotels%2Fdetail%2F564460" target="_blank" rel="noopener">看房價</a>)</strong></p>
+<p><a href="https://bobowin.blog/inhousehotel-taichung/" target="_blank" rel="noopener"><strong>台中薆悅酒店五權館</strong></a><strong>(<a href="https://affiliate.klook.com/redirect?aid=32&amp;aff_adid=613723&amp;k_site=https%3A%2F%2Fwww.klook.com%2Fzh-TW%2Fhotels%2F438467" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/kloud-hotel/">台中逢甲浮雲客棧 (</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=8186321" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/kloud-hotel/">)</a></strong><br />
+<strong><a href="https://bobowin.blog/royal-roi-hotel/">台中余舍行旅 (</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=6948019" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/royal-roi-hotel/">)</a></strong><br />
+<strong><a href="https://bobowin.blog/freshfields-hotel/" target="_blank" rel="noopener">台中清新溫泉飯店</a></strong> (<strong><a href="https://reurl.cc/r797k" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/2015-05-02-379/" target="_blank" rel="noopener">台中紅點文旅</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=665570" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/1969bluesky/" target="_blank" rel="noopener">台中1969藍天飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1179332" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/2016-07-04-165/" target="_blank" rel="noopener">台中璞樹文旅</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=861981" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/2014-01-17-658/" target="_blank" rel="noopener">台中裕元花園飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=248403" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<a href="https://bobowin.blog/tch-hotel/" target="_blank" rel="noopener"><strong>台中港酒店</strong></a> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=433342" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/nantou-dellago/" target="_blank" rel="noopener">南投日月潭大淶閣飯店</a> (<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=77378" target="_blank" rel="noopener">看房價</a>)</strong></p>
+<p><strong><a href="https://bobowin.blog/wyndham-sunmoonlake/" target="_blank" rel="noopener">日月潭力麗溫德姆溫泉酒店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=44383706" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><strong><a href="https://bobowin.blog/apollo-resort-hotel/" target="_blank" rel="noopener noreferrer">日月潭鴻賓大飯店</a></strong>(<strong><a href="https://www.klook.com/zh-TW/hotels/detail/321414?aid=32" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/howard-resort-xitou/" target="_blank" rel="noopener">南投溪頭福華渡假飯店(</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=263544" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/howard-resort-xitou/" target="_blank" rel="noopener">)</a></strong><br />
+<a href="https://bobowin.blog/2016-03-11-215/" target="_blank" rel="noopener"><strong>南投米堤大飯店</strong></a><strong>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=296977" target="_blank" rel="noopener noreferrer">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/fuli-hot-spring-resort/" target="_blank" rel="noopener">南投馥麗溫泉大飯店</a> (<a href="https://www.agoda.com/partners/partnersearch.aspx?cid=1604220&amp;pcs=1&amp;hid=621419" target="_blank" rel="noopener noreferrer">看房價</a>)</strong></p>
+<p><a href="https://bobowin.blog/topcloud/" target="_blank" rel="noopener"><strong>清境雲頂渡假山莊(<a href="https://reurl.cc/Op5Rxy" target="_blank" rel="noopener noreferrer">看房價</a>)</strong></a><br />
+<strong><a href="https://bobowin.blog/unionhouse/" target="_blank" rel="noopener">彰化鹿港永樂酒店</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1632502" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><a href="https://bobowin.blog/sundialogue-hotel/" target="_blank" rel="noopener noreferrer"><strong>嘉義天成文旅繪日之丘(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1193810" target="_blank" rel="noopener noreferrer">看房價</a>)</strong></a></p>
+<p><strong><a href="https://bobowin.blog/south-urban-hotel/" target="_blank" rel="noopener">嘉義南院旅墅(</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1270359" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/south-urban-hotel/" target="_blank" rel="noopener">)</a></strong><br />
+<strong><a href="https://bobowin.blog/p1517/" target="_blank" rel="noopener">嘉義里亞環島行旅</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1376000" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/brickhotel/" target="_blank" rel="noopener">嘉義棒棒積木飯店(</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=15854596" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/brickhotel/" target="_blank" rel="noopener">)</a></strong></p>
+<p><a href="https://bobowin.blog/chiananwind/" target="_blank" rel="noopener"><strong>嘉楠風華酒店</strong></a>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1887937&amp;hid=1622559" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/chiayi-cfcv/" target="_blank" rel="noopener">嘉義詩情花園渡假村(</a><a href="https://pse.is/3sjdyn" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/chiayi-cfcv/" target="_blank" rel="noopener">)</a></strong></p>
+<p><strong><a href="https://bobowin.blog/grandbanyan-hotel/" target="_blank" rel="noopener">台南禧榕軒大飯店 (</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=31373782" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/grandbanyan-hotel/" target="_blank" rel="noopener">)</a></strong></p>
+<p><strong><a href="https://bobowin.blog/crowneplaza-tainan/" target="_blank" rel="noopener">台南大員皇冠假日酒店 (</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=2405100" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/crowneplaza-tainan/" target="_blank" rel="noopener">)</a></strong><br />
+<strong><a href="https://bobowin.blog/the-place-tainan/" target="_blank" rel="noopener">台南老爺行旅</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?cid=1604220&amp;pcs=1&amp;hid=867580" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/shangrila-tainan/" target="_blank" rel="noopener">台南遠東香格里拉</a></strong> <strong>(<a href="https://www.agoda.com/partners/partnersearch.aspx?cid=1604220&amp;pcs=1&amp;hid=109235" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/2015-12-03-269/" target="_blank" rel="noopener">台南和逸西門館 </a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=781566" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/uji-tainan/" target="_blank" rel="noopener">台南友愛街旅館</a></strong>  <strong>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=2727823" target="_blank" rel="noopener nofollow external noreferrer" data-wpel-link="external">看房價</a>)</strong></p>
+<p><strong><a href="https://bobowin.blog/tainan-jianshanpi/" target="_blank" rel="noopener">台糖柳營尖山埤渡假村</a>(<a href="https://reurl.cc/9pW3v8" target="_blank" rel="noopener">看房價</a>)</strong></p>
+<p><strong><a href="https://bobowin.blog/justsleep-ten-drum/" target="_blank" rel="noopener">捷絲旅台南虎山館</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1887937&amp;hid=22885886" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/edaroyal/" target="_blank" rel="noopener">高雄義大皇家酒店</a> </strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=566627" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/edaskylark/" target="_blank" rel="noopener">高雄義大天悅飯店 (</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=251501" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/edaskylark/" target="_blank" rel="noopener">)</a></strong><br />
+<strong><a href="https://bobowin.blog/hotelhg2/" target="_blank" rel="noopener">高雄華園飯店草衙道館</a></strong> <strong>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=6494206" target="_blank" rel="noopener noreferrer">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/citysuites-pier2/" target="_blank" rel="noopener">高雄城市商旅-駁二館</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1220617" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/kaohsiung-lainn/" target="_blank" rel="noopener">高雄樂逸旅居</a></strong>  (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1162232" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/kaohsiung-marriott/" target="_blank" rel="noopener">高雄萬豪酒店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=23388991" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><a href="https://bobowin.blog/fullon-hotel-kaohsiung/" target="_blank" rel="noopener"><strong>高雄福容大飯店</strong></a>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=247610" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><strong><a href="https://bobowin.blog/kung-shang/">高雄宮賞藝術大飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=255325" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/spa-grand/" target="_blank" rel="noopener">高雄遠山望月溫泉露營車(</a><a href="https://pse.is/3mxy36" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/spa-grand/" target="_blank" rel="noopener">)</a></strong></p>
+<p>墾丁夏都沙灘飯店(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=60397" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><strong><a href="https://bobowin.blog/yoho-hotel/" target="_blank" rel="noopener">墾丁悠活渡假村(</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=60400" target="_blank" rel="noopener">看房價</a>)</strong></p>
+<p><a href="https://bobowin.blog/h-resort/" target="_blank" rel="noopener"><strong>墾丁H會館(</strong></a><strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=295060" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/kenting-uni-resort/" target="_blank" rel="noopener">墾丁統一渡假村</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=292678" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><a href="https://bobowin.blog/kenting-long-beach-hotel/"><strong>墾丁長灘休閒飯店</strong></a>(<strong><a href="https://pse.is/3yus88" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/2010-06-23-1196/" target="_blank" rel="noopener">花蓮遠雄悅來大飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=267845" target="_blank" rel="noopener">看房價</a>)<br />
+<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=267845" target="_blank" rel="noopener">花蓮太魯閣晶英酒店</a>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=324" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/liiko-hotel/" target="_blank" rel="noopener">花蓮立閣人文旅店(</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1134924" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/liiko-hotel/" target="_blank" rel="noopener">)</a></strong><br />
+<strong><a href="https://bobowin.blog/taroko-lakeshore/" target="_blank" rel="noopener">煙波花時間花蓮</a></strong> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1887937&amp;hid=28393248" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/hualien-fullon/" target="_blank" rel="noopener">花蓮福容大飯店</a> </strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=247571" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/azure-hotel/" target="_blank" rel="noopener">花蓮藍天麗池飯店</a> </strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=263138" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<a href="https://bobowin.blog/chu-resort/" target="_blank" rel="noopener"><strong>花蓮丘丘森旅</strong></a>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=34153197" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><strong><a href="https://bobowin.blog/promisedland-resort/" target="_blank" rel="noopener">花蓮理想大地渡假飯店</a></strong>(<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=89331" target="_blank" rel="noopener">看房價</a></strong>)</p>
+<p><a href="https://bobowin.blog/hualien-grandcosmos/"><strong>花蓮瑞穗天合國際觀光酒店 (</strong></a><strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=5662409" target="_blank" rel="noopener noreferrer">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/tudor-hualien/">花蓮都鐸王朝露營車</a></strong><strong>(<a href="https://reurl.cc/WXDKZL" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/rice-resort-hotel/">台東禾風新棧度假飯店 (</a><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=8233372" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/rice-resort-hotel/">)</a></strong><br />
+<a href="https://bobowin.blog/gaya-hotel/" target="_blank" rel="noopener"><strong>台東THE GAYA HOTEL酒店</strong></a> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=2070099" target="_blank" rel="noopener">看房價</a></strong>)<br />
+<a href="https://bobowin.blog/papago-resort/" target="_blank" rel="noopener"><strong>台東池上日暉國際渡假村</strong></a> (<strong><a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=240417" target="_blank" rel="noopener noreferrer">看房價</a></strong>)<br />
+<strong><a href="https://bobowin.blog/star-campground-taitung/">台東海邊舟舟曉晴星空帳</a>  <a href="https://bobowin.blog/star-campground-taitung/">(</a><a href="https://reurl.cc/ogb9kv" target="_blank" rel="noopener">看房價</a><a href="https://bobowin.blog/star-campground-taitung/">)</a></strong><br />
+<strong><a href="https://bobowin.blog/fourpoints-penghu/" target="_blank" rel="noopener">澎湖福朋喜來登酒店</a>  (<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=1030513" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/discovery-hotel-penghu/" target="_blank" rel="noopener">澎湖澎澄飯店</a>  (<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=4537891" target="_blank" rel="noopener">看房價</a>)</strong><br />
+<strong><a href="https://bobowin.blog/goldenlakehotel/" target="_blank" rel="noopener">金門昇恆昌金湖飯店</a></strong> <strong>(<a href="https://www.agoda.com/partners/partnersearch.aspx?pcs=1&amp;cid=1604220&amp;hid=774230" target="_blank" rel="noopener">看房價</a>)</strong></p>
+<p><a href="https://bobowin.blog/happycasaresorts/" target="_blank" rel="noopener"><strong>金門十美度假村(</strong></a><strong><a href="https://www.agoda.com/h22192264/hotel/kinmen-tw.html?pcs=1&amp;cid=1604220&amp;hid=22230889&amp;checkIn=2024-10-22&amp;checkOut=2024-10-23&amp;adults=2&amp;rooms=1&amp;pslc=1&amp;ds=m%2FswQ5idyipaet2P" target="_blank" rel="noopener">看房價</a>)</strong></p>
+</div>
+		</section><section id="text-10" class="widget widget_text"><h3>台灣各地一日遊二日遊</h3>			<div class="textwidget"><p><strong><a href="https://bobowin.blog/2011-03-25-1093/" target="_blank" rel="noopener">宜蘭一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2016-03-14-213/" target="_blank" rel="noopener">宜蘭兩日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/yilan-toucheng/">宜蘭頭城一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/yilan-jiaoxi/" target="_blank" rel="noopener">宜蘭礁溪一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/p1895/" target="_blank" rel="noopener">宜蘭員山一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/yilan-wujie/" target="_blank" rel="noopener">宜蘭五結壯圍一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/yilan-tangsuann/" target="_blank" rel="noopener">宜蘭冬山一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/keelung-one/" target="_blank" rel="noopener">基隆一日遊</a></strong><br />
+<strong> <a href="https://bobowin.blog/keelung-ocean/" target="_blank" rel="noopener">基隆瑞芳景點一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2015-10-19-293/" target="_blank" rel="noopener">台北捷運一日遊路線</a></strong><br />
+<strong><a href="https://bobowin.blog/2016-10-05-105/" target="_blank" rel="noopener">捷運板南線一日遊</a></strong><br />
+<strong>NEW!! <a href="https://bobowin.blog/neihu/" target="_blank" rel="noopener">台北內湖一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/beitou-10/" target="_blank" rel="noopener">台北北投一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/taipei-nangang/" target="_blank" rel="noopener">台北南港一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/yangmingshan/" target="_blank" rel="noopener">台北陽明山一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2013-05-12-753/" target="_blank" rel="noopener">新北市一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/ruifang-trip/" target="_blank" rel="noopener">新北瑞芳一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/north-coast/" target="_blank" rel="noopener">新北北海岸一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/tamsui-one/" target="_blank" rel="noopener">新北淡水一日遊</a></strong><br />
+<a href="https://bobowin.blog/linkou-guishan/" target="_blank" rel="noopener"><strong>新北林口龜山一日遊</strong></a><br />
+<strong><a href="https://bobowin.blog/xinzhuang-old-street/" target="_blank" rel="noopener">新北新莊一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/golden-city/" target="_blank" rel="noopener">金瓜石一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/shuangxi-trip/" target="_blank" rel="noopener">新北雙溪一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2016-11-16-84/" target="_blank" rel="noopener">東北角一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/p1564/" target="_blank" rel="noopener">北海岸一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2012-11-07-828/" target="_blank" rel="noopener">桃園一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/daxi/" target="_blank" rel="noopener">桃園大溪一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/taoyuan-fuxing/" target="_blank" rel="noopener">桃園復興鄉一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/taoyuan-longtan/" target="_blank" rel="noopener">桃園龍潭一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/p2477/" target="_blank" rel="noopener">桃園青埔一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2019-hsinchu/" target="_blank" rel="noopener">新竹親子兩日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/emei-12/" target="_blank" rel="noopener">新竹峨嵋一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/miaoli-1day/" target="_blank" rel="noopener">苗栗一日遊</a></strong><br />
+<strong>NEW!! <a href="https://bobowin.blog/miaoli-zhunan/" target="_blank" rel="noopener">苗栗竹南一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/miaoli-strawberry/" target="_blank" rel="noopener">苗栗大湖一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/miaoli-tongluo/" target="_blank" rel="noopener">苗栗銅鑼一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/miaoli-houlong/" target="_blank" rel="noopener">苗栗後龍通霄一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/miaoli-sanyi/" target="_blank" rel="noopener">苗栗三義一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/museum-2days/" target="_blank" rel="noopener">台中親子兩日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/taichung-houli/" target="_blank" rel="noopener">台中后里一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2015-05-25-369/" target="_blank" rel="noopener">彰化雲林一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/chiayi-meishan/" target="_blank" rel="noopener">嘉義梅山一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2021-chiayi/" target="_blank" rel="noopener">嘉義兩日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/tainan-trip/" target="_blank" rel="noopener">台南三日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/hualien-xincheng/" target="_blank" rel="noopener">花蓮新城一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/taitung-10/" target="_blank" rel="noopener">台東市區一日遊</a></strong><br />
+<strong>NEW!! <a href="https://bobowin.blog/penghu-cimei/" target="_blank" rel="noopener">澎湖七美一日遊</a></strong></p>
+</div>
+		</section><section id="text-9" class="widget widget_text"><h3>寶寶溫的台灣親子懶人包</h3>			<div class="textwidget"><p><strong><a href="https://bobowin.blog/child-hotel/" target="_blank" rel="noopener">全台親子飯店</a></strong><br />
+<a href="https://bobowin.blog/taiwan150/"><strong>全台特色公園親子景點</strong></a><br />
+<strong><a href="https://bobowin.blog/taipei-slide/" target="_blank" rel="noopener">雙北特色公園懶人包</a></strong><br />
+<strong><a href="https://bobowin.blog/2015-10-04-303/" target="_blank" rel="noopener">全台溜滑梯公園</a></strong><br />
+<strong><a href="https://bobowin.blog/2014-05-12-611/" target="_blank" rel="noopener">全台老街一日遊</a></strong><br />
+<strong><a href="https://bobowin.blog/2014-08-29-541/" target="_blank" rel="noopener">全台景觀餐廳</a></strong><br />
+<strong><a href="https://bobowin.blog/taiwan-starbucks/" target="_blank" rel="noopener">全台特色星巴克</a></strong><br />
+<strong><a href="https://bobowin.blog/keelung-child/" target="_blank" rel="noopener">基隆親子景點懶人包</a></strong><br />
+<strong><a href="https://bobowin.blog/taipei-child/" target="_blank" rel="noopener">台北親子景點懶人包</a></strong><br />
+<strong><a href="https://bobowin.blog/new-taipei-child/">新北市親子景點懶人包</a></strong><br />
+<strong><a href="https://bobowin.blog/taoyuan-child/" target="_blank" rel="noopener">桃園親子景點懶人包</a></strong><br />
+<a href="https://bobowin.blog/hsinchu-child/" target="_blank" rel="noopener"><strong>新竹親子景點懶人包</strong></a><br />
+<strong><a href="https://bobowin.blog/miaoli-child/" target="_blank" rel="noopener">苗栗親子景點懶人包</a></strong><br />
+<strong><a href="https://bobowin.blog/taichung-child/" target="_blank" rel="noopener">台中親子景點懶人包</a></strong><br />
+<a href="https://bobowin.blog/tainan-funny/" target="_blank" rel="noopener"><strong>台南親子景點懶人包</strong></a><br />
+<strong><a href="https://bobowin.blog/yilan-child/" target="_blank" rel="noopener">宜蘭親子景點懶人包</a></strong><br />
+<strong><a href="https://bobowin.blog/hualien-fun/" target="_blank" rel="noopener">花蓮親子景點懶人包</a></strong><br />
+<strong><a href="https://bobowin.blog/taitung-10/" target="_blank" rel="noopener">台東親子景點懶人包</a></strong><br />
+<strong><a href="https://bobowin.blog/2015-07-29-334/" target="_blank" rel="noopener">北北基野餐景點</a></strong><br />
+<strong><a href="https://bobowin.blog/2016-04-03-203/" target="_blank" rel="noopener">台北野餐景點</a></strong></p>
+</div>
+		</section><section id="text-7" class="widget widget_text"><h3>友站連結</h3>			<div class="textwidget"><p><a href="https://gogojp.tw/" target="_blank" rel="noopener"><strong>福寶媽衝日本</strong></a></p>
+<p><strong><a href="http://natsuphil.com/" target="_blank" rel="noopener">小菲兒童攝影日記</a></strong></p>
+<p><strong><a href="https://yoyoman822.pixnet.net/blog" target="_blank" rel="noopener">1＋1＝3 玩學樂生活</a></strong></p>
+</div>
+		</section><section id="text-6" class="widget widget_text"><h3>Fun100 宜蘭民宿讚</h3>			<div class="textwidget"><p><a href=" http://www.fun100-ilanbnb.com/" target="_blank" rel="noopener"><img decoding="async" src="https://i0.wp.com/www.fun100-ilanbnb.com/label.gif" border="0" /></a></p>
+<p><span class="Apple-converted-space">Fun 100 <a href="http://www.fun100-ilanbnb.com/">宜蘭民宿</a>讚</span><br />
+<a href=" http://www.good360day.com/" target="_blank" rel="noopener"><img decoding="async" src="https://i0.wp.com/www.good360day.com/img/lable.jpg" border="0" /></a><br />
+<span class="Apple-converted-space"><br />
+Fun <a href="http://www.good360day.com/">宜蘭民宿</a>優惠王</span></p>
+<p>&nbsp;</p>
+<p><span class="Apple-converted-space"> </span></p>
+</div>
+		</section><section id="custom_html-3" class="widget_text widget widget_custom_html"><h3>日本租車早鳥優惠</h3><div class="textwidget custom-html-widget"><div><a href="http://asp.yuanhsu.com/link.php?i=58d48aafafa8f&amp;m=59e5d0ce56cb1&amp;guid=ON" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-2024" src="https://gogojp.tw/wp-content/uploads/20171102055119_64.gif" alt="" width="336" height="280" /></a></div></div></section><section id="achang_jetpack_virtual_counter-3" class="widget widget_jetpack_virtual_counter"><h3>網站人氣統計</h3>
+		<div class="achang_jvc">
+			<div class="today">今日人氣：<span class="achang_jvc_today"><img src="https://bobowin.blog/wp-content/plugins/achangJetPackVirtualCounter/assets/ic_loading.gif" /></span></div>
+			<div class="total">累計人氣：<span class="achang_jvc_total"><img src="https://bobowin.blog/wp-content/plugins/achangJetPackVirtualCounter/assets/ic_loading.gif" /></span></div>
+		</div>
+
+		</section><section id="text-13" class="widget widget_text"><h3>GoogleAD</h3>			<div class="textwidget"><p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br />
+<!-- blog_側欄最下面 --><br />
+<ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6994555750211392" data-ad-slot="5115963569" data-ad-format="auto" data-full-width-responsive="true"></ins><br />
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+</div>
+		</section>
+</aside>
+			<div class="fix"></div>
+
+		</div><!-- content END -->
+
+		<div class="socials">
+
+			
+			<a rel="nofollow noopener noreferrer" href="https://www.facebook.com/bobowin" title="Facebook" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+			<a rel="nofollow noopener noreferrer" href="https://www.instagram.com/bobowingreg/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i>Instgram</a>
+			
+			
+			
+			<a rel="nofollow noopener noreferrer" href="http://pic.sopili.net/lnk/*http://tw.piliapp.com/email-html/show/?text=bobowingreg%40gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i>Email</a>
+			<a rel="nofollow" href="https://bobowin.blog/feed/" title="RSS" target="_blank"><i class="fas fa-rss"></i>RSS</a>
+
+		</div>
+
+		<footer id="footer">
+
+			<div id="foot-inner">
+
+				<div class="footer-logo">
+
+					<h1 class="no-logo"><a id="footer-logo" href="https://bobowin.blog" title="寶寶溫旅行親子生活" class="text" >寶寶溫旅行親子生活</a></h1>
+
+				</div>
+
+				<div id="copyright">
+
+					<div class="title">
+
+						<span class="info">&copy; 2026 <a href="https://bobowin.blog" title="寶寶溫旅行親子生活">寶寶溫旅行親子生活 國內外旅遊,親子行程,露營生活, 美食懶人包</a></span>
+
+						<span class="free-themes">佈景：<a href="https://achang.tw/themes.html" title="本站使用「Quill」佈景主題。">Quill</a>.</span>
+
+						<span class="design">網頁設計：<a href="https://achang.tw" title="WordPress設計" rel="sponsored" >阿腸網頁設計</a>.</span>
+
+					</div>
+
+					<div class="fix"></div>
+
+				</div>
+
+			</div>
+
+			<div class="fix"></div>
+
+			
+			<div class="fbbox">
+
+			    <div class="fb-like-box" data-href="https://www.facebook.com/bobowin" data-width="247" data-height="245" data-show-faces="true" data-stream="false" data-show-border="true" data-header="false"></div>
+
+			</div>
+
+			
+		</footer>
+
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/achang-quill\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div id="achang-ft-btn">
+    <ul>
+    <li id="achang_ft_btn-3" style="background-color:#f9cd9a; background-image: none; padding:0px; border-radius:50%;" class="has-individual-style " class="achang-ft-btn-floating-widget">                <a href="https://bobowin.blog/" target="_self">
+                    <img src="https://bobowin.blog/wp-content/uploads/20221230163202_20.png" />
+                </a>
+        </li><li id="achang_ft_btn-4" style="background-color:#f9cd9a; background-image: none; padding:0px; border-radius:50%;" class="has-individual-style " class="achang-ft-btn-floating-widget">                <a href=" https://www.facebook.com/bobowin" target="_blank">
+                    <img src="https://bobowin.blog/wp-content/uploads/20221230163158_1.png" />
+                </a>
+        </li><li id="achang_ft_btn-5" style="background-color:#f9cd9a; background-image: none; padding:0px; border-radius:50%;" class="has-individual-style " class="achang-ft-btn-floating-widget">                <a href="https://www.instagram.com/bobowingreg/" target="_blank">
+                    <img src="https://bobowin.blog/wp-content/uploads/20221230163201_92.png" />
+                </a>
+        </li>            <li class="to-top">
+            <a href="#"><img src="https://bobowin.blog/wp-content/uploads/20221230163203_76.png" /></a>
+        </li>
+        </ul>
+</div>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHJ5NBJ" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<div id="fb-root"></div>
+            <script>
+            (function(d, s, id) {
+
+            var js, fjs = d.getElementsByTagName(s)[0];
+
+            if (d.getElementById(id)) return;
+
+            js = d.createElement(s); js.id = id;
+
+            js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=&version=v2.6";
+            js.async = true;
+            js.defer = true;
+            js.crossorigin="anonymous";
+
+            fjs.parentNode.insertBefore(js, fjs);
+
+            }(document, "script", "facebook-jssdk"));
+        </script><script type="text/javascript" id="achang-ft-btn-front-js-extra">
+/* <![CDATA[ */
+var achangFtBtnData = {"ajaxUrl":"https:\/\/bobowin.blog\/wp-admin\/admin-ajax.php","defer":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/achang-ft-btn/js/front.js?ver=1762420058" id="achang-ft-btn-front-js"></script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/achang-pencil-box/public/js/achang-pencil-box-public.js?ver=1.9.3.1762420065.1.2.14.2" id="achang-pencil-box-js"></script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/honeypot/includes/js/wpa.js?ver=2.3.04" id="wpascript-js"></script>
+<script type="text/javascript" id="wpascript-js-after">
+/* <![CDATA[ */
+wpa_field_info = {"wpa_field_name":"ntzyqx6817","wpa_field_value":18509,"wpa_add_test":"no"}
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=1.2.14.2" id="devicepx-js"></script>
+<script type="text/javascript" id="q2w3_fixed_widget-js-extra">
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"use_sticky_position":false,"margin_top":80,"margin_bottom":0,"stop_elements_selectors":"footer","screen_max_width":0,"screen_max_height":0,"widgets":[]}];
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/q2w3-fixed-widget/js/frontend.min.js?ver=6.2.3" id="q2w3_fixed_widget-js"></script>
+<script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"126598879","post":"0","tz":"8","srv":"bobowin.blog","arch_err":"/wp-content/uploads/pixnet/d6f2e5c5e5c5e5c5e5c5e5c5e5c5e5c5.jpg","j":"1:15.5"} ]);
+_stq.push([ "clickTrackerInit", "126598879", "0" ]);
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202610.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/quick-adsense-reloaded/assets/js/ads.js?ver=2.0.98.1" id="quads-ads-js"></script>
+
+	
+</body>
+
+</html>
+
+<!-- Page cached by LiteSpeed Cache 7.7 on 2026-03-08 12:38:04 -->
