@@ -690,7 +690,7 @@ var WPdTreeSettings = {"animate":"1","duration":"250","imgurl":"https:\/\/bobowi
 <p class="has-text-align-center">
 
 
-●聯絡信箱：<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cfada0ada0b8a6a1a8bdaaa88fa8a2aea6a3e1aca0a2">[email&#160;protected]</a>
+●聯絡信箱：<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ceaca1aca1b9a7a0a9bcaba98ea9a3afa7a2e0ada1a3">[email&#160;protected]</a>
 </p>
 </section><section id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" action="https://bobowin.blog/" >
 
@@ -887,7 +887,7 @@ document.write(cat1);
 <script type='text/javascript'>
 /* <![CDATA[ */
 try{
-/*WP-dTree: cat1 request was "'wp-content\/uploads\/pixnet\/fb8e7c6d5a4b3e2a1f0e9d8c7b6a5e4d.jpg'" Couldn't find it.*/
+/*WP-dTree: cat1 request was "'wp-content\/uploads\/pixnet\/0cd95219e5d0a12afa0d9fd6e6cf3e1a.jpg'" Couldn't find it.*/
 }catch(e){} /* ]]> */
 </script>
 </div></section><section id="text-11" class="widget widget_text"><h3>台灣住宿飯店懶人包</h3>			<div class="textwidget"><p><strong><a href="https://bobowin.blog/child-hotel/" target="_blank" rel="noopener noreferrer">全台親子飯店推薦</a></strong></p>
@@ -1247,7 +1247,7 @@ var achangFtBtnData = {"ajaxUrl":"https:\/\/bobowin.blog\/wp-admin\/admin-ajax.p
 <script type="text/javascript" src="https://bobowin.blog/wp-content/plugins/honeypot/includes/js/wpa.js?ver=2.3.04" id="wpascript-js"></script>
 <script type="text/javascript" id="wpascript-js-after">
 /* <![CDATA[ */
-wpa_field_info = {"wpa_field_name":"ntzyqx6817","wpa_field_value":511900,"wpa_add_test":"no"}
+wpa_field_info = {"wpa_field_name":"ntzyqx6817","wpa_field_value":720239,"wpa_add_test":"no"}
 /* ]]> */
 </script>
 <script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=1.2.14.2" id="devicepx-js"></script>
@@ -1260,7 +1260,7 @@ var q2w3_sidebar_options = [{"use_sticky_position":false,"margin_top":80,"margin
 <script type="text/javascript" id="jetpack-stats-js-before">
 /* <![CDATA[ */
 _stq = window._stq || [];
-_stq.push([ "view", {"v":"ext","blog":"126598879","post":"0","tz":"8","srv":"bobowin.blog","arch_err":"/wp-content/uploads/pixnet/fb8e7c6d5a4b3e2a1f0e9d8c7b6a5e4d.jpg","j":"1:15.5"} ]);
+_stq.push([ "view", {"v":"ext","blog":"126598879","post":"0","tz":"8","srv":"bobowin.blog","arch_err":"/wp-content/uploads/pixnet/0cd95219e5d0a12afa0d9fd6e6cf3e1a.jpg","j":"1:15.5"} ]);
 _stq.push([ "clickTrackerInit", "126598879", "0" ]);
 /* ]]> */
 </script>
@@ -1272,4 +1272,4 @@ _stq.push([ "clickTrackerInit", "126598879", "0" ]);
 
 </html>
 
-<!-- Page cached by LiteSpeed Cache 7.7 on 2026-03-08 13:34:10 -->
+<!-- Page cached by LiteSpeed Cache 7.7 on 2026-03-08 13:29:13 -->
