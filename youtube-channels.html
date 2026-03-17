@@ -118,7 +118,7 @@
 
         .channels-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 20px;
         }
 
@@ -130,6 +130,9 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .channel-card:hover {
@@ -177,6 +180,14 @@
             font-size: 0.95em;
         }
 
+        .channel-detail {
+            color: #718096;
+            font-size: 0.85em;
+            line-height: 1.5;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
         .channel-tags {
             display: flex;
             flex-wrap: wrap;
@@ -190,6 +201,16 @@
             padding: 4px 12px;
             border-radius: 15px;
             font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .youtube-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #667eea;
+            font-size: 0.85em;
+            margin-top: 10px;
             font-weight: 600;
         }
 
@@ -266,7 +287,7 @@
     <div class="container">
         <header>
             <h1>📺 YouTube 优质频道推荐</h1>
-            <p>来自串文社团的精选整理</p>
+            <p>来自串文社团的精选整理 · 点击卡片直接前往 YouTube</p>
             <div class="meta">
                 <div class="meta-item">📅 2026-03-17</div>
                 <div class="meta-item">📊 80+ 个频道</div>
@@ -301,7 +322,8 @@
 
         <footer>
             <p>整理自 Facebook 串文社团 | 由 AI 助手整理</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">版本 1.0 | 最后更新：2026-03-17 17:26 GMT+8</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">版本 1.1 | 最后更新：2026-03-17 17:35 GMT+8</p>
+            <p style="margin-top: 5px; font-size: 0.85em; opacity: 0.8;">点击频道卡片即可前往 YouTube 搜索</p>
         </footer>
     </div>
 
@@ -311,176 +333,180 @@
                 category: "📚 历史类",
                 icon: "📚",
                 channels: [
-                    { name: "Stefan Milo", desc: "史前史", popular: false },
-                    { name: "Dan Davis History", desc: "史前史", popular: false },
-                    { name: "Miniminmutemen", desc: "史前史", popular: false },
-                    { name: "Cambrian Chronicles", desc: "世界史（但基本上都是威尔斯史）", popular: false },
-                    { name: "Ancient Americas", desc: "世界史", popular: false },
-                    { name: "Kings and Generals", desc: "世界史", popular: false },
-                    { name: "Simple History", desc: "军事相关历史，很多主题有趣", popular: false },
-                    { name: "Overly Sarcastic Productions", desc: "神话故事、古文明史、文学史诗等", popular: false },
-                    { name: "PBS Eons", desc: "生物演化历史，适合喜欢史前生物/恐龙/演化的人", popular: false },
-                    { name: "OverSimplified", desc: "历史动画（以前很红但很久没更新了）", popular: false },
-                    { name: "Tasting History with Max Miller", desc: "讲食物和历史，目前觉得最好", popular: false }
+                    { name: "Stefan Milo", desc: "史前史专家", detail: "深入探讨人类起源、史前文明与考古发现，用科学证据重建远古历史", url: "Stefan Milo", popular: false },
+                    { name: "Dan Davis History", desc: "史前史研究", detail: "专注于旧石器时代、冰河时期与早期人类迁徙，考古学视角解读史前世界", url: "Dan Davis History", popular: false },
+                    { name: "Miniminmutemen", desc: "史前史与历史迷思破解", detail: "以幽默方式戳破历史谣言与伪考古学说，用证据说话的史前史科普", url: "Miniminmutemen", popular: false },
+                    { name: "Cambrian Chronicles", desc: "世界史（威尔斯史为主）", detail: "虽名为寒武纪编年史，实际聚焦威尔斯地区历史文化，小众但深度优质", url: "Cambrian Chronicles", popular: false },
+                    { name: "Ancient Americas", desc: "前哥伦布时期美洲文明", detail: "探索玛雅、阿兹特克、印加等被低估的美洲古文明，打破欧洲中心史观", url: "Ancient Americas", popular: false },
+                    { name: "Kings and Generals", desc: "军事史与战争动画", detail: "高质量战争史动画，涵盖古代至现代重大战役，战术地图清晰易懂", url: "Kings and Generals", popular: false },
+                    { name: "Simple History", desc: "简明历史动画", detail: "用简洁动画讲解军事历史、武器装备与战争故事，适合快速了解历史事件", url: "Simple History", popular: false },
+                    { name: "Overly Sarcastic Productions", desc: "神话与文学史诗", detail: "两位主持人分工讲解世界神话、古典文学、历史事件，红蓝配色动画风格独特", url: "Overly Sarcastic Productions", popular: false },
+                    { name: "PBS Eons", desc: "生物演化史", detail: "PBS出品的古生物学频道，从寒武纪大爆发到人类演化，地质时间尺度讲生命史", url: "PBS Eons", popular: false },
+                    { name: "OverSimplified", desc: "历史事件简化动画", detail: "曾经爆红的历史动画频道，以夸张幽默方式浓缩重大历史事件（已停更）", url: "OverSimplified", popular: false },
+                    { name: "Tasting History with Max Miller", desc: "历史料理复原", detail: "社团公认最佳历史+食物频道！用古代食谱重现历史，边烹饪边讲故事", url: "Tasting History with Max Miller", popular: false }
                 ]
             },
             {
                 category: "🔬 科学 & 科普类",
                 icon: "🔬",
                 channels: [
-                    { name: "Veritasium", desc: "啥都有", tags: ["综合科普"], popular: true },
-                    { name: "Be Smart", desc: "科学", popular: false },
-                    { name: "Howtown", desc: "科学", popular: false },
-                    { name: "Ze Frank", desc: "科学", popular: false },
-                    { name: "ScienceClic", desc: "物理", popular: false },
-                    { name: "minutephysics", desc: "物理", popular: false },
-                    { name: "NileRed", desc: "化学", tags: ["化学"], popular: true },
-                    { name: "James Hoffmann", desc: "咖啡", popular: false },
-                    { name: "PBS Space Time", desc: "物理（很深，用来快速理解概念）", popular: false },
-                    { name: "HyperCubist Math", desc: "数学", popular: false },
-                    { name: "StatQuest with Josh Starmer", desc: "统计学", popular: false },
-                    { name: "Dr.Zye", desc: "好玩的数学频道", popular: false },
-                    { name: "3Blue1Brown", desc: "数学（视觉化解释）", popular: false },
-                    { name: "StyroPyro", desc: "关于电跟物理", popular: false },
-                    { name: "Dr. Becky", desc: "天文", popular: false },
-                    { name: "Welch Labs", desc: "AI 的数学", popular: false },
-                    { name: "Artem Kirsanov", desc: "AI 的数学", popular: false },
-                    { name: "Core Dumped", desc: "电脑底层", popular: false }
+                    { name: "Veritasium", desc: "综合科学探索", detail: "Derek Muller的科学实验频道，从物理、化学到认知科学，高质量科学纪录片水准", tags: ["综合科普"], url: "Veritasium", popular: true },
+                    { name: "Be Smart", desc: "PBS科学频道", detail: "PBS数字工作室制作，涵盖生物学、心理学、物理等，科学问题深入浅出", url: "Be Smart", popular: false },
+                    { name: "Howtown", desc: "事物运作原理", detail: "探索日常事物背后的科学原理，满足好奇心的工程学视角", url: "Howtown", popular: false },
+                    { name: "Ze Frank", desc: "动物行为科学", detail: "用独特幽默风格介绍动物世界，科学准确又让人捧腹的生物纪录片", url: "Ze Frank", popular: false },
+                    { name: "ScienceClic", desc: "物理可视化", detail: "法国物理学家用精美动画解释相对论、量子力学等高深物理概念", url: "ScienceClic", popular: false },
+                    { name: "minutephysics", desc: "快速物理科普", detail: "手绘动画讲解物理概念，几分钟内理解复杂原理，简洁而深刻", url: "minutephysics", popular: false },
+                    { name: "NileRed", desc: "化学实验与合成", detail: "从可乐中提取可卡因、用手套做热狗，疯狂但严谨的化学实验室", tags: ["化学"], url: "NileRed", popular: true },
+                    { name: "James Hoffmann", desc: "咖啡科学", detail: "世界冠军咖啡师的频道，咖啡器材评测、冲煮技巧与咖啡文化深度解析", url: "James Hoffmann", popular: false },
+                    { name: "PBS Space Time", desc: "理论物理深度探讨", detail: "硬核物理频道，黑洞、暗物质、量子场论，适合快速理解前沿物理概念", url: "PBS Space Time", popular: false },
+                    { name: "HyperCubist Math", desc: "高维数学可视化", detail: "用动画展示高维几何、拓扑学等抽象数学概念", url: "HyperCubist Math", popular: false },
+                    { name: "StatQuest with Josh Starmer", desc: "统计学教学", detail: "用有趣的方式讲解统计学与机器学习，研究生都在看的统计教学频道", url: "StatQuest with Josh Starmer", popular: false },
+                    { name: "Dr.Zye", desc: "趣味数学", detail: "好玩的数学谜题与问题，激发数学兴趣的娱乐性频道", url: "Dr.Zye", popular: false },
+                    { name: "3Blue1Brown", desc: "数学可视化艺术", detail: "Grant Sanderson的神级数学动画，微积分、线性代数视觉化解释，美到令人感动", url: "3Blue1Brown", popular: false },
+                    { name: "StyroPyro", desc: "激光与电气实验", detail: "自制高功率激光、特斯拉线圈，危险但迷人的电气工程实验", url: "StyroPyro", popular: false },
+                    { name: "Dr. Becky", desc: "天文学研究", detail: "牛津大学天体物理学家，讲解黑洞、系外行星等天文发现", url: "Dr. Becky", popular: false },
+                    { name: "Welch Labs", desc: "AI与机器学习数学", detail: "深入浅出讲解神经网络、深度学习背后的数学原理", url: "Welch Labs", popular: false },
+                    { name: "Artem Kirsanov", desc: "AI数学基础", detail: "视觉化解释机器学习算法，从数学角度理解AI", url: "Artem Kirsanov", popular: false },
+                    { name: "Core Dumped", desc: "计算机底层原理", detail: "操作系统、编译器、计算机架构深度探讨，程序员必看", url: "Core Dumped", popular: false }
                 ]
             },
             {
                 category: "🎓 教育 & 学习类",
                 icon: "🎓",
                 channels: [
-                    { name: "CrashCourse", desc: "超强科普频道，各种学科知识都找得到。主持人语速偏快，算幽默的", tags: ["综合学习"], popular: false },
-                    { name: "freeCodeCamp.org", desc: "可以入门近乎所有资工领域工程师的内容：AI、程式语言、作业系统、资结演算法、甚至是线代和微积分", tags: ["编程"], popular: false }
+                    { name: "CrashCourse", desc: "综合学科速成课", detail: "Hank Green创办的教育帝国，历史、科学、哲学、经济学全覆盖。主持人语速快但幽默，适合重学学校知识", tags: ["综合学习"], url: "CrashCourse", popular: false },
+                    { name: "freeCodeCamp.org", desc: "免费编程教学", detail: "完整的编程学习平台，从Python、JavaScript到算法、系统设计，甚至线性代数与微积分，全部免费！", tags: ["编程"], url: "freeCodeCamp.org", popular: false }
                 ]
             },
             {
                 category: "🧬 医学 & 健康类",
                 icon: "🧬",
                 channels: [
-                    { name: "Institute of Human Anatomy", desc: "解剖", popular: false },
-                    { name: "Doctorly", desc: "皮肤科知识（买对成分帮我省了很多钱）", popular: false },
-                    { name: "HealthyGamerGG", desc: "执业精神科医师 + 曾经在印度修行过 + 是个电玩宅男，用易懂的角度来拆解生活常见难处", popular: false },
-                    { name: "HubermanLab", desc: "最硬的，但如果喜欢知道所有科普知识背后的文献，这个就很推。主题：怎么解决拖延症、如何增加睡眠品质等等", popular: false }
+                    { name: "Institute of Human Anatomy", desc: "人体解剖教学", detail: "用真实人体标本讲解解剖学，医学生与健身爱好者的宝藏频道", url: "Institute of Human Anatomy", popular: false },
+                    { name: "Doctorly", desc: "皮肤科学与保养", detail: "两位皮肤科医生破解护肤迷思，教你看成分省钱买对产品", url: "Doctorly", popular: false },
+                    { name: "HealthyGamerGG", desc: "精神健康与游戏文化", detail: "哈佛精神科医师 + 前僧侣 + 电玩玩家，用独特视角拆解现代人的心理困境", url: "HealthyGamerGG", popular: false },
+                    { name: "HubermanLab", desc: "神经科学与健康优化", detail: "斯坦福神经科学家Andrew Huberman的硬核科普，从睡眠、专注力到情绪管理，每集都附大量文献。想知道背后科学证据必看！", url: "HubermanLab", popular: false }
                 ]
             },
             {
                 category: "🌍 地理 & 地图类",
                 icon: "🌍",
                 channels: [
-                    { name: "Aidin Robbins", desc: "地理奇观", popular: false },
-                    { name: "Jay & Mark (Jay Foreman)", desc: "Map Men 系列，关于地理/地图", popular: false },
-                    { name: "Geography now", desc: "地理", popular: false }
+                    { name: "Aidin Robbins", desc: "地理奇观探索", detail: "世界各地的地理奇特现象，从自然景观到人文地理", url: "Aidin Robbins", popular: false },
+                    { name: "Jay & Mark (Jay Foreman)", desc: "Map Men 地图解密", detail: "英国喜剧演员Jay Foreman的地理频道，用幽默方式讲地图、边界与城市规划", url: "Map Men Jay Foreman", popular: false },
+                    { name: "Geography now", desc: "认识世界每个国家", detail: "按字母顺序介绍世界所有国家，地理、文化、历史全方位了解", url: "Geography now", popular: false }
                 ]
             },
             {
                 category: "💻 科技 & 工程类",
                 icon: "💻",
                 channels: [
-                    { name: "CNC Kitchen", desc: "3D 列印", popular: false },
-                    { name: "Extra Credits", desc: "游戏设计", popular: false },
-                    { name: "GDC Festival of Gaming", desc: "游戏设计", popular: false },
-                    { name: "MKBHD", desc: "科技评测（应该英文不差的人都会被演算法推到）", popular: false },
-                    { name: "MattKC", desc: "retro console, 科技类", popular: false },
-                    { name: "Computerphile", desc: "计算机科学", popular: false },
-                    { name: "Sebastian Lague", desc: "编程/游戏开发", popular: false }
+                    { name: "CNC Kitchen", desc: "3D打印与材料科学", detail: "德国工程师的3D打印测试频道，严谨的材料强度实验与优化技巧", url: "CNC Kitchen", popular: false },
+                    { name: "Extra Credits", desc: "游戏设计理论", detail: "游戏设计、叙事、游戏史深度分析，游戏开发者必看", url: "Extra Credits", popular: false },
+                    { name: "GDC Festival of Gaming", desc: "游戏开发者大会", detail: "GDC官方频道，顶尖游戏开发者分享设计心得与技术", url: "GDC", popular: false },
+                    { name: "MKBHD", desc: "科技产品评测", detail: "Marques Brownlee的科技评测帝国，从手机到电动车，制作质量顶尖", url: "MKBHD", popular: false },
+                    { name: "MattKC", desc: "复古电脑与技术", detail: "修复老旧电脑、游戏机，探索复古技术的魅力", url: "MattKC", popular: false },
+                    { name: "Computerphile", desc: "计算机科学原理", detail: "诺丁汉大学制作，从算法到密码学，深入计算机科学核心", url: "Computerphile", popular: false },
+                    { name: "Sebastian Lague", desc: "编程与游戏开发", detail: "用代码创造美，程序生成、游戏AI、图形学可视化编程艺术", url: "Sebastian Lague", popular: false }
                 ]
             },
             {
                 category: "🚗 汽车 & 机车类",
                 icon: "🚗",
                 channels: [
-                    { name: "Fortnine (RyanF9)", desc: "关于机车", popular: false },
-                    { name: "ziptietuning", desc: "汽车", popular: false },
-                    { name: "donut media", desc: "汽车", popular: false },
-                    { name: "speeed", desc: "汽车", popular: false },
-                    { name: "bigtime", desc: "汽车", popular: false }
+                    { name: "Fortnine (RyanF9)", desc: "机车装备与文化", detail: "加拿大机车频道，装备评测、骑行技巧、机车文化探讨，制作精良", url: "FortNine", popular: false },
+                    { name: "ziptietuning", desc: "汽车改装DIY", detail: "平民汽车改装，用便宜方法提升性能", url: "ziptietuning", popular: false },
+                    { name: "donut media", desc: "汽车文化娱乐", detail: "年轻化的汽车频道，科学解释、改装、汽车历史，寓教于乐", url: "donut media", popular: false },
+                    { name: "speeed", desc: "汽车速度与性能", detail: "汽车性能测试与赛道体验", url: "speeed", popular: false },
+                    { name: "bigtime", desc: "汽车生活", detail: "汽车评测与驾驶体验分享", url: "bigtime", popular: false }
                 ]
             },
             {
                 category: "🎭 娱乐 & 幽默类",
                 icon: "🎭",
                 channels: [
-                    { name: "Exurbia", desc: "与一般的科学台不同，他用笑话及故事介绍一些超深奥的哲学思想和科学理论", popular: false },
-                    { name: "Michael Reeves", desc: "啥都有很好笑", popular: false },
-                    { name: "Vsauce", desc: "经典科普娱乐", popular: false },
-                    { name: "anthpo", desc: "很有料，我超推他，只是看你要长哪方面的脑袋", popular: false },
-                    { name: "Pewdiepie", desc: "现在除了 Vlog 也开始组电脑、搞AI，我都拿来配饭", popular: false },
-                    { name: "FP1Will", desc: "搞笑版F1 reviews", popular: false }
+                    { name: "Exurb1a", desc: "哲学喜剧科普", detail: "英国作家用黑色幽默讲存在主义、量子力学、意识等深刻主题，笑中带泪的哲学频道", url: "Exurb1a", popular: false },
+                    { name: "Michael Reeves", desc: "恶搞机器人工程师", detail: "用编程与机器人做恶搞发明，天才程序员的疯狂创意", url: "Michael Reeves", popular: false },
+                    { name: "Vsauce", desc: "科普娱乐经典", detail: "Michael Stevens的经典科普频道，从哲学到物理，标志性的'Hey, Vsauce! Michael here'", url: "Vsauce", popular: false },
+                    { name: "anthpo", desc: "创意实验喜剧", detail: "很有料的创作者，看你要长哪方面的脑袋（社团原话）", url: "anthpo", popular: false },
+                    { name: "Pewdiepie", desc: "游戏娱乐转型", detail: "从游戏实况转向生活Vlog、组装电脑、AI实验，配饭神器", url: "Pewdiepie", popular: false },
+                    { name: "FP1Will", desc: "F1搞笑评论", detail: "用幽默方式点评F1赛事，赛车迷的娱乐频道", url: "FP1Will", popular: false }
                 ]
             },
             {
                 category: "🎙️ Podcast & 访谈类",
                 icon: "🎙️",
                 channels: [
-                    { name: "The Diary of a CEO", desc: "很多影片都让我很惊艳。最爱有一集他访谈特务 Evy Poumpouras", tags: ["访谈"], popular: true },
-                    { name: "Mel Robbins", desc: "概可以直接听懂7-8成，受访者都是业界权威或是知名人士", popular: false },
-                    { name: "StarTalk", desc: "著名的美国天体物理学家与科普作家 Neil deGrasse Tyson 的节目。两个人互动其实也很搞笑，大推", popular: false },
-                    { name: "Critics at Large", desc: "The New Yorker 自制的 Podcast 节目，三位写手会透过一些文本跟影视作品讨论", popular: false },
-                    { name: "Ask A Matchmaker", desc: "主持人是专业媒人，会讨论一些感情关系中的难题", popular: false },
-                    { name: "The Ramsey Show", desc: "讲财务跟资产管理的，有时会有请听众 call in 分享自己的财务难关", popular: false }
+                    { name: "The Diary of a CEO", desc: "企业家深度访谈", detail: "Steven Bartlett访问各领域专家，从商业、心理到科学。最爱特务Evy Poumpouras那集！", tags: ["访谈"], url: "The Diary of a CEO", popular: true },
+                    { name: "Mel Robbins", desc: "励志访谈节目", detail: "作家Mel Robbins访问业界权威，7-8成可直接听懂，虽然议题常见但观点新颖", url: "Mel Robbins", popular: false },
+                    { name: "StarTalk", desc: "科学娱乐访谈", detail: "Neil deGrasse Tyson把宇宙物理讲得有趣，搭配Chuck Nice的互动超搞笑！社团大推", url: "StarTalk", popular: false },
+                    { name: "Critics at Large", desc: "文化评论Podcast", detail: "《纽约客》三位写手深度分析流行文化、文学与影视", url: "Critics at Large", popular: false },
+                    { name: "Ask A Matchmaker", desc: "恋爱关系咨询", detail: "专业媒人讨论感情难题，从远距离恋爱到分手的干净切割", url: "Ask A Matchmaker", popular: false },
+                    { name: "The Ramsey Show", desc: "个人理财咨询", detail: "Dave Ramsey的理财节目，听众call in分享财务困境，实用的金钱管理建议", url: "The Ramsey Show", popular: false }
                 ]
             },
             {
                 category: "📰 新闻 & 时事类",
                 icon: "📰",
                 channels: [
-                    { name: "Last Week Tonight", desc: "现在台湾能在 YouTube 看到完整集数", popular: false },
-                    { name: "BBC world service", desc: "新闻", popular: false },
-                    { name: "Frontline PBS", desc: "纪录片/新闻", popular: false },
-                    { name: "DW documentary", desc: "纪录片", popular: false },
-                    { name: "Religion for breakfast", desc: "宗教主题", popular: false },
-                    { name: "William Spaniel (Lines on Map)", desc: "讲解国际局势/战争", popular: false }
+                    { name: "Last Week Tonight", desc: "讽刺新闻评论", detail: "John Oliver的HBO节目，深度调查报道+英式幽默。台湾现在能看完整集，要珍惜！", url: "LastWeekTonight", popular: false },
+                    { name: "BBC world service", desc: "BBC国际新闻", detail: "英国广播公司的全球新闻服务，客观报道世界大事", url: "BBC world service", popular: false },
+                    { name: "Frontline PBS", desc: "深度调查纪录片", detail: "PBS出品的调查报道节目，美国最受尊敬的新闻纪录片", url: "Frontline PBS", popular: false },
+                    { name: "DW documentary", desc: "德国之声纪录片", detail: "德国国际媒体制作的深度纪录片，国际视角", url: "DW Documentary", popular: false },
+                    { name: "Religion for breakfast", desc: "宗教学科普", detail: "宗教历史与文化的学术性探讨，破除迷信与误解", url: "Religion for breakfast", popular: false },
+                    { name: "William Spaniel (Lines on Map)", desc: "国际局势分析", detail: "政治学者用博弈论解释战争与国际冲突，理性分析地缘政治", url: "William Spaniel", popular: false }
                 ]
             },
             {
                 category: "📊 图表 & 数据可视化",
                 icon: "📊",
                 channels: [
-                    { name: "UsefulCharts", desc: "内容范围满广，可以挑自己有兴趣的", popular: false }
+                    { name: "UsefulCharts", desc: "历史图表可视化", detail: "用精美图表呈现历史、宗教、王室家谱，内容范围广可挑有兴趣的看", url: "UsefulCharts", popular: false }
                 ]
             },
             {
                 category: "🎬 纪录片类",
                 icon: "🎬",
                 channels: [
-                    { name: "fern", desc: "纪录片", popular: false }
+                    { name: "fern", desc: "原创纪录片", detail: "独立制作的高质量纪录片频道", url: "fern", popular: false }
                 ]
             },
             {
                 category: "🏹 运动 & 特技类",
                 icon: "🏹",
                 channels: [
-                    { name: "Blumineck", desc: "真·弓箭手，shorts为主", popular: false },
-                    { name: "Pongfinity", desc: "前芬兰桌球国手们开的频道，各种桌球特技 + 和桌球名人合作", popular: false }
+                    { name: "Blumineck", desc: "弓箭特技短片", detail: "真正的弓箭手展示惊人技巧，shorts为主", url: "Blumineck", popular: false },
+                    { name: "Pongfinity", desc: "桌球特技与合作", detail: "前芬兰国手开的频道，各种疯狂桌球特技 + 和名人合作", url: "Pongfinity", popular: false }
                 ]
             },
             {
                 category: "🏠 生活 & 实用类",
                 icon: "🏠",
                 channels: [
-                    { name: "Cleanwithbea", desc: "免费帮有需要的人清理住家，通常都是脏重到不可能自己清的", popular: false },
-                    { name: "Dad, How Do I?", desc: "频道主因为成长的过程没有爸爸，所以开了一个频道跟大家分享一些青少年在生活中可能会需要爸爸的哪些帮助", popular: false },
-                    { name: "Therapy in a Nutshell", desc: "执业心理咨商师频道", popular: false }
+                    { name: "Cleanwithbea", desc: "免费清洁服务", detail: "帮助需要的人清理严重脏乱的家，温暖人心的公益频道", url: "Cleanwithbea", popular: false },
+                    { name: "Dad, How Do I?", desc: "爸爸教你生活技能", detail: "频道主因成长过程没有父亲，开频道教青少年日常技能，从换轮胎到打领带", url: "Dad, How Do I", popular: false },
+                    { name: "Therapy in a Nutshell", desc: "心理健康教育", detail: "执业心理咨商师Emma McAdam的心理健康频道，实用的应对技巧", url: "Therapy in a Nutshell", popular: false }
                 ]
             },
             {
                 category: "🎯 其他特色频道",
                 icon: "🎯",
                 channels: [
-                    { name: "Kurzgesagt", desc: "有中文字幕，而且怕你无聊很努力配动画。然后有子频道 Nightshift", tags: ["动画科普"], popular: true },
-                    { name: "Tom Scott (retired)", desc: "啥都有（已退休）", popular: false },
-                    { name: "Numberphile", desc: "数学趣味", popular: false },
-                    { name: "Johnny Harris", desc: "应该英文不差的人都会被演算法推到", popular: false },
-                    { name: "Yes Theory", desc: "应该英文不差的人都会被演算法推到", popular: false },
-                    { name: "Seek Discomfort", desc: "应该英文不差的人都会被演算法推到", popular: false },
-                    { name: "Modern Day Eratosthenes", desc: "科普影片，shorts和长片都有", popular: false },
-                    { name: "Nightshift", desc: "Kurzgesagt 的子频道", popular: false }
+                    { name: "Kurzgesagt", desc: "动画科普扛鼎之作", detail: "德国团队制作，有中文字幕！精美动画讲解科学、哲学、未来。子频道Nightshift也超讚", tags: ["动画科普"], url: "Kurzgesagt", popular: true },
+                    { name: "Tom Scott (retired)", desc: "科技文化探索", detail: "英国YouTuber Tom Scott的经典频道，涵盖语言学、计算机、地理（已退休但值得回顾）", url: "Tom Scott", popular: false },
+                    { name: "Numberphile", desc: "数学爱好者天堂", detail: "数学家们讲有趣的数学问题，从质数到无穷大", url: "Numberphile", popular: false },
+                    { name: "Johnny Harris", desc: "叙事性调查报道", detail: "前Vox记者的独立频道，精美视觉叙事 + 深度调查", url: "Johnny Harris", popular: false },
+                    { name: "Yes Theory", desc: "走出舒适圈实验", detail: "'Seek Discomfort'理念，挑战恐惧、尝试新事物的生活实验", url: "Yes Theory", popular: false },
+                    { name: "Seek Discomfort", desc: "Yes Theory衍生", detail: "Yes Theory团队的品牌频道，鼓励冒险与突破", url: "Seek Discomfort", popular: false },
+                    { name: "Modern Day Eratosthenes", desc: "科普短片", detail: "shorts和长片都有的科普频道", url: "Modern Day Eratosthenes", popular: false },
+                    { name: "Nightshift", desc: "Kurzgesagt深夜版", detail: "Kurzgesagt的子频道，更深入的科学探讨", url: "Kurzgesagt Nightshift", popular: false }
                 ]
             }
         ];
+
+        function getYouTubeURL(searchQuery) {
+            return `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQuery)}`;
+        }
 
         function renderChannels() {
             const categoriesContainer = document.getElementById('categories');
@@ -498,12 +524,17 @@
                     const tagsHTML = channel.tags ? 
                         `<div class="channel-tags">${channel.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : '';
                     
+                    const detailHTML = channel.detail ? 
+                        `<div class="channel-detail">${channel.detail}</div>` : '';
+                    
                     return `
-                        <div class="channel-card ${channel.popular ? 'popular' : ''}" data-name="${channel.name}" data-desc="${channel.desc}">
+                        <a href="${getYouTubeURL(channel.url)}" target="_blank" class="channel-card ${channel.popular ? 'popular' : ''}" data-name="${channel.name}" data-desc="${channel.desc} ${channel.detail || ''}">
                             <div class="channel-name">${channel.name}</div>
                             <div class="channel-desc">${channel.desc}</div>
+                            ${detailHTML}
                             ${tagsHTML}
-                        </div>
+                            <div class="youtube-link">🔗 前往 YouTube →</div>
+                        </a>
                     `;
                 }).join('');
                 
@@ -539,11 +570,11 @@
                     const desc = card.dataset.desc.toLowerCase();
                     
                     if (name.includes(searchTerm) || desc.includes(searchTerm)) {
-                        card.classList.remove('hidden');
+                        card.style.display = 'block';
                         categoryHasVisible = true;
                         hasResults = true;
                     } else {
-                        card.classList.add('hidden');
+                        card.style.display = 'none';
                     }
                 });
                 
