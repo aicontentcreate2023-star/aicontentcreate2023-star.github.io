@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube 优质频道推荐 | 串文社团整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        #searchInput:focus {
+            border-color: #764ba2;
+            box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+        }
+
+        .category {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .category-icon {
+            font-size: 2em;
+        }
+
+        .category-title {
+            font-size: 1.8em;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .category-count {
+            margin-left: auto;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .channel-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .channel-card.popular {
+            background: linear-gradient(135deg, #FFD89B 0%, #FF9A76 100%);
+        }
+
+        .channel-card.popular::before {
+            content: "⭐ 多人推荐";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            color: #FF6B6B;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.75em;
+            font-weight: 700;
+        }
+
+        .channel-name {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .channel-name::before {
+            content: "▶";
+            color: #FF0000;
+            font-size: 0.8em;
+        }
+
+        .channel-desc {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .channel-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: rgba(102, 126, 234, 0.15);
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #718096;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .channels-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category {
+                padding: 20px;
+            }
+            
+            .meta {
+                font-size: 0.9em;
+            }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #718096;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📺 YouTube 优质频道推荐</h1>
+            <p>来自串文社团的精选整理</p>
+            <div class="meta">
+                <div class="meta-item">📅 2026-03-17</div>
+                <div class="meta-item">📊 80+ 个频道</div>
+                <div class="meta-item">📁 15 个分类</div>
+            </div>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 搜索频道名称或简介...">
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalChannels">80+</div>
+                <div class="stat-label">总频道数</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15</div>
+                <div class="stat-label">分类</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4</div>
+                <div class="stat-label">多人推荐</div>
+            </div>
+        </div>
+
+        <div id="categories"></div>
+
+        <div id="noResults" class="no-results hidden">
+            😢 没有找到匹配的频道
+        </div>
+
+        <footer>
+            <p>整理自 Facebook 串文社团 | 由 AI 助手整理</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">版本 1.0 | 最后更新：2026-03-17 17:26 GMT+8</p>
+        </footer>
+    </div>
+
+    <script>
+        const channelsData = [
+            {
+                category: "📚 历史类",
+                icon: "📚",
+                channels: [
+                    { name: "Stefan Milo", desc: "史前史", popular: false },
+                    { name: "Dan Davis History", desc: "史前史", popular: false },
+                    { name: "Miniminmutemen", desc: "史前史", popular: false },
+                    { name: "Cambrian Chronicles", desc: "世界史（但基本上都是威尔斯史）", popular: false },
+                    { name: "Ancient Americas", desc: "世界史", popular: false },
+                    { name: "Kings and Generals", desc: "世界史", popular: false },
+                    { name: "Simple History", desc: "军事相关历史，很多主题有趣", popular: false },
+                    { name: "Overly Sarcastic Productions", desc: "神话故事、古文明史、文学史诗等", popular: false },
+                    { name: "PBS Eons", desc: "生物演化历史，适合喜欢史前生物/恐龙/演化的人", popular: false },
+                    { name: "OverSimplified", desc: "历史动画（以前很红但很久没更新了）", popular: false },
+                    { name: "Tasting History with Max Miller", desc: "讲食物和历史，目前觉得最好", popular: false }
+                ]
+            },
+            {
+                category: "🔬 科学 & 科普类",
+                icon: "🔬",
+                channels: [
+                    { name: "Veritasium", desc: "啥都有", tags: ["综合科普"], popular: true },
+                    { name: "Be Smart", desc: "科学", popular: false },
+                    { name: "Howtown", desc: "科学", popular: false },
+                    { name: "Ze Frank", desc: "科学", popular: false },
+                    { name: "ScienceClic", desc: "物理", popular: false },
+                    { name: "minutephysics", desc: "物理", popular: false },
+                    { name: "NileRed", desc: "化学", tags: ["化学"], popular: true },
+                    { name: "James Hoffmann", desc: "咖啡", popular: false },
+                    { name: "PBS Space Time", desc: "物理（很深，用来快速理解概念）", popular: false },
+                    { name: "HyperCubist Math", desc: "数学", popular: false },
+                    { name: "StatQuest with Josh Starmer", desc: "统计学", popular: false },
+                    { name: "Dr.Zye", desc: "好玩的数学频道", popular: false },
+                    { name: "3Blue1Brown", desc: "数学（视觉化解释）", popular: false },
+                    { name: "StyroPyro", desc: "关于电跟物理", popular: false },
+                    { name: "Dr. Becky", desc: "天文", popular: false },
+                    { name: "Welch Labs", desc: "AI 的数学", popular: false },
+                    { name: "Artem Kirsanov", desc: "AI 的数学", popular: false },
+                    { name: "Core Dumped", desc: "电脑底层", popular: false }
+                ]
+            },
+            {
+                category: "🎓 教育 & 学习类",
+                icon: "🎓",
+                channels: [
+                    { name: "CrashCourse", desc: "超强科普频道，各种学科知识都找得到。主持人语速偏快，算幽默的", tags: ["综合学习"], popular: false },
+                    { name: "freeCodeCamp.org", desc: "可以入门近乎所有资工领域工程师的内容：AI、程式语言、作业系统、资结演算法、甚至是线代和微积分", tags: ["编程"], popular: false }
+                ]
+            },
+            {
+                category: "🧬 医学 & 健康类",
+                icon: "🧬",
+                channels: [
+                    { name: "Institute of Human Anatomy", desc: "解剖", popular: false },
+                    { name: "Doctorly", desc: "皮肤科知识（买对成分帮我省了很多钱）", popular: false },
+                    { name: "HealthyGamerGG", desc: "执业精神科医师 + 曾经在印度修行过 + 是个电玩宅男，用易懂的角度来拆解生活常见难处", popular: false },
+                    { name: "HubermanLab", desc: "最硬的，但如果喜欢知道所有科普知识背后的文献，这个就很推。主题：怎么解决拖延症、如何增加睡眠品质等等", popular: false }
+                ]
+            },
+            {
+                category: "🌍 地理 & 地图类",
+                icon: "🌍",
+                channels: [
+                    { name: "Aidin Robbins", desc: "地理奇观", popular: false },
+                    { name: "Jay & Mark (Jay Foreman)", desc: "Map Men 系列，关于地理/地图", popular: false },
+                    { name: "Geography now", desc: "地理", popular: false }
+                ]
+            },
+            {
+                category: "💻 科技 & 工程类",
+                icon: "💻",
+                channels: [
+                    { name: "CNC Kitchen", desc: "3D 列印", popular: false },
+                    { name: "Extra Credits", desc: "游戏设计", popular: false },
+                    { name: "GDC Festival of Gaming", desc: "游戏设计", popular: false },
+                    { name: "MKBHD", desc: "科技评测（应该英文不差的人都会被演算法推到）", popular: false },
+                    { name: "MattKC", desc: "retro console, 科技类", popular: false },
+                    { name: "Computerphile", desc: "计算机科学", popular: false },
+                    { name: "Sebastian Lague", desc: "编程/游戏开发", popular: false }
+                ]
+            },
+            {
+                category: "🚗 汽车 & 机车类",
+                icon: "🚗",
+                channels: [
+                    { name: "Fortnine (RyanF9)", desc: "关于机车", popular: false },
+                    { name: "ziptietuning", desc: "汽车", popular: false },
+                    { name: "donut media", desc: "汽车", popular: false },
+                    { name: "speeed", desc: "汽车", popular: false },
+                    { name: "bigtime", desc: "汽车", popular: false }
+                ]
+            },
+            {
+                category: "🎭 娱乐 & 幽默类",
+                icon: "🎭",
+                channels: [
+                    { name: "Exurbia", desc: "与一般的科学台不同，他用笑话及故事介绍一些超深奥的哲学思想和科学理论", popular: false },
+                    { name: "Michael Reeves", desc: "啥都有很好笑", popular: false },
+                    { name: "Vsauce", desc: "经典科普娱乐", popular: false },
+                    { name: "anthpo", desc: "很有料，我超推他，只是看你要长哪方面的脑袋", popular: false },
+                    { name: "Pewdiepie", desc: "现在除了 Vlog 也开始组电脑、搞AI，我都拿来配饭", popular: false },
+                    { name: "FP1Will", desc: "搞笑版F1 reviews", popular: false }
+                ]
+            },
+            {
+                category: "🎙️ Podcast & 访谈类",
+                icon: "🎙️",
+                channels: [
+                    { name: "The Diary of a CEO", desc: "很多影片都让我很惊艳。最爱有一集他访谈特务 Evy Poumpouras", tags: ["访谈"], popular: true },
+                    { name: "Mel Robbins", desc: "概可以直接听懂7-8成，受访者都是业界权威或是知名人士", popular: false },
+                    { name: "StarTalk", desc: "著名的美国天体物理学家与科普作家 Neil deGrasse Tyson 的节目。两个人互动其实也很搞笑，大推", popular: false },
+                    { name: "Critics at Large", desc: "The New Yorker 自制的 Podcast 节目，三位写手会透过一些文本跟影视作品讨论", popular: false },
+                    { name: "Ask A Matchmaker", desc: "主持人是专业媒人，会讨论一些感情关系中的难题", popular: false },
+                    { name: "The Ramsey Show", desc: "讲财务跟资产管理的，有时会有请听众 call in 分享自己的财务难关", popular: false }
+                ]
+            },
+            {
+                category: "📰 新闻 & 时事类",
+                icon: "📰",
+                channels: [
+                    { name: "Last Week Tonight", desc: "现在台湾能在 YouTube 看到完整集数", popular: false },
+                    { name: "BBC world service", desc: "新闻", popular: false },
+                    { name: "Frontline PBS", desc: "纪录片/新闻", popular: false },
+                    { name: "DW documentary", desc: "纪录片", popular: false },
+                    { name: "Religion for breakfast", desc: "宗教主题", popular: false },
+                    { name: "William Spaniel (Lines on Map)", desc: "讲解国际局势/战争", popular: false }
+                ]
+            },
+            {
+                category: "📊 图表 & 数据可视化",
+                icon: "📊",
+                channels: [
+                    { name: "UsefulCharts", desc: "内容范围满广，可以挑自己有兴趣的", popular: false }
+                ]
+            },
+            {
+                category: "🎬 纪录片类",
+                icon: "🎬",
+                channels: [
+                    { name: "fern", desc: "纪录片", popular: false }
+                ]
+            },
+            {
+                category: "🏹 运动 & 特技类",
+                icon: "🏹",
+                channels: [
+                    { name: "Blumineck", desc: "真·弓箭手，shorts为主", popular: false },
+                    { name: "Pongfinity", desc: "前芬兰桌球国手们开的频道，各种桌球特技 + 和桌球名人合作", popular: false }
+                ]
+            },
+            {
+                category: "🏠 生活 & 实用类",
+                icon: "🏠",
+                channels: [
+                    { name: "Cleanwithbea", desc: "免费帮有需要的人清理住家，通常都是脏重到不可能自己清的", popular: false },
+                    { name: "Dad, How Do I?", desc: "频道主因为成长的过程没有爸爸，所以开了一个频道跟大家分享一些青少年在生活中可能会需要爸爸的哪些帮助", popular: false },
+                    { name: "Therapy in a Nutshell", desc: "执业心理咨商师频道", popular: false }
+                ]
+            },
+            {
+                category: "🎯 其他特色频道",
+                icon: "🎯",
+                channels: [
+                    { name: "Kurzgesagt", desc: "有中文字幕，而且怕你无聊很努力配动画。然后有子频道 Nightshift", tags: ["动画科普"], popular: true },
+                    { name: "Tom Scott (retired)", desc: "啥都有（已退休）", popular: false },
+                    { name: "Numberphile", desc: "数学趣味", popular: false },
+                    { name: "Johnny Harris", desc: "应该英文不差的人都会被演算法推到", popular: false },
+                    { name: "Yes Theory", desc: "应该英文不差的人都会被演算法推到", popular: false },
+                    { name: "Seek Discomfort", desc: "应该英文不差的人都会被演算法推到", popular: false },
+                    { name: "Modern Day Eratosthenes", desc: "科普影片，shorts和长片都有", popular: false },
+                    { name: "Nightshift", desc: "Kurzgesagt 的子频道", popular: false }
+                ]
+            }
+        ];
+
+        function renderChannels() {
+            const categoriesContainer = document.getElementById('categories');
+            categoriesContainer.innerHTML = '';
+            
+            let totalCount = 0;
+            channelsData.forEach(category => {
+                totalCount += category.channels.length;
+                
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category';
+                categoryDiv.dataset.category = category.category;
+                
+                const channelsHTML = category.channels.map(channel => {
+                    const tagsHTML = channel.tags ? 
+                        `<div class="channel-tags">${channel.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : '';
+                    
+                    return `
+                        <div class="channel-card ${channel.popular ? 'popular' : ''}" data-name="${channel.name}" data-desc="${channel.desc}">
+                            <div class="channel-name">${channel.name}</div>
+                            <div class="channel-desc">${channel.desc}</div>
+                            ${tagsHTML}
+                        </div>
+                    `;
+                }).join('');
+                
+                categoryDiv.innerHTML = `
+                    <div class="category-header">
+                        <span class="category-icon">${category.icon}</span>
+                        <h2 class="category-title">${category.category}</h2>
+                        <span class="category-count">${category.channels.length} 个</span>
+                    </div>
+                    <div class="channels-grid">
+                        ${channelsHTML}
+                    </div>
+                `;
+                
+                categoriesContainer.appendChild(categoryDiv);
+            });
+            
+            document.getElementById('totalChannels').textContent = totalCount;
+        }
+
+        function searchChannels() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const categories = document.querySelectorAll('.category');
+            const noResults = document.getElementById('noResults');
+            let hasResults = false;
+            
+            categories.forEach(category => {
+                const cards = category.querySelectorAll('.channel-card');
+                let categoryHasVisible = false;
+                
+                cards.forEach(card => {
+                    const name = card.dataset.name.toLowerCase();
+                    const desc = card.dataset.desc.toLowerCase();
+                    
+                    if (name.includes(searchTerm) || desc.includes(searchTerm)) {
+                        card.classList.remove('hidden');
+                        categoryHasVisible = true;
+                        hasResults = true;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                
+                if (categoryHasVisible) {
+                    category.classList.remove('hidden');
+                } else {
+                    category.classList.add('hidden');
+                }
+            });
+            
+            if (hasResults) {
+                noResults.classList.add('hidden');
+            } else {
+                noResults.classList.remove('hidden');
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('input', searchChannels);
+        
+        renderChannels();
+    </script>
+</body>
+</html>
